@@ -7,11 +7,16 @@ Parsing Swissmedic and Pharmnet with Meteor
 ## Install Meteor on Linux
 `curl https://install.meteor.com/ | sh`
 
-## Run the software
-$ install meteor
+## Install dependencies
 $ meteor npm install
-$ meteor 
 
+## Run the Software
+$ meteor
+
+## Check files
+$ cd public/exports
+
+## Check files in Browser
 Open http://localhost:3000 in the browser
 
 ## Debugging
