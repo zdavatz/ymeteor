@@ -7,7 +7,7 @@
 $ meteor npm install
 
 #### Run the Software
-$ meteor
+$ meteor --once
 
 #### Check files
 $ cd public/exports
