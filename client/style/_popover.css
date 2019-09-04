@@ -1,0 +1,78 @@
+.popover__title {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    line-height: 36px;
+    text-decoration: none;
+    color: rgb(228, 68, 68);
+    text-align: center;
+    padding: 15px 0;
+  }
+  
+  .popover__wrapper {
+      position: relative;
+      margin-top: 1rem;
+      display: block;
+  }
+  .popover__content {
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      left: -300px;
+      top:-2px;
+      transform: translate(0,10px);
+      background-color: #BFBFBF;
+      /* padding: 1.5rem; */
+      /* box-shadow: 0 2px 5px 50px rgba(0, 0, 0, 0.26); */
+      /* box-shadow:1px 4px 40px #999; */
+      width: 300px;
+  }
+  .popover__content:before {
+      position: absolute;
+      z-index: -1;
+      content: '';
+      /* right: calc(50% - 10px); */
+      right:100px;
+      top: -8px;
+      /* border-style: solid; */
+      /* border-width: 0 10px 10px 10px; */
+      border-color: transparent transparent #BFBFBF transparent;
+      transition-duration: 0.3s;
+      transition-property: transform;
+  }
+  .popover__wrapper:hover .popover__content {
+      z-index: 10;
+      opacity: 1;
+      visibility: visible;
+      transform: translate(0,-20px);
+      transition: all 0.5s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+  }
+  .popover__message {
+    text-align: center;
+  }
+  /*  */
+  .border-line-danger{
+    border-top:4px solid #c0392b;
+  }
+  .border-line-dark{
+    border-top:4px solid #2c3e50;
+  }
+  .border-line-warning{
+    border-top:4px solid #d35400;
+  }
+  .border-line-primary{
+    border-top:4px solid #2ecc71;
+  }
+  .border-line-success{
+    border-top:4px solid #27ae60;
+  }
+  .border-line-info{
+    border-top:4px solid #3498db;
+  }
+  
+  .border-line-light{
+    border-top:4px solid #1abc9c;
+  }
+  
+  .border-line-orange{
+    border-top:4px solid #f39c12 ;
+  }

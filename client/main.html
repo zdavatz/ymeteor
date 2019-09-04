@@ -1,0 +1,27 @@
+<head>
+  <title>swissmed</title>
+</head>
+<!--  await page.click('a[data-loadpage = "2"]'); -->
+
+<body>
+  <h4>Generated files</h4>
+  {{>files}}
+</body>
+
+<template name="files">
+  <div class="section">
+    <div class="columns">
+      <div class="column is-10 columns is-multiline">
+
+
+        {{#each files}}
+        <div class="column is-6">
+          <p class="notification is-white has-shadow"><a href="/exports/{{this}}" download target="_blank">{{this}}</a>
+          </p>
+        </div>
+        {{/each}}
+
+      </div>
+    </div>
+  </div>
+</template>

@@ -1,0 +1,8 @@
+body{
+    -webkit-overflow-scrolling: touch;
+    will-change: transform;
+    scroll-behavior: auto;
+    min-height:100vh !important;
+    min-width:100vw !important;
+}
+

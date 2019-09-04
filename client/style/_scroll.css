@@ -1,0 +1,62 @@
+/* ::-webkit-scrollbar {
+    background: transparent;
+} */
+
+/* html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    will-change: transform;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: auto;
+    min-height:100% !important;
+}
+
+.columns, .column, .box{
+    will-change: transform;
+} */
+
+/* THAT IS FUCKED IMPORTANT TO FIX THE MOBILE LAGGING */
+.is-scroll-fix{
+    will-change: transform;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width:100vw;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+}
+
+.is-scroll {
+    /* overflow: scroll !important; */
+    padding-bottom: 80px !important;
+    width:100%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    will-change: transform;
+    height:100%; /*A value other than height:auto needs to be set*/
+    scroll-behavior: smooth;
+}
+
+.is-scroll::-webkit-scrollbar {
+    width: 0px !important;
+    /* remove scrollbar space */
+    background: transparent;
+    /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+.is-scroll::-webkit-scrollbar-thumb {
+    width: 0px !important;
+    /* background: #FF0000; */
+    background: #777 !important;
+}
+
+
+/* html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+.is-flowed::-webkit-scrollbar,
+.isModal::-webkit-scrollbar {
+    display: none;
+    background: transparent;
+    visibility: hidden;
+    width: 0px;
+    overflow-x:hidden;
+} */
