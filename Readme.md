@@ -14,7 +14,7 @@ $ meteor
 
 Open http://localhost:3000 in the browser
 
-## For Debugging do
+## Debugging
 METEOR_PROFILE=1 METEOR_LOG=debug meteor --verbose
 
 ## Configure:
