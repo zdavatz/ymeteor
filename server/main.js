@@ -1,6 +1,7 @@
 import {
   Meteor
 } from 'meteor/meteor';
+import './config.js'
 const _ = require("lodash")
 const fs = require('fs')
 const scrapeIt = require("scrape-it")
@@ -8,6 +9,7 @@ const puppeteer = require('puppeteer');
 /*
   Project Specifics
 */
+console.log(Config.interval)
 // Public Directory Path
 var path = process.env['METEOR_SHELL_DIR'] + '/../../../public/';
 let root = 'https://www.swissmedic.ch';
@@ -116,6 +118,9 @@ Swiss.record = ()=>{
     Swiss.close()
   },5000)
 }
+/*
+meteor | sed -e '/Exited with code/q'
+*/
 
 Swiss.close = function(){
   process.exit(0)
