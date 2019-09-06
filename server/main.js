@@ -110,8 +110,8 @@ Swiss.run = ()=>{
 }
 
 Swiss.record = ()=>{
-  Swiss.writeFile('/exports/drugs-de.json',JSON.stringify(Swiss.getItems('drug','de')))
-  Swiss.writeFile('/exports/doc-de.json',JSON.stringify(Swiss.getItems('doc','de')))
+  Swiss.writeFile('/exports/chargenrueckrufe_de.json',JSON.stringify(Swiss.getItems('drug','de')))
+  Swiss.writeFile('/exports/dhcp_hcp_de.json',JSON.stringify(Swiss.getItems('doc','de')))
   Meteor.setTimeout(function(){
     Swiss.close()
   },5000)
@@ -119,7 +119,7 @@ Swiss.record = ()=>{
 
 Swiss.close = function(){
   process.exit(0)
-  //process.kill(process.pid)
+  process.kill(process.pid)
 }
 /*
   Pupeeter Scrapper
