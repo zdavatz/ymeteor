@@ -93,11 +93,33 @@ Swiss.scrapDrug = (url,id)=>{
     data,
     response
   }) => {
-    console.log(`Status Code Working: ${response.statusCode}`)
-    //console.log(url,id)
+    console.log(`Scrapping:`, data.title)
+    console.log(`Scrapping status: ${response.statusCode}`)
     data.pdf = root + data.pdf
     Items.update({_id:id},{$set:data})
   })
+}
+
+/*
+  Runner
+*/
+Swiss.run = ()=>{
+  scrapper(swissList,'drug','de')
+  scrapper(qa,'doc','de')
+
+}
+
+Swiss.record = ()=>{
+  Swiss.writeFile('/exports/drugs-de.json',JSON.stringify(Swiss.getItems('drug','de')))
+  Swiss.writeFile('/exports/doc-de.json',JSON.stringify(Swiss.getItems('doc','de')))
+  Meteor.setTimeout(function(){
+    Swiss.close()
+  },5000)
+}
+
+Swiss.close = function(){
+  process.exit(0)
+  //process.kill(process.pid)
 }
 /*
   Pupeeter Scrapper
@@ -113,7 +135,6 @@ let scrapper = async (url, type, lang) => {
     ],
   });
   const page = await browser.newPage();
-  //url = 'https://www.swissmedic.ch/swissmedic/de/home/humanarzneimittel/marktueberwachung/qualitaetsmaengel-und-chargenrueckrufe/chargenrueckrufe.html'
   await page.goto(url, {
     waitUntil: 'load'
   });
@@ -148,9 +169,13 @@ let scrapper = async (url, type, lang) => {
     if(dimensions.items && dimensions.items.length){
       Swiss.patch(dimensions.items,type,lang)
     }
-    console.log('Dimensions:', 'dimensions');
+    
+    if(dimensions && dimensions.items){
+      console.log('Scrapped Items:', dimensions.items.length);
+    }
   }
   await browser.close();
+  Swiss.record()
   console.log("async got executed");
 }
 /*
@@ -165,21 +190,23 @@ Meteor.methods({
   fileDownload() {}
 })
 /*
+
+*/
+
+Meteor.startup(function(){
+  Swiss.run()
+})
+/*
   CronJobs
 */
 SyncedCron.add({
   name: 'Crunch some important numbers for the marketing department',
   schedule: function (parser) {
-    return parser.text('every 24 hours');
+    return parser.text('every 12 hours');
   },
   job: function () {
     console.log('Running......')
-    scrapper(swissList,'drug','de')
-    scrapper(qa,'doc','de')
-    Meteor.setTimeout(function(){
-      Swiss.writeFile('/exports/drugs-de.json',JSON.stringify(Swiss.getItems('drug','de')))
-      Swiss.writeFile('/exports/doc-de.json',JSON.stringify(Swiss.getItems('doc','de')))
-    },60*1000*10)
+    Swiss.run()
   }
 });
 SyncedCron.start();
@@ -189,3 +216,7 @@ SyncedCron.start();
 Meteor.publish(null,function(){
   return Items.find({},{limit:10})
 })
+
+if (process.pid) {
+  console.log('This process is your pid ' + process.pid);
+}
