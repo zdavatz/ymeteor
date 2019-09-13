@@ -18,8 +18,7 @@ const puppeteer = require('puppeteer');
 */
 
 var Project = YAML.parse(Assets.getText('urls.yaml'))
-console.log(Project.urls.length)
-
+//console.log(Project.urls.length)
 
 
 // Public Directory Path
@@ -129,19 +128,25 @@ Swiss.run = ()=>{
   scrapper(frDocs,'doc','fr')
 }
 
+
+
 Swiss.record = ()=>{
-  console.log('------------ Getting files ready ------------')
-  
-  Meteor.setTimeout(function(){
+  console.log('Progress: Getting files ready')  
+  //Meteor.setTimeout(function(){
     Swiss.writeFile('/exports/chargenrueckrufe_de.json',JSON.stringify(Swiss.getItems('drug','de')))
     Swiss.writeFile('/exports/dhcp_hcp_de.json',JSON.stringify(Swiss.getItems('doc','de')))
     // French
     Swiss.writeFile('/exports/chargenrueckrufe_fr.json',JSON.stringify(Swiss.getItems('drug','fr')))
     Swiss.writeFile('/exports/dhcp_hcp_fr.json',JSON.stringify(Swiss.getItems('doc','fr')))    
-    console.log('------------ Files have been saved to /public/exports ------------')
-    Swiss.close()
-  },5000)
+    console.log('Done: Files have been saved to /public/exports')
+    //Swiss.close()
+  //},5000)
 }
+
+
+
+
+
 /*
 meteor | sed -e '/Exited with code/q'
 */
@@ -168,7 +173,7 @@ let scrapper = async (url, type, lang) => {
     waitUntil: 'load'
   });
   await page.waitForSelector(".mod-teaser")
-  for (var i = 1; i < 6; i++) {
+  for (var i = 1; i < 7; i++) {
     if (i !== 1) {
       await page.click('a[data-loadpage = "' + i + '"]');
       await page.waitFor(3000);
@@ -198,18 +203,18 @@ let scrapper = async (url, type, lang) => {
     if(dimensions.items && dimensions.items.length){
       Swiss.patch(dimensions.items,type,lang)
     }
-    
     if(dimensions && dimensions.items){
       console.log('Scrapped Items:', dimensions.items.length);
     }
   }
   await browser.close();
   Counter = Counter + 1;
-  console.log('Project '+Counter+ ' is finished')
-  if(Counter == 4){
+  console.log('Project ' + Counter + ' is finished')
+  console.log('Type:', type, '& Lang:',lang)
+  //if(Counter == 4){
     Swiss.record()
-  }
-  console.log("async got executed");
+  //}
+  console.log("Async got executed");
 }
 /*
   Methods
