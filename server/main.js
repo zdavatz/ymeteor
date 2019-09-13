@@ -28,7 +28,7 @@ let swissList = 'https://www.swissmedic.ch/swissmedic/de/home/humanarzneimittel/
 let qa = 'https://www.swissmedic.ch/swissmedic/de/home/humanarzneimittel/marktueberwachung/health-professional-communication--hpc-.html';
 let frDrugs = 'https://www.swissmedic.ch/swissmedic/fr/home/humanarzneimittel/marktueberwachung/qualitaetsmaengel-und-chargenrueckrufe/chargenrueckrufe.html';
 let frDocs = 'https://www.swissmedic.ch/swissmedic/fr/home/humanarzneimittel/marktueberwachung/health-professional-communication--hpc-.html';
- 
+
 
 Counter = 0;
 /*
@@ -44,16 +44,18 @@ Logs = new Mongo.Collection('logs')
   Basic App Actions
 
 */
-Swiss.patch = (data,type,lang)=>{
-  _.each(data,(item)=>{
-    let isExist = Items.findOne({title:item.title})
-    let exclude = ["KPA Breakout Session – Präsentationen","Newsdienste – Newsletter abonnieren"]
-    if(!isExist && exclude.indexOf(item.title) == -1){
+Swiss.patch = (data, type, lang) => {
+  _.each(data, (item) => {
+    let isExist = Items.findOne({
+      title: item.title
+    })
+    let exclude = ["KPA Breakout Session – Präsentationen", "Newsdienste – Newsletter abonnieren"]
+    if (!isExist && exclude.indexOf(item.title) == -1) {
       item.type = type;
       item.lang = lang;
       item.url = root + item.url;
       var id = Items.insert(item)
-      Swiss.scrapDrug(item.url,id)
+      Swiss.scrapDrug(item.url, id)
     }
   })
 }
@@ -79,15 +81,18 @@ Swiss.getFiles = (dir) => {
   getItems
     - Fetch collection with certain values
 */
-Swiss.getItems = (type,lang) =>{
-  return Items.find({lang:lang,type:type}).fetch()
+Swiss.getItems = (type, lang) => {
+  return Items.find({
+    lang: lang,
+    type: type
+  }).fetch()
 }
 
 /*
   Custom Single Link Scrapper 
     - Puppeteer is NOT required
 */
-Swiss.scrapDrug = (url,id)=>{
+Swiss.scrapDrug = (url, id) => {
   scrapeIt(url, {
     title: ".mod h1",
     date: '.mod-headline h5',
@@ -114,33 +119,38 @@ Swiss.scrapDrug = (url,id)=>{
     console.log(`Scrapping:`, data.title)
     console.log(`Scrapping status: ${response.statusCode}`)
     data.pdf = root + data.pdf
-    Items.update({_id:id},{$set:data})
+    Items.update({
+      _id: id
+    }, {
+      $set: data
+    })
   })
 }
 
 /*
   Runner
 */
-Swiss.run = ()=>{
-  scrapper(swissList,'drug','de')
-  scrapper(qa,'doc','de')
-  scrapper(frDrugs, 'drug' ,'fr')
-  scrapper(frDocs,'doc','fr')
+Swiss.run = () => {
+  scrapper(swissList, 'drug', 'de')
+  scrapper(qa, 'doc', 'de')
+  scrapper(frDrugs, 'drug', 'fr')
+  scrapper(frDocs, 'doc', 'fr')
 }
 
 
 
-Swiss.record = ()=>{
-  console.log('Progress: Getting files ready')  
-  //Meteor.setTimeout(function(){
-    Swiss.writeFile('/exports/chargenrueckrufe_de.json',JSON.stringify(Swiss.getItems('drug','de')))
-    Swiss.writeFile('/exports/dhcp_hcp_de.json',JSON.stringify(Swiss.getItems('doc','de')))
-    // French
-    Swiss.writeFile('/exports/chargenrueckrufe_fr.json',JSON.stringify(Swiss.getItems('drug','fr')))
-    Swiss.writeFile('/exports/dhcp_hcp_fr.json',JSON.stringify(Swiss.getItems('doc','fr')))    
-    console.log('Done: Files have been saved to /public/exports')
-    //Swiss.close()
-  //},5000)
+Swiss.record = () => {
+  console.log('Progress: Getting files ready')
+
+  Swiss.writeFile('/exports/chargenrueckrufe_de.json', JSON.stringify(Swiss.getItems('drug', 'de')))
+  Swiss.writeFile('/exports/dhcp_hcp_de.json', JSON.stringify(Swiss.getItems('doc', 'de')))
+  // French
+  Swiss.writeFile('/exports/chargenrueckrufe_fr.json', JSON.stringify(Swiss.getItems('drug', 'fr')))
+  Swiss.writeFile('/exports/dhcp_hcp_fr.json', JSON.stringify(Swiss.getItems('doc', 'fr')))
+  console.log('Done: Files have been saved to /public/exports')
+  Meteor.setTimeout(function () {
+    Swiss.close()
+  }, 5000)
 }
 
 
@@ -151,7 +161,7 @@ Swiss.record = ()=>{
 meteor | sed -e '/Exited with code/q'
 */
 
-Swiss.close = function(){
+Swiss.close = function () {
   process.exit(0)
   process.kill(process.pid)
 }
@@ -174,6 +184,10 @@ let scrapper = async (url, type, lang) => {
   });
   await page.waitForSelector(".mod-teaser")
   for (var i = 1; i < 7; i++) {
+    // if (await page.$('a[data-loadpage = "' + i + '"]') !== null){
+    //   console.log('Passed')
+    //   return
+    // }    
     if (i !== 1) {
       await page.click('a[data-loadpage = "' + i + '"]');
       await page.waitFor(3000);
@@ -188,7 +202,7 @@ let scrapper = async (url, type, lang) => {
         return e !== 0
       })
       var nav = nav.filter((x, i, a) => a.indexOf(x) == i)
-      for (var i = 0; i < ax.length; i++) {    
+      for (var i = 0; i < ax.length; i++) {
         items.push({
           title: title[i].innerHTML,
           url: title[i].getAttribute('href')
@@ -200,19 +214,19 @@ let scrapper = async (url, type, lang) => {
       };
     });
     //_.each(docs)
-    if(dimensions.items && dimensions.items.length){
-      Swiss.patch(dimensions.items,type,lang)
+    if (dimensions.items && dimensions.items.length) {
+      Swiss.patch(dimensions.items, type, lang)
     }
-    if(dimensions && dimensions.items){
+    if (dimensions && dimensions.items) {
       console.log('Scrapped Items:', dimensions.items.length);
     }
   }
   await browser.close();
   Counter = Counter + 1;
   console.log('Project ' + Counter + ' is finished')
-  console.log('Type:', type, '& Lang:',lang)
+  console.log('Type:', type, '& Lang:', lang)
   //if(Counter == 4){
-    Swiss.record()
+  Swiss.record()
   //}
   console.log("Async got executed");
 }
@@ -224,14 +238,14 @@ Meteor.methods({
     return Swiss.getFiles('exports')
   },
   getLatest() {},
-  getStats(){},
+  getStats() {},
   fileDownload() {}
 })
 /*
 
 */
 
-Meteor.startup(function(){
+Meteor.startup(function () {
   Swiss.run()
 })
 /*
@@ -251,8 +265,10 @@ SyncedCron.start();
 /*
   Test
 */
-Meteor.publish(null,function(){
-  return Items.find({},{limit:10})
+Meteor.publish(null, function () {
+  return Items.find({}, {
+    limit: 10
+  })
 })
 
 if (process.pid) {
