@@ -13,7 +13,8 @@
     "lodash": "^4.17.15",
     "meteor-node-stubs": "^0.4.1",
     "puppeteer": "^1.19.0",
-    "scrape-it": "^5.1.4"
+    "scrape-it": "^5.1.4",
+    "yaml": "^1.6.0"
   },
   "meteor": {
     "mainModule": {

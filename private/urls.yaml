@@ -1,0 +1,23 @@
+title: SwissMedic Scrapping Project
+Desc: 
+urls:
+  -
+    url: https://www.swissmedic.ch/swissmedic/de/home/humanarzneimittel/marktueberwachung/qualitaetsmaengel-und-chargenrueckrufe/chargenrueckrufe.html
+    lang: de
+    type: drug
+    file: chargenrueckrufe_de
+  -
+    url: https://www.swissmedic.ch/swissmedic/de/home/humanarzneimittel/marktueberwachung/health-professional-communication--hpc-.html
+    lang: de
+    type: doc
+    file: dhcp_hcp_de
+  -
+    url: https://www.swissmedic.ch/swissmedic/fr/home/humanarzneimittel/marktueberwachung/qualitaetsmaengel-und-chargenrueckrufe/chargenrueckrufe.html
+    lang: fr
+    type: drug
+    file: chargenrueckrufe_fr
+  -
+    url: https://www.swissmedic.ch/swissmedic/fr/home/humanarzneimittel/marktueberwachung/health-professional-communication--hpc-.html
+    lang: fr
+    type: doc
+    file: dhcp_hcp_fr

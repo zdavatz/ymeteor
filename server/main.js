@@ -2,19 +2,36 @@ import {
   Meteor
 } from 'meteor/meteor';
 import './config.js'
+import YAML from 'yaml'
+
+
+// import URLS from './urls.yaml'
+// console.log(URLS)
 const _ = require("lodash")
 const fs = require('fs')
 const scrapeIt = require("scrape-it")
 const puppeteer = require('puppeteer');
+
+
 /*
   Project Specifics
 */
-console.log(Config.interval)
+
+var Project = YAML.parse(Assets.getText('urls.yaml'))
+console.log(Project.urls.length)
+
+
+
 // Public Directory Path
 var path = process.env['METEOR_SHELL_DIR'] + '/../../../public/';
 let root = 'https://www.swissmedic.ch';
 let swissList = 'https://www.swissmedic.ch/swissmedic/de/home/humanarzneimittel/marktueberwachung/qualitaetsmaengel-und-chargenrueckrufe/chargenrueckrufe.html';
 let qa = 'https://www.swissmedic.ch/swissmedic/de/home/humanarzneimittel/marktueberwachung/health-professional-communication--hpc-.html';
+let frDrugs = 'https://www.swissmedic.ch/swissmedic/fr/home/humanarzneimittel/marktueberwachung/qualitaetsmaengel-und-chargenrueckrufe/chargenrueckrufe.html';
+let frDocs = 'https://www.swissmedic.ch/swissmedic/fr/home/humanarzneimittel/marktueberwachung/health-professional-communication--hpc-.html';
+ 
+
+Counter = 0;
 /*
   ===
 */
@@ -108,13 +125,20 @@ Swiss.scrapDrug = (url,id)=>{
 Swiss.run = ()=>{
   scrapper(swissList,'drug','de')
   scrapper(qa,'doc','de')
-
+  scrapper(frDrugs, 'drug' ,'fr')
+  scrapper(frDocs,'doc','fr')
 }
 
 Swiss.record = ()=>{
-  Swiss.writeFile('/exports/chargenrueckrufe_de.json',JSON.stringify(Swiss.getItems('drug','de')))
-  Swiss.writeFile('/exports/dhcp_hcp_de.json',JSON.stringify(Swiss.getItems('doc','de')))
+  console.log('------------ Getting files ready ------------')
+  
   Meteor.setTimeout(function(){
+    Swiss.writeFile('/exports/chargenrueckrufe_de.json',JSON.stringify(Swiss.getItems('drug','de')))
+    Swiss.writeFile('/exports/dhcp_hcp_de.json',JSON.stringify(Swiss.getItems('doc','de')))
+    // French
+    Swiss.writeFile('/exports/chargenrueckrufe_fr.json',JSON.stringify(Swiss.getItems('drug','fr')))
+    Swiss.writeFile('/exports/dhcp_hcp_fr.json',JSON.stringify(Swiss.getItems('doc','fr')))    
+    console.log('------------ Files have been saved to /public/exports ------------')
     Swiss.close()
   },5000)
 }
@@ -180,7 +204,11 @@ let scrapper = async (url, type, lang) => {
     }
   }
   await browser.close();
-  Swiss.record()
+  Counter = Counter + 1;
+  console.log('Project '+Counter+ ' is finished')
+  if(Counter == 4){
+    Swiss.record()
+  }
   console.log("async got executed");
 }
 /*
