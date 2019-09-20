@@ -48,7 +48,7 @@ async function initCheck() {
   }
   Log('warning','Drugs[DB]: Has new data ',+Drugs.find().count())
   if (drugs.length > 0) {
-    await scrapPharma(flow.entry)
+    await scrapPharma(pharma.entry)
     await App.writeFile('/exports/pharma.json', JSON.stringify(Items.find({type:'pharma'}).fetch()))
   }
 }
