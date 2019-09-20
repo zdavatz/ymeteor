@@ -1,3 +1,11 @@
 node_modules/
 public/exports/*
-public/*
+public/*.*
+private/
+exp/*
+.meteor/local
+*.tar.gz
+*.swp
+settings.json
+npm-debug.log
+packages/*/.npm/
