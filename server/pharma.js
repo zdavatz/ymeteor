@@ -5,11 +5,18 @@ import './collections.js'
 import './db.js'
 import './app.js'
 import Log from './log.js'
+const fs = require("fs");
 const _ = require('lodash')
 const puppeteer = require('puppeteer');
 const cheerio = require('cheerio');
 cheerioTableparser = require('cheerio-tableparser')
+
+//
 var path = process.env['METEOR_SHELL_DIR'] + '/../../../exp/';
+var root = process.env['METEOR_SHELL_DIR'] + '/../../../';
+
+
+
 /*
   ====Flow Init
  */
@@ -24,13 +31,13 @@ pharma.entry = 'https://www.pharmnet-bund.de/dynamic/de/arzneimittel-information
   =====Run Pharma Project
 */
 let isPharma = Meteor.settings.isPharma
-if(isPharma){
+if (isPharma) {
   var drugs = Drugs.find({
     checked: {
       $ne: true
     }
   }).fetch()
-  Log('progress','Drugs[DB: Not checked]: Count '+ drugs.length)
+  Log('progress', 'Drugs[DB: Not checked]: Count ' + drugs.length)
   initCheck()
 }
 //
@@ -38,22 +45,31 @@ if(isPharma){
   Insert All drugs into Collection
 */
 async function initCheck() {
+  if (fs.existsSync(root + '/private/prodname_unique.txt')) {
+    Log('success', 'Drug file exists')
+  } else {
+    Log('error', chalk.red('Drugs file does not exist in /private; Add "prodname_unique.txt" in /private'))
+    return
+  }
   var meds = Assets.getText('prodname_unique.txt')
+
   var meds = meds.split("\n");
   var meds = _.compact(meds)
-  Log('progress','Checking Drugs:Products Files, Content: '+ meds.length)
+  Log('progress', 'Checking Drugs:Products Files, Content: ' + meds.length)
   if (meds.length > Drugs.find().count()) {
-    Log('warning','Drugs[file]: Has new data ')
+    Log('warning', 'Drugs[file]: Has new data ')
     await DB.batchDrugs(meds)
   }
-  Log('warning','Drugs[DB]: Has new data ',+Drugs.find().count())
+  Log('warning', 'Drugs[DB]: Has new data ', +Drugs.find().count())
   if (drugs.length > 0) {
     await scrapPharma(pharma.entry)
-    await App.writeFile('/exports/pharma.json', JSON.stringify(Items.find({type:'pharma'}).fetch()))
+    await App.writeFile('/exports/pharma.json', JSON.stringify(Items.find({
+      type: 'pharma'
+    }).fetch()))
   }
 }
 /*
-*/
+ */
 FlowPup.goto = async (url, page, delay) => {
   await page.goto(url, {
     waitUntil: 'load'
@@ -67,7 +83,7 @@ FlowPup.screenshot = async (page, file, fullpage) => {
     console.log('Error in image file or connection')
     return
   };
-  Log('screen','Screenshot saved:'+ file)
+  Log('screen', 'Screenshot saved:' + file)
   await page.screenshot({
     path: path + file,
     fullPage: fullpage
@@ -75,9 +91,9 @@ FlowPup.screenshot = async (page, file, fullpage) => {
 }
 /*
  */
-FlowPup.click = async (page, el, delay,msg) => {
+FlowPup.click = async (page, el, delay, msg) => {
   await page.click(el);
-  Log('step','Event[click]: ' + msg)
+  Log('step', 'Event[click]: ' + msg)
   if (delay && Number.isInteger(delay)) {
     //console.log('Clicked: el', el, 'loading...', delay)
     await page.waitFor(delay);
@@ -129,26 +145,26 @@ FlowPup.extractItem = async (page, keyword) => {
   // Export field
   item.type = 'pharma';
   //
-  Log('success','Scrapping[done]: '+ chalk.cyan(item.name))
+  Log('success', 'Scrapping[done]: ' + chalk.cyan(item.name))
   // DB[Insert]
-  DB.itemInsert(item,'name')
+  DB.itemInsert(item, 'name')
 }
 /*
   Search Keyword
  */
 FlowPup.searchItem = async (keyword, browser, page) => {
-  if(!keyword){
-    Log('warning','[searchItem] Search validation');
+  if (!keyword) {
+    Log('warning', '[searchItem] Search validation');
     return
   }
-  Log('progress','Searching: ' + chalk.green(keyword))
+  Log('progress', 'Searching: ' + chalk.green(keyword))
   await page.focus('#\\30 ');
   await page.keyboard.down('Control');
   await page.keyboard.press('A');
   await page.keyboard.up('Control');
   await page.keyboard.press('Backspace');
   await page.keyboard.type(keyword);
-  await FlowPup.click(page, "#goME", 3000,'Search Init')
+  await FlowPup.click(page, "#goME", 3000, 'Search Init')
   //
   await FlowPup.screenshot(page, 'ARR.png', true)
   // await page.waitForSelector('#documentDisplayButton', {
@@ -157,11 +173,11 @@ FlowPup.searchItem = async (keyword, browser, page) => {
   // });
   var itemsCount = '#titlesHeader > table > tbody > tr > td.wbtxt > span.wbtxt.dom_value\\:\\:getTitlesList\\(\\)\\.getCurrentResult\\(\\)\\.getHits\\(\\)'
   if (await page.$(itemsCount) === null) {
-    Log('error','Results: 0')
+    Log('error', 'Results: 0')
     return
   } else {
     var itemsCount = await page.evaluate(() => document.querySelector('#titlesHeader > table > tbody > tr > td.wbtxt > span.wbtxt.dom_value\\:\\:getTitlesList\\(\\)\\.getCurrentResult\\(\\)\\.getHits\\(\\)').innerHTML)
-    Log('success','Results: ' + itemsCount)
+    Log('success', 'Results: ' + itemsCount)
   }
   var checkElement;
   if (itemsCount <= 10) {
@@ -171,16 +187,16 @@ FlowPup.searchItem = async (keyword, browser, page) => {
     checkElement = '#titlesFields > table > tbody > tr:nth-child(2) > td:nth-child(1) > input'
   }
   // GET ItemsCount
-  await FlowPup.click(page, checkElement, null ,'Event[check]:input => item')
+  await FlowPup.click(page, checkElement, null, 'Event[check]:input => item')
   // New blank page for Item
   const newPagePromise = new Promise(x => browser.once('targetcreated', target => x(target.page())));
-  await FlowPup.click(page, '#documentDisplayButton', 3000,'[newTab]:Opening => item');
+  await FlowPup.click(page, '#documentDisplayButton', 3000, '[newTab]:Opening => item');
   const newPage = await newPagePromise;
-  Log('start','Session[open]:'+ keyword + ', Results[Scrapping]: '+ itemsCount)
+  Log('start', 'Session[open]:' + keyword + ', Results[Scrapping]: ' + itemsCount)
   // Docs[loop]
   for (var j = 1; j <= parseInt(itemsCount); j++) {
-    await FlowPup.extractItem(newPage,keyword)
-    Log('progress','Scrapping[current]: [ '+ chalk.bgGreen(j) + ' from '+ itemsCount+' ] - ' + chalk.green(keyword))
+    await FlowPup.extractItem(newPage, keyword)
+    Log('progress', 'Scrapping[current]: [ ' + chalk.bgGreen(j) + ' from ' + itemsCount + ' ] - ' + chalk.green(keyword))
     var [button] = await newPage.$x("//a[contains(., '» nächstes Dokument »')]");
     if (button) {
       await button.click();
@@ -191,7 +207,7 @@ FlowPup.searchItem = async (keyword, browser, page) => {
       if (j === parseInt(itemsCount)) {
         //console.log('Scrapped done for one search:', keyword, itemsCount, 'scrapped')
         await newPage.close()
-        Log('done','Session[closed]:'+ keyword + ', Results[Scrapped]'+ itemsCount)
+        Log('done', 'Session[closed]:' + keyword + ', Results[Scrapped]' + itemsCount)
         Drugs.update({
           name: keyword
         }, {
@@ -207,7 +223,7 @@ FlowPup.searchItem = async (keyword, browser, page) => {
   Puppeteer Scrapper
  */
 async function scrapPharma(url) {
-  try{
+  try {
     const browser = await puppeteer.launch({
       headless: true,
       args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-gpu',
@@ -217,34 +233,34 @@ async function scrapPharma(url) {
         '--single-process',
       ],
     });
-    Log('progress','Browser init.....')
+    Log('progress', 'Browser init.....')
     const page = await browser.newPage();
     await FlowPup.goto(url, page)
-    Log('progress','Browser steps: Main URL')
+    Log('progress', 'Browser steps: Main URL')
     let el = '#inhalt form input.button'
-    await FlowPup.click(page, el, 5000,'Step[1] => Event[click] Selection')
-    Log('progress','Pharma: Aggrement[Loading]')
+    await FlowPup.click(page, el, 5000, 'Step[1] => Event[click] Selection')
+    Log('progress', 'Pharma: Aggrement[Loading]')
     // Accept
     page.waitForSelector('#clause', {
       visible: true,
       timeout: 0
     });
     var elem = '#clause > div > div > table:nth-child(2) > tbody > tr.dom_if\\:\\:\\!getApplInfo\\(\\)\\.isFZKNavigationDisabled\\(\\) > td:nth-child(2) > a.wbbluebutton.dom_action\\:\\:AcceptFZK.dom_translate\\:\\:amis\\.clause\\.accept';
-    await FlowPup.click(page, elem, 3000,'Step[2] => Event[click] Aggrement[Accept]')
+    await FlowPup.click(page, elem, 3000, 'Step[2] => Event[click] Aggrement[Accept]')
     // Search page
     // ==> Search Drugs
     for (var i = 0; i <= drugs.length; i++) {
-      if(i === drugs.length || !drugs[i]){
+      if (i === drugs.length || !drugs[i]) {
         await browser.close()
-        Log('done','All drugs has been scrapped')
+        Log('done', 'All drugs has been scrapped')
         return
-      }else{
+      } else {
         await FlowPup.searchItem(drugs[i].name, browser, page)
         //await FlowPup.searchItem(drugs[i], browser, page)
       }
     }
     // end loop
-  }catch(error){
-    log('error',error)
-  } 
+  } catch (error) {
+    log('error', error)
+  }
 }
