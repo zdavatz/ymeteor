@@ -7,7 +7,9 @@
 $ meteor npm install
 
 #### Run the Software
-$ meteor --once
+$ meteor --once --settings pharma.json
+
+$ meteor --once --settings swiss.json
 
 #### Check files
 $ cd public/exports
