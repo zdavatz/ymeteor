@@ -10,16 +10,19 @@ const _ = require('lodash')
 const puppeteer = require('puppeteer');
 const cheerio = require('cheerio');
 cheerioTableparser = require('cheerio-tableparser')
-
 //
 var path = process.env['METEOR_SHELL_DIR'] + '/../../../exp/';
 var root = process.env['METEOR_SHELL_DIR'] + '/../../../';
-
 //
 var drugsSample = ['5', 'AARANE', 'AMOXIBETA', 'AMISULPRID', 'OUSJAKLLS' ,'AMITRIPTYLIN-NEURAX', 'AMLODIGAMMA TOP', 'AMLODIPIN/VALS', 'AMOXIHEXAL', 'ACC'];
-
-let isTest = false;
-let isClean = true;
+/*
+*/
+let isTest = true;
+let isClean = false;
+/*
+  Drugs
+*/
+var drugs;
 /*
   ====Flow Init
  */
@@ -30,7 +33,6 @@ FlowPup = {}
 pharma = {}
 pharma.root = 'https://portal.dimdi.de';
 pharma.entry = 'https://www.pharmnet-bund.de/dynamic/de/arzneimittel-informationssystem/index.html'
-
 /*
   =====TESTING
 */
@@ -43,25 +45,19 @@ FlowPup.clean = ()=>{
 if(isClean){
   FlowPup.clean()
 }
-
 /*
   =====Run Pharma Project
 */
 let isPharma = Meteor.settings.isPharma
 if (isPharma) {
-  var drugs = Drugs.find({
-    checked: {
-      $ne: true
-    }
-  }).fetch()
-  //[TEST]
+  log('start','Pharma Scrapping init')
   if(isTest){
-    var drugs = drugsSample;
+    Log('start',chalk.yellow('......TESTING MODE.......'))
+  }else{
+    Log('start','......RUN MODE.......')
   }
-  Log('progress', 'Drugs[DB: Not checked]: Count ' + drugs.length)
-  initCheck()
+   initCheck()
 }
-
 //
 /*
   Insert All drugs into Collection
@@ -77,18 +73,16 @@ async function initCheck() {
   var meds = meds.split("\n");
   var meds = _.compact(meds)
   Log('progress', 'Checking Drugs:Products Files, Content: ' + meds.length)
-  if (meds.length > Drugs.find().count()) {
+  console.log('Drugs File:DB => ',meds.length, ' : ' , Drugs.find().count())
+  if (meds.length !== Drugs.find().count()) {
     Log('warning', 'Drugs[file]: Has new data Updating Drugs')
     await DB.batchDrugs(meds)
   }
-  Log('warning', 'Drugs[DB]: Has new data ', + Drugs.find().count())
-  if (drugs.length > 0) {
     await scrapPharma(pharma.entry)
     await App.writeFile('/exports/pharma.json', JSON.stringify(Items.find({
       type: 'pharma'
     }).fetch()))
-  }
-  await App.exit()
+    await App.exit()
 }
 /*
  */
@@ -270,7 +264,29 @@ async function scrapPharma(url) {
     await FlowPup.click(page, elem, 3000, 'Step[2] => Event[click] Aggrement[Accept]')
     // Search page
     // ==> Search Drugs
+    /*
+      [start] TEST
+    */
+    if(isTest){
+      Log('warning','Drugs[SET] Sample')
+      var drugs = drugsSample;
+    }else{
+      var drugsDB = Drugs.find({
+        checked: {
+          $ne: true
+        }
+      }).fetch();   
+      Log('warning','Drugs[SET] DB')
+      var drugs = drugsDB;
+    }
+    /*
+      [end] TEST
+    */
+    if(!drugs.length){
+      Log('error','Scrap: DrugsArr is not defined')
+    }
     for (var i = 0; i <= drugs.length; i++) {
+      console.log('ScrapCon: Drugs.len',drugs.length, 'Drug', drugs[i])
       if (i === drugs.length || !drugs[i]) {
         await browser.close()
         Log('done', 'All drugs has been scrapped')

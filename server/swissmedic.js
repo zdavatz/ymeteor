@@ -32,9 +32,10 @@ Swiss = {}
 */
 let isSwiss = Meteor.settings.isSwiss
 if(isSwiss){
+    log('start','SwissMedic.ch Scrapping init')
   runScrapper()
 }
-log('start','SwissMedic.ch Scrapping init')
+
 /*
   Development
 */

@@ -18,7 +18,7 @@ DB.itemInsert = async (doc, field) => {
       [field]: doc[field]
     })) {
     Items.insert(doc);
-    log('success','DB: Doc Inserted' + doc[field] + ' -  ' + doc['name'])
+    log('success','DB: Doc Inserted : ' + doc[field] + ' -  ' + doc['name'])
   }else{
    log('warning','DB: Doc Exists' + doc[field])
   }
