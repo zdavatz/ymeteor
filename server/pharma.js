@@ -15,8 +15,11 @@ cheerioTableparser = require('cheerio-tableparser')
 var path = process.env['METEOR_SHELL_DIR'] + '/../../../exp/';
 var root = process.env['METEOR_SHELL_DIR'] + '/../../../';
 
+//
+var drugsSample = ['5', 'AARANE', 'AMOXIBETA', 'AMISULPRID', 'OUSJAKLLS' ,'AMITRIPTYLIN-NEURAX', 'AMLODIGAMMA TOP', 'AMLODIPIN/VALS', 'AMOXIHEXAL', 'ACC'];
 
-
+let isTest = false;
+let isClean = true;
 /*
   ====Flow Init
  */
@@ -27,6 +30,20 @@ FlowPup = {}
 pharma = {}
 pharma.root = 'https://portal.dimdi.de';
 pharma.entry = 'https://www.pharmnet-bund.de/dynamic/de/arzneimittel-informationssystem/index.html'
+
+/*
+  =====TESTING
+*/
+FlowPup.clean = ()=>{
+  Log('progress', 'Cleaning DB; Drugs/ Items[Pharma')
+  Drugs.remove({})
+  Items.remove({type:'pharma'},{multi:true})
+  Log('done', 'Cleaning DB; Drugs/ Items[Pharma')
+}
+if(isClean){
+  FlowPup.clean()
+}
+
 /*
   =====Run Pharma Project
 */
@@ -37,9 +54,14 @@ if (isPharma) {
       $ne: true
     }
   }).fetch()
+  //[TEST]
+  if(isTest){
+    var drugs = drugsSample;
+  }
   Log('progress', 'Drugs[DB: Not checked]: Count ' + drugs.length)
   initCheck()
 }
+
 //
 /*
   Insert All drugs into Collection
@@ -52,21 +74,21 @@ async function initCheck() {
     return
   }
   var meds = Assets.getText('prodname_unique.txt')
-
   var meds = meds.split("\n");
   var meds = _.compact(meds)
   Log('progress', 'Checking Drugs:Products Files, Content: ' + meds.length)
   if (meds.length > Drugs.find().count()) {
-    Log('warning', 'Drugs[file]: Has new data ')
+    Log('warning', 'Drugs[file]: Has new data Updating Drugs')
     await DB.batchDrugs(meds)
   }
-  Log('warning', 'Drugs[DB]: Has new data ', +Drugs.find().count())
+  Log('warning', 'Drugs[DB]: Has new data ', + Drugs.find().count())
   if (drugs.length > 0) {
     await scrapPharma(pharma.entry)
     await App.writeFile('/exports/pharma.json', JSON.stringify(Items.find({
       type: 'pharma'
     }).fetch()))
   }
+  await App.exit()
 }
 /*
  */
@@ -144,10 +166,9 @@ FlowPup.extractItem = async (page, keyword) => {
   var item = Object.assign(item, general);
   // Export field
   item.type = 'pharma';
-  //
   Log('success', 'Scrapping[done]: ' + chalk.cyan(item.name))
   // DB[Insert]
-  DB.itemInsert(item, 'name')
+  DB.itemInsert(item, 'number')
 }
 /*
   Search Keyword
@@ -255,8 +276,11 @@ async function scrapPharma(url) {
         Log('done', 'All drugs has been scrapped')
         return
       } else {
-        await FlowPup.searchItem(drugs[i].name, browser, page)
-        //await FlowPup.searchItem(drugs[i], browser, page)
+        if(isTest){
+          await FlowPup.searchItem(drugs[i], browser, page)
+        }else{
+          await FlowPup.searchItem(drugs[i].name, browser, page)  
+        }
       }
     }
     // end loop

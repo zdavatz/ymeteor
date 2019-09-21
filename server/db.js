@@ -4,6 +4,7 @@
 
 import _ from 'lodash'
 import './collections.js'
+import log from './log.js'
 import {
   globalAgent
 } from 'http';
@@ -17,9 +18,9 @@ DB.itemInsert = async (doc, field) => {
       [field]: doc[field]
     })) {
     Items.insert(doc);
-    console.log('DB: Doc Inserted', doc[field])
+    log('success','DB: Doc Inserted' + doc[field] + ' -  ' + doc['name'])
   }else{
-    console.log('DB: Doc Exists', doc[field])
+   log('warning','DB: Doc Exists' + doc[field])
   }
 }
 
@@ -56,7 +57,7 @@ DB.batchDrugs = async (data) => {
       name: item
     })
     if (!isExist) {
-      console.log('DB.batchInsert: Success,', item, 'Inserted')
+      console.log('DrugsInsert: Success,', item, 'Inserted')
       if (!item) {
         return
       }
@@ -97,10 +98,3 @@ DB.checkKeywod = (isTesting) => {
 
 
 }
-
-
-//DB.batchInsert([{name:"batata",type:'drugs-batata'}],'name')
-
-//DB.batchColInsert('Items',[{name:"batatassssss",type:'drugs-batata'}],'name')
-
-//DB.insert({name:"batata",type:'drugs-batata'},'type')

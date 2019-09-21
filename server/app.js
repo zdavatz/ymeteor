@@ -21,3 +21,9 @@ App.writeFile = async(file, data) => {
       type: type
     }).fetch()
   }
+
+
+  App.exit = async()=>{
+    process.exit(0)
+    process.kill(process.pid)
+  }

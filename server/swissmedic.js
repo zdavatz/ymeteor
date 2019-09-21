@@ -219,6 +219,7 @@ async function runScrapper(){
   await SwissRun()
   await Swiss.record()
   await log('success','Scrapping is finished, You may close meteor')
+  await Swiss.close()
 }
 /*
   CronJobs
