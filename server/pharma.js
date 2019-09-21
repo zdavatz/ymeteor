@@ -17,7 +17,7 @@ var root = process.env['METEOR_SHELL_DIR'] + '/../../../';
 var drugsSample = ['5', 'AARANE', 'AMOXIBETA', 'AMISULPRID', 'OUSJAKLLS' ,'AMITRIPTYLIN-NEURAX', 'AMLODIGAMMA TOP', 'AMLODIPIN/VALS', 'AMOXIHEXAL', 'ACC'];
 /*
 */
-let isTest = true;
+let isTest = false;
 let isClean = false;
 /*
   Drugs
