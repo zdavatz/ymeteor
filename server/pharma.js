@@ -181,7 +181,7 @@ FlowPup.searchItem = async (keyword, browser, page) => {
   await page.keyboard.type(keyword);
   await FlowPup.click(page, "#goME", 3000, 'Search Init')
   //
-  await FlowPup.screenshot(page, 'ARR.png', true)
+  //await FlowPup.screenshot(page, 'ARR.png', true)
   // await page.waitForSelector('#documentDisplayButton', {
   //   visible: true,
   //   timeout: 0
