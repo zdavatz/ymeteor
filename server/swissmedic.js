@@ -89,7 +89,7 @@ Swiss.getItems = async (type, lang) => {
 }
 /*
   Custom Single Link Scrapper 
-    - Puppeteer is NOT required
+    - Puppeteer 
 */
 Swiss.scrapDrug = async (url, id) => {
   scrapeIt(url, {
@@ -121,6 +121,7 @@ Swiss.scrapDrug = async (url, id) => {
     var item = Items.findOne({_id:id});
     var date = item.date[0]
     var date = date.replace(/\n/,' ');
+    // #6
     data.date = date;
     log('progress', `Scrapped:` +  data.date + ' ' + data.title)
     Items.update({
