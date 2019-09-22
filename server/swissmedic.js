@@ -36,9 +36,8 @@ if (isSwiss) {
   runScrapper()
 }
 /*
-*/
-Swiss.scrapURL = (url, id) => {
-}
+ */
+Swiss.scrapURL = (url, id) => {}
 /*
   Basic App Actions
 */
@@ -95,8 +94,8 @@ Swiss.scrapDrug = async (url, id) => {
   scrapeIt(url, {
     title: ".mod h1",
     desc: ".mod-text article",
-    content : '.mod-layout .mod-text p',
-    date : '.mod.mod-headline',  
+    content: '.mod-layout .mod-text p',
+    date: '.mod.mod-headline',
     pdf: {
       selector: ".mod-download a",
       attr: "href"
@@ -116,21 +115,22 @@ Swiss.scrapDrug = async (url, id) => {
     data,
     response
   }) => {
-
     data.pdf = root + data.pdf
-    var item = Items.findOne({_id:id});
+    var item = Items.findOne({
+      _id: id
+    });
     var date = item.date[0]
-    var date = date.replace(/\n/,' ');
+    var date = date.replace(/\n/, ' ');
     // #6
     data.date = date;
-    log('progress', `Scrapped:` +  data.date + ' ' + data.title)
+    log('progress', `Scrapped:` + data.date + ' ' + data.title)
     Items.update({
       _id: id
     }, {
       $set: data
     })
     //
-    log('success', `DB-Updated:` +  data.date + ' ' + data.title)
+    log('success', `DB-Updated:` + data.date + ' ' + data.title)
   })
 }
 /*
@@ -172,22 +172,30 @@ async function scrapper(url, type, lang) {
     ],
   });
   const page = await browser.newPage();
-  await page.setViewport({ width: 1280, height: 720 });
+  await page.setViewport({
+    width: 1280,
+    height: 720
+  });
   await page.goto(url, {
     waitUntil: 'load'
   });
   await page.waitForSelector(".mod-teaser")
+  //var navx = Array.from(await page.$$('nav a'))
+  const nav = await page.evaluate(() => {
+    var nav = document.querySelectorAll('a[data-loadpage]')
+    var nav = [].map.call(nav, a => a.getAttribute("data-loadpage"));
+    var nav = nav.filter(function (e) {
+      return e !== 0
+    })
+    var nav = nav.filter((x, i, a) => a.indexOf(x) == i)
+    return nav;
+  })
+  if(!nav.length){
+    log('error','Checking; There is no navigation')
+    return
+  }
   //
-  for (var i = 1; i < 7; i++) {
-    if (i !== 1) {
-      var resultsBox = 'a[data-loadpage = "' + i + '"]'
-      if (await page.$(resultsBox) === null) {
-        log('warning', 'Scanning....');
-        return
-      }
-      await page.click('a[data-loadpage = "' + i + '"]');
-      await page.waitFor(5000,{waitUntil: 'domcontentloaded', timeout: 0});
-    }
+  for (var i = 1; i < nav.length; i++) {
     //
     const dimensions = await page.evaluate(() => {
       var nav = document.querySelectorAll('a[data-loadpage]')
@@ -205,7 +213,7 @@ async function scrapper(url, type, lang) {
           title: title[i].innerHTML,
           url: title[i].getAttribute('href')
         }
-        var date =  dates[i].innerHTML
+        var date = dates[i].innerHTML
         var date = date.replace(/<[^>]*>?/gm, '')
         var date = date.replace(/^\s+|\s+$/g, '')
         var date = date.split(" ")
@@ -217,11 +225,26 @@ async function scrapper(url, type, lang) {
         nav: nav,
       };
     });
+    //
     if (dimensions.items && dimensions.items.length) {
       Swiss.patch(dimensions.items, type, lang)
     }
     if (dimensions && dimensions.items) {
       log('progress', 'Scrapped Items:' + dimensions.items.length);
+    }
+    var resultsBox = 'a[data-loadpage = "' + i + '"]'
+    if (await page.$(resultsBox) === null || i === nav.length) {
+      log('warning', 'Scanning...');
+      log('progress', 'Next project');
+      return
+    }
+    if (i !== 1) {
+      await page.click('a[data-loadpage = "' + i + '"]');
+      log('step','Next Page [loading...]')
+      await page.waitFor(5000, {
+        waitUntil: 'domcontentloaded',
+        timeout: 0
+      });
     }
   }
   await browser.close();
