@@ -45,12 +45,13 @@ Swiss.patch = (data, type, lang) => {
         let isExist = Items.findOne({
             title: item.title
         })
-        let exclude = ["KPA Breakout Session – Präsentationen", "Newsdienste – Newsletter abonnieren"]
-        if (isExist || exclude.indexOf(item.title) == -1) {
+        let exclude = ["KPA Breakout Session – Präsentationen", "Newsdienste – Newsletter abonnieren",'"KPA Breakout Session – Présentations']
+        if (!isExist || exclude.indexOf(item.title) == -1) {
             item.type = type;
             item.lang = lang;
             item.url = root + item.url;
-            var id = Items.insert(item)
+            var id = Items.insert(item);
+            console.log(item)
             Swiss.scrapDrug(item.url, id)
         }
     })

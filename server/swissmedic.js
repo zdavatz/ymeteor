@@ -30,11 +30,11 @@ Counter = 0;
 Swiss = {}
 /*
  */
-let isSwiss = Meteor.settings.isSwiss
-if (isSwiss) {
-  log('start', 'SwissMedic.ch Scrapping init')
-  runScrapper()
-}
+  let isSwiss = Meteor.settings.isSwiss
+  if (isSwiss) {
+    log('start', 'SwissMedic.ch Scrapping init')
+    runScrapper()
+  }
 /*
  */
 Swiss.scrapURL = (url, id) => {}

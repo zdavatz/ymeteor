@@ -1,8 +1,14 @@
 const fs = require('fs')
+import Log from './log';
 App = {}
 App.path = process.env['METEOR_SHELL_DIR'] + '/../../../public/';
+log = console.log;
+/*
+
+*/
 App.writeFile = async(file, data) => {
-    await fs.writeFile(App.path + file, data, (err) => {
+    log('Writing file')
+    await fs.writeFileSync(App.path + file, data, (err) => {
       if (err) log('error',err);
       log('progress',"File updated" + file);
     });
@@ -24,6 +30,6 @@ App.writeFile = async(file, data) => {
 
 
   App.exit = async()=>{
-    process.exit(0)
+    process.exit(1)
     process.kill(process.pid)
   }

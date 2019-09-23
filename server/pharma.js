@@ -11,10 +11,12 @@ const puppeteer = require('puppeteer');
 const cheerio = require('cheerio');
 cheerioTableparser = require('cheerio-tableparser')
 //
+log = console.log;
+//
 var path = process.env['METEOR_SHELL_DIR'] + '/../../../exp/';
 var root = process.env['METEOR_SHELL_DIR'] + '/../../../';
 //
-var drugsSample = ['5', 'AARANE', 'AMOXIBETA', 'AMISULPRID', 'OUSJAKLLS' ,'AMITRIPTYLIN-NEURAX', 'AMLODIGAMMA TOP', 'AMLODIPIN/VALS', 'AMOXIHEXAL', 'ACC'];
+var drugsSample = ['5', 'AARANE'];
 /*
 */
 let isTest = false;
@@ -39,7 +41,7 @@ pharma.entry = 'https://www.pharmnet-bund.de/dynamic/de/arzneimittel-information
 FlowPup.clean = ()=>{
   Log('progress', 'Cleaning DB; Drugs/ Items[Pharma')
   Drugs.remove({})
-  Items.remove({type:'pharma'},{multi:true})
+  Items.remove({type:'pharma'})
   Log('done', 'Cleaning DB; Drugs/ Items[Pharma')
 }
 if(isClean){
@@ -56,6 +58,7 @@ if (isPharma) {
   }else{
     Log('start','......RUN MODE.......')
   }
+
    initCheck()
 }
 //
@@ -79,10 +82,10 @@ async function initCheck() {
     await DB.batchDrugs(meds)
   }
     await scrapPharma(pharma.entry)
-    await App.writeFile('/exports/pharma.json', JSON.stringify(Items.find({
-      type: 'pharma'
-    }).fetch()))
-    await App.exit()
+    // Meteor.setTimeout(function(){
+      App.exit()
+    // },7000)
+    
 }
 /*
  */
@@ -290,6 +293,14 @@ async function scrapPharma(url) {
       if (i === drugs.length || !drugs[i]) {
         await browser.close()
         Log('done', 'All drugs has been scrapped')
+
+        // Write Files
+       await App.writeFile('/exports/pharma.json', JSON.stringify(Items.find({
+          type: 'pharma'
+        }).fetch()));
+
+        log('================================================================')
+
         return
       } else {
         if(isTest){

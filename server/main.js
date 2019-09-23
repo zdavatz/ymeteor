@@ -24,6 +24,3 @@ Check.swiss = Items.find({type:'doc'}).count()
 
 log('start',JSON.stringify(Check))
 
-App.writeFile('/exports/pharma.json', JSON.stringify(Items.find({
-  type: 'pharma'
-}).fetch()))
