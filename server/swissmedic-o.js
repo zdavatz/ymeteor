@@ -51,7 +51,6 @@ Swiss.patch = (data, type, lang) => {
             item.lang = lang;
             item.url = root + item.url;
             var id = Items.insert(item);
-            console.log(item)
             Swiss.scrapDrug(item.url, id)
         }
     })
@@ -112,14 +111,22 @@ Swiss.scrapDrug = (url, id) => {
         data,
         response
     }) => {
-        console.log(`Scrapping:`, data.title)
+        
+        
+        if(data.title == 'KPA Breakout Session – Präsentationen' || data.title == 'KPA Breakout Session – Présentations'){
+            console.log('Data Review...')
+            Items.remove(id)
+        }else{
+            console.log('Files updated for ',data.title)
+            data.pdf = root + data.pdf
+            Items.update({
+                _id: id
+            }, {
+                $set: data
+            })
+        }
         //console.log(`Scrapping status: ${response.statusCode}`)
-        data.pdf = root + data.pdf
-        Items.update({
-            _id: id
-        }, {
-            $set: data
-        })
+       
     })
 }
 /*
@@ -142,7 +149,7 @@ Swiss.record = () => {
 meteor | sed -e '/Exited with code/q'
 */
 Swiss.close = async function () {
-    console.log('Project is Done....')
+    console.log('Meteor Exit code.')
     process.exit(0)
     process.kill(process.pid)
 }
@@ -150,13 +157,13 @@ Swiss.close = async function () {
 
 Swiss.run = async () => {
     for (var i = 0; i <= Project.urls.length; i++) {
-        if (i == Project.urls.length) {
-            
-            Swiss.close()
+
+        var projects = Project.urls
+        var project = projects[i]      
+        if (!project || i == Project.urls.length) {
+            await Swiss.close()
             return
         }
-        var projects = Project.urls
-        var project = projects[i]
         console.log('Project:START', project.file, '---')
         await scrapper(project.url, project.type, project.lang, project.file)
     }
@@ -252,12 +259,13 @@ let scrapper = async (url, type, lang, file) => {
 
         if (dimensions.items && dimensions.items.length) {
             Swiss.patch(dimensions.items, type, lang)
+            console.log('Data Patch set:' , dimensions.items.length)
         }
 
         // if (i !== 1) {
         await page.click('a[data-loadpage = "' + nav[i] + '"]');
-        console.log(' PAGE CLICKED', nav[i])
-        await page.waitFor(5000);
+        console.log(' PAGE >', nav[i] , 'of' , nav)
+        await page.waitFor(3000);
         // }
 
     }
@@ -283,6 +291,4 @@ let isSwiss = Meteor.settings.isSwiss
 if (isSwiss) {
     log('start', 'SwissMedic.ch Scrapping init')
     Swiss.run()
-
-
 }
