@@ -18,7 +18,7 @@ var root = process.env['METEOR_SHELL_DIR'] + '/../../../';
 //
 var drugsSample = ['5', 'AARANE'];
 /*
-*/
+ */
 let isTest = false;
 let isClean = false;
 /*
@@ -38,13 +38,15 @@ pharma.entry = 'https://www.pharmnet-bund.de/dynamic/de/arzneimittel-information
 /*
   =====TESTING
 */
-FlowPup.clean = ()=>{
+FlowPup.clean = () => {
   Log('progress', 'Cleaning DB; Drugs/ Items[Pharma')
   Drugs.remove({})
-  Items.remove({type:'pharma'})
+  Items.remove({
+    type: 'pharma'
+  })
   Log('done', 'Cleaning DB; Drugs/ Items[Pharma')
 }
-if(isClean){
+if (isClean) {
   FlowPup.clean()
 }
 /*
@@ -52,14 +54,18 @@ if(isClean){
 */
 let isPharma = Meteor.settings.isPharma
 if (isPharma) {
-  log('start','Pharma Scrapping init')
-  if(isTest){
-    Log('start',chalk.yellow('......TESTING MODE.......'))
-  }else{
-    Log('start','......RUN MODE.......')
+  log('start', 'Pharma Scrapping init')
+  if (isTest) {
+    Log('start', chalk.yellow('......TESTING MODE.......'))
+  } else {
+    Log('start', '......RUN MODE.......')
   }
 
-   initCheck()
+  // 
+
+
+  //
+  initCheck()
 }
 //
 /*
@@ -76,16 +82,22 @@ async function initCheck() {
   var meds = meds.split("\n");
   var meds = _.compact(meds)
   Log('progress', 'Checking Drugs:Products Files, Content: ' + meds.length)
-  console.log('Drugs File:DB => ',meds.length, ' : ' , Drugs.find().count())
+  console.log('Drugs File:DB => ', meds.length, ' : ', Drugs.find().count())
   if (meds.length !== Drugs.find().count()) {
     Log('warning', 'Drugs[file]: Has new data Updating Drugs')
     await DB.batchDrugs(meds)
   }
-    await scrapPharma(pharma.entry)
-    // Meteor.setTimeout(function(){
-      App.exit()
-    // },7000)
-    
+
+  // Write first file
+  await App.writeFile('/exports/pharma.json', JSON.stringify(Items.find({
+    type: 'pharma'
+  }).fetch()));
+  //
+  await scrapPharma(pharma.entry)
+  // Meteor.setTimeout(function(){
+  App.exit()
+  // },7000)
+
 }
 /*
  */
@@ -270,32 +282,32 @@ async function scrapPharma(url) {
     /*
       [start] TEST
     */
-    if(isTest){
-      Log('warning','Drugs[SET] Sample')
+    if (isTest) {
+      Log('warning', 'Drugs[SET] Sample')
       var drugs = drugsSample;
-    }else{
+    } else {
       var drugsDB = Drugs.find({
         checked: {
           $ne: true
         }
-      }).fetch();   
-      Log('warning','Drugs[SET] DB')
+      }).fetch();
+      Log('warning', 'Drugs[SET] DB')
       var drugs = drugsDB;
     }
     /*
       [end] TEST
     */
-    if(!drugs.length){
-      Log('error','Scrap: DrugsArr is not defined')
+    if (!drugs.length) {
+      Log('error', 'Scrap: DrugsArr is not defined')
     }
     for (var i = 0; i <= drugs.length; i++) {
-      console.log('ScrapCon: Drugs.len',drugs.length, 'Drug', drugs[i])
+      console.log('ScrapCon: Drugs.len', drugs.length, 'Drug', drugs[i])
       if (i === drugs.length || !drugs[i]) {
         await browser.close()
         Log('done', 'All drugs has been scrapped')
 
         // Write Files
-       await App.writeFile('/exports/pharma.json', JSON.stringify(Items.find({
+        await App.writeFile('/exports/pharma.json', JSON.stringify(Items.find({
           type: 'pharma'
         }).fetch()));
 
@@ -303,10 +315,10 @@ async function scrapPharma(url) {
 
         return
       } else {
-        if(isTest){
+        if (isTest) {
           await FlowPup.searchItem(drugs[i], browser, page)
-        }else{
-          await FlowPup.searchItem(drugs[i].name, browser, page)  
+        } else {
+          await FlowPup.searchItem(drugs[i].name, browser, page)
         }
       }
     }
