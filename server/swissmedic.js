@@ -46,9 +46,9 @@ Swiss.patch = (data, type, lang) => {
     let isExist = Items.findOne({
       title: item.title
     })
-    let exclude = ["KPA Breakout Session – Präsentationen", "Newsdienste – Newsletter abonnieren"]
+    let exclude = ["KPA Breakout Session – Präsentationen", "Newsdienste – Newsletter abonnieren","Services Services d'information – Newsletters, flux RSS"]
     // TESTING
-    if (isExist && exclude.indexOf(item.title) == -1) {
+    if (isExist || exclude.indexOf(item.title) == -1) {
       item.type = type;
       item.lang = lang;
       item.url = root + item.url;
@@ -80,7 +80,7 @@ Swiss.getFiles = async (dir) => {
   getItems
     - Fetch collection with certain values
 */
-Swiss.getItems = async (type, lang) => {
+Swiss.getItems = (type, lang) => {
   return Items.find({
     lang: lang,
     type: type
@@ -136,7 +136,7 @@ Swiss.scrapDrug = async (url, id) => {
 /*
   Runner
 */
-async function SwissRun() {
+function SwissRun() {
   await scrapper(swissList, 'drug', 'de')
   await scrapper(qa, 'doc', 'de')
   await scrapper(frDrugs, 'drug', 'fr')
@@ -171,6 +171,7 @@ async function scrapper(url, type, lang) {
       '--single-process',
     ],
   });
+  log('start','Lang'+lang + '  type: ' + type)
   const page = await browser.newPage();
   await page.setViewport({
     width: 1280,
@@ -190,6 +191,7 @@ async function scrapper(url, type, lang) {
     var nav = nav.filter((x, i, a) => a.indexOf(x) == i)
     return nav;
   })
+  console.log('NBAV',nav)
   if(!nav.length){
     log('error','Checking; There is no navigation')
     return
@@ -241,23 +243,26 @@ async function scrapper(url, type, lang) {
     if (i !== 1) {
       await page.click('a[data-loadpage = "' + i + '"]');
       log('step','Next Page [loading...]')
-      await page.waitFor(5000, {
-        waitUntil: 'domcontentloaded',
-        timeout: 0
-      });
+      // await page.waitFor(5000, {
+      //   waitUntil: 'domcontentloaded',
+      //   timeout: 0
+      // });
     }
   }
-  await browser.close();
+  
   Counter = Counter + 1;
+
+  Swiss.writeFile('/exports/chargenrueckrufe_de.json', JSON.stringify(Swiss.getItems(type, lang)))
   log('success', 'Project ' + Counter + ' is finished')
+  await browser.close();
 }
 /*
  */
 async function runScrapper() {
-  await SwissRun()
-  await Swiss.record()
+  SwissRun()
+  //await Swiss.record()
   await log('success', 'Scrapping is finished, You may close meteor')
-  await Swiss.close()
+  // await Swiss.close()
 }
 /*
   CronJobs

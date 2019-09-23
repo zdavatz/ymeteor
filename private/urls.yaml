@@ -5,19 +5,20 @@ urls:
     url: https://www.swissmedic.ch/swissmedic/de/home/humanarzneimittel/marktueberwachung/qualitaetsmaengel-und-chargenrueckrufe/chargenrueckrufe.html
     lang: de
     type: drug
-    file: chargenrueckrufe_de
+    file: chargenrueckrufe_de.json
   -
     url: https://www.swissmedic.ch/swissmedic/de/home/humanarzneimittel/marktueberwachung/health-professional-communication--hpc-.html
     lang: de
     type: doc
-    file: dhcp_hcp_de
+    file: dhcp_hcp_de.json
   -
     url: https://www.swissmedic.ch/swissmedic/fr/home/humanarzneimittel/marktueberwachung/qualitaetsmaengel-und-chargenrueckrufe/chargenrueckrufe.html
     lang: fr
     type: drug
-    file: chargenrueckrufe_fr
+    file: chargenrueckrufe_fr.json
   -
     url: https://www.swissmedic.ch/swissmedic/fr/home/humanarzneimittel/marktueberwachung/health-professional-communication--hpc-.html
     lang: fr
     type: doc
-    file: dhcp_hcp_fr
+    file: dhcp_hcp_fr.json
+directory: /public/exposts
