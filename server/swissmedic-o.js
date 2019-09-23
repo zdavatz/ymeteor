@@ -26,7 +26,7 @@ let frDrugs = 'https://www.swissmedic.ch/swissmedic/fr/home/humanarzneimittel/ma
 let frDocs = 'https://www.swissmedic.ch/swissmedic/fr/home/humanarzneimittel/marktueberwachung/health-professional-communication--hpc-.html';
 Counter = 0;
 /*
-*/
+ */
 Items.remove({
     type: 'doc'
 })
@@ -46,7 +46,7 @@ Swiss.patch = (data, type, lang) => {
             title: item.title
         })
         let exclude = ["KPA Breakout Session – Präsentationen", "Newsdienste – Newsletter abonnieren"]
-        if (!isExist && exclude.indexOf(item.title) == -1) {
+        if (isExist || exclude.indexOf(item.title) == -1) {
             item.type = type;
             item.lang = lang;
             item.url = root + item.url;
@@ -124,17 +124,7 @@ Swiss.scrapDrug = (url, id) => {
 /*
   Runner
 */
-Swiss.run = async () => {
-    for (var i = 0; i <= Project.urls.length; i++) {
-        if (i == Project.urls.length) {
-            return
-        }
-        var projects = Project.urls
-        var project = projects[i]
-        console.log('Project:START', project.file, '---' )
-        await scrapper(project.url, project.type, project.lang, project.file)
-    }
-}
+// 
 Swiss.record = () => {
     console.log('Progress: Getting files ready')
     Meteor.setTimeout(function () {
@@ -150,10 +140,29 @@ Swiss.record = () => {
 /*
 meteor | sed -e '/Exited with code/q'
 */
-Swiss.close = function () {
+Swiss.close = async function () {
+    console.log('Project is Done....')
     process.exit(0)
     process.kill(process.pid)
 }
+
+
+Swiss.run = async () => {
+    for (var i = 0; i <= Project.urls.length; i++) {
+        if (i == Project.urls.length) {
+            
+            Swiss.close()
+            return
+        }
+        var projects = Project.urls
+        var project = projects[i]
+        console.log('Project:START', project.file, '---')
+        await scrapper(project.url, project.type, project.lang, project.file)
+    }
+
+}
+
+
 /*
   Pupeeter Scrapper
 */
@@ -181,35 +190,31 @@ let scrapper = async (url, type, lang, file) => {
         var nav = document.querySelectorAll('a[data-loadpage]')
         var nav = [].map.call(nav, a => a.getAttribute("data-loadpage"));
         var nav = nav.filter(function (e) {
-          return e !== 0
+            return e !== 0
         })
         var nav = nav.filter((x, i, a) => a.indexOf(x) == i)
         return nav;
-      })
-      console.log('Pages =>',nav)
-      if(!nav.length){
-        log('error','Checking; There is no navigation')
+    })
+    console.log('Pages =>', nav)
+    if (!nav.length) {
+        log('error', 'Checking; There is no navigation')
         return
-      }
+    }
 
 
     //
-    for (var i = 1; i <= nav.length; i++) {
-        // if (await page.$('a[data-loadpage = "' + i + '"]') !== null){
-        //   console.log('Passed')
-        //   return
-        // }    
+    for (var i = 0; i <= nav.length; i++) {
 
-   
+
         if (i == nav.length) {
-            console.log('Project:FINISHED', file , 'DONE' )
+            console.log('Project:FINISHED', file, 'DONE')
             console.log('----------------------------------')
-            return
+            Swiss.writeFile('/exports/' + file, JSON.stringify(Swiss.getItems(type, lang)))
+            console.log('Check', file , " : " ,Items.find({type:type, lang:lang}).count() )
+            console.log('----------------------------------')
+            break;
         }
-        // if (i !== 1) {
-            await page.click('a[data-loadpage = "' + nav[i] + '"]');
-            await page.waitFor(3000);
-        // }
+
         const dimensions = await page.evaluate(() => {
             var nav = document.querySelectorAll('a[data-loadpage]')
             var content = document.querySelectorAll('.mod-teaser')
@@ -241,18 +246,22 @@ let scrapper = async (url, type, lang, file) => {
                 nav: nav,
             };
         });
-        //_.each(docs)
+
+
+
         if (dimensions.items && dimensions.items.length) {
             Swiss.patch(dimensions.items, type, lang)
         }
-        // if (dimensions && dimensions.items) {
-        //     console.log('Scrapped Items:', dimensions.items.length, dimensions.items);
-        //     console.log('==========================================================')
+
+        // if (i !== 1) {
+        await page.click('a[data-loadpage = "' + nav[i] + '"]');
+        console.log(' PAGE CLICKED', nav[i])
+        await page.waitFor(5000);
         // }
+
     }
     await browser.close();
-    Swiss.writeFile('/exports/' + file, JSON.stringify(Swiss.getItems(type, lang)))
-    console.log("Browser is closed Project is done");
+    console.log("Project",file, ' is done');
 }
 /*
   Methods
@@ -271,7 +280,8 @@ Meteor.methods({
 
 let isSwiss = Meteor.settings.isSwiss
 if (isSwiss) {
-  log('start', 'SwissMedic.ch Scrapping init')
-  Swiss.run()
-}
+    log('start', 'SwissMedic.ch Scrapping init')
+    Swiss.run()
 
+
+}
