@@ -4,7 +4,7 @@ import {
 import log from './log.js'
 import './swissmedic-o.js'
 import './pharma.js'
-import './acc.js'
+import './atc.js'
 import './app.js'
 
 
