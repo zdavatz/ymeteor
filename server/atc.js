@@ -116,7 +116,7 @@ pharma.extractItem = async (page, keyword) => {
     item.meta = summary;
     item.project = 'atc';
     console.log(item)
-    DB.itemInsert(item, 'name')
+    DB.itemInsert(item, 'number')
 }
 /*
   Search Keyword

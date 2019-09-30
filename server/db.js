@@ -24,6 +24,7 @@ DB.itemInsert = async (doc, field) => {
    log('success','DB: Doc Update' + doc[field])
   }
 }
+// 
 DB.batchInsert = async (data, field,project) => {
   console.log(data[2],field,project)
   if (!data || !data.length || !field) {
