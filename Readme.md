@@ -11,6 +11,10 @@ $ meteor --once --settings pharma.json
 
 $ meteor --once --settings swiss.json
 
+ __in progress__
+
+$ meteor --oncemeteor --settings atc.json   
+
 #### Check files
 $ cd public/exports
 
