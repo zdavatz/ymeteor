@@ -173,7 +173,7 @@ pharma.searchItem = async (keyword, browser, page) => {
                 await newPage.close()
                 Log('done', 'Session[closed]:' + keyword + ', Results[Scrapped]' + itemsCount)
                 Drugs.update({
-                    name: keyword
+                    code: keyword
                 }, {
                     $set: {
                         checked: true
