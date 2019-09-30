@@ -115,7 +115,6 @@ pharma.extractItem = async (page, keyword) => {
     })
     item.meta = summary;
     item.project = 'atc';
-    console.log(item)
     DB.itemInsert(item, 'number')
 }
 /*
@@ -172,6 +171,7 @@ pharma.searchItem = async (keyword, browser, page) => {
                 //console.log('Scrapped done for one search:', keyword, itemsCount, 'scrapped')
                 await newPage.close()
                 Log('done', 'Session[closed]:' + keyword + ', Results[Scrapped]' + itemsCount)
+                
                 Drugs.update({
                     code: keyword
                 }, {
@@ -179,6 +179,7 @@ pharma.searchItem = async (keyword, browser, page) => {
                         checked: true
                     }
                 });
+                console.log('Drug Checked')
             }
         }
     }
@@ -241,7 +242,7 @@ async function scrapPharma(url) {
             Log('error', 'Scrap: DrugsArr is not defined')
         }
         for (var i = 0; i <= drugs.length; i++) {
-            console.log('ScrapCon: Drugs.len', drugs.length, 'Drug', drugs[i])
+            // console.log('ScrapCon: Drugs.len', drugs.length, 'Drug', drugs[i])
             if (i === drugs.length || !drugs[i]) {
                 await browser.close()
                 Log('done', 'All drugs has been scrapped')
