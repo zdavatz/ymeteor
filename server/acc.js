@@ -238,7 +238,7 @@ async function scrapPharma(url) {
                 await browser.close()
                 Log('done', 'All drugs has been scrapped')
                   // Write Files
-                  await App.writeFile('/exports/acc-code.json', JSON.stringify(Items.find({
+                  await App.writeFile('/exports/pharma_atc.json', JSON.stringify(Items.find({
                     type: 'acc'
                   }).fetch()));
                 log('================================================================')
