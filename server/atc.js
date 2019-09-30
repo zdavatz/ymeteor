@@ -12,17 +12,19 @@ const _ = require('lodash')
 const puppeteer = require('puppeteer');
 const cheerio = require('cheerio');
 const Papa = require('papaparse');
-cheerioTableparser = require('cheerio-tableparser')
+const cheerioTableparser = require('cheerio-tableparser')
+const axios = require('axios');
 //
 log = console.log;
 //
 var path = process.env['METEOR_SHELL_DIR'] + '/../../../exp/';
 let file = 'atc_ddd_2019.csv'
 let filePath = '/private/' + file;
+let fileRemoteURL = 'https://raw.githubusercontent.com/zdavatz/cpp2sqlite/master/input/atc_ddd_2019.csv'
 /*
     Testing Mode
 */
-let isTest = true;
+let isTest = false;
 let isClean = false;
 let codeSample = ['A01AA01', 'A01AA03', 'A01AB09', 'A02AC02', 'A02AD04']
 /*
@@ -32,18 +34,8 @@ pharma.root = 'https://portal.dimdi.de';
 pharma.entry = 'https://www.pharmnet-bund.de/dynamic/de/arzneimittel-informationssystem/index.html'
 /*
  */
-if (Util.isFileExists(filePath)) {
-    var AccCode = Assets.getText(file)
-    var AccCode = Papa.parse(AccCode, {
-        header: true
-    })
-    log(AccCode.data.length411, AccCode.data[2])
-}
-
 /*
-
-*/
-
+ */
 let isCode = Meteor.settings.isCode
 if (isCode) {
     log('start', 'Pharma Scrapping init')
@@ -52,17 +44,29 @@ if (isCode) {
     } else {
         Log('start', '......RUN MODE.......')
     }
-    scrapPharma(pharma.entry)
+    runAtc()
+}
+/*
+    RUN
+*/
+async function runAtc() {
+    await remoteFile(fileRemoteURL)
+    await log('Data Inserted')
+    await App.writeFile('/exports/pharma_atc.json', JSON.stringify(Items.find({
+        type: 'acc'
+    }).fetch()));
+    await scrapPharma(pharma.entry)
+    App.exit()
 }
 /*
  */
 /*
-*/
+ */
 /*
   Extracting Item from a Page
  */
 pharma.extractItem = async (page, keyword) => {
-    Log('progress','ACC-Code ExtractItem')
+    Log('progress', 'ACC-Code ExtractItem')
     var [button] = await page.$x("//a[contains(., '+ Fach-/Gebrauchsinformationen')]");
     if (button) {
         await button.click();
@@ -91,23 +95,27 @@ pharma.extractItem = async (page, keyword) => {
         $('#contentFrame > table:nth-child(1) > tbody > tr:nth-child(2) > td:nth-child(1)').find('a').each(function () {
             var t = $(this).text().split(/\s/)
             var t = _.compact(t)
-    
-
-            files.push({
-                date: t[0],
-                name: t[1],
-                lang: t[2].replace(/[^\w\s]/gi, ''),
-                link: $(this).attr('href')
-            })
+            var file = {}
+            if (t.length && t[1] && t[1]) {
+                file.date = t[0]
+                file.name = t[1]
+                file.lang = t[2].replace(/[^\w\s]/gi, '')
+                file.link = $(this).attr('href')
+                files.push(file)
+            }
         });
     }
     item.files = files;
-    
     var item = Object.assign(item, general);
-
     // Export field
     item.type = 'acc';
     Log('success', 'Scrapping[done]: ' + chalk.cyan(item.name))
+    var summary = Drugs.findOne({
+        code: keyword
+    })
+    item.meta = summary;
+    item.project = 'atc';
+    console.log(item)
     DB.itemInsert(item, 'name')
 }
 /*
@@ -204,7 +212,6 @@ async function scrapPharma(url) {
         });
         var elem = '#clause > div > div > table:nth-child(2) > tbody > tr.dom_if\\:\\:\\!getApplInfo\\(\\)\\.isFZKNavigationDisabled\\(\\) > td:nth-child(2) > a.wbbluebutton.dom_action\\:\\:AcceptFZK.dom_translate\\:\\:amis\\.clause\\.accept';
         await FlowPup.click(page, elem, 3000, 'Step[2] => Event[click] Aggrement[Accept]')
-
         // await page.screenshot({
         //     path: path + 'test-1.png',
         //     fullPage: true
@@ -219,12 +226,13 @@ async function scrapPharma(url) {
             var drugs = codeSample;
         } else {
             var drugsDB = Drugs.find({
+                project: 'atc',
                 checked: {
                     $ne: true
                 }
             }).fetch();
-            Log('warning', 'Drugs[SET] DB')
-            var drugs = codeSample;
+            Log('warning', 'Drugs[SET] DB; ', drugsDB.length + ' to scrap')
+            var drugs = drugsDB;
         }
         /*
           [end] TEST
@@ -237,10 +245,10 @@ async function scrapPharma(url) {
             if (i === drugs.length || !drugs[i]) {
                 await browser.close()
                 Log('done', 'All drugs has been scrapped')
-                  // Write Files
-                  await App.writeFile('/exports/pharma_atc.json', JSON.stringify(Items.find({
+                // Write Files
+                await App.writeFile('/exports/pharma_atc.json', JSON.stringify(Items.find({
                     type: 'acc'
-                  }).fetch()));
+                }).fetch()));
                 log('================================================================')
                 return
             } else {
@@ -249,12 +257,27 @@ async function scrapPharma(url) {
                     Log('step', 'Passing Search Test')
                     await pharma.searchItem(drugs[i], browser, page)
                 } else {
-                    await pharma.searchItem(drugs[i].name, browser, page)
+                    await pharma.searchItem(drugs[i].code, browser, page)
                 }
             }
         }
         // end loop
     } catch (error) {
         log('error', error)
+    }
+}
+/*
+    Reading Remote File Data
+*/
+async function remoteFile(url) {
+    //console.log(url)
+    let file = await axios(url);
+    if (file && file.data) {
+        var header = 'code;name;dose'
+        var data = header + file.data;
+        var Atc_csv = Papa.parse(data, {
+            header: true
+        })
+        DB.batchAtc(Atc_csv.data, 'code', 'atc')
     }
 }

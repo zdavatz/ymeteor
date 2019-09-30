@@ -1,14 +1,12 @@
 /*
     DB.
 */
-
 import _ from 'lodash'
 import './collections.js'
 import log from './log.js'
 import {
   globalAgent
 } from 'http';
-
 DB = {}
 /*
   DB insert Collection
@@ -26,9 +24,8 @@ DB.itemInsert = async (doc, field) => {
    log('success','DB: Doc Update' + doc[field])
   }
 }
-
-
-DB.batchInsert = async (data, field) => {
+DB.batchInsert = async (data, field,project) => {
+  console.log(data[2],field,project)
   if (!data || !data.length || !field) {
     console.log('DB:batchInsert Err')
     return;
@@ -39,21 +36,19 @@ DB.batchInsert = async (data, field) => {
     })
     if (!isExist) {
       console.log('DB.batchInsert: Success,', item[field], 'Inserted')
+      item.project = project
       Items.insert(item)
     } else {
       console.log('DB.batchInsert: Doc[Exists], Doc', item[field], 'Exists')
     }
   })
 }
-
 //
-
-DB.batchDrugs = async (data) => {
+DB.batchDrugs = async (data,project) => {
   if (!data || !data.length) {
     console.log('DB:batchInsert Err')
     return;
   }
-
   console.log('Checking meds.....')
   _.each(data, (item) => {
     let isExist = Drugs.findOne({
@@ -69,12 +64,30 @@ DB.batchDrugs = async (data) => {
       })
     }
   })
-
-
 }
-
+// Drugs.remove({})
+DB.batchAtc = async (data,field,project) => {
+  if (!data || !data.length) {
+    console.log('DB:batchInsert Err')
+    return;
+  }
+  console.log('Checking meds.....')
+  _.each(data, (item) => {
+    let isExist = Drugs.findOne({
+      name: item.name
+    })
+    if (!isExist && item) {
+      if (!item || !item.name) {
+        console.log('Checking...')
+        return
+      }
+      item.project = project
+      console.log('DrugsInsert: Success,', item, 'Inserted')
+      Drugs.insert(item)
+    }
+  })
+}
 //
-
 DB.batchColInsert = (col, data, field) => {
   if (!data || !data.length || !field || !global[col]) {
     console.log('DB:batchInsert Err', col)
@@ -92,12 +105,9 @@ DB.batchColInsert = (col, data, field) => {
     }
   })
 }
-
 /*
   Checking f a keyword is scrapped or not
 */
 DB.checkKeywod = (isTesting) => {
   if (isTesting) return;
-
-
 }
