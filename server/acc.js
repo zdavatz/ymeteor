@@ -205,10 +205,10 @@ async function scrapPharma(url) {
         var elem = '#clause > div > div > table:nth-child(2) > tbody > tr.dom_if\\:\\:\\!getApplInfo\\(\\)\\.isFZKNavigationDisabled\\(\\) > td:nth-child(2) > a.wbbluebutton.dom_action\\:\\:AcceptFZK.dom_translate\\:\\:amis\\.clause\\.accept';
         await FlowPup.click(page, elem, 3000, 'Step[2] => Event[click] Aggrement[Accept]')
 
-        await page.screenshot({
-            path: path + 'test-1.png',
-            fullPage: true
-        });
+        // await page.screenshot({
+        //     path: path + 'test-1.png',
+        //     fullPage: true
+        // });
         // Search page
         // ==> Search Drugs
         /*
