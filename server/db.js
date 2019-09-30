@@ -14,13 +14,16 @@ DB = {}
   DB insert Collection
 */
 DB.itemInsert = async (doc, field) => {
-  if (!Items.findOne({
-      [field]: doc[field]
-    })) {
+  var isItem = Items.findOne({
+    [field]: doc[field]
+  })
+  if (!isItem) {
     Items.insert(doc);
     log('success','DB: Doc Inserted : ' + doc[field] + ' -  ' + doc['name'])
   }else{
    log('warning','DB: Doc Exists' + doc[field])
+   Items.update({_id:isItem._id},{$set:doc})
+   log('success','DB: Doc Update' + doc[field])
   }
 }
 

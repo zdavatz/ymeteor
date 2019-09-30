@@ -16,7 +16,7 @@ const puppeteer = require('puppeteer');
 var Project = YAML.parse(Assets.getText('urls.yaml'))
 // Public Directory Path
 var path = process.env['METEOR_SHELL_DIR'] + '/../../../public/';
-let root = 'https://www.swissmedic.ch';
+let rootDir = 'https://www.swissmedic.ch';
 let swissList = 'https://www.swissmedic.ch/swissmedic/de/home/humanarzneimittel/marktueberwachung/qualitaetsmaengel-und-chargenrueckrufe/chargenrueckrufe.html';
 let qa = 'https://www.swissmedic.ch/swissmedic/de/home/humanarzneimittel/marktueberwachung/health-professional-communication--hpc-.html';
 let frDrugs = 'https://www.swissmedic.ch/swissmedic/fr/home/humanarzneimittel/marktueberwachung/qualitaetsmaengel-und-chargenrueckrufe/chargenrueckrufe.html';
@@ -51,7 +51,7 @@ Swiss.patch = (data, type, lang) => {
     if (isExist || exclude.indexOf(item.title) == -1) {
       item.type = type;
       item.lang = lang;
-      item.url = root + item.url;
+      item.url = rootDir + item.url;
       var id = Items.insert(item)
       // Scrap DRUG
       Swiss.scrapDrug(item.url, id)
@@ -115,7 +115,7 @@ Swiss.scrapDrug = async (url, id) => {
     data,
     response
   }) => {
-    data.pdf = root + data.pdf
+    data.pdf = rootDir + data.pdf
     var item = Items.findOne({
       _id: id
     });
