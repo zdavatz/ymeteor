@@ -4,6 +4,7 @@
 import './collections.js'
 import './db.js'
 import './app.js'
+import FlowPup from './flowPub.js'
 import Log from './log.js'
 const fs = require("fs");
 const _ = require('lodash')
@@ -14,7 +15,7 @@ cheerioTableparser = require('cheerio-tableparser')
 log = console.log;
 //
 var path = process.env['METEOR_SHELL_DIR'] + '/../../../exp/';
-var root = process.env['METEOR_SHELL_DIR'] + '/../../../';
+var rootDir = process.env['METEOR_SHELL_DIR'] + '/../../../';
 //
 var drugsSample = ['5', 'AARANE'];
 /*
@@ -28,7 +29,7 @@ var drugs;
 /*
   ====Flow Init
  */
-FlowPup = {}
+
 /*
   ====Pharma Specific
  */
@@ -72,7 +73,8 @@ if (isPharma) {
   Insert All drugs into Collection
 */
 async function initCheck() {
-  if (fs.existsSync(root + '/private/prodname_unique.txt')) {
+  let isPharmaFileExists = fs.existsSync(rootDir + '/private/prodname_unique.txt');
+  if ( isPharmaFileExists) {
     Log('success', 'Drug file exists')
   } else {
     Log('error', chalk.red('Drugs file does not exist in /private; Add "prodname_unique.txt" in /private'))
@@ -94,42 +96,12 @@ async function initCheck() {
   }).fetch()));
   //
   await scrapPharma(pharma.entry)
-  // Meteor.setTimeout(function(){
+
   App.exit()
-  // },7000)
+
 
 }
-/*
- */
-FlowPup.goto = async (url, page, delay) => {
-  await page.goto(url, {
-    waitUntil: 'load'
-  });
-}
-/*
-  Screenshot for debugging
- */
-FlowPup.screenshot = async (page, file, fullpage) => {
-  if (!page || !file || (/\.(gif|jpg|jpeg|tiff|png)$/i).test(file) == false) {
-    console.log('Error in image file or connection')
-    return
-  };
-  Log('screen', 'Screenshot saved:' + file)
-  await page.screenshot({
-    path: path + file,
-    fullPage: fullpage
-  });
-}
-/*
- */
-FlowPup.click = async (page, el, delay, msg) => {
-  await page.click(el);
-  Log('step', 'Event[click]: ' + msg)
-  if (delay && Number.isInteger(delay)) {
-    //console.log('Clicked: el', el, 'loading...', delay)
-    await page.waitFor(delay);
-  }
-}
+
 /*
   Extracting Item from a Page
  */
@@ -188,6 +160,9 @@ FlowPup.searchItem = async (keyword, browser, page) => {
     return
   }
   Log('progress', 'Searching: ' + chalk.green(keyword))
+
+
+
   await page.focus('#\\30 ');
   await page.keyboard.down('Control');
   await page.keyboard.press('A');
