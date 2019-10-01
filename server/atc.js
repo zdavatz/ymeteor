@@ -93,9 +93,14 @@ pharma.extractItem = async (page, keyword) => {
     var docLen = $('#contentFrame > table:nth-child(1) > tbody > tr:nth-child(2) > td:nth-child(1)').find('a').length
     if (docLen > 0) {
         $('#contentFrame > table:nth-child(1) > tbody > tr:nth-child(2) > td:nth-child(1)').find('a').each(function () {
+            if(!$(this).text()){
+                return
+            }
             var t = $(this).text().split(/\s/)
+
             var t = _.compact(t)
             var file = {}
+            // check the files
             if (t.length == 3) {
                 file.date = t[0]
                 file.name = t[1]
