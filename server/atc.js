@@ -96,7 +96,7 @@ pharma.extractItem = async (page, keyword) => {
             var t = $(this).text().split(/\s/)
             var t = _.compact(t)
             var file = {}
-            if (t.length && t[1] && t[2] && t[0]) {
+            if (t.length == 3) {
                 file.date = t[0]
                 file.name = t[1]
                 file.lang = t[2].replace(/[^\w\s]/gi, '')
