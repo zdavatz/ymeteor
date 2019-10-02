@@ -46,6 +46,11 @@ if (isCode) {
     }
     runAtc()
 }
+
+if(isClean){
+    Drugs.remove({project:'atc'})
+    Items.remove({project:'atc'})
+}
 /*
     RUN
 */
@@ -56,6 +61,9 @@ async function runAtc() {
         type: 'acc'
     }).fetch()));
     await scrapPharma(pharma.entry)
+    await App.writeFile('/exports/pharma_atc.json', JSON.stringify(Items.find({
+        type: 'acc'
+    }).fetch()));
     App.exit()
 }
 /*
@@ -285,7 +293,7 @@ async function remoteFile(url) {
         var Atc_csv = Papa.parse(data, {
             header: true
         })
-        console.log(Atc_csv.data[1])
+        // console.log(Atc_csv.data[1])
         DB.batchAtc(Atc_csv.data, 'code', 'atc')
     }
 }

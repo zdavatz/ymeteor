@@ -18,7 +18,7 @@ log = console.log
 var Project = YAML.parse(Assets.getText('urls.yaml'))
 // Public Directory Path
 var path = process.env['METEOR_SHELL_DIR'] + '/../../../public/';
-let root = 'https://www.swissmedic.ch';
+let rootURL = 'https://www.swissmedic.ch';
 // 
 let swissList = 'https://www.swissmedic.ch/swissmedic/de/home/humanarzneimittel/marktueberwachung/qualitaetsmaengel-und-chargenrueckrufe/chargenrueckrufe.html';
 let qa = 'https://www.swissmedic.ch/swissmedic/de/home/humanarzneimittel/marktueberwachung/health-professional-communication--hpc-.html';
@@ -49,7 +49,7 @@ Swiss.patch = (data, type, lang) => {
         if (!isExist || exclude.indexOf(item.title) == -1) {
             item.type = type;
             item.lang = lang;
-            item.url = root + item.url;
+            item.url = rootURL + item.url;
             var id = Items.insert(item);
             Swiss.scrapDrug(item.url, id)
         }
@@ -118,7 +118,7 @@ Swiss.scrapDrug = (url, id) => {
             Items.remove(id)
         }else{
             console.log('Files updated for ',data.title)
-            data.pdf = root + data.pdf
+            data.pdf = rootURL + data.pdf
             Items.update({
                 _id: id
             }, {

@@ -8,7 +8,7 @@ import { builtinModules } from "module";
  */
 
 const path = process.env['METEOR_SHELL_DIR'] + '/../../../public';
-const exp = root + 'exp/'
+const exp = path + 'exp/'
 /*
 
 */
