@@ -159,10 +159,11 @@ FlowPup.extractItem = async (page, keyword) => {
   item.files = files;
   var item = Object.assign(item, general);
   // Export field
-  item.type = 'pharma';
+  var type = 'pharma';
+  item.type = type;
   Log('success', 'Scrapping[done]: ' + chalk.cyan(item.name))
   // DB[Insert]
-  DB.itemInsert(item, 'number')
+  DB.itemInsert(item, 'number',type)
 }
 /*
   Search Keyword

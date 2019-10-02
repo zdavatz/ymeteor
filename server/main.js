@@ -24,6 +24,8 @@ Check = {}
 Check.pharma = Items.find({type:'pharma'}).count()
 Check.swiss = Items.find({type:'doc'}).count()
 Check.code = Items.find({type:'code'}).count()
-
-log('start',JSON.stringify(Check))
+Check.pharmaX = Items.find({type:'pharma'},{limit:1}).fetch()
+Check.atc = Items.find({project:'atc'},{limit:1}).fetch()
+// log('start',JSON.stringify(Check))
+console.log(Check)
 

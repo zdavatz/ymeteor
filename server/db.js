@@ -11,13 +11,14 @@ DB = {}
 /*
   DB insert Collection
 */
-DB.itemInsert = async (doc, field) => {
+DB.itemInsert = async (doc, field,type) => {
   var isItem = Items.findOne({
-    [field]: doc[field]
+    [field]: doc[field],
+    type: type
   })
   if (!isItem) {
     Items.insert(doc);
-    log('success','DB: Doc Inserted : ' + doc[field] + ' -  ' + doc['name'])
+    log('success','DB: Doc Inserted : ' + doc[field] + ' - ' + doc['name'] + ' - Project:' +type)
   }else{
     // Update products
    log('warning','DB: Doc Exists' + doc[field])

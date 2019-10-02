@@ -128,14 +128,15 @@ pharma.extractItem = async (page, keyword) => {
     item.files = files;
     var item = Object.assign(item, general);
     // Export field
-    item.type = 'acc';
+    var type = 'acc'
+    item.type = type
     Log('success', 'Scrapping[done]: ' + chalk.cyan(item.name))
     var summary = Drugs.findOne({
         code: keyword
     })
     item.meta = summary;
-    item.project = 'atc';
-    DB.itemInsert(item, 'number')
+    item.project = type;
+    DB.itemInsert(item, 'number',type)
 }
 /*
   Search Keyword
