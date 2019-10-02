@@ -141,7 +141,7 @@ Swiss.run = () => {
 
 Swiss.record = () => {
   console.log('Progress: Getting files ready')
-
+  // German
   Swiss.writeFile('/exports/chargenrueckrufe_de.json', JSON.stringify(Swiss.getItems('drug', 'de')))
   Swiss.writeFile('/exports/dhcp_hcp_de.json', JSON.stringify(Swiss.getItems('doc', 'de')))
   // French
