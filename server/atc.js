@@ -26,7 +26,8 @@ let fileRemoteURL = 'https://raw.githubusercontent.com/zdavatz/cpp2sqlite/master
 */
 let isTest = false;
 let isClean = false;
-let codeSample = ['A01AA01', 'A01AA03', 'A01AB09', 'A02AC02', 'A02AD04']
+// let codeSample = ['A01AA01', 'A01AA03', 'A01AB09', 'A02AC02', 'A02AD04']
+let codeSample = ['G04BE03']
 /*
  */
 pharma = {}
