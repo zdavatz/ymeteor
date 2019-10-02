@@ -279,11 +279,13 @@ async function remoteFile(url) {
     //console.log(url)
     let file = await axios(url);
     if (file && file.data) {
-        var header = 'code;name;dose'
+        // Fixing #16
+        var header = 'code;name;dose\n'
         var data = header + file.data;
         var Atc_csv = Papa.parse(data, {
             header: true
         })
+        console.log(Atc_csv.data[1])
         DB.batchAtc(Atc_csv.data, 'code', 'atc')
     }
 }
