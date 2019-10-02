@@ -19,6 +19,7 @@ DB.itemInsert = async (doc, field) => {
     Items.insert(doc);
     log('success','DB: Doc Inserted : ' + doc[field] + ' -  ' + doc['name'])
   }else{
+    // Update products
    log('warning','DB: Doc Exists' + doc[field])
    Items.update({_id:isItem._id},{$set:doc})
    log('success','DB: Doc Update' + doc[field])

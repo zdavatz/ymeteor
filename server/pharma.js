@@ -133,14 +133,21 @@ FlowPup.extractItem = async (page, keyword) => {
   var docLen = $('#contentFrame > table:nth-child(1) > tbody > tr:nth-child(2) > td:nth-child(1)').find('a').length
   if (docLen > 0) {
     $('#contentFrame > table:nth-child(1) > tbody > tr:nth-child(2) > td:nth-child(1)').find('a').each(function () {
+      if(!$(this).text()){
+        return
+    }
       var t = $(this).text().split(/\s/)
       var t = _.compact(t)
+      if(t.length >= 3){
+
+      
       files.push({
         date: t[0],
         name: t[1],
         lang: t[2].replace(/[^\w\s]/gi, ''),
         link: $(this).attr('href')
       })
+    }
     });
   }
   item.files = files;
