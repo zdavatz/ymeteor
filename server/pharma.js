@@ -128,7 +128,7 @@ FlowPup.extractItem = async (page, keyword) => {
     refNo: $('#rechts > div:nth-child(6) > div:nth-child(16) > span:nth-child(5)').text(),
     data: $("#rechts > div:nth-child(14) > div:nth-child(5) > table").parsetable(true, true, true),
   }
-  // AK-Classification
+  // AK-Classification +
   var amKlassification = $('#contentFrame > table:nth-child(4) > tbody:nth-child(1) > tr:nth-child(4) > td:nth-child(1) > div:nth-child(18) > table:nth-child(2) > tbody:nth-child(1)').text()
   // #contentFrame > table:nth-child(4) > tbody:nth-child(1) > tr:nth-child(4) > td:nth-child(1) > div:nth-child(18) > table:nth-child(2) > tbody:nth-child(1)
   if (amKlassification) {
