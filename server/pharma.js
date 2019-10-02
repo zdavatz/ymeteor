@@ -74,7 +74,7 @@ if (isPharma) {
 */
 async function initCheck() {
   let isPharmaFileExists = fs.existsSync(rootDir + '/private/prodname_unique.txt');
-  if ( isPharmaFileExists) {
+  if (isPharmaFileExists) {
     Log('success', 'Drug file exists')
   } else {
     Log('error', chalk.red('Drugs file does not exist in /private; Add "prodname_unique.txt" in /private'))
@@ -128,26 +128,32 @@ FlowPup.extractItem = async (page, keyword) => {
     refNo: $('#rechts > div:nth-child(6) > div:nth-child(16) > span:nth-child(5)').text(),
     data: $("#rechts > div:nth-child(14) > div:nth-child(5) > table").parsetable(true, true, true),
   }
+  // AK-Classification
+  var amKlassification = $('#contentFrame > table:nth-child(4) > tbody:nth-child(1) > tr:nth-child(4) > td:nth-child(1) > div:nth-child(18) > table:nth-child(2) > tbody:nth-child(1)').text()
+  // #contentFrame > table:nth-child(4) > tbody:nth-child(1) > tr:nth-child(4) > td:nth-child(1) > div:nth-child(18) > table:nth-child(2) > tbody:nth-child(1)
+  if (amKlassification) {
+    item.amKlassification = amKlassification.replace(/(\r\n|\n|\r|\t)/gm, "");
+  }
   // Files
   var files = []
   var docLen = $('#contentFrame > table:nth-child(1) > tbody > tr:nth-child(2) > td:nth-child(1)').find('a').length
   if (docLen > 0) {
     $('#contentFrame > table:nth-child(1) > tbody > tr:nth-child(2) > td:nth-child(1)').find('a').each(function () {
-      if(!$(this).text()){
+      if (!$(this).text()) {
         return
-    }
+      }
       var t = $(this).text().split(/\s/)
       var t = _.compact(t)
-      if(t.length >= 3){
+      if (t.length >= 3) {
 
-      
-      files.push({
-        date: t[0],
-        name: t[1],
-        lang: t[2].replace(/[^\w\s]/gi, ''),
-        link: $(this).attr('href')
-      })
-    }
+
+        files.push({
+          date: t[0],
+          name: t[1],
+          lang: t[2].replace(/[^\w\s]/gi, ''),
+          link: $(this).attr('href')
+        })
+      }
     });
   }
   item.files = files;
