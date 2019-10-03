@@ -52,7 +52,7 @@ if (isClean) {
 }
 
 
-Drugs.remove({})
+
 /*
   =====Run Pharma Project
 */
@@ -85,16 +85,16 @@ async function initCheck() {
   Log('progress', 'Checking Drugs:Products Files, Content: ' + meds.length)
   var drugsCount = Drugs.find({project:'product'}).count()
   // 
-  console.log('Drugs File:DB => ', meds.length, ':', drugsCount)  
-  if (meds.length !== drugsCount) {
+  console.log('Drugs File:DB => ', meds.length, ':', (drugsCount+1))  
+  if (meds.length !== (drugsCount+1)) {
     Log('warning', 'Drugs[file]: Has new data Updating Drugs')
+    
     await DB.batchDrugs(meds)
   }
 
+  // return
   // Write first file
-  // await App.writeFile('/exports/pharma.json', JSON.stringify(Items.find({
-  //   type: 'pharma'
-  // }).fetch()));
+  await App.writeFile('/exports/pharma-product-arr.json', JSON.stringify(meds));
   //
   await scrapPharma(pharma.entry)
 
