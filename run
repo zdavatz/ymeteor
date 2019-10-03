@@ -1,0 +1,5 @@
+# meteor | sed -e '/Exited with code/q'
+meteor --once --settings pharma.json
+meteor --once --settings swiss.json
+cd public/exports
+scp *.json zeno@192.168.0.166:/home/ftp/

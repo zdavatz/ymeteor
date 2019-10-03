@@ -1,0 +1,3129 @@
+code;name;dose
+A01AA01;Natriumfluorid;1,1 mg O 0,5 mg Fluorid
+A01AA03;Olaflur;1,1 mg O
+A01AB02;Wasserstoffperoxid;60 mg O
+A01AB03;Chlorhexidin;30 mg O
+A01AB04;Amphotericin B;40 mg O
+A01AB05;Polynoxylin;0,18 g O
+A01AB06;Domiphen;3 mg O
+A01AB07;Oxychinolin;80 mg O
+A01AB09;Miconazol;0,2 g O
+A01AB10;Natamycin;20 mg O
+A01AB23;Minocyclin;1 mg O
+A01AB33;Nystatin;500 TSD E O 
+A02AA04;Magnesiumhydroxid;3 g O
+A02AB02;Algeldrat;5 g O
+A02AB04;Dihydroxyaluminiumnatriumcarbonat (Carbaldrat)**;4 g O
+A02AC02;Calciumsilikat;6 g O
+A02AD01;Einfache Salzkombinationen**;Standarddosis: 10 Tabletten oder 50 ml Mixtur
+A02AD02;Magaldrat;3,2 g O 
+A02AD04;Hydrotalcit;3,5 g O 
+A02AD05;Almasilat;4 g O 
+A02AD06;Simaldrat;5 g O 
+A02BA01;Cimetidin;0,8 g O,P
+A02BA02;Ranitidin;0,3 g O,P
+A02BA03;Famotidin;40 mg O,P
+A02BA04;Nizatidin;0,3 g O,P
+A02BA06;Roxatidin;0,15 g O
+A02BA07;Ranitidinbismutcitrat;0,8 g O
+A02BA08;Lafutidin;20 mg O
+A02BB01;Misoprostol;0,8 mg O
+A02BB02;Enprostil;70 mcg O
+A02BC01;Omeprazol;20 mg O,P
+A02BC02;Pantoprazol;"40 mg O,P; 20 mg O,P "
+A02BC03;Lansoprazol;"30 mg O; 15 mg O "
+A02BC04;Rabeprazol;"20 mg O; 10 mg O,P "
+A02BC05;Esomeprazol;"30 mg O,P; 20 mg O,P "
+A02BC06;Dexlansoprazol;30 mg O
+A02BD04;Pantoprazol, Amoxicillin und Clarithromycin;Kombinationspackung: 6 DE O 
+A02BD05;Omeprazol, Amoxicillin und Clarithromycin;Kombinationspackung: 6 DE O 
+A02BD08;Bismutsubcitrat, Tetracyclin und Metronidazol;Kombinationspackung: 12 DE O 
+A02BX01;Carbenoxolon;0,15 g O
+A02BX02;Sucralfat;4 g O
+A02BX03;Pirenzepin;"0,1 g O; 20 mg P"
+A02BX05;Bismutsubcitrat;0,48 g O
+A02BX06;Proglumid;1,2 g O
+A02BX14;Rebamipid;0,3 g O
+A02BX63;Alginsäure, Kombinationen;Standarddosis: 10 Tabletten oder 50 ml Mixtur O 
+A03AA01;Oxyphencyclimin;20 mg O
+A03AA03;Camylofin;0,2 g O,R
+A03AA04;Mebeverin;"0,3 g O; 0,4 g O "
+A03AA05;Trimebutin;0,6 g O
+A03AA07;Dicycloverin;80 mg O,P
+A03AB01;Benzilon;70 mg O
+A03AB02;Glycopyrroniumbromid;"3 mg O,R; 0,3 mg P; 2,4 mg O Kinder DDD bezogen auf Glycopyrronium "
+A03AB03;Oxyphenonium;25 mg O
+A03AB04;Penthienat;15 mg O
+A03AB05;Propanthelin;60 mg O,P
+A03AB07;Methanthelinium;0,15 g O
+A03AB08;Tridihexethyl;0,125 g O
+A03AB09;Isopropamid;10 mg O
+A03AB10;Hexocyclium;0,15 g O
+A03AB11;Poldin;12 mg O
+A03AB12;Mepenzolat;0,1 g O
+A03AB13;Bevonium;0,2 g O
+A03AB14;Pipenzolat;20 mg O
+A03AB16;(2-Benzhydryloxyethyl)diethylmethylammoniumiodid;0,3 g O
+A03AD01;Papaverin;0,1 g O,P
+A03AD02;Drotaverin;0,1 g O,P
+A03AD30;Moxaverin;50 mg O
+A03AE01;Alosetron;1 mg O
+A03AX03;Chlorbenzoxamin;0,15 g O
+A03AX04;Pinaverium;0,15 g O
+A03AX13;Silikone;0,5 g O
+A03AX30;Trimethyldiphenylpropylamin;50 mg O,P
+A03BA01;Atropin;1,5 mg O,P
+A03BA03;Hyoscyamin;1,2 mg O
+A03BA04;Belladonna-Gesamtalkaloide;1 mg O
+A03BB01;Butylscopolamin;60 mg O,P,R
+A03BB02;Methylatropin;3 mg O
+A03BB03;Methylscopolamin;12 mg O,P
+A03BB04;Fentonium;60 mg O
+A03FA01;Metoclopramid;"30 mg O,P,R; 10 mg R Kinder DDD "
+A03FA02;Cisaprid;30 mg O,R
+A03FA03;Domperidon;"30 mg O,P; 0,12 g R"
+A03FA04;Bromoprid;20 mg O,P
+A03FA05;Alizaprid;0,15 g O,P
+A03PP02;Schöllkraut;"3,5 g O Droge; 21 mg O Gesamtalkaloide, berechnet als Chelidonin "
+A04AA01;Ondansetron;16 mg O,P,R
+A04AA02;Granisetron;"2 mg O; 3 mg P; 3,1 mg TD Pflaster bezogen auf die Freisetzungsrate
+pro 24 Stunden"
+A04AA03;Tropisetron;5 mg O,P
+A04AA04;Dolasetron;"0,2 g O; 0,1 g P"
+A04AA05;Palonosetron;"0,5 mg O; 0,25 mg P"
+A04AA55;Palonosetron, Kombinationen;0,5 mg O bezogen auf Palonosetron 
+A04AB02;Dimenhydrinat;"0,275 g O; 0,2 g R "
+A04AB04;Meclozin;"37,5 mg O; 50 mg R "
+A04AB54;Meclozin, Kombinationen;"37,5 mg O bezogen auf Meclozin; 50 mg R bezogen auf Meclozin "
+A04AD05;Metopimazin;15 mg O,P
+A04AD11;Nabilon;3 mg O 
+A04AD12;Aprepitant, Fosaprepitant;"165 mg O Eindosisbehandlung; 150 mg P bezogen auf Fosaprepitant; 
+95 mg O; 70 mg O Kinder DDD "
+A04AD14;Rolapitant;0,18 g O Eindosisbehandlung
+A05AA01;Chenodeoxycholsäure;1 g O
+A05AA02;Ursodeoxycholsäure;0,75 g O
+A05AA03;Cholsäure;0,25 g O Kinder DDD 
+A05AA04;Obeticholsäure;10 mg O
+A05AP03;Artischockenblätter;"6 g O Droge; 30 g O Frischpflanze "
+A05AP07;Curcumawurzelstock;"2 g O Javanische Gelbwurz; 2,25 g O Curcumawurzelstock "
+A05AX02;Hymecromon;1 g O 
+A05BP01;Mariendistelfrüchte;"13,5 g O Droge; 0,3 g O bezogen auf Silymarin "
+A06AA01;Dickflüssiges Paraffin;15 g O
+A06AA02;Docusat-Natrium;0,15 g O
+A06AB01;Oxyphenisatin;10 mg O
+A06AB02;Bisacodyl;10 mg O,R
+A06AB03;Dantron;50 mg O
+A06AB04;Phenolphthalein;0,2 g O
+A06AB05;Rizinusöl;20 g O
+A06AB08;Natriumpicosulfat;"5 mg O; 2,5 mg O Kinder DDD "
+A06AB09;Bisoxatin;0,12 g O
+A06AB10;Koloquinthen;0,3 g O Droge 
+A06AC01;Ispaghula (Flohsamen);7 g O
+A06AC02;Ethulose;3 g O
+A06AC03;Sterculia;8 g O
+A06AC06;Methylcellulose;2 g O
+A06AC07;Triticum (Weizenkleie);10 g O
+A06AC08;Polycarbophil-Calcium;2,5 g O
+A06AD01;Magnesiumcarbonat;7 g O
+A06AD02;Magnesiumoxid;7 g O
+A06AD04;Magnesiumsulfat;7 g O
+A06AD11;Lactulose;"6,7 g O; 12,5 g O "
+A06AD12;Lactitol;10 g O
+A06AD15;Macrogol;10 g O
+A06AD17;Natriumphosphat;50 g O
+A06AD18;Sorbitol;10 g O
+A06AD65;Macrogol, Kombinationen;Standarddosis: 2 DE O 
+A06AG01;Natriumphosphat;Standarddosis: 1 DE R 
+A06AG02;Bisacodyl;Standarddosis: 1 DE R 
+A06AG03;Dantron, inkl. Kombinationen;Standarddosis: 1 DE R 
+A06AG04;Glycerol;Standarddosis: 1 DE R 
+A06AG06;Öl;Standarddosis: 1 DE R 
+A06AG07;Sorbitol;Standarddosis: 1 DE R 
+A06AG10;Docusat-Natrium, inkl. Kombinationen;Standarddosis: 1 DE R 
+A06AG11;Natriumlaurylsulfoacetat, inkl. Kombinationen;Standarddosis: 1 DE R 
+A06AG20;Kombinationen;Standarddosis: 1 DE R 
+A06AH01;Methylnaltrexonbromid;6 mg P
+A06AH03;Naloxegol;25 mg O
+A06AH05;Naldemedin;0,2 mg O
+A06AX01;Glycerol;2 g R 
+A06AX04;Linaclotid;0,29 mg O
+A06AX05;Prucaloprid;2 mg O
+A06AX06;Tegaserod;12 mg O
+A06AX07;Plecanatid;3 mg O
+A07AA01;Neomycin;5 g O
+A07AA02;Nystatin;1,5 MIO E O
+A07AA03;Natamycin;0,3 g O
+A07AA05;Polymyxin B;3 MIO E O
+A07AA06;Paromomycin;3 g O
+A07AA07;Amphotericin B;0,4 g O
+A07AA08;Kanamycin;3 g O
+A07AA09;Vancomycin;2 g O
+A07AA10;Colistin;9 MIO E O
+A07AA11;Rifaximin;0,6 g O
+A07AA12;Fidaxomicin;0,4 g O
+A07AB02;Phthalylsulfathiazol;9 g O
+A07AB03;Sulfaguanidin;4 g O
+A07AC01;Miconazol;1 g O
+A07AX03;Nifuroxazid;0,6 g O
+A07BA01;Medizinische Kohle;5 g O
+A07BC05;Diosmectit;9 g O
+A07DA01;Diphenoxylat;15 mg O
+A07DA02;Opium;"0,1 g O; 1 g O "
+A07DA03;Loperamid;"10 mg O; 3,5 mg O Kinder DDD "
+A07DA05;Loperamidoxid;5 mg O
+A07DA06;Eluxadolin;0,2 g O
+A07EA04;Betamethason;Standarddosis: 1 DE R 
+A07EA06;Budesonid;"9 mg O; Standarddosis: 1 DE R "
+A07EA51;Prednisolon, Kombinationen;Standarddosis: 1 DE R 
+A07EB01;Cromoglicinsäure;0,8 g O
+A07EC01;Sulfasalazin;"2 g O,R; Standarddosis: 1 DE R "
+A07EC02;Mesalazin;"1,5 g O,R; Standarddosis: 1 DE R "
+A07EC03;Olsalazin;1 g O
+A07EC04;Balsalazid;6,75 g O
+A07FA02;Saccharomyces boulardii;1 g O
+A07XA01;Albumintannat;3 g O
+A07XA04;Racecadotril;"0,3 g O; 0,1 g O Kinder DDD "
+A08AA01;Phentermin;15 mg O
+A08AA02;Fenfluramin;0,12 g O
+A08AA03;Amfepramon;75 mg O
+A08AA04;Dexfenfluramin;30 mg O
+A08AA05;Mazindol;1 mg O
+A08AA10;Sibutramin;10 mg O
+A08AA62;Bupropion und Naltrexon;4 DE O 
+A08AB01;Orlistat;0,36 g O
+A08AX01;Rimonabant;20 mg O
+A08AX02;Liraglutid;3 mg P 
+A09AA02;Multienzyme (Lipase, Protease etc.);240 TSD FIP E O Lipase 
+A09AB01;Glutaminsäurehydrochlorid;1,5 g O
+A09AB02;Betainhydrochlorid;1 g O
+A09AB04;Zitronensäure;2 g O
+A10AB01;Insulin (human);40 E P
+A10AB02;Insulin (Rind);40 E P
+A10AB03;Insulin (Schwein);40 E P
+A10AB04;Insulin lispro;40 E P
+A10AB05;Insulin aspart;40 E P
+A10AB06;Insulin glulisin;40 E P
+A10AB30;Kombinationen;40 E P
+A10AC01;Insulin (human);40 E P
+A10AC02;Insulin (Rind);40 E P
+A10AC03;Insulin (Schwein);40 E P
+A10AC04;Insulin lispro;40 E P
+A10AC30;Kombinationen;40 E P
+A10AD01;Insulin (human);40 E P
+A10AD02;Insulin (Rind);40 E P
+A10AD03;Insulin (Schwein);40 E P
+A10AD04;Insulin lispro;40 E P
+A10AD05;Insulin aspart;40 E P
+A10AD06;Insulin degludec und Insulin aspart;40 E P
+A10AD30;Kombinationen;40 E P
+A10AE01;Insulin (human);40 E P
+A10AE02;Insulin (Rind);40 E P
+A10AE03;Insulin (Schwein);40 E P
+A10AE04;Insulin glargin;40 E P
+A10AE05;Insulin detemir;40 E P
+A10AE06;Insulin degludec;40 E P
+A10AE30;Kombinationen;40 E P
+A10AE54;Insulin glargin und Lixisenatid;40 E P bezogen auf Insulin glargin
+A10AE56;Insulin degludec und Liraglutid;40 E P bezogen auf Insulin degludec
+A10AF01;Insulin (human);15 mg Inhal.pulver
+A10BA01;Phenformin;0,1 g O
+A10BA02;Metformin;2 g O
+A10BA03;Buformin;0,2 g O
+A10BB01;Glibenclamid;"10 mg O; 7 mg O mikrokristall. Substanz; 6 mg O Kinder DDD bezogen auf die kontinuierliche Behandlung ohne Insulindosis "
+A10BB02;Chlorpropamid;0,375 g O
+A10BB03;Tolbutamid;1,5 g O
+A10BB04;Glibornurid;38 mg O
+A10BB05;Tolazamid;0,5 g O
+A10BB06;Carbutamid;0,75 g O
+A10BB07;Glipizid;10 mg O
+A10BB08;Gliquidon;60 mg O
+A10BB09;Gliclazid;60 mg O
+A10BB12;Glimepirid;2 mg O
+A10BB31;Acetohexamid;0,5 g O
+A10BC01;Glymidin;1 g O
+A10BD03;Metformin und Rosiglitazon;Standarddosis: 2 DE O 
+A10BD04;Glimepirid und Rosiglitazon;Standarddosis: 1 DE O 
+A10BD05;Metformin und Pioglitazon;Standarddosis: 2 DE O 
+A10BD06;Glimepirid und Pioglitazon;Standarddosis: 1 DE O 
+A10BD07;Metformin und Sitagliptin;Standarddosis: 2 DE O 
+A10BD08;Metformin und Vildagliptin;Standarddosis: 2 DE O 
+A10BD10;Metformin und Saxagliptin;Standarddosis: 2 DE O 
+A10BD15;Metformin und Dapagliflozin;Standarddosis: 2 DE O 
+A10BD16;Metformin und Canagliflozin;Standarddosis: 2 DE O 
+A10BD20;Metformin und Empagliflozin;Standarddosis: 2 DE O 
+A10BD24;Sitagliptin und Ertugliflozin;Standarddosis: 1 DE O 
+A10BD31;Metformin und Glibenclamid;Standarddosis: 2 DE O 
+A10BF01;Acarbose;0,3 g O
+A10BF02;Miglitol;0,3 g O
+A10BF03;Voglibose;0,6 mg O
+A10BG01;Troglitazon;0,4 g O
+A10BG02;Rosiglitazon;6 mg O
+A10BG03;Pioglitazon;30 mg O
+A10BH01;Sitagliptin;0,1 g O
+A10BH02;Vildagliptin;0,1 g O
+A10BH03;Saxagliptin;5 mg O
+A10BH04;Alogliptin;25 mg O
+A10BH05;Linagliptin;5 mg O
+A10BH06;Gemigliptin;50 mg O
+A10BH07;Evogliptin;5 mg O
+A10BJ01;Exenatid;"15 mcg P; 0,286 mg P Depotinjektion"
+A10BJ02;Liraglutid;"1,2 mg P; 1,5 mg P "
+A10BJ03;Lixisenatid;20 mcg P
+A10BJ04;Albiglutid;5,7 mg P
+A10BJ05;Dulaglutid;0,16 mg P
+A10BJ06;Semaglutid;0,11 mg P 
+A10BK01;Dapagliflozin;10 mg O
+A10BK02;Canagliflozin;0,2 g O
+A10BK03;Empagliflozin;17,5 mg O
+A10BK04;Ertugliflozin;10 mg O
+A10BX02;Repaglinid;4 mg O
+A10BX03;Nateglinid;0,36 g O
+A10BX06;Benfluorex;0,45 g O
+A10BX08;Mitiglinid;30 mg O
+A11AA02;Multivitamine und Calcium;Standarddosis: 1 Tablette oder 30 ml Mixtur O 
+A11AA03;Multivitamine und andere Mineralstoffe, inkl. Kombinationen;Standarddosis: 1 Tablette oder 30 ml Mixtur O 
+A11AB50;Multivitamine, andere Kombinationen;Standarddosis: 1 Tablette oder 30 ml Mixtur O 
+A11BA01;Multivitamine, rein;Standarddosis: 1 Tablette oder 30 ml Mixtur O 
+A11CA01;Retinol (Vitamin A);50 TSD E O,P
+A11CC02;Dihydrotachysterol;1 mg O
+A11CC03;Alfacalcidol;1 mcg O,P
+A11CC04;Calcitriol;1 mcg O,P
+A11CC05;Colecalciferol;"20 mcg O; Standarddosis: 1 DE O, P zur Stoßtherapie; 
+500 E O Kinder DDD prophylaktische Dosis "
+A11CC80;Colecalciferol, Kombinationen mit Natriumfluorid;500 E O Kinder DDD bezogen auf Colecalciferol, prophylaktische Dosis 
+A11DA01;Thiamin (Vitamin B1);50 mg O,P
+A11EB01;Vitamin-B-Komplex mit Vitamin C;Standarddosis: 1 Tablette oder 30 ml Mixtur O 
+A11GA01;Ascorbinsäure (Vitamin C);0,2 g O,P
+A11HA01;Nicotinamid;0,15 g O
+A11HA02;Pyridoxin (Vitamin B6);0,16 g O,P
+A11HA03;Tocopherol (Vitamin E);0,2 g O,P
+A11HA05;Biotin;5 mg O 
+A11HA08;Tocofersolan;"0,2 g O bezogen auf Tocopherol; 0,425 g O Kinder DDD RRR-alpha-Tocopherol in Form v. Tocofersolan "
+A11JA01;Retinol, Kombinationen;Standarddosis: 1 Tablette oder 30 ml Mixtur O 
+A11JA03;Tocopherol (Vitamin E), Kombinationen;Standarddosis: 1 Tablette oder 30 ml Mixtur O 
+A11JA20;Kombinationen;Standarddosis: 1 Tablette oder 30 ml Mixtur O 
+A11JB01;Vitamin E, Kombinationen mit Mineralstoffen;Standarddosis: 1 Tablette oder 30 ml Mixtur O 
+A11JC50;Vitamine, andere Kombinationen;Standarddosis: 1 Tablette oder 30 ml Mixtur O 
+A12AA01;Calciumphosphat;2 g O
+A12AA02;Calciumglubionat;2,75 g P
+A12AA03;Calciumgluconat**;3 g O,P
+A12AA04;Calciumcarbonat;3 g O
+A12AA05;Calciumlactat;2 g O
+A12AA06;Calciumlactogluconat;3 g O
+A12AA07;Calciumchlorid;0,2 g P
+A12AA09;Calciumcitratlysin-Komplex;0,5 g O
+A12AA10;Calciumglucoheptonat;3 g O
+A12AA20;Calcium (verschiedene Salze in Kombination);0,5 g O Ca2+
+A12AA30;Calciumlaevulat;1 g P
+A12BA01;Kaliumchlorid;3 g O
+A12BA02;Kaliumcitrat;4 g O
+A12BA03;Kaliumhydrogentartrat;7,5 g O
+A12BA04;Kaliumhydrogencarbonat;4 g O
+A12CA01;Natriumchlorid;1 g O
+A12CB01;Zinksulfat;"0,6 g O; 20 mg O,P "
+A12CB02;Zinkgluconat;20 mg O,P 
+A12CB03;Zinkprotein-Komplex;20 mg O,P 
+A12CB05;Zinkhydrogenaspartat;20 mg O,P 
+A12CB06;Zinkorotat;20 mg O,P 
+A12CC01;Magnesiumchlorid;"2,5 g O; 0,8 g P"
+A12CC02;Magnesiumsulfat;"3 g O; 1 g P"
+A12CC03;Magnesiumgluconat;5 g O
+A12CC04;Magnesiumcitrat;2 g O
+A12CC05;Magnesiumaspartat;10 mmol O Mg2+ 
+A12CC10;Magnesiumoxid;0,5 g O 
+A12CD01;Natriumfluorid;88 mg O bezogen auf Fluorid 40 mg
+A12CD02;Natriummonofluorphosphat;0,152 g O bezogen auf Fluorid 20 mg
+A12CD52;Natriummonofluorphosphat, Kombinationen;20 mg O bezogen auf Fluorid 
+A12CE01;Natriumselenat;0,2 mg O Se
+A12CE02;Natriumselenit;"0,2 mg O Se; 0,2 mg P"
+A13AA01;Glutaminsäure;Standarddosis: 30 ml flüssige Zubereitung O 
+A13AA02;Lebertran;Standarddosis: 30 ml flüssige Zubereitung O 
+A13AA50;Tonika, Kombinationen;Standarddosis: 30 ml flüssige Zubereitung O 
+A14AA02;Stanozolol;"5 mg O; 3,5 mg P"
+A14AA03;Metandienon;5 mg O
+A14AA04;Metenolon;"10 mg O; 7 mg P"
+A14AA05;Oxymetholon;0,25 g O
+A14AB01;Nandrolon;2 mg P
+A14AB02;Ethylestrenol;2 mg O
+A16AA01;Levocarnitin;2 g O,P
+A16AA04;Mercaptamin;2 g O
+A16AA05;Carglumsäure;0,2 g O
+A16AA06;Betain;6 g O
+A16AA07;Metreleptin;5 mg P 
+A16AB02;Imiglucerase;300 E P
+A16AB03;Agalsidase alfa;1 mg P
+A16AB04;Agalsidase beta;5 mg P
+A16AB05;Laronidase;1 TSD E P
+A16AB06;Sacrosidase;68 TSD E O
+A16AB07;Alglucosidase alfa;0,1 g P
+A16AB09;Idursulfase;5 mg P 
+A16AB10;Velaglucerase alfa;300 E P
+A16AB12;Elosulfase alfa;"20 mg P; 7 mg P Kinder DDD "
+A16AB13;Asfotase alfa;21,4 mg P Kinder DDD 
+A16AB14;Sebelipase alfa;"5 mg P; 2 mg P Kinder DDD "
+A16AB15;Velmanase alfa;10 mg P 
+A16AB17;Cerliponase alfa;21 mg P Kinder DDD 
+A16AB18;Vestronidase alfa;20 mg P 
+A16AX01;Thioctsäure (Alpha-Liponsäure);0,6 g O,P
+A16AX03;Natriumphenylbutyrat;20 g O
+A16AX04;Nitisinon;20 mg O
+A16AX05;Zinkacetat;0,15 g O
+A16AX06;Miglustat;0,3 g O
+A16AX07;Sapropterin;0,7 g O 
+A16AX08;Teduglutid;"5 mg P; 1,25 mg P Kinder DDD "
+A16AX09;Glycerolphenylbutyrat;15 g O 
+A16AX10;Eliglustat;0,168 g O
+A16AX12;Trientin;0,7 g O 
+A16AX14;Migalastat;61,5 mg O
+A16AX15;Telotristat;0,75 g O
+B01AA01;Dicoumarol;0,1 g O
+B01AA02;Phenindion;0,1 g O
+B01AA03;Warfarin;7,5 mg O,P
+B01AA04;Phenprocoumon;3 mg O
+B01AA07;Acenocoumarol;5 mg O
+B01AA08;Ethylbiscoumacetat;0,6 g O
+B01AB01;Heparin;10 TSD E P
+B01AB02;Antithrombin III, Antithrombin alfa ;"2,1 TSD E P; 7,5 TSD E P bezogen auf Antithrombin alfa "
+B01AB04;Dalteparin;2,5 TSD E P anti Xa
+B01AB05;Enoxaparin;2 TSD E P anti Xa
+B01AB06;Nadroparin;2,85 TSD E P anti Xa
+B01AB07;Parnaparin;3,2 TSD E P anti Xa
+B01AB08;Reviparin;1,43 TSD E P anti Xa
+B01AB09;Danaparoid;1,5 TSD E P anti Xa
+B01AB10;Tinzaparin;3,5 TSD E P anti Xa
+B01AB11;Sulodexid;500 LSU O,P (Lipoprotein-Lipase-Releasing-Einheiten)
+B01AB12;Bemiparin;2,5 TSD E P
+B01AB13;Certoparin;3 TSD E P anti Xa 
+B01AC04;Clopidogrel;75 mg O
+B01AC05;Ticlopidin;0,5 g O
+B01AC06;Acetylsalicylsäure;1 Tablette O (unabhängig von der Wirkstärke)
+B01AC07;Dipyridamol;"0,4 g O; 0,2 g P"
+B01AC08;Carbasalat calcium;1 Tablette O
+B01AC09;Epoprostenol;38 mcg P 
+B01AC11;Iloprost;"0,15 mg Inhal.lösung; 50 mcg P"
+B01AC13;Abciximab;25 mg P
+B01AC16;Eptifibatid;0,2 g P
+B01AC17;Tirofiban;10 mg P
+B01AC18;Triflusal;0,6 g O
+B01AC21;Treprostinil;4,3 mg P
+B01AC22;Prasugrel;10 mg O
+B01AC23;Cilostazol;0,2 g O
+B01AC24;Ticagrelor;0,18 g O
+B01AC25;Cangrelor;50 mg P
+B01AC26;Vorapaxar;2,08 mg O
+B01AC27;Selexipag;1,8 mg O
+B01AC34;Clopidogrel und Acetylsalicylsäure;75 mg O bezogen auf Clopidogrel 
+B01AC36;Dipyridamol und Acetylsalicylsäure;0,4 g O bezogen auf Dipyridamol 
+B01AC86;Acetylsalicylsäure und Esomeprazol;Standarddosis: 1 DE O 
+B01AD01;Streptokinase;1,5 MIO E P
+B01AD02;Alteplase;0,1 g P
+B01AD03;Anistreplase;30 E P
+B01AD04;Urokinase;3 MIO E P
+B01AD07;Reteplase;20 E P
+B01AD10;Drotrecogin alfa (aktiviert);40 mg P
+B01AD11;Tenecteplase;40 mg P
+B01AE01;Desirudin;30 mg P
+B01AE02;Lepirudin;0,25 g P
+B01AE03;Argatroban;0,2 g P
+B01AE04;Melagatran;6 mg P
+B01AE05;Ximelagatran;48 mg O
+B01AE06;Bivalirudin;0,25 g P
+B01AE07;Dabigatranetexilat;0,3 g O
+B01AF01;Rivaroxaban;20 mg O
+B01AF02;Apixaban;10 mg O
+B01AF03;Edoxaban;60 mg O
+B01AX01;Defibrotid;1,75 g P
+B01AX05;Fondaparinux;2,5 mg P
+B01AX07;Caplacizumab;10 mg P 
+B01AY02;Urokinase;25 TSD E P 
+B02AA01;Aminocapronsäure;16 g O,P
+B02AA02;Tranexamsäure;2 g O,P
+B02AA03;Aminomethylbenzoesäure;0,25 g O
+B02AB01;Aprotinin;500 TSD E P
+B02AB02;Alfa1-Antitrypsin;0,6 g P
+B02BA01;Phytomenadion;20 mg O,P
+B02BA02;Menadion;"10 mg O; 2 mg P"
+B02BB01;Fibrinogen, human;5 g P
+B02BC01;Absorbierbarer Gelatineschwamm;Standarddosis: 1 DE T 
+B02BC02;Oxidierte Zellulose;Standarddosis: 1 DE T 
+B02BC07;Kollagen;Standarddosis: 1 DE T 
+B02BC57;Kollagen, Kombinationen;Standarddosis: 1 DE T 
+B02BD01;Blutgerinnungsfaktoren IX, II, VII und X in Kombination;1,6 TSD E P bezogen auf Blutgerinnungsfaktor IX 
+B02BD02;Blutgerinnungsfaktor VIII;1 TSD E P 
+B02BD03;Faktor-VIII-Inhibitor-bypass-Aktivität;7 TSD E P 
+B02BD04;Blutgerinnungsfaktor IX;600 E P 
+B02BD05;Blutgerinnungsfaktor VII;6,5 TSD E P 
+B02BD06;Von Willebrand-Faktor und Blutgerinnungsfaktor VIII in Kombination;1 TSD E P bezogen auf Blutgerinnungsfaktor VIII 
+B02BD07;Blutgerinnungsfaktor XIII;3,5 TSD E P 
+B02BD09;Nonacog alfa;800 E P 
+B02BD10;Von Willebrand-Faktor;1,5 TSD E P 
+B02BD13;Blutgerinnungsfaktor X;1,75 TSD E P 
+B02BD14;Susoctocog alfa;14 TSD E P 
+B02BD15;Octocog alfa;1 TSD E P 
+B02BD16;Turoctocog alfa;1 TSD E P 
+B02BD17;Simoctocog alfa;1 TSD E P 
+B02BD29;Nonacog gamma;800 E P 
+B02BD31;Moroctocog alfa;1 TSD E P 
+B02BD32;Efmoroctocog alfa;1 TSD E P 
+B02BD33;Albutrepenonacog alfa;400 E P 
+B02BD34;Eftrenonacog alfa;400 E P 
+B02BD35;Lonoctocog alfa;1 TSD E P 
+B02BD36;Nonacog beta pegol;400 E P 
+B02BD37;Eptacog alfa (aktiviert);18,9 mg P 
+B02BD38;Rurioctocog alfa pegol;1 TSD E P 
+B02BD39;Damoctocog alfa pegol;1 TSD E P 
+B02BD40;Vonicog alfa;1,5 TSD E P 
+B02BX04;Romiplostim;30 mcg P
+B02BX05;Eltrombopag;50 mg O
+B02BX06;Emicizumab;15 mg P
+B03AA01;Eisen(II)glycinsulfat;0,2 g O Fe2+
+B03AA02;Eisen(II)fumarat;0,2 g O Fe2+
+B03AA03;Eisen(II)gluconat;0,2 g O Fe2+
+B03AA04;Eisen(II)carbonat;0,2 g O Fe2+
+B03AA05;Eisen(II)chlorid;0,2 g O Fe2+
+B03AA06;Eisen(II)succinat;0,2 g O Fe2+
+B03AA07;Eisen(II)sulfat;0,2 g O Fe2+
+B03AA08;Eisen(II)tartrat;0,2 g O Fe2+
+B03AA09;Eisen(II)aspartat;0,2 g O Fe2+
+B03AA10;Eisen(II)ascorbat;0,2 g O Fe2+
+B03AA11;Eisen(II)iodat;0,2 g O Fe2+
+B03AA13;Eisen(II)polystyrol-sulfonat;0,2 g O Fe2+ 
+B03AA19;Ammoniumeisen(II)sulfat;0,2 g O Fe2+ 
+B03AB01;Eisen(III)natriumcitrat;0,75 g O Fe3+
+B03AB02;Eisen(III)oxid-Saccharose-Komplex;0,11 g O Fe3+
+B03AB03;Natriumferedetat;0,17 g O Fe3+
+B03AB05;Eisen(III)hydroxid-Polymaltose-Komplex;90 mg O Fe3+
+B03AB09;Eisen(III)proteinsuccinylat;80 mg O Fe3+
+B03AB10;Eisen(III)-maltol;60 mg O Fe3+ 
+B03AC  ;Eisen, parenterale Zubereitungen;0,1 g P Fe
+B03AC01;Eisen(III)hydroxid-Polymaltose-Komplex;0,1 g P Fe3+ 
+B03AC02;Eisen(III)oxid-Saccharose-Komplex;0,1 g P Fe3+ 
+B03AC03;Eisen(III)sorbit-Zitronensäure-Komplex;0,1 g P Fe3+ 
+B03AC05;Eisen(III)sorbit-Gluconsäure-Komplex;0,1 g P Fe3+ 
+B03AC06;Eisen(III)hydroxid-Dextran-Komplex;0,1 g P Fe3+ 
+B03AC07;Eisen(III)natrium-Gluconat-Komplex;0,1 g P Fe3+ 
+B03AD03;Eisen(II)sulfat;0,1 g O Fe2+ 
+B03AD05;Ammoniumeisen(II)sulfat;0,1 g O Fe2+ 
+B03AD06;Eisen(II)glycinsulfat;0,1 g O Fe2+ 
+B03BA01;Cyanocobalamin;"70 mcg N; 1 mg O; 20 mcg P"
+B03BA02;Cyanocobalamin-Tannin-Komplex;20 mcg P
+B03BA03;Hydroxocobalamin;20 mcg P
+B03BA05;Mecobalamin;"1,5 mg O; 0,2 mg P"
+B03BB01;Folsäure;"0,4 mg O prophylaktische Dosis; 10 mg P therapeutische Dosis; 
+10 mg O therapeutische Dosis "
+B03XA01;Erythropoietin;1 TSD E P
+B03XA02;Darbepoetin alfa;4,5 mcg P
+B03XA03;Methoxy-Polyethylenglycol-Epoetin beta;4 mcg P
+B03XA11;Epoetin delta;1 TSD E P 
+B05AA01;Albumin;Standarddosis: 1 DE P 
+B05AA02;Andere Plasmaproteinfraktionen;Standarddosis: 1 DE P 
+B05AA03;Fluorocarbon-Blutersatzmittel;Standarddosis: 1 DE P 
+B05AA05;Dextran;Standarddosis: 1 DE P 
+B05AA06;Gelatine-haltige Mittel;Standarddosis: 1 DE P 
+B05AA07;Hydroxyethylstärke;Standarddosis: 1 DE P 
+B05AA08;Hämoglobin crosfumaril;Standarddosis: 1 DE P 
+B05AA09;Hämoglobin raffimer;Standarddosis: 1 DE P 
+B05AA51;Albumin, Kombinationen;Standarddosis: 1 DE P 
+B05AA55;Dextran, Kombinationen;Standarddosis: 1 DE P 
+B05AA56;Gelatine-haltige Mittel, Kombinationen;Standarddosis: 1 DE P 
+B05AA57;Hydroxyethylstärke, Kombinationen;Standarddosis: 1 DE P 
+B05BA01;Aminosäuren;Standarddosis: 1 DE P 
+B05BA02;Fett-Emulsionen;Standarddosis: 1 DE P 
+B05BA03;Kohlenhydrate;Standarddosis: 1 DE P 
+B05BA04;Proteinhydrolysate;Standarddosis: 1 DE P 
+B05BA10;Kombinationen;Standarddosis: 1 DE P 
+B05BA11;Glucose;Standarddosis: 1 DE P 
+B05BA12;Fructose;Standarddosis: 1 DE P 
+B05BA13;Sorbitol;Standarddosis: 1 DE P 
+B05BA14;Xylitol;Standarddosis: 1 DE P 
+B05BB01;Elektrolyte;Standarddosis: 1 DE P 
+B05BB02;Elektrolyte mit Kohlenhydraten;Standarddosis: 1 DE P 
+B05BB03;Trometamol;Standarddosis: 1 DE P 
+B05BB04;Elektrolyte in Kombination mit anderen Mitteln;Standarddosis: 1 DE P 
+B05BB11;Physiologische Kochsalzlösung;Standarddosis: 1 DE P 
+B05BB12;Ringerlösung;Standarddosis: 1 DE P 
+B05BB13;Ringerlactatlösung;Standarddosis: 1 DE P 
+B05BB14;Ringeracetatlösung;Standarddosis: 1 DE P 
+B05BB53;Trometamol, Kombinationen;Standarddosis: 1 DE P 
+B05BC01;Mannitol;Standarddosis: 1 DE P 
+B05BC02;Harnstoff;Standarddosis: 1 DE P 
+B05BC03;Sorbitol;Standarddosis: 1 DE P 
+B05BC51;Mannitol, Kombinationen;Standarddosis: 1 DE P 
+B05BC53;Sorbitol, Kombinationen;Standarddosis: 1 DE P 
+B05CB01;Natriumchlorid;Standarddosis: 1 DE P 
+B05CB02;Natriumcitrat;Standarddosis: 1 DE P 
+B05CB03;Magnesiumcitrat;Standarddosis: 1 DE P 
+B05CB04;Natriumbicarbonat;Standarddosis: 1 DE P 
+B05CB10;Kombinationen;Standarddosis: 1 DE P 
+B05CX01;Glucose;Standarddosis: 1 DE P 
+B05CX02;Sorbitol;Standarddosis: 1 DE P 
+B05CX03;Glycin;Standarddosis: 1 DE P, U 
+B05CX04;Mannitol;Standarddosis: 1 DE P 
+B05CX10;Kombinationen;Standarddosis: 1 DE P 
+B05DB50;Kombinationen;Standarddosis: 1 DE P 
+B05XA01;Kaliumchlorid;Standarddosis: 1 DE P 
+B05XA02;Natriumbicarbonat;Standarddosis: 1 DE P 
+B05XA03;Natriumchlorid;Standarddosis: 1 DE P 
+B05XA05;Magnesiumsulfat;Standarddosis: 1 DE P 
+B05XA07;Calciumchlorid;Standarddosis: 1 DE P 
+B05XA18;Dinatrium-1(2)-glycerin-phosphat-Gemisch;Standarddosis: 1 DE P 
+B05XA19;Kalium L-malat;Standarddosis: 1 DE P 
+B05XA21;Natriumcitrat;Standarddosis: 1 DE P 
+B05XA30;Kombinationen von Elektrolyten;Standarddosis: 1 DE P 
+B05XA31;Elektrolyte in Kombination mit anderen Mitteln;Standarddosis: 1 DE P 
+B05XB01;Argininhydrochlorid;Standarddosis: 1 DE P 
+B05XB02;Alanylglutamin;Standarddosis: 1 DE P 
+B05XB03;Lysin;Standarddosis: 1 DE P 
+B05XC30;Kombinationen;Standarddosis: 1 DE P 
+B05XX02;Trometamol;Standarddosis: 1 DE P 
+B05XX04;Ethanol;Standarddosis: 1 DE P 
+B05ZA50;Kombinationen;Standarddosis: 1 DE P 
+B05ZB50;Kombinationen;Standarddosis: 1 DE P 
+B06AC01;C1-Inhibitor, aus Plasma gewonnen;1,4 TSD E P
+B06AC02;Icatibant;30 mg P
+B06AC04;Conestat alfa;3,5 TSD E P
+B06AC05;Lanadelumab;21 mg P 
+C01AA01;Acetyldigitoxin;0,2 mg O
+C01AA02;Acetyldigoxin;0,5 mg O
+C01AA03;Digitalisblätter;0,1 g O
+C01AA04;Digitoxin;0,1 mg O,P
+C01AA05;Digoxin;0,25 mg O,P
+C01AA06;Lanatosid C;1 mg O,R
+C01AA07;Deslanosid;1 mg P zur Akutbehandlung
+C01AA08;Metildigoxin;0,2 mg O,P
+C01AB01;Proscillaridin;0,75 mg O
+C01AC01;g-Strophanthin;0,25 mg P
+C01AC03;Cymarin;2,5 mg O
+C01BA01;Chinidin;1,2 g O
+C01BA02;Procainamid;3 g O,P
+C01BA03;Disopyramid;0,4 g O,P
+C01BA04;Spartein;0,2 g P
+C01BA05;Ajmalin;"0,3 g O; 50 mg P "
+C01BA08;Prajmalin;30 mg O
+C01BA12;Lorajmin;0,3 g O
+C01BB01;Lidocain;"3 g P; Standarddosis: 1 DE P "
+C01BB02;Mexiletin;0,8 g O,P
+C01BB03;Tocainid;1,2 g O,P
+C01BB04;Aprindin;0,1 g O,P
+C01BC03;Propafenon;"0,3 g O,P; 0,5 g O,P "
+C01BC04;Flecainid;0,2 g O,P
+C01BC07;Lorcainid;0,2 g P
+C01BC08;Encainid;0,1 g O
+C01BD01;Amiodaron;0,2 g O,P
+C01BD05;Ibutilid;1 mg P
+C01BD07;Dronedaron;0,8 g O
+C01BG01;Moracizin;0,75 g O
+C01BG11;Vernakalant;0,2 g P bezogen auf Vernakalanthydrochlorid
+C01CA01;Etilefrin;50 mg O,P
+C01CA02;Isoprenalin;90 mg O,P
+C01CA03;Norepinephrin;6 mg P
+C01CA04;Dopamin;0,5 g P
+C01CA05;Norfenefrin;25 mg O
+C01CA06;Phenylephrin;4 mg P
+C01CA07;Dobutamin;0,5 g P
+C01CA08;Oxedrin;0,2 g O,P
+C01CA09;Metaraminol;50 mg P
+C01CA10;Methoxamin;30 mg P
+C01CA11;Mephentermin;"30 mg P; 30 mg O "
+C01CA13;Prenalterol;10 mg P
+C01CA14;Dopexamin;0,5 g P
+C01CA15;Gepefrin;30 mg O
+C01CA16;Ibopamin;0,3 g O
+C01CA17;Midodrin;30 mg O
+C01CA24;Epinephrin;"0,5 mg P; 1 DE P zur Notfallbehandlung "
+C01CA25;Ameziniummetilsulfat;30 mg O
+C01CA26;Ephedrin;50 mg P
+C01CA27;Droxidopa;1 g O
+C01CE01;Amrinon;0,5 g P
+C01CE02;Milrinon;50 mg P
+C01CE03;Enoximon;1 g P
+C01CX06;Angiotensinamid;5 mg P
+C01CX07;Xamoterol;0,4 g O
+C01CX08;Levosimendan;11 mg P
+C01DA02;Glyceroltrinitrat;"5 mg O,TD; 2,5 mg oral Aerosol,SL; Standarddosis: 1 DE P "
+C01DA05;Pentaerythrityltetranitrat;0,12 g O
+C01DA07;Propatylnitrat;30 mg O
+C01DA08;Isosorbiddinitrat;"60 mg O; 20 mg oral Aerosol,SL; 0,1 g TD; Standarddosis: 1 DE P "
+C01DA09;Trolnitrat;20 mg O
+C01DA13;Erythrityltetranitrat;90 mg O
+C01DA14;Isosorbidmononitrat;40 mg O
+C01DX02;Prenylamin;0,12 g O
+C01DX03;Oxyfedrin;40 mg O,P
+C01DX04;Benziodaron;0,25 g O
+C01DX07;Etafenon;0,225 g O
+C01DX08;Heptaminol;0,45 g O,P
+C01DX09;Imolamin;90 mg O
+C01DX10;Dilazep;0,1 g O
+C01DX12;Molsidomin;8 mg O 
+C01DX13;Efloxat;0,2 g O
+C01DX14;Cinepazet;0,9 g O
+C01DX16;Nicorandil;40 mg O
+C01DX19;Nesiritid;1,5 mg P
+C01EA01;Alprostadil;0,5 mg P
+C01EB02;Campher;0,15 g O
+C01EB10;Adenosin;15 mg P
+C01EB15;Trimetazidin;40 mg O
+C01EB16;Ibuprofen;30 mg P
+C01EB17;Ivabradin;10 mg O
+C01EB18;Ranolazin;1,5 g O
+C01EB21;Regadenoson;0,4 mg P
+C01EP01;Weißdornblätter mit Blüten;0,53 g O wässrig-ethanolischer Extrakt 
+C02AA02;Reserpin;0,5 mg O,P
+C02AA07;Bietaserpin;15 mg O
+C02AB01;Methyldopa (linksdrehend);1 g O,P
+C02AB02;Methyldopa (racemisch);2 g O
+C02AC01;Clonidin;0,45 mg O,P
+C02AC02;Guanfacin;3 mg O
+C02AC04;Tolonidin;0,75 mg O
+C02AC05;Moxonidin;0,3 mg O
+C02BA01;Trimetaphan;0,25 g P
+C02CA01;Prazosin;5 mg O
+C02CA03;Trimazosin;0,3 g O
+C02CA04;Doxazosin;4 mg O
+C02CA06;Urapidil;"0,12 g O; 50 mg P"
+C02CA07;Bunazosin;6 mg O 
+C02CA08;Terazosin;5 mg O 
+C02CC01;Betanidin;0,1 g O
+C02CC02;Guanethidin;30 mg O
+C02CC03;Guanoxan;20 mg O
+C02CC04;Debrisoquin;20 mg O
+C02CC07;Guanoxabenz;25 mg O
+C02DA01;Diazoxid;0,3 g P
+C02DB01;Dihydralazin;"75 mg O; 25 mg P"
+C02DB02;Hydralazin;0,1 g O
+C02DB03;Endralazin;10 mg O
+C02DB04;Cadralazin;15 mg O
+C02DC01;Minoxidil;20 mg O
+C02DD01;Nitroprussid;50 mg P
+C02DG01;Pinacidil;50 mg O
+C02KD01;Ketanserin;40 mg O,P
+C02KX01;Bosentan;0,25 g O
+C02KX02;Ambrisentan;7,5 mg O
+C02KX03;Sitaxentan;0,1 g O
+C02KX04;Macitentan;10 mg O
+C02KX05;Riociguat;4,5 mg O
+C02KX06;Sildenafil;60 mg O 
+C02KX07;Tadalafil;40 mg O 
+C02KX08;Iloprost;30 mcg Inhal.lösung 
+C02KX09;Selexipag;1,8 mg O 
+C02LA01;Reserpin und Diuretika;Standarddosis: 1 DE O 
+C02LA51;Reserpin und Diuretika, Kombinationen mit anderen Mitteln;Standarddosis: 1 DE O 
+C02LA52;Rescinnamin und Diuretika, Kombinationen mit anderen Mitteln;Standarddosis: 1 DE O 
+C02LA58;Rauwolfia-Alkaloide, ganze Wurzel und Diuretika, Kombinationen;Standarddosis: 1 DE O 
+C02LB01;Methyldopa (linksdrehend) und Diuretika;Standarddosis: 1 DE O 
+C02LC01;Clonidin und Diuretika;Standarddosis: 1 DE O 
+C02LE01;Prazosin und Diuretika;Standarddosis: 1 DE O 
+C02LF01;Guanethidin und Diuretika;Standarddosis: 1 DE O 
+C03AA01;Bendroflumethiazid;2,5 mg O
+C03AA02;Hydroflumethiazid;25 mg O
+C03AA03;Hydrochlorothiazid;25 mg O
+C03AA04;Chlorothiazid;0,5 g O
+C03AA05;Polythiazid;1 mg O
+C03AA06;Trichlormethiazid;4 mg O
+C03AA07;Cyclopenthiazid;0,5 mg O
+C03AA08;Methylclothiazid;5 mg O
+C03AA09;Cyclothiazid;5 mg O
+C03AB01;Bendroflumethiazid und Kalium;2,5 mg O bezogen auf Bendroflumethiazid
+C03AB02;Hydroflumethiazid und Kalium;25 mg O bezogen auf Hydroflumethiazid
+C03AB03;Hydrochlorothiazid und Kalium;25 mg O bezogen auf Hydrochlorothiazid
+C03AB04;Chlorothiazid und Kalium;0,5 g O bezogen auf Chlorothiazid
+C03AB05;Polythiazid und Kalium;1 mg O bezogen auf Polythiazid
+C03AB06;Trichlormethiazid und Kalium;4 mg O bezogen auf Trichlormethiazid
+C03AB07;Cyclopenthiazid und Kalium;0,5 mg O bezogen auf Cyclopenthiazid
+C03AB08;Methylclothiazid und Kalium;5 mg O bezogen auf Methylclothiazid
+C03AB09;Cyclothiazid und Kalium;5 mg O bezogen auf Cyclothiazid
+C03BA02;Quinethazon;50 mg O
+C03BA03;Clopamid;10 mg O
+C03BA04;Chlortalidon;25 mg O
+C03BA05;Mefrusid;25 mg O
+C03BA08;Metolazon;5 mg O
+C03BA10;Xipamid;20 mg O
+C03BA11;Indapamid;2,5 mg O
+C03BB02;Quinethazon und Kalium;50 mg O bezogen auf Quinethazon
+C03BB03;Clopamid und Kalium;10 mg O bezogen auf Clopamid
+C03BB04;Chlortalidon und Kalium;25 mg O bezogen auf Chlortalidon
+C03BB05;Mefrusid und Kalium;25 mg O bezogen auf Mefrusid
+C03BD01;Theobromin;4 g O
+C03CA01;Furosemid;40 mg O,P
+C03CA02;Bumetanid;1 mg O,P
+C03CA03;Piretanid;6 mg O 
+C03CA04;Torasemid;15 mg O,P
+C03CB01;Furosemid und Kalium;40 mg O bezogen auf Furosemid
+C03CB02;Bumetanid und Kalium;1 mg O bezogen auf Bumetanid
+C03CC01;Etacrynsäure;50 mg O,P
+C03CD01;Muzolimin;20 mg O
+C03DA01;Spironolacton;75 mg O
+C03DA02;Kaliumcanrenoat;0,4 g P
+C03DA04;Eplerenon;50 mg O
+C03DB01;Amilorid;10 mg O
+C03DB02;Triamteren;0,1 g O
+C03EA02;Trichlormethiazid und Kalium sparende Mittel;Standarddosis: 1 DE O 
+C03EA15;Xipamid und Triamteren;Standarddosis: 1 DE O 
+C03EA16;Bemetizid und Triamteren;Standarddosis: 1 DE O 
+C03EA21;Hydrochlorothiazid und Triamteren;Standarddosis: 1 DE O 
+C03EA33;Bendroflumethiazid und Amilorid;Standarddosis: 1 DE O 
+C03EA41;Hydrochlorothiazid und Amilorid;Standarddosis: 1 DE O 
+C03EB21;Furosemid und Triamteren;Standarddosis: 1 DE O 
+C03EB31;Furosemid und Amilorid;Standarddosis: 1 DE O 
+C03EC01;Spironolacton und Low-ceiling-Diuretika;Standarddosis: 1 DE O 
+C03EC21;Spironolacton und Hydrochlorothiazid;Standarddosis: 1 DE O 
+C03EC41;Spironolacton und Bendroflumethiazid;Standarddosis: 1 DE O 
+C03ED01;Spironolacton und Furosemid;Standarddosis: 1 DE O 
+C03XA01;Tolvaptan;30 mg O
+C04AA01;Isoxsuprin;60 mg O,P
+C04AA02;Buphenin;30 mg O
+C04AA31;Bamethan;75 mg O
+C04AB01;Phentolamin;10 mg O,P
+C04AB02;Tolazolin;75 mg O
+C04AC01;Nicotinsäure;0,2 g O,P
+C04AC02;Nicotinylalkohol (Pyridylcarbinol);0,3 g O,P
+C04AC03;Inositolnicotinat;1,2 g O
+C04AD02;Xantinolnicotinat;0,9 g O,P
+C04AD03;Pentoxifyllin;"1 g O; 0,3 g P"
+C04AD04;Etofyllinnicotinat;0,3 g O
+C04AE01;Ergoloidmesylat;3 mg O,P
+C04AF01;Kallidinogenase;30 E O,P
+C04AG01;Alprostadil;40 mcg P 
+C04AX01;Cyclandelat;0,6 g O
+C04AX02;Phenoxybenzamin;30 mg O
+C04AX20;Buflomedil;0,6 g O
+C04AX21;Naftidrofuryl;"0,6 g O; 0,3 g P "
+C04AX24;Visnadin;0,6 g O
+C04AX30;Azapetin;0,15 g O
+C05BA03;Heparin;Standarddosis: 2,5 g Salbe etc. T 
+C05CA04;Troxerutin;0,9 g O 
+C05CA07;Aescin;0,1 g O 
+C05CP01;Rosskastaniensamen;0,1 g O bezogen auf Aescin 
+C06AA02;Dihydroergotaminmesilat;4 mg O 
+C07AA01;Alprenolol;0,4 g O,P
+C07AA02;Oxprenolol;0,16 g O,P
+C07AA03;Pindolol;15 mg O,P
+C07AA05;Propranolol;0,16 g O,P
+C07AA06;Timolol;20 mg O,P
+C07AA07;Sotalol;0,16 g O,P
+C07AA12;Nadolol;0,16 g O
+C07AA14;Mepindolol;5 mg O
+C07AA15;Carteolol;10 mg O
+C07AA16;Tertatolol;5 mg O
+C07AA19;Bupranolol;0,1 g O 
+C07AA23;Penbutolol;40 mg O
+C07AB01;Practolol;"0,3 g O; 20 mg P"
+C07AB02;Metoprolol;"0,15 g O bezogen auf Metoprololtartrat; 0,15 g P"
+C07AB03;Atenolol;75 mg O,P
+C07AB04;Acebutolol;0,4 g O,P
+C07AB05;Betaxolol;20 mg O
+C07AB06;Bevantolol;0,3 g O
+C07AB07;Bisoprolol;10 mg O bezogen auf Bisoprololhemifumarat
+C07AB08;Celiprolol;0,2 g O
+C07AB09;Esmolol;2,5 g P
+C07AB10;Epanolol;0,2 g O
+C07AB11;S-Atenolol;50 mg O
+C07AB12;Nebivolol;5 mg O
+C07AB13;Talinolol;0,1 g O
+C07AG01;Labetalol;0,6 g O,P
+C07AG02;Carvedilol;37,5 mg O
+C07BA01;Alprenolol und Thiazide;Standarddosis: 1 DE O 
+C07BA05;Propranolol und Thiazide;Standarddosis: 1 DE O 
+C07BA07;Sotalol und Thiazide;Standarddosis: 1 DE O 
+C07BA12;Nadolol und Thiazide;Standarddosis: 1 DE O 
+C07BA14;Mepindolol und Thiazide;Standarddosis: 1 DE O 
+C07BA18;Metipranolol und Thiazide;Standarddosis: 1 DE O 
+C07BB22;Metoprolol und Hydrochlorothiazid;Standarddosis: 1 DE O 
+C07BB27;Bisoprolol und Hydrochlorothiazid;Standarddosis: 1 DE O 
+C07CA02;Oxprenolol und andere Diuretika;Standarddosis: 1 DE O 
+C07CA03;Pindolol und andere Diuretika;Standarddosis: 1 DE O 
+C07CA05;Propranolol und andere Diuretika;Standarddosis: 1 DE O 
+C07CA51;Penbutolol und Furosemid;Standarddosis: 1 DE O 
+C07CA52;Penbutolol und Piretanid;Standarddosis. 1 DE O 
+C07CB04;Acebutolol und andere Diuretika;Standarddosis: 1 DE O 
+C07CB22;Metoprolol und Chlortalidon;Standarddosis: 1 DE O 
+C07CB23;Atenolol und Chlortalidon;Standarddosis: 1 DE O 
+C07DA25;Propranolol, Hydrochlorothiazid und Triamteren;Standarddosis: 1 DE O 
+C07DA26;Timolol, Hydrochlorothiazid und Amilorid;Standarddosis: 1 DE O 
+C07EA03;Pindolol und Vasodilatatoren;Standarddosis: 1 DE O 
+C07EA05;Propranolol und Vasodilatatoren;Standarddosis: 1 DE O 
+C07EA19;Bupranolol und Vasodilatatoren;Standarddosis: 1 DE O 
+C07FB02;Metoprolol und Felodipin;Standarddosis: 1 DE O 
+C07FB03;Atenolol und Nifedipin;Standarddosis: 1 DE O 
+C07FB07;Bisoprolol und Amlodipin;Standarddosis: 1 DE O 
+C07FB13;Metoprolol und Amlodipin;Standarddosis: 1 DE O 
+C07FB22;Metoprolol und Nifedipin;Standarddosis: 1 DE O 
+C07FB26;Acebutolol und Nifedipin;Standarddosis: 1 DE O 
+C07FX01;Propranolol und andere Kombinationen;Standarddosis: 1 DE O 
+C07FX05;Metoprolol und Ivabradin;Standarddosis: 2 DE O 
+C07FX15;Oxprenolol und andere Antihypertensiva;Standarddosis: 1 DE O 
+C07FX16;Metipranolol und andere Antihypertensiva;Standarddosis: 1 DE O 
+C07FX17;Bupranolol und andere Antihypertensiva;Standarddosis: 1 DE O 
+C07FX18;Atenolol, Chlortalidon und Hydralazin;Standarddosis: 1 DE O 
+C08CA01;Amlodipin;5 mg O
+C08CA02;Felodipin;5 mg O
+C08CA03;Isradipin;5 mg O,P
+C08CA04;Nicardipin;90 mg O,P
+C08CA05;Nifedipin;30 mg O,P
+C08CA06;Nimodipin;"0,3 g O; 50 mg P"
+C08CA07;Nisoldipin;20 mg O
+C08CA08;Nitrendipin;20 mg O
+C08CA09;Lacidipin;4 mg O
+C08CA10;Nilvadipin;8 mg O
+C08CA11;Manidipin;10 mg O
+C08CA12;Barnidipin;10 mg O
+C08CA13;Lercanidipin;10 mg O
+C08CA14;Cilnidipin;10 mg O
+C08CA16;Clevidipin;0,12 g P 
+C08CX01;Mibefradil;75 mg O
+C08DA01;Verapamil;0,24 g O,P
+C08DA02;Gallopamil;0,1 g O 
+C08DB01;Diltiazem;0,24 g O
+C08EA02;Bepridil;0,3 g O
+C08EX01;Lidoflazin;0,18 g O
+C08GA01;Nifedipin und Diuretika;Standarddosis: 1 DE O 
+C08GA23;Verapamil und Hydrochlorothiazid;Standarddosis: 1 DE O 
+C08GA53;Verapamil, Hydrochlorothiazid und Triamteren;Standarddosis: 1 DE O 
+C09AA01;Captopril;50 mg O
+C09AA02;Enalapril;10 mg O,P
+C09AA03;Lisinopril;10 mg O
+C09AA04;Perindopril;4 mg O
+C09AA05;Ramipril;2,5 mg O
+C09AA06;Quinapril;15 mg O,P
+C09AA07;Benazepril;7,5 mg O
+C09AA08;Cilazapril;2,5 mg O
+C09AA09;Fosinopril;15 mg O
+C09AA10;Trandolapril;2 mg O
+C09AA11;Spirapril;6 mg O
+C09AA12;Delapril;30 mg O
+C09AA13;Moexipril;15 mg O
+C09AA14;Temocapril;10 mg O
+C09AA15;Zofenopril;30 mg O
+C09AA16;Imidapril;10 mg O
+C09BA21;Captopril und Hydrochlorothiazid;Standarddosis. 1 DE O 
+C09BA22;Enalapril und Hydrochlorothiazid;Standarddosis: 1 DE O 
+C09BA23;Lisinopril und Hydrochlorothiazid;Standarddosis: 1 DE O 
+C09BA25;Ramipril und Hydrochlorothiazid;Standarddosis: 1 DE O 
+C09BA26;Quinapril und Hydrochlorothiazid;Standarddosis: 1 DE O 
+C09BA27;Benazepril und Hydrochlorothiazid;Standarddosis: 1 DE O 
+C09BA28;Cilazapril und Hydrochlorothiazid;Standarddosis: 1 DE O 
+C09BA29;Fosinopril und Hydrochlorothiazid;Standarddosis: 1 DE O 
+C09BA33;Moexipril und Hydrochlorothiazid;Standarddosis: 1 DE O 
+C09BA35;Zofenopril und Hydrochlorothiazid;Standarddosis: 1 DE O 
+C09BA54;Perindopril und Indapamid;Standarddosis: 1 DE O 
+C09BA55;Ramipril und Piretanid;Standarddosis. 1 DE O 
+C09BB02;Enalapril und Lercanidipin;Standarddosis: 1 DE O 
+C09BB04;Perindopril und Amlodipin;Standarddosis: 1 DE O 
+C09BB05;Ramipril und Felodipin;Standarddosis: 1 DE O 
+C09BB06;Enalapril und Nitrendipin;Standarddosis: 1 DE O 
+C09BB07;Ramipril und Amlodipin;Standarddosis: 1 DE O 
+C09BB10;Trandolapril und Verapamil;Standarddosis: 1 DE O 
+C09BB12;Delapril und Manidipin;Standarddosis: 1 DE O 
+C09BX01;Perindopril, Amlodipin und Indapamid;Standarddosis: 1 DE O 
+C09CA01;Losartan;50 mg O
+C09CA02;Eprosartan;0,6 g O
+C09CA03;Valsartan;80 mg O
+C09CA04;Irbesartan;0,15 g O
+C09CA06;Candesartan;8 mg O
+C09CA07;Telmisartan;40 mg O
+C09CA08;Olmesartanmedoxomil;20 mg O
+C09CA09;Azilsartanmedoxomil;40 mg O
+C09CA10;Fimasartan;60 mg O
+C09DA21;Losartan und Hydrochlorothiazid;Standarddosis: 1 DE O 
+C09DA22;Eprosartan und Hydrochlorothiazid;Standarddosis: 1 DE O 
+C09DA23;Valsartan und Hydrochlorothiazid;Standarddosis: 1 DE O 
+C09DA24;Irbesartan und Hydrochlorothiazid;Standarddosis: 1 DE O 
+C09DA26;Candesartan und Hydrochlorothiazid;Standarddosis: 1 DE O 
+C09DA27;Telmisartan und Hydrochlorothiazid;Standarddosis: 1 DE O 
+C09DA28;Olmesartanmedoxomil und Hydrochlorothiazid;Standarddosis: 1 DE O 
+C09DB01;Valsartan und Amlodipin;Standarddosis: 1 DE O 
+C09DB02;Olmesartanmedoxomil und Amlodipin;Standarddosis: 1 DE O 
+C09DB04;Telmisartan und Amlodipin;Standarddosis: 1 DE O 
+C09DB06;Losartan und Amlodipin;Standarddosis: 1 DE O 
+C09DB07;Candesartan und Amlodipin;Standarddosis: 1 DE O 
+C09DX01;Valsartan, Amlodipin und Hydrochlorothiazid;Standarddosis: 1 DE O 
+C09DX03;Olmesartanmedoxomil, Amlodipin und Hydrochlorothiazid;Standarddosis: 1 DE O 
+C09DX04;Valsartan und Sacubitril;Standarddosis: 2 DE O 
+C09XA02;Aliskiren;0,15 g O
+C09XA52;Aliskiren und Hydrochlorothiazid;Standarddosis: 1 DE O 
+C10AA01;Simvastatin;30 mg O
+C10AA02;Lovastatin;45 mg O
+C10AA03;Pravastatin;30 mg O
+C10AA04;Fluvastatin;60 mg O
+C10AA05;Atorvastatin;20 mg O
+C10AA06;Cerivastatin;0,2 mg O
+C10AA07;Rosuvastatin;10 mg O
+C10AA08;Pitavastatin;2 mg O
+C10AB01;Clofibrat;2 g O
+C10AB02;Bezafibrat;0,6 g O
+C10AB04;Gemfibrozil;1,2 g O
+C10AB05;Fenofibrat;"0,2 g O mikronisiert; 0,25 g O nicht mikronisiert "
+C10AB08;Ciprofibrat;0,1 g O
+C10AB11;Cholinfenofibrat;0,135 g O bezogen auf Fenofibratsäure
+C10AC01;Colestyramin;14 g O
+C10AC02;Colestipol;20 g O
+C10AC04;Colesevelam;3,75 g O
+C10AD01;Niceritrol;1,5 g O
+C10AD02;Nicotinsäure;2 g O
+C10AD05;Nicotinylalkohol (Pyridylcarbinol);0,9 g O
+C10AD06;Acipimox;0,5 g O
+C10AD08;Xantinolnicotinat;2 g O 
+C10AD52;Nicotinsäure, Kombinationen;2 g O bezogen auf Nicotinsäure 
+C10AX01;Dextrothyroxin;4 mg O
+C10AX09;Ezetimib;10 mg O
+C10AX10;Alipogentiparvovec;24 DE P 
+C10AX12;Lomitapid;40 mg O
+C10AX13;Evolocumab;10 mg P
+C10AX14;Alirocumab;5,4 mg P
+C10AX19;Beta-Sitosterin;4,5 g O 
+C10BA02;Simvastatin und Ezetimib;Standarddosis: 1 DE O 
+C10BA03;Pravastatin und Fenofibrat;Standarddosis: 1 DE O 
+C10BA05;Atorvastatin und Ezetimib;Standarddosis: 1 DE O 
+C10BA06;Rosuvastatin und Ezetimib;Standarddosis: 1 DE O 
+C10BX01;Simvastatin und Acetylsalicylsäure;30 mg O bezogen auf Simvastatin
+C10BX06;Atorvastatin, Acetylsalicylsäure und Ramipril;Standarddosis: 1 DE O 
+C10BX09;Rosuvastatin und Amlodipin;Standarddosis: 1 DE O 
+C10BX11;Atorvastatin, Amlodipin und Perindopril;Standarddosis: 1 DE O 
+D01AA01;Nystatin;250 TSD E T 
+D01AA51;Nystatin, Kombinationen;2,5 g T 
+D01AA91;Nystatin und Zinkoxid;2,5 g T 
+D01AC01;Clotrimazol;25 mg T 
+D01AC02;Miconazol;40 mg T 
+D01AC07;Tioconazol;20 mg T 
+D01AC08;Ketoconazol;30 mg T (Creme) 
+D01AC10;Bifonazol;10 mg T 
+D01AC11;Oxiconazol;10 mg T 
+D01AE12;Salicylsäure;0,3 g T Seborrhoea capitis 
+D01AE14;Ciclopirox;20 mg T bezogen auf Ciclopiroxolamin (Creme) 
+D01AE15;Terbinafin;10 mg T 
+D01AE18;Tolnaftat;15 mg T 
+D01BA01;Griseofulvin;0,5 g O
+D01BA02;Terbinafin;0,25 g O
+D02AB01;Zinkoxid;Standarddosis: 2,5 g Salbe etc. T 
+D02AB51;Zinkoxid, Kombinationen;Standarddosis: 2,5 g Salbe etc. T 
+D02AE01;Harnstoff;0,2 g T 
+D02BB01;Betacaroten;0,1 g O
+D02BB02;Afamelanotid;0,00822 DE Implantat 
+D03AP08;Bromelain;2 g T (Konzentrat proteolytischer Enzyme angereichert aus Bromelain) 
+D03AX03;Dexpanthenol;0,125 g T 
+D04AX03;Bufexamac;0,1 g T 
+D04AX07;Gerbstoffe;15 mg T 
+D05AX02;Calcipotriol;75 mcg T 
+D05AX03;Calcitriol;6 mcg T 
+D05AX04;Tacalcitol;4 mcg T 
+D05BA01;Trioxysalen;10 mg O
+D05BA02;Methoxsalen;10 mg O
+D05BB01;Etretinat;35 mg O
+D05BB02;Acitretin;35 mg O
+D05BX02;Dimethylfumarat;0,36 g O 
+D05BX51;Fumarsäure-Derivate, Kombinationen;0,36 g O bezogen auf Dimethylfumarat (zur Langzeittherapie) 
+D06AX01;Fusidinsäure;60 mg T 
+D06AX07;Gentamicin;2,5 mg T 
+D06AX09;Mupirocin;40 mg T 
+D06AX13;Retapamulin;20 mg T 
+D06BB03;Aciclovir;25 mg T für 5%-ige Zubereitungen 
+D06BB06;Penciclovir;6 mg T für 1%-ige Zubereitungen 
+D06BB11;Docosanol;50 mg T 
+D06BB13;Foscarnet;12 mg T 
+D06BX01;Metronidazol;15 mg T 
+D06BX02;Ingenolmebutat;Standarddosis: 1 DE T 
+D07AB09;Triamcinolon;2 mg T für 0,1%-ige Zubereitungen 
+D07AC01;Betamethason;2 mg T für 0,1%-ige Zubereitungen 
+D07AC04;Fluocinolonacetonid;0,3 mg T 
+D07AC11;Amcinonid;1,5 mg T 
+D07AC13;Mometason;1 mg T 
+D07AC14;Methylprednisolonaceponat;1 mg T 
+D07AC18;Prednicarbat;2,5 mg T 
+D07AD01;Clobetasol;0,5 mg T für 0,05%-ige Zubereitungen 
+D08AG02;Povidon-Iod;0,4 g T 
+D09AA09;Povidon-Iod;Standarddosis: 1 DE T 
+D09AA12;Chlorhexidin;Standarddosis: 1 DE T 
+D09AA13;Iodoform;Standarddosis: 1 DE T 
+D09AA30;Kombinationen;Standarddosis: 1 DE T 
+D10AD03;Adapalen;1 mg T 
+D10AE01;Benzoylperoxid;0,1 g T 
+D10AF02;Erythromycin;Standarddosis: 2,0 g Salbe etc. T 
+D10AF05;Nadifloxacin;20 mg T 
+D10BA01;Isotretinoin;30 mg O
+D11AA04;Methanthelinium;0,1 g O 
+D11AF01;Salicylsäure;Standarddosis: 0,25 ml Lösung T 
+D11AF51;Salicylsäure, Kombinationen;Standarddosis: 0,25 ml Lösung T 
+D11AH02;Pimecrolimus;20 mg T 
+D11AH04;Alitretinoin;20 mg O
+D11AH05;Dupilumab;21,4 mg P
+D11AX02;Gamolensäure;0,4 g O
+D11AX10;Finasterid;1 mg O
+D11AX21;Brimonidin;1,65 mg T 
+D11AX22;Ivermectin;10 mg T für 1%-ige Zubereitungen 
+G01AA01;Nystatin;0,1 MIO E V
+G01AA02;Natamycin;25 mg V
+G01AA03;Amphotericin B;0,2 g V
+G01AA04;Candicidin;6 mg V
+G01AA10;Clindamycin;0,1 g V
+G01AB01;Acetarsol;0,5 g V
+G01AC01;Diiodhydroxychinolin;0,2 g V
+G01AC03;Chlorquinaldol;0,2 g V
+G01AC05;Dequalinium;"20 mg V; 10 mg V "
+G01AC06;Broxychinolin;0,1 g V
+G01AD03;Ascorbinsäure;0,25 g V
+G01AF01;Metronidazol;0,5 g V
+G01AF02;Clotrimazol;0,1 g V
+G01AF04;Miconazol;0,1 g V
+G01AF05;Econazol;0,1 g V
+G01AF07;Isoconazol;0,6 g V
+G01AF08;Tioconazol;0,3 g V Ein-Dosis-Behandlung
+G01AF11;Ketoconazol;0,4 g V
+G01AF12;Fenticonazol;0,1 g V
+G01AF15;Butoconazol;0,1 g V
+G01AG02;Terconazol;80 mg V
+G01AX01;Clodantoin;0,1 g V
+G01AX03;Policresulen;90 mg V
+G01AX05;Nifuratel;0,6 g O,V
+G01AX11;Povidon-Iod;0,2 g V
+G01AX12;Ciclopirox;50 mg V bezogen auf Ciclopiroxolamin (Vaginalcreme) 
+G02AB01;Methylergometrin;0,2 mg O,P
+G02AB03;Ergometrin;0,2 mg O,P
+G02AD01;Dinoprost;25 mg P
+G02AD02;Dinoproston;0,5 mg O,V
+G02AD03;Gemeprost;1 mg V Ein-Dosis-Behandlung
+G02AD04;Carboprost;2,5 mg P Ein-Dosis-Behandlung
+G02AD05;Sulproston;0,5 mg P
+G02AD06;Misoprostol;"0,2 mg O; 0,2 mg V Vaginale Arzneiformulierung, bezogen auf den Inhalt einer vaginalen Arzneiformulierung"
+G02BB01;Vaginalring mit Gestagenen und Estrogenen;0,0357 DE V 
+G02BB09;Nonoxinol 9;Standarddosis: 1 DE V 
+G02CA01;Ritodrin;40 mg O,P
+G02CA02;Buphenin;30 mg P
+G02CB01;Bromocriptin;5 mg O,P
+G02CB02;Lisurid;0,6 mg O
+G02CB03;Cabergolin;0,5 mg O
+G02CB04;Quinagolid;75 mcg O
+G02CP01;Keuschlammfrüchte;35 mg O Droge 
+G02CP03;Cimicifugawurzelstock;40 mg O Droge 
+G02CX01;Atosiban;165 mg P
+G03AA05;Norethisteron und Ethinylestradiol;"Zykluspackung mit 28 Tabletten 1 DE O; 
+Zykluspackung mit 21 Tabletten 0,75 DE O "
+G03AA06;Norgestrel und Ethinylestradiol;"Zykluspackung mit 28 Tabletten 1 DE O; 
+Zykluspackung mit 21 Tabletten 0,75 DE O "
+G03AA07;Levonorgestrel und Ethinylestradiol;"Zykluspackung mit 91 Tabletten 1 DE O; 
+Zykluspackung mit 28 Tabletten 1 DE O; 
+Zykluspackung mit 21 Tabletten 0,75 DE O "
+G03AA09;Desogestrel und Ethinylestradiol;"Zykluspackung mit 28 Tabletten 1 DE O; 
+Zykluspackung mit 21 Tabletten 0,75 DE O "
+G03AA10;Gestoden und Ethinylestradiol;"Zykluspackung mit 28 Tabletten 1 DE O; 
+Zykluspackung mit 21 Tabletten 0,75 DE O "
+G03AA11;Norgestimat und Ethinylestradiol;"Zykluspackung mit 28 Tabletten 1 DE O; 
+Zykluspackung mit 21 Tabletten 0,75 DE O "
+G03AA12;Drospirenon und Ethinylestradiol;"Zykluspackung mit 28 Tabletten 1 DE O; 
+Zykluspackung mit 21 Tabletten 0,75 DE O "
+G03AA14;Nomegestrol und Estradiol;Zykluspackung mit 28 Tabletten 1 DE O 
+G03AA15;Chlormadinon und Ethinylestradiol;"Zykluspackung mit 28 Tabletten 1 DE O; 
+Zykluspackung mit 21 Tabletten 0,75 DE O "
+G03AA16;Dienogest und Ethinylestradiol;"Zykluspackung mit 28 Tabletten 1 DE O; 
+Zykluspackung mit 21 Tabletten 0,75 DE O "
+G03AB02;Lynestrenol und Ethinylestradiol;"Zykluspackung mit 28 Tabletten 1 DE O; 
+Zykluspackung mit 21 Tabletten 0,75 DE O "
+G03AB03;Levonorgestrel und Ethinylestradiol;"Zykluspackung mit 28 Tabletten 1 DE O; 
+Zykluspackung mit 21 Tabletten 0,75 DE O "
+G03AB04;Norethisteron und Ethinylestradiol;"Zykluspackung mit 28 Tabletten 1 DE O; 
+Zykluspackung mit 21 Tabletten 0,75 DE O "
+G03AB05;Desogestrel und Ethinylestradiol;"Zykluspackung mit 28 Tabletten 1 DE O; 
+Zykluspackung mit 21 Tabletten 0,75 DE O "
+G03AB08;Dienogest und Estradiol;Zykluspackung mit 28 Tabletten 1 DE O 
+G03AB09;Norgestimat und Ethinylestradiol;"Zykluspackung mit 28 Tabletten 1 DE O; 
+Zykluspackung mit 21 Tabletten 0,75 DE O "
+G03AC01;Norethisteron;2,5 mg P
+G03AC03;Levonorgestrel;Zykluspackung mit 28 Tabletten 1 DE O 
+G03AC06;Medroxyprogesteron;1,67 mg P
+G03AC08;Etonogestrel;68 mcg s.c. Implantat
+G03AC09;Desogestrel;"Zykluspackung mit 28 Tabletten 1 DE O; 
+Zykluspackung mit 21 Tabletten 0,75 DE O "
+G03AD01;Levonorgestrel;1,5 mg O
+G03AD02;Ulipristal;30 mg O
+G03BA01;Fluoxymesteron;5 mg O
+G03BA02;Methyltestosteron;25 mg O
+G03BA03;Testosteron;"0,12 g O,R; 18 mg P; 60 mg SL; 3 mg TD; 50 mg TD Gel; 
+12 mg P bezogen auf Testosteronundecanoat; 60 mg TD Lösung "
+G03BB01;Mesterolon;50 mg O
+G03CA01;Ethinylestradiol;25 mcg O
+G03CA03;Estradiol;"0,3 mg N; 2 mg O; 1 mg P Depot mit kurzer Wirkdauer; 
+0,3 mg P Depot mit langer Wirkdauer; 5 mg R; 1 mg TD Gel; 
+50 mcg TD Pflaster, bezogen auf die Freisetzungsrate pro 24 Stunden; 
+1,53 mg TD Spray; 25 mcg V; 7,5 mcg V Vaginalring, bezogen auf 
+die Freisetzungsrate pro 24 Stunden"
+G03CA04;Estriol;"2 mg O,P; 0,2 mg V"
+G03CA06;Chlorotrianisen;24 mg O
+G03CA07;Estron;1 mg O
+G03CA57;Konjugierte Estrogene;0,625 mg O,V
+G03CB01;Dienestrol;"2,5 mg O; 0,2 mg V"
+G03CB02;Diethylstilbestrol;"0,2 mg O; 1 mg V"
+G03CB03;Methallenestril;9 mg O
+G03CD01;Estriol;0,2 mg V 
+G03CD03;Estradiol;25 mcg V 
+G03CX01;Tibolon;2,5 mg O
+G03DA01;Gestonoron;30 mg P
+G03DA02;Medroxyprogesteron;"5 mg O; 7 mg P"
+G03DA03;Hydroxyprogesteron;10 mg P
+G03DA04;Progesteron;"0,3 g O; 5 mg P; 0,2 g R; 90 mg V Vaginalgel"
+G03DB01;Dydrogesteron;10 mg O
+G03DB02;Megestrol;5 mg O
+G03DB03;Medrogeston;5 mg O 
+G03DB08;Dienogest;2 mg O
+G03DC01;Allylestrenol;10 mg O
+G03DC02;Norethisteron;"5 mg O; 0,65 mg O niedrigdosierte Zubereitungen "
+G03DC03;Lynestrenol;5 mg O
+G03DC04;Ethisteron;5 mg O
+G03DC31;Methylestrenolon;5 mg O
+G03FA01;Norethisteron und Estrogen;"Zykluspackung mit 28 Tabletten 1 DE O;
+Zykluspackung mit 21 Tabletten 0,75 DE O "
+G03FA11;Levonorgestrel und Estrogen;"Zykluspackung mit 28 Tabletten 1 DE O; 
+Zykluspackung mit 21 Tabletten 0,75 DE O "
+G03FA12;Medroxyprogesteron und Estrogen;"Zykluspackung mit 28 Tabletten 1 DE O; 
+Zykluspackung mit 21 Tabletten 0,75 DE O "
+G03FA14;Dydrogesteron und Estrogen;Zykluspackung mit 28 Tabletten 1 DE O 
+G03FA15;Dienogest und Estrogen;"Zykluspackung mit 28 Tabletten 1 DE O; 
+Zykluspackung mit 21 Tabletten 0,75 DE O "
+G03FA17;Drospirenon und Estrogen;"Zykluspackung mit 28 Tabletten 1 DE O; 
+Zykluspackung mit 21 Tabletten 0,75 DE O "
+G03FA20;Chlormadinon und Estrogen;"Zykluspackung mit 28 Tabletten 1 DE O; 
+Zykluspackung mit 21 Tabletten 0,75 DE O "
+G03FB01;Norgestrel und Estrogen;"Zykluspackung mit 28 Tabletten 1 DE O; 
+Zykluspackung mit 21 Tabletten 0,75 DE O "
+G03FB05;Norethisteron und Estrogen;"Zykluspackung mit 28 Tabletten 1 DE O; 
+Zykluspackung mit 21 Tabletten 0,75 DE O "
+G03FB06;Medroxyprogesteron und Estrogen;"Zykluspackung mit 28 Tabletten 1 DE O; 
+Zykluspackung mit 21 Tabletten 0,75 DE O "
+G03FB07;Medrogeston und Estrogen;"Zykluspackung mit 28 Tabletten 1 DE O; 
+Zykluspackung mit 21 Tabletten 0,75 DE O "
+G03FB08;Dydrogesteron und Estrogen;Zykluspackung mit 28 Tabletten 1 DE O 
+G03FB09;Levonorgestrel und Estrogen;"Zykluspackung mit 28 Tabletten 1 DE O; 
+Zykluspackung mit 21 Tabletten 0,75 DE O "
+G03FB12;Nomegestrol und Estrogen;Zykluspackung mit 24 Tabletten 0,86 DE O 
+G03GA01;Choriongonadotrophin;"250 E P; 7,5 TSD E P zur Ovulationsauslösung "
+G03GA02;Humanes menopausales Gonadotrophin;75 E P
+G03GA03;Serumgonadotrophin;750 E P
+G03GA04;Urofollitropin;75 E P
+G03GA05;Follitropin alfa;75 E P
+G03GA06;Follitropin beta;75 E P
+G03GA07;Lutropin alfa;75 E P
+G03GA08;Choriongonadotropin alfa;0,25 mg P
+G03GA09;Corifollitropin alfa;0,15 mg P
+G03GA10;Follitropin delta;12 mcg P
+G03GA21;Lutropin alfa und Follitropin alfa;150 E P bezogen auf Follitropin alfa 
+G03GB01;Cyclofenil;0,14 g O
+G03GB02;Clomifen;9 mg O
+G03GB03;Epimestrol;10 mg O
+G03HA01;Cyproteron;"0,1 g O,P; 25 mg P Depot, für den Mann "
+G03HB01;Cyproteron und Estrogen;Zykluspackung mit 21 Tabletten 0,75 DE O 
+G03XA01;Danazol;0,6 g O
+G03XA02;Gestrinon;0,7 mg O
+G03XB01;Mifepriston;0,2 g O
+G03XB02;Ulipristal;5 mg O
+G03XB51;Mifepriston, Kombinationen;0,2 g O bezogen auf Mifepriston
+G03XC01;Raloxifen;60 mg O
+G03XC02;Bazedoxifen;20 mg O
+G03XC03;Lasofoxifen;0,5 mg O
+G03XC05;Ospemifen;60 mg O 
+G04BA01;Ammoniumchlorid;8,5 g O
+G04BA04;L-Methionin;2,25 g O 
+G04BD01;Emepronium;"0,5 g O; 75 mg P"
+G04BD02;Flavoxat;0,8 g O
+G04BD03;Meladrazin;0,45 g O
+G04BD04;Oxybutynin;"15 mg O; 3,9 mg TD"
+G04BD05;Terodilin;50 mg O
+G04BD06;Propiverin;"30 mg O; 20 mg O Kinder DDD "
+G04BD07;Tolterodin;4 mg O
+G04BD08;Solifenacin;5 mg O
+G04BD09;Trospium;40 mg O
+G04BD10;Darifenacin;7,5 mg O
+G04BD11;Fesoterodin;4 mg O
+G04BD12;Mirabegron;50 mg O
+G04BD13;Desfesoterodin;3,5 mg O bezogen auf Desfesoterodinsuccinat
+G04BE01;Alprostadil;"20 mcg P; 0,25 mg urethral"
+G04BE03;Sildenafil;50 mg O
+G04BE04;Yohimbin;15 mg O
+G04BE07;Apomorphin;2 mg SL
+G04BE08;Tadalafil;10 mg O
+G04BE09;Vardenafil;10 mg O
+G04BE10;Avanafil;0,1 g O
+G04BP01;Bärentraubenblätter;"7,5 g O Droge; 0,62 g O Hydrochinon "
+G04BP02;Birkenblätter;10 g O Droge 
+G04BP03;Orthosiphonblätter;9 g O Droge 
+G04BP06;Goldrutenkraut;9 g O Droge 
+G04BP08;Brennnesselkraut und -blätter;10 g O Droge aus Kraut und Blättern 
+G04BX01;Magnesiumhydroxid;0,5 g O
+G04BX03;Acetohydroxamsäure;0,75 g O
+G04BX06;Phenazopyridin;0,6 g O
+G04BX12;Phenylsalicylat;2 g O
+G04BX14;Dapoxetin;30 mg O
+G04BX15;Natriumpentosanpolysulfat;0,3 g O 
+G04BX16;Tiopronin;0,8 g O
+G04BX18;Duloxetin;80 mg O 
+G04BX21;Tolvaptan;"0,12 g O bei autosomal-dominanter polyzystischer 
+Nierenerkrankung (ADPKD) "
+G04CA01;Alfuzosin;7,5 mg O
+G04CA02;Tamsulosin;0,4 mg O
+G04CA03;Terazosin;5 mg O
+G04CA04;Silodosin;8 mg O
+G04CA05;Doxazosin;6 mg O 
+G04CA52;Tamsulosin und Dutasterid;Standarddosis: 1 DE O 
+G04CB01;Finasterid;5 mg O
+G04CB02;Dutasterid;0,5 mg O
+G04CP01;Phytosterol;60 mg O 
+G04CP02;Brennnesselwurzel;5 g O 
+G04CP05;Kürbissamen;10 g O Samen 
+G04CP06;Sägepalmenfrüchte;"1,5 g O Droge; 0,32 g O lipophil ausgezogener Extrakt "
+G04CX11;Beta-Sitosterin;60 mg O 
+H01AA01;Corticotropin;25 E P
+H01AA02;Tetracosactid;0,25 mg P
+H01AB01;Thyrotropin alfa;0,9 mg P
+H01AC01;Somatropin;2 E P Kinder DDD
+H01AC03;Mecasermin;2 mg P
+H01AX01;Pegvisomant;10 mg P
+H01BA01;Vasopressin (Argipressin);40 E P bezogen auf Argipressin
+H01BA02;Desmopressin;"25 mcg N; 0,4 mg O; 4 mcg P; 0,24 mg SL Base"
+H01BA03;Lypressin;20 E N,P
+H01BA04;Terlipressin;12 mg P bezogen auf das Terlipressinacetat
+H01BA05;Ornipressin;5 E P
+H01BB01;Demoxytocin;100 E O
+H01BB02;Oxytocin;"15 E N,P; 200 E O"
+H01BB03;Carbetocin;0,1 mg P
+H01CA02;Nafarelin;0,4 mg N
+H01CA04;Leuprorelin;0,134 mg P Depotinjektion 
+H01CA05;Goserelin;0,129 mg Implantat 
+H01CA07;Triptorelin;"0,134 mg P Depotinjektion; 0,1 mg P "
+H01CB01;Somatostatin;6 mg P
+H01CB02;Octreotid;"0,7 mg P  i.m. Monatsdepot ; 0,3 mg P s.c. "
+H01CB03;Lanreotid;3 mg P
+H01CB05;Pasireotid;1,2 mg P
+H01CC01;Ganirelix;0,25 mg P
+H01CC02;Cetrorelix;0,25 mg P
+H02AA02;Fludrocortison;0,1 mg O
+H02AA03;Desoxycorton;5 mg O,P
+H02AB01;Betamethason;"1,5 mg O,P; 0,4 mg P Depot"
+H02AB02;Dexamethason;1,5 mg O,P
+H02AB03;Fluocortolon;10 mg O
+H02AB04;Methylprednisolon;"7,5 mg O; 20 mg P"
+H02AB05;Paramethason;4 mg O,P
+H02AB06;Prednisolon;10 mg O,P
+H02AB07;Prednison;10 mg O
+H02AB08;Triamcinolon;7,5 mg O,P
+H02AB09;Hydrocortison;"30 mg O,P; 10 mg O Kinder DDD bei primärer und sekundärer Nebenniereninsuffizienz "
+H02AB10;Cortison;37,5 mg O,P
+H02AB11;Prednyliden;12 mg O
+H02AB12;Rimexolon;20 mg P intraartikulär
+H02AB13;Deflazacort;15 mg O
+H02AB51;Betamethason-Depot;0,4 mg P Depot 
+H02AB56;Prednisolon-Depot;10 mg P Depot 
+H02AB58;Triamcinolon-Depot;1,5 mg P Depot, bezogen auf Triamcinolonacetonid 
+H02BX06;Prednisolon, Kombinationen;10 mg O 
+H02BX08;Triamcinolon, Kombinationen;7,5 mg P 
+H02BX09;Betamethason, Kombinationen;1,5 mg O,P 
+H02CA01;Trilostan;0,36 g O
+H02CA02;Ketoconazol;0,6 g O 
+H03AA01;Levothyroxin-Natrium;0,15 mg O,P
+H03AA02;Liothyronin-Natrium;60 mcg O,P
+H03AA05;Zubereitungen aus Schilddrüsengewebe;0,1 g O
+H03AA51;Levothyroxin und Kaliumiodid;Standarddosis: 1 DE O 
+H03BA01;Methylthiouracil;0,1 g O
+H03BA02;Propylthiouracil;0,1 g O
+H03BB01;Carbimazol;15 mg O
+H03BB02;Thiamazol;10 mg O
+H03CA  ;Iodtherapie;0,33 mg O,P
+H03CA01;Iodide;0,15 mg O 
+H04AA01;Glucagon;1 mg P
+H05AA02;Teriparatid;20 mcg P
+H05AA03;Parathyroid Hormon;0,1 mg P
+H05BA01;Calcitonin (Lachs, synthetisch);"200 E N; 100 E P"
+H05BA02;Calcitonin (Schwein, natürlich);100 E P
+H05BA03;Calcitonin (Mensch, synthetisch);100 E P
+H05BX01;Cinacalcet;60 mg O
+H05BX02;Paricalcitol;2 mcg O,P
+H05BX04;Etelcalcetid;2,1 mg P
+J01AA01;Demeclocyclin;0,6 g O
+J01AA02;Doxycyclin;0,1 g O,P
+J01AA03;Chlortetracyclin;1 g O
+J01AA04;Lymecyclin;0,6 g O,P
+J01AA05;Metacyclin;0,6 g O
+J01AA06;Oxytetracyclin;1 g O,P
+J01AA07;Tetracyclin;1 g O,P
+J01AA08;Minocyclin;0,2 g O,P
+J01AA09;Rolitetracyclin;0,35 g P
+J01AA11;Clomocyclin;1 g O
+J01AA12;Tigecyclin;0,1 g P
+J01AA56;Oxytetracyclin, Kombinationen;1 g O bezogen auf Oxytetracyclin 
+J01AA57;Tetracyclin, Kombinationen;1 g O,P bezogen auf Tetracyclin 
+J01BA01;Chloramphenicol;3 g O,P
+J01BA02;Thiamphenicol;1,5 g O,P
+J01BA51;Chloramphenicol, Kombinationen;3 g O bezogen auf Chloramphenicol 
+J01CA01;Ampicillin;"2 g O,R; 6 g P"
+J01CA02;Pivampicillin;1,05 g O
+J01CA03;Carbenicillin;12 g P
+J01CA04;Amoxicillin;"1,5 g O; 3 g P"
+J01CA05;Carindacillin;4 g O
+J01CA06;Bacampicillin;1,2 g O
+J01CA07;Epicillin;2 g O,P
+J01CA08;Pivmecillinam;0,6 g O
+J01CA09;Azlocillin;12 g P
+J01CA10;Mezlocillin;6 g P
+J01CA11;Mecillinam;1,2 g P
+J01CA12;Piperacillin;14 g P
+J01CA13;Ticarcillin;15 g P
+J01CA14;Metampicillin;1,5 g O,P
+J01CA15;Talampicillin;2 g O
+J01CA16;Sulbenicillin;15 g P
+J01CA17;Temocillin;4 g P
+J01CA18;Hetacillin;2 g O
+J01CA19;Aspoxicillin;4 g P
+J01CE01;Benzylpenicillin;3,6 g P
+J01CE02;Phenoxymethylpenicillin;"2 g O; 1,5 MIO E O Kinder DDD "
+J01CE03;Propicillin;0,9 g O
+J01CE04;Azidocillin;1,5 g O
+J01CE05;Pheneticillin;1 g O
+J01CE06;Penamecillin;1,05 g O
+J01CE07;Clometocillin;1 g O
+J01CE08;Benzylpenicillin-Benzathin;3,6 g P bezogen auf Benzylpenicillin
+J01CE09;Benzylpenicillin-Procain;0,6 g P
+J01CE10;Phenoxymethylpenicillin-Benzathin;"2 g O; 1,5 MIO E O Kinder DDD "
+J01CF01;Dicloxacillin;2 g O,P
+J01CF02;Cloxacillin;2 g O,P
+J01CF03;Meticillin;4 g P
+J01CF04;Oxacillin;2 g O,P
+J01CF05;Flucloxacillin;"2 g O,P; 3 g O,P; 1 g O Kinder DDD "
+J01CF06;Nafcillin;3 g P
+J01CG01;Sulbactam;1 g P
+J01CR01;Ampicillin und Beta-Lactamase-Inhibitoren;6 g P bezogen auf Ampicillin
+J01CR02;Amoxicillin und Beta-Lactamase-Inhibitoren;"1,5 g O bezogen auf Amoxicillin; 3 g P bezogen auf Amoxicillin"
+J01CR03;Ticarcillin und Beta-Lactamase-Inhibitoren;15 g P bezogen auf Ticarcillin
+J01CR04;Sultamicillin;1,5 g O
+J01CR05;Piperacillin und Beta-Lactamase-Inhibitoren;14 g P bezogen auf Piperacillin
+J01DB01;Cefalexin;"2 g O; 1 g O Kinder DDD "
+J01DB02;Cefaloridin;3 g P
+J01DB03;Cefalotin;4 g P
+J01DB04;Cefazolin;3 g P
+J01DB05;Cefadroxil;"2 g O; 1 g O Kinder DDD "
+J01DB06;Cefazedon;3 g P
+J01DB07;Cefatrizin;1 g O
+J01DB08;Cefapirin;4 g P
+J01DB09;Cefradin;2 g O,P
+J01DB11;Cefroxadin;2,1 g O
+J01DB12;Ceftezol;3 g P
+J01DC01;Cefoxitin;6 g P
+J01DC02;Cefuroxim;"0,5 g O; 3 g P"
+J01DC03;Cefamandol;6 g P
+J01DC04;Cefaclor;"1 g O; 0,75 g O Kinder DDD "
+J01DC05;Cefotetan;4 g P
+J01DC06;Cefonicid;1 g P
+J01DC07;Cefotiam;"1,2 g O; 4 g P"
+J01DC08;Loracarbef;0,6 g O
+J01DC09;Cefmetazol;4 g P
+J01DC10;Cefprozil;1 g O
+J01DC11;Ceforanid;4 g P
+J01DC12;Cefminox;4 g P
+J01DC13;Cefbuperazon;2 g P
+J01DC14;Flomoxef;2 g P
+J01DD01;Cefotaxim;4 g P
+J01DD02;Ceftazidim;4 g P
+J01DD03;Cefsulodin;4 g P
+J01DD04;Ceftriaxon;2 g P
+J01DD05;Cefmenoxim;2 g P
+J01DD06;Latamoxef;4 g P
+J01DD07;Ceftizoxim;4 g P
+J01DD08;Cefixim;"0,4 g O; 0,2 g O Kinder DDD "
+J01DD09;Cefodizim;2 g P
+J01DD10;Cefetamet;1 g O
+J01DD11;Cefpiramid;2 g P
+J01DD12;Cefoperazon;4 g P
+J01DD13;Cefpodoxim;"0,4 g O; 0,2 g O Kinder DDD "
+J01DD14;Ceftibuten;0,4 g O
+J01DD15;Cefdinir;0,6 g O
+J01DD16;Cefditoren;0,4 g O
+J01DD17;Cefcapen;0,45 g O
+J01DD18;Cefteram;0,4 g O
+J01DD52;Ceftazidim und Beta-Lactamase-Inhibitoren;6 g P bezogen auf Ceftazidim
+J01DD62;Cefoperazon und Beta-Lactamase-Inhibitoren;4 g P bezogen auf Cefoperazon
+J01DD63;Ceftriaxon und Beta-Lactamase-Inhibitoren;2 g P bezogen auf Ceftriaxon
+J01DE01;Cefepim;4 g P
+J01DE02;Cefpirom;4 g P
+J01DE03;Cefozopran;4 g P
+J01DF01;Aztreonam;"0,225 g Inhal.lösung; 4 g P"
+J01DF02;Carumonam;2 g P
+J01DH02;Meropenem;3 g P
+J01DH03;Ertapenem;1 g P
+J01DH04;Doripenem;1,5 g P
+J01DH05;Biapenem;1,2 g P
+J01DH06;Tebipenempivoxil;0,56 g O
+J01DH51;Imipenem und Cilastatin;2 g P bezogen auf Imipenem
+J01DH55;Panipenem und Betamipron;2 g P bezogen auf Panipenem
+J01DI01;Ceftobiprolmedocaril;1,5 g P bezogen auf Ceftobiprol
+J01DI02;Ceftarolinfosamil;1,2 g P
+J01DI03;Faropenem;0,75 g O
+J01DI54;Ceftolozan und Beta-Lactamase-Inhibitoren;3 g P bezogen auf Ceftolozan
+J01EA01;Trimethoprim;"0,4 g O,P; 0,15 g O Kinder DDD "
+J01EA02;Brodimoprim;0,2 g O
+J01EB01;Sulfaisodimidin;4 g O,P
+J01EB02;Sulfamethizol;4 g O
+J01EB03;Sulfadimidin;4 g O
+J01EB04;Sulfapyridin;1 g O
+J01EB05;Sulfafurazol;4 g O,P
+J01EB08;Sulfathiourea;6 g O
+J01EC01;Sulfamethoxazol;2 g O
+J01EC02;Sulfadiazin;0,6 g O
+J01EC03;Sulfamoxol;1 g O,P
+J01ED01;Sulfadimethoxin;0,5 g O
+J01ED02;Sulfalen;0,1 g O
+J01ED04;Sulfametoxydiazin;0,5 g O
+J01ED05;Sulfamethoxypyridazin;0,5 g O
+J01ED06;Sulfaperin;0,5 g O
+J01ED07;Sulfamerazin;3 g O
+J01ED08;Sulfaphenazol;1 g O
+J01ED09;Sulfamazon;1,5 g O,R
+J01EE01;Sulfamethoxazol und Trimethoprim;"1,6 g Sulfamethoxazol + 0,32 g Trimethoprim; 
+0,8 g Sulfamethoxazol + 0,16 g Trimethoprim Kinder DDD "
+J01FA01;Erythromycin;"1 g O,P; 2 g O Erythromycinethylsuccinat-Tabletten; 2 g P; 
+1 g O Kinder DDD für Erythromycinethylsuccinat-haltige Mittel "
+J01FA02;Spiramycin;3 g O
+J01FA03;Midecamycin;"1,2 g O; 1 g P"
+J01FA05;Oleandomycin;1 g O
+J01FA06;Roxithromycin;"0,3 g O; 0,15 g O Kinder DDD "
+J01FA07;Josamycin;2 g O
+J01FA08;Troleandomycin;1 g O
+J01FA09;Clarithromycin;"0,5 g O; 1 g P; 0,375 g O Kinder DDD "
+J01FA10;Azithromycin;"0,3 g O; 0,5 g P; 0,25 g O Kinder DDD "
+J01FA11;Miocamycin;1,2 g O
+J01FA12;Rokitamycin;0,8 g O
+J01FA13;Dirithromycin;0,5 g O
+J01FA14;Flurithromycin;0,75 g O
+J01FA15;Telithromycin;0,8 g O
+J01FA21;Erythromycinstinoprat;1 g O,P 
+J01FF01;Clindamycin;"1,2 g O; 1,8 g P; 0,45 g O Kinder DDD "
+J01FF02;Lincomycin;1,8 g O,P
+J01FG01;Pristinamycin;2 g O
+J01FG02;Quinupristin/Dalfopristin;1,5 g P
+J01GA01;Streptomycin;1 g P
+J01GA02;Streptoduocin;1 g P
+J01GB01;Tobramycin;"0,3 g Inhal.lösung; 0,112 g Inhal.pulver; 0,24 g P"
+J01GB03;Gentamicin;0,24 g P
+J01GB04;Kanamycin;1 g P
+J01GB05;Neomycin;1 g O
+J01GB06;Amikacin;1 g P
+J01GB07;Netilmicin;0,35 g O,P
+J01GB08;Sisomicin;0,24 g P
+J01GB09;Dibekacin;0,14 g P
+J01GB10;Ribostamycin;1 g P
+J01GB11;Isepamicin;0,4 g P
+J01GB12;Arbekacin;0,2 g P
+J01GB13;Bekanamycin;0,6 g P
+J01MA01;Ofloxacin;0,4 g O,P
+J01MA02;Ciprofloxacin;"1 g O; 0,8 g P"
+J01MA03;Pefloxacin;0,8 g O,P
+J01MA04;Enoxacin;0,8 g O
+J01MA05;Temafloxacin;0,8 g O
+J01MA06;Norfloxacin;0,8 g O
+J01MA07;Lomefloxacin;0,4 g O
+J01MA08;Fleroxacin;0,4 g O,P
+J01MA09;Sparfloxacin;0,2 g O
+J01MA10;Rufloxacin;0,2 g O
+J01MA11;Grepafloxacin;0,4 g O
+J01MA12;Levofloxacin;"0,5 g O,P; 0,24 g Inhal.lösung "
+J01MA13;Trovafloxacin;0,2 g O,P
+J01MA14;Moxifloxacin;0,4 g O,P
+J01MA15;Gemifloxacin;0,32 g O
+J01MA16;Gatifloxacin;0,4 g O,P
+J01MA17;Prulifloxacin;0,6 g O
+J01MA18;Pazufloxacin;1 g P
+J01MA19;Garenoxacin;0,4 g O
+J01MA21;Sitafloxacin;0,1 g O
+J01MA22;Tosufloxacin;0,45 g O
+J01MA23;Delafloxacin;"0,9 g O; 0,6 g P"
+J01MB01;Rosoxacin;0,3 g O
+J01MB02;Nalidixinsäure;4 g O
+J01MB03;Piromidsäure;2 g O
+J01MB04;Pipemidsäure;0,8 g O
+J01MB05;Oxolinsäure;1 g O
+J01MB06;Cinoxacin;1 g O
+J01MB07;Flumequin;1,2 g O
+J01XA01;Vancomycin;2 g P
+J01XA02;Teicoplanin;0,4 g P
+J01XA03;Telavancin;0,7 g P 
+J01XA04;Dalbavancin;1,5 g P Dosis pro Behandlungszyklus
+J01XB01;Colistin;"3 MIO E Inhal.lösung/pulver ; 9 MIO E P"
+J01XB02;Polymyxin B;0,15 g P
+J01XC01;Fusidinsäure;1,5 g O,P
+J01XD01;Metronidazol;1,5 g P
+J01XD02;Tinidazol;1,5 g P
+J01XD03;Ornidazol;1 g P
+J01XE01;Nitrofurantoin;"0,2 g O; 0,12 g O Kinder DDD "
+J01XE02;Nifurtoinol;0,16 g O
+J01XE03;Furazidin;0,3 g O
+J01XX01;Fosfomycin;"3 g O; 8 g P"
+J01XX03;Clofoctol;1,5 g R
+J01XX04;Spectinomycin;3 g P
+J01XX05;Methenamin;"2 g O Hippurat; 3 g O Mandelat"
+J01XX06;Mandelsäure;12 g O
+J01XX07;Nitroxolin;1 g O
+J01XX08;Linezolid;1,2 g O,P
+J01XX09;Daptomycin;0,28 g P zur Therapie von Haut- und Weichteilinfektionen 
+J01XX11;Tedizolid;0,2 g O,P bezogen auf Tedizolidphosphat
+J02AA01;Amphotericin B;35 mg P
+J02AB01;Miconazol;1 g P
+J02AB02;Ketoconazol;0,2 g O
+J02AC01;Fluconazol;0,2 g O,P
+J02AC02;Itraconazol;0,2 g O,P
+J02AC03;Voriconazol;0,4 g O,P
+J02AC04;Posaconazol;0,3 g O,P
+J02AC05;Isavuconazol;0,2 g O,P
+J02AX01;Flucytosin;10 g O,P
+J02AX04;Caspofungin;50 mg P
+J02AX05;Micafungin;0,1 g P
+J02AX06;Anidulafungin;0,1 g P
+J04AA01;4-Aminosalicylsäure;12 g O
+J04AA02;Natriumaminosalicylat;14 g O,P
+J04AA03;Calciumaminosalicylat;15 g O 
+J04AB01;Cycloserin;0,75 g O
+J04AB02;Rifampicin;"0,6 g O,P; 0,3 g O Kinder DDD "
+J04AB03;Rifamycin;0,6 g P
+J04AB04;Rifabutin;0,15 g O
+J04AB05;Rifapentin;0,11 g O
+J04AB06;Enviomycin;1 g P 
+J04AB30;Capreomycin;1 g P
+J04AC01;Isoniazid;0,3 g O,P
+J04AC51;Isoniazid, Kombinationen;0,3 g O bezogen auf Isoniazid 
+J04AD01;Protionamid;0,75 g O
+J04AD02;Tiocarlid;7 g O
+J04AD03;Ethionamid;0,75 g O
+J04AK01;Pyrazinamid;1,5 g O
+J04AK02;Ethambutol;1,2 g O,P
+J04AK05;Bedaquilin;86 mg O
+J04AK06;Delamanid;0,2 g O
+J04BA01;Clofazimin;0,1 g O
+J04BA02;Dapson;50 mg O
+J04BA03;Aldesulfonnatrium;0,33 g O
+J05AB01;Aciclovir;4 g O,P
+J05AB03;Vidarabin;0,7 g P 
+J05AB06;Ganciclovir;"3 g O; 0,5 g P"
+J05AB09;Famciclovir;"0,75 g O; 1,5 g O "
+J05AB11;Valaciclovir;3 g O
+J05AB12;Cidofovir;25 mg P
+J05AB14;Valganciclovir;0,9 g O
+J05AB15;Brivudin;0,125 g O
+J05AC02;Rimantadin;0,2 g O
+J05AC04;Amantadin;0,2 g O 
+J05AD01;Foscarnet;6,5 g P
+J05AE01;Saquinavir;"1,8 g O; 2 g O "
+J05AE02;Indinavir;2,4 g O
+J05AE03;Ritonavir;1,2 g O
+J05AE04;Nelfinavir;2,25 g O
+J05AE05;Amprenavir;1,2 g O
+J05AE07;Fosamprenavir;1,4 g O
+J05AE08;Atazanavir;0,3 g O
+J05AE09;Tipranavir;"1 g O; 0,64 g O Kinder DDD "
+J05AE10;Darunavir;1,2 g O
+J05AF01;Zidovudin;0,6 g O,P
+J05AF02;Didanosin;0,4 g O
+J05AF03;Zalcitabin;2,25 mg O
+J05AF04;Stavudin;80 mg O
+J05AF05;Lamivudin;0,3 g O
+J05AF06;Abacavir;0,6 g O
+J05AF07;Tenofovirdisoproxil;0,245 g O
+J05AF08;Adefovirdipivoxil;10 mg O
+J05AF09;Emtricitabin;0,2 g O
+J05AF10;Entecavir;0,5 mg O
+J05AF11;Telbivudin;0,6 g O
+J05AF12;Clevudin;30 mg O
+J05AF13;Tenofoviralafenamid;25 mg O
+J05AG01;Nevirapin;"0,4 g O; 0,3 g O Kinder DDD "
+J05AG02;Delavirdin;1,2 g O
+J05AG03;Efavirenz;0,6 g O
+J05AG04;Etravirin;0,4 g O
+J05AG05;Rilpivirin;25 mg O
+J05AG06;Doravirin;0,1 g O 
+J05AH01;Zanamivir;20 mg Inhal.pulver  zur Therapie 
+J05AH02;Oseltamivir;0,15 g O
+J05AH03;Peramivir;0,6 g P 
+J05AH04;Laninamivir;40 mg Inhal.pulver 
+J05AP01;Ribavirin;"6 g Inhal.lösung; 1 g O"
+J05AP02;Telaprevir;2,25 g O
+J05AP03;Boceprevir;2,4 g O
+J05AP05;Simeprevir;0,15 g O
+J05AP06;Asunaprevir;0,2 g O 
+J05AP07;Daclatasvir;60 mg O
+J05AP08;Sofosbuvir;0,4 g O
+J05AP09;Dasabuvir;0,5 g O
+J05AP10;Elbasvir;50 mg O 
+J05AP11;Grazoprevir;0,1 g O 
+J05AP51;Sofosbuvir und Ledipasvir;Standarddosis: 1 DE O 
+J05AP53;Ombitasvir, Paritaprevir und Ritonavir;Standarddosis: 2 DE O 
+J05AP54;Elbasvir und Grazoprevir;Standarddosis: 1 DE O 
+J05AP55;Sofosbuvir und Velpatasvir;Standarddosis: 1 DE O 
+J05AP56;Sofosbuvir, Velpatasvir und Voxilaprevir;Standarddosis: 1 DE O 
+J05AP57;Glecaprevir und Pibrentasvir;Standarddosis: 3 DE O 
+J05AR01;Zidovudin und Lamivudin;Standarddosis: 2 DE O 
+J05AR02;Lamivudin und Abacavir;Standarddosis: 1 DE O 
+J05AR03;Tenofovirdisoproxil und Emtricitabin;Standarddosis: 1 DE O 
+J05AR04;Zidovudin, Lamivudin und Abacavir;Standarddosis: 2 DE O 
+J05AR06;Emtricitabin, Tenofovirdisoproxil und Efavirenz;Standarddosis: 1 DE O 
+J05AR08;Emtricitabin, Tenofovirdisoproxil und Rilpivirin;Standarddosis: 1 DE O 
+J05AR09;Emtricitabin, Tenofovirdisoproxil, Elvitegravir und Cobicistat;Standarddosis: 1 DE O 
+J05AR10;Lopinavir und Ritonavir;0,8 g O bezogen auf Lopinavir
+J05AR13;Lamivudin, Abacavir und Dolutegravir;Standarddosis: 1 DE O 
+J05AR17;Emtricitabin und Tenofoviralafenamid;Standarddosis: 1 DE O 
+J05AR18;Emtricitabin, Tenofoviralafenamid, Elvitegravir und Cobicistat;Standarddosis: 1 DE O 
+J05AR19;Emtricitabin, Tenofoviralafenamid und Rilpivirin;Standarddosis: 1 DE O 
+J05AR20;Emtricitabin, Tenofoviralafenamid und Bictegravir;Standarddosis: 1 DE O 
+J05AR21;Dolutegravir und Rilpivirin;Standarddosis: 1 DE O 
+J05AR22;Emtricitabin, Tenofoviralafenamid, Darunavir und Cobicistat;Standarddosis: 1 DE O 
+J05AR23;Atazanavir und Ritonavir;0,3 g O bezogen auf Atazanavir
+J05AR24;Lamivudin, Tenofovirdisoproxil und Doravirin;Standarddosis: 1 DE O 
+J05AX01;Moroxydin;0,3 g O
+J05AX05;Inosin pranobex;3 g O
+J05AX07;Enfuvirtid;0,18 g P
+J05AX08;Raltegravir;0,8 g O
+J05AX09;Maraviroc;0,6 g O
+J05AX12;Dolutegravir;50 mg O
+J05AX13;Umifenovir;0,8 g O
+J05AX17;Enisamiumiodid;1,5 g O
+J05AX18;Letermovir;0,48 g O,P
+J05AX19;Tiloron;0,125 g O
+J05AX21;Imidazolylethanamidoglutarsäure;90 mg O
+J05AX22;Kagocel;60 mg O 
+J05AX26;Amenamevir;0,4 g O 
+J05AX27;Favipiravir;1,6 g O 
+J06BA01;Immunglobuline, normal human, zur extravasalen Anwendung;1,4 g P 
+J06BA02;Immunglobuline, normal human, zur intravasalen Anwendung;1,6 g P 
+J06BB04;Hepatitis-B-Immunglobulin;500 E P 
+J06BB16;Palivizumab;3,75 mg P Säuglings DDD 
+J06BB21;Bezlotoxumab;0,7 g P 
+J06BC01;Nebacumab;0,1 g P
+J07AE01;Cholera, inaktiviert, ganze Zelle;Standarddosis: 1 DE O 
+J07AF01;Diphtherie-Toxoid;Standarddosis: 1 DE P 
+J07AG01;Haemophilus influenzae B, gereinigtes Antigen konjugiert;Standarddosis: 1 DE P 
+J07AG51;Haemophilus influenzae B, Kombinationen mit Toxoiden;Standarddosis: 1 DE P 
+J07AG52;"Haemophilus influenzae B, Kombinationen mit Pertussis 
+und Toxoiden";Standarddosis: 1 DE P 
+J07AH03;"Meningokokken bivalent (A, C), gereinigtes 
+Polysaccharid-Antigen";Standarddosis: 1 DE P 
+J07AH04;"Meningokokken tetravalent (A, C, Y, W-135), gereinigtes 
+Polysaccharid-Antigen";Standarddosis: 1 DE P 
+J07AH07;"Meningokokken C, gereinigtes Polysaccharid-Antigen, 
+konjugiert";Standarddosis: 1 DE P 
+J07AH08;Meningokokken tetravalent (A, C, Y, W-135), gereinigtes Polysaccharid-Antigen, konjugiert;Standarddosis: 1 DE P 
+J07AH09;Meningokokken B, Multikomponenten-Impfstoff;Standarddosis: 1 DE P 
+J07AJ02;Pertussis, gereinigtes Antigen;Standarddosis: 1 DE P 
+J07AJ52;Pertussis, gereinigtes Antigen, Kombinationen mit Toxoiden;Standarddosis: 1 DE P 
+J07AL01;Pneumokokken, gereinigtes Polysaccharid-Antigen;Standarddosis: 1 DE P 
+J07AL02;"Pneumokokken, gereinigtes Polysaccharid-Antigen, 
+konjugiert";Standarddosis: 1 DE P 
+J07AL52;"Pneumokokken, gereinigtes Polysaccharid-Antigen und 
+Haemophilus influenzae B, konjugiert";Standarddosis: 1 DE P 
+J07AM01;Tetanus-Toxoid;Standarddosis: 1 DE P 
+J07AM51;Tetanus-Toxoid, Kombinationen mit Diphtherie-Toxoid;Standarddosis: 1 DE P 
+J07AN01;Tuberkulose, lebend abgeschwächt;Standarddosis: 1 DE P 
+J07AP01;Typhus, oral, lebend abgeschwächt;Standarddosis: 1 DE O 
+J07AP03;Typhus, gereinigtes Polysaccharid-Antigen;Standarddosis: 1 DE P 
+J07AX52;Lactobacillus Stämme, Kombinationen;Standarddosis: 1 DE P 
+J07AX53;Enterobacteriacae Stämme, Kombinationen;Standarddosis: 1 DE P 
+J07BA01;FSME, inaktiviert, ganzes Virus;Standarddosis: 1 DE P 
+J07BA02;Encephalitis, japanische, inaktiviert, ganzes Virus;Standarddosis: 1 DE P 
+J07BB01;Influenza, inaktiviert, ganzes Virus;Standarddosis: 1 DE P 
+J07BB02;Influenza, inaktiviert, Spaltvirus oder Oberflächenantigen;Standarddosis: 1 DE P 
+J07BB03;Influenza, lebend abgeschwächt;Standarddosis: 1 DE N 
+J07BC01;Hepatitis B, gereinigtes Antigen;Standarddosis: 1 DE P 
+J07BC02;Hepatitis A, inaktiviert, ganzes Virus;Standarddosis: 1 DE P 
+J07BC03;Hepatitis A, gereinigtes Antigen;Standarddosis: 1 DE P 
+J07BC20;Kombinationen;Standarddosis: 1 DE P 
+J07BD01;Masern, lebend abgeschwächt;Standarddosis: 1 DE P 
+J07BD51;Masern, Kombinationen mit Mumps, lebend abgeschwächt;Standarddosis: 1 DE P 
+J07BD52;"Masern, Kombinationen mit Mumps und Röteln, 
+lebend abgeschwächt";Standarddosis: 1 DE P 
+J07BD54;"Masern, Kombinationen mit Mumps, Röteln und Varicella, 
+lebend abgeschwächt";Standarddosis: 1 DE P 
+J07BF02;Poliomyelitis, oral, trivalent, lebend abgeschwächt;Standarddosis: 1 DE O 
+J07BF03;Poliomyelitis, trivalent, inaktiviert, ganzes Virus;Standarddosis: 1 DE P 
+J07BG01;Tollwut, inaktiviert, ganzes Virus;Standarddosis: 1 DE P 
+J07BH01;Rotavirus, lebend abgeschwächt;Standarddosis: 1 DE O 
+J07BH02;Rotavirus, pentavalent, lebend, Reassortanten;Standarddosis: 1 DE O 
+J07BJ01;Röteln, lebend abgeschwächt;Standarddosis: 1 DE P 
+J07BK01;Varicella, lebend abgeschwächt;Standarddosis: 1 DE P 
+J07BK02;Zoster Virus, lebend abgeschwächt;Standarddosis: 1 DE P 
+J07BK03;Zoster Virus, gereinigtes Antigen;Standarddosis: 1 DE P 
+J07BL01;Gelbfieber, lebend abgeschwächt;Standarddosis: 1 DE P 
+J07BM01;Humaner-Papillomvirus-Impfstoff (Typen 6,11,16,18);Standarddosis: 1 DE P 
+J07BM02;Humaner-Papillomvirus-Impfstoff (Typen 16,18);Standarddosis: 1 DE P 
+J07BM03;"Humaner-Papillomvirus-Impfstoff 
+(Typen 6,11,16,18,31,33,45,52,58)";Standarddosis: 1 DE P 
+J07BX01;Pocken-Impfstoff, lebend, modifiziert;Standarddosis: 1 DE P 
+J07BX02;Inaktiviertes Herpes-simplex-Virus;Standarddosis: 1 DE P 
+J07CA01;Diphtherie-Poliomyelitis-Tetanus;Standarddosis: 1 DE P 
+J07CA02;Diphtherie-Pertussis-Poliomyelitis-Tetanus;Standarddosis: 1 DE P 
+J07CA06;"Diphtherie-Haemophilus influenzae B-Pertussis-
+Poliomyelitis-Tetanus";Standarddosis: 1 DE P 
+J07CA08;Haemophilus influenzae B und Hepatitis B;Standarddosis: 1 DE P 
+J07CA09;"Diphtherie-Haemophilus influenzae B-Pertussis-
+Poliomyelitis-Tetanus-Hepatitis B";Standarddosis: 1 DE P 
+J07CA10;Typhus-Hepatitis A;Standarddosis: 1 DE P 
+L01AA01;Cyclophosphamid;0,25 g P 
+L01AA03;Melphalan;"2 mg O; 1 mg P "
+L01AA06;Ifosfamid;0,7 g P 
+L01AA07;Trofosfamid;0,15 g O 
+L01AA09;Bendamustin;17 mg P 
+L01AB01;Busulfan;0,224 g P 
+L01AC01;Thiotepa;1,62 g P 
+L01AD01;Carmustin;8,57 mg P 
+L01AD04;Streptozocin;96 mg P 
+L01AX03;Temozolomid;65 mg O,P 
+L01AX04;Dacarbazin;0,1 g P 
+L01BA01;Methotrexat;Standarddosis: 1 DE P 
+L01BA04;Pemetrexed;43 mg P 
+L01BB02;Mercaptopurin;0,175 g O bezogen auf kg Körpergewicht 
+L01BB05;Fludarabin;8 mg P 
+L01BB06;Clofarabin;8,8 mg P Kinder DDD 
+L01BB07;Nelarabin;0,39 g P 
+L01BC02;Fluorouracil;"0,15 g O; 0,1 g P "
+L01BC05;Gemcitabin;0,2 g P 
+L01BC06;Capecitabin;3 g O 
+L01BC07;Azacitidin;34 mg P 
+L01BC08;Decitabin;6,43 mg P 
+L01BC59;Trifluridin, Kombinationen;45 mg O bezogen auf Trifluridin 
+L01BC63;Tegafur und Uracil;0,432 g O bezogen auf Tegafur 
+L01BC73;Tegafur, Gimeracil und Oteracil;67,5 mg O bezogen auf Tegafur 
+L01CA01;Vinblastin;11,61 mg P Wochendosis 
+L01CA02;Vincristin;0,36 mg P 
+L01CA04;Vinorelbin;"18 mg O; 7 mg P "
+L01CA05;Vinflunin;27,43 mg P 
+L01CB01;Etoposid;"50 mg O; 25 mg P "
+L01CD01;Paclitaxel;"15 mg P; 22 mg P Nanopartikelformulierung "
+L01CD02;Docetaxel;6,43 mg P 
+L01CD04;Cabazitaxel;2,14 mg P 
+L01CX01;Trabectedin;0,13 mg P 
+L01DA01;Dactinomycin;0,32 mg P bezogen auf die Körperoberfläche 
+L01DB01;Doxorubicin;"5 mg P; 3 mg P pegylierte liposomale Form;
+Standarddosis: 1 DE U "
+L01DB03;Epirubicin;7 mg P 
+L01DB06;Idarubicin;"6 mg O; 3 mg P "
+L01DB07;Mitoxantron;"10 mg P Zytostatikum; 0,24 mg P Multiple Sklerose "
+L01DB11;Pixantron;9,64 mg P 
+L01DC01;Bleomycin;"3 mg P entsprechend einer standardisierten 
+biologischen Aktivität von 3.000 E "
+L01DC03;Mitomycin;"4,29 mg Intravesikal; 0,65 mg P "
+L01XA01;Cisplatin;6,75 mg P 
+L01XA02;Carboplatin;25 mg P 
+L01XA03;Oxaliplatin;11 mg P 
+L01XC02;Rituximab;"67 mg P s.c.; 32 mg P "
+L01XC03;Trastuzumab;"29 mg P s.c.; 20 mg P "
+L01XC04;Alemtuzumab;13 mg P 
+L01XC05;Gemtuzumab ozogamicin;2,1 mg P 
+L01XC06;Cetuximab;65 mg P 
+L01XC07;Bevacizumab;45 mg P 
+L01XC08;Panitumumab;30 mg P 
+L01XC09;Catumaxomab;21 mcg P 
+L01XC10;Ofatumumab;0,133 g P 
+L01XC11;Ipilimumab;10 mg P 
+L01XC12;Brentuximab vedotin;6 mg P 
+L01XC13;Pertuzumab;20 mg P 
+L01XC14;Trastuzumab emtansin;12 mg P 
+L01XC15;Obinutuzumab;48 mg P 
+L01XC16;Dinutuximab beta;2,6 mg P Kinder DDD 
+L01XC17;Nivolumab;17 mg P 
+L01XC18;Pembrolizumab;9,5 mg P 
+L01XC19;Blinatumomab;17 mcg P 
+L01XC21;Ramucirumab;40 mg P 
+L01XC22;Necitumumab;76 mg P 
+L01XC23;Elotuzumab;50 mg P 
+L01XC24;Daratumumab;40 mg P 
+L01XC26;Inotuzumab ozogamicin;0,1 mg P 
+L01XC27;Olaratumab;0,1 g P 
+L01XC28;Durvalumab;50 mg P 
+L01XC31;Avelumab;50 mg P 
+L01XC32;Atezolizumab;57 mg P 
+L01XD05;Temoporfin;10,5 mg P 
+L01XD07;Padeliporfin;0,26 g P 
+L01XE01;Imatinib;0,5 g O 
+L01XE02;Gefitinib;0,25 g O 
+L01XE03;Erlotinib;0,125 g O 
+L01XE04;Sunitinib;35 mg O 
+L01XE05;Sorafenib;0,8 g O 
+L01XE06;Dasatinib;0,12 g O 
+L01XE07;Lapatinib;1,375 g O 
+L01XE08;Nilotinib;0,6 g O 
+L01XE09;Temsirolimus;7,1 mg P 
+L01XE10;Everolimus;10 mg O 
+L01XE11;Pazopanib;0,8 g O 
+L01XE12;Vandetanib;0,3 g O 
+L01XE13;Afatinib;40 mg O 
+L01XE14;Bosutinib;0,5 g O 
+L01XE15;Vemurafenib;1,92 g O 
+L01XE16;Crizotinib;0,5 g O 
+L01XE17;Axitinib;10 mg O 
+L01XE18;Ruxolitinib;30 mg O 
+L01XE21;Regorafenib;0,12 g O 
+L01XE23;Dabrafenib;0,3 g O 
+L01XE24;Ponatinib;45 mg O 
+L01XE25;Trametinib;2 mg O 
+L01XE26;Cabozantinib;"140 mg O Schilddrüsenkarzinom; 
+60 mg O Nieren- und Leberzellkarzinom "
+L01XE27;Ibrutinib;0,49 g O 
+L01XE28;Ceritinib;0,45 g O 
+L01XE29;Lenvatinib;18 mg O 
+L01XE31;Nintedanib;"0,3 g O idiopathische Lungenfibrose; 
+0,4 g O nicht-kleinzelliges Lungenkarzinom "
+L01XE33;Palbociclib;94 mg O 
+L01XE34;Tivozanib;1 mg O 
+L01XE35;Osimertinib;80 mg O 
+L01XE36;Alectinib;1,2 g O 
+L01XE38;Cobimetinib;45 mg O 
+L01XE39;Midostaurin;0,15 g O 
+L01XE41;Binimetinib;90 mg O 
+L01XE42;Ribociclib;0,45 g O 
+L01XE43;Brigatinib;0,18 g O 
+L01XE46;Encorafenib;0,45 g O 
+L01XE50;Abemaciclib;0,3 g O 
+L01XX05;Hydroxycarbamid;1,75 g O 
+L01XX11;Estramustin;0,56 g O 
+L01XX17;Topotecan;"1 mg O; 0,65 mg P "
+L01XX19;Irinotecan;"30 mg P; 10 mg P pegylierte, liposomale Form "
+L01XX25;Bexaroten;0,54 g O 
+L01XX32;Bortezomib;0,45 mg P 
+L01XX35;Anagrelid;2 mg O 
+L01XX41;Eribulin;0,21 mg P bezogen auf Eribulin 
+L01XX42;Panobinostat;5,7 mg O 
+L01XX43;Vismodegib;0,15 g O 
+L01XX44;Aflibercept;20 mg P 
+L01XX45;Carfilzomib;10 mg P 
+L01XX46;Olaparib;"0,8 g O (Hartkapseln); 0,6 g O (Filmtabletten) "
+L01XX47;Idelalisib;0,3 g O 
+L01XX48;Sonidegib;0,2 g O 
+L01XX50;Ixazomib;0,43 mg O 
+L01XX51;Talimogen laherparepvec;0,14 DE P (entspr. 14 MIO PFU) 
+L01XX52;Venetoclax;0,4 g O 
+L01XX54;Niraparib;0,3 g O 
+L01XX55;Rucaparib;1,2 g O 
+L01XX90;Allogene T-Zellen, genetisch modifiziert;Standarddosis: 1 DE P 
+L01XX91;Tisagenlecleucel;Standarddosis: 1 DE P 
+L01XY01;Cytarabin und Daunorubicin;Standarddosis: 0,6 DE P 
+L02AA01;Diethylstilbestrol;3 mg O
+L02AA02;Polyestradiolphosphat;6 mg P
+L02AA03;Ethinylestradiol;1,5 mg O
+L02AA04;Fosfestrol;0,25 g O,P
+L02AB01;Megestrol;0,16 g O
+L02AB02;Medroxyprogesteron;1 g O,P
+L02AB03;Gestonoron;40 mg P
+L02AE01;Buserelin;"0,11 mg Implantat; 1,2 mg N; 1,5 mg P"
+L02AE02;Leuprorelin;"60 mcg Implantat; 1 mg P; 0,134 mg P Depotinjektion; 
+1 DE P pro Behandlungszeitraum für Depotarzneiformen "
+L02AE03;Goserelin;0,129 mg Implantat
+L02AE04;Triptorelin;"0,1 mg P; 0,134 mg P Depotinjektion"
+L02AE05;Histrelin;0,137 mg Implantat (Freisetzungsrate 50 mcg pro Tag)
+L02BA01;Tamoxifen;20 mg O
+L02BA02;Toremifen;60 mg O
+L02BA03;Fulvestrant;"8,3 mg P; 18 mg P "
+L02BB01;Flutamid;0,75 g O
+L02BB02;Nilutamid;0,3 g O
+L02BB03;Bicalutamid;"50 mg O; 0,15 g O bezogen auf die Monotherapie "
+L02BB04;Enzalutamid;0,16 g O
+L02BB05;Apalutamid;0,24 g O 
+L02BG01;Aminoglutethimid;1 g O
+L02BG02;Formestan;18 mg P
+L02BG03;Anastrozol;1 mg O
+L02BG04;Letrozol;2,5 mg O
+L02BG06;Exemestan;25 mg O
+L02BX01;Abarelix;3,6 mg P
+L02BX02;Degarelix;2,7 mg P
+L02BX03;Abirateron;1 g O bezogen auf Abirateronacetat
+L03AA02;Filgrastim;0,35 mg P bezogen auf kg Körpergewicht
+L03AA03;Molgramostim;0,35 mg P
+L03AA09;Sargramostim;0,45 mg P
+L03AA10;Lenograstim;0,35 mg P bezogen auf kg Körpergewicht
+L03AA12;Ancestim;1,4 mg P
+L03AA13;Pegfilgrastim;0,3 mg P
+L03AA14;Lipegfilgrastim;0,3 mg P
+L03AA17;Pegteograstim;0,3 mg P
+L03AB01;Interferon alfa, natürlich;2 MIO E P
+L03AB02;Interferon beta, natürlich;33,33 TSD E P
+L03AB03;Interferon gamma;40 mcg P
+L03AB04;Interferon alfa-2a;2 MIO E P
+L03AB05;Interferon alfa-2b;2 MIO E P
+L03AB06;Interferon alfa-n1;5 MIO E P
+L03AB07;Interferon beta-1a;"4,3 mcg P i.m.; 18,86 mcg P s.c. "
+L03AB08;Interferon beta-1b;4 MIO E P
+L03AB09;Interferon alfacon-1;4 mcg P
+L03AB10;Peginterferon alfa-2b;"7,5 mcg P; 15 mcg P Kombinationstherapie bei Hepatitis C "
+L03AB11;Peginterferon alfa-2a;26 mcg P Kombinationstherapie bei Hepatitis C
+L03AB13;Peginterferon beta-1a;8,9 mcg P
+L03AB14;Cepeginterferon alfa-2b;17 mcg P
+L03AC01;Aldesleukin;0,2 mg P
+L03AC02;Oprelvekin;3,5 mg P
+L03AP01;Echinacea-purpurea-Presssaft;"0,3 g O Trockenpresssaft; 7,5 ml O Presssaft "
+L03AP02;Echinacea-pallida-Wurzel;0,9 g O Droge 
+L03AX01;Lentinan;0,3 mg O,P
+L03AX03;BCG-Impfstoff;"1,8 mg Intravesikal; 0,033 Darreichungsform Intravesikal "
+L03AX05;Pidotimod;1,6 g O
+L03AX10;Immunocyanin;3 mg Intravesikal
+L03AX11;Tasonermin;3,5 mg P
+L03AX13;Glatirameracetat;20 mg P
+L03AX14;Histamindihydrochlorid;0,5 mg P
+L03AX15;Mifamurtid;0,7 mg P
+L03AX16;Plerixafor;16,8 mg P
+L03AX17;Sipuleucel-T;0,071 DE P entsprechend 1 DE pro 14 Tage 
+L04AA02;Muromonab-CD3;5 mg P
+L04AA04;Antithymozytäres Immunglobulin (Kaninchen);0,1 g P
+L04AA06;Mycophenolsäure;2 g O,P bezogen auf Mycophenolatmofetil
+L04AA10;Sirolimus;3 mg O
+L04AA13;Leflunomid;20 mg O
+L04AA18;Everolimus;1,5 mg O
+L04AA21;Efalizumab;10 mg P
+L04AA23;Natalizumab;10 mg P
+L04AA24;Abatacept;27 mg P
+L04AA25;Eculizumab;64 mg P
+L04AA26;Belimumab;25 mg P
+L04AA27;Fingolimod;0,5 mg O
+L04AA28;Belatacept;12,5 mg P
+L04AA29;Tofacitinib;10 mg O
+L04AA31;Teriflunomid;14 mg O
+L04AA32;Apremilast;60 mg O
+L04AA33;Vedolizumab;5,4 mg P
+L04AA34;Alemtuzumab;0,13 mg P
+L04AA36;Ocrelizumab;3,29 mg P
+L04AA37;Baricitinib;4 mg O
+L04AA40;Cladribin;0,34 mg O
+L04AB01;Etanercept;"7 mg P; 3 mg P Kinder DDD "
+L04AB02;Infliximab;3,75 mg P
+L04AB04;Adalimumab;"2,9 mg P; 1,6 mg P Kinder DDD "
+L04AB05;Certolizumab pegol;14 mg P
+L04AB06;Golimumab;1,66 mg P
+L04AB07;Opinercept;7 mg P 
+L04AC01;Daclizumab;5 mg P
+L04AC02;Basiliximab;40 mg P Dosis pro Behandlungszyklus
+L04AC03;Anakinra;0,1 g P
+L04AC04;Rilonacept;23 mg P
+L04AC05;Ustekinumab;0,54 mg P
+L04AC07;Tocilizumab;20 mg P
+L04AC08;Canakinumab;2,7 mg P
+L04AC10;Secukinumab;10 mg P
+L04AC11;Siltuximab;37 mg P
+L04AC12;Brodalumab;15 mg P 
+L04AC13;Ixekizumab;2,9 mg P
+L04AC14;Sarilumab;14,3 mg P
+L04AC16;Guselkumab;1,79 mg P
+L04AC17;Tildrakizumab;1,2 mg P 
+L04AD01;Ciclosporin;0,25 g O,P
+L04AD02;Tacrolimus;5 mg O,P
+L04AX01;Azathioprin;0,15 g O,P
+L04AX02;Thalidomid;"0,1 g O; 0,2 g O "
+L04AX03;Methotrexat;2,5 mg O,P
+L04AX04;Lenalidomid;10 mg O
+L04AX05;Pirfenidon;2,4 g O
+L04AX06;Pomalidomid;3 mg O
+L04AX07;Dimethylfumarat;0,48 g O
+M01AA01;Phenylbutazon;0,3 g O,P,R
+M01AA02;Mofebutazon;0,75 g O,P
+M01AA03;Oxyphenbutazon;0,3 g O,R
+M01AA05;Clofezon;0,6 g O,R
+M01AB01;Indometacin;0,1 g O,P,R
+M01AB02;Sulindac;0,4 g O,P,R
+M01AB03;Tolmetin;0,7 g O,R
+M01AB04;Zomepirac;0,3 g O
+M01AB05;Diclofenac;0,1 g O,P,R
+M01AB06;Alclofenac;1,25 g O,R
+M01AB07;Bumadizon;0,4 g O
+M01AB08;Etodolac;0,4 g O
+M01AB09;Lonazolac;0,6 g O
+M01AB11;Acemetacin;0,12 g O
+M01AB15;Ketorolac;30 mg O,P
+M01AB16;Aceclofenac;0,2 g O
+M01AB51;Indometacin, Kombinationen;0,1 g O,R bezogen auf Indometacin
+M01AB55;Diclofenac, Kombinationen;0,1 g O bezogen auf Diclofenac
+M01AC01;Piroxicam;20 mg O,P,R
+M01AC02;Tenoxicam;20 mg O,P,R
+M01AC05;Lornoxicam;12 mg O,P,R
+M01AC06;Meloxicam;15 mg O,P,R
+M01AE01;Ibuprofen;"1,2 g O,P,R; 0,4 g O Kinder DDD; 0,4 g R Kinder DDD "
+M01AE02;Naproxen;0,5 g O,R
+M01AE03;Ketoprofen;0,15 g O,P,R
+M01AE04;Fenoprofen;1,2 g O
+M01AE05;Fenbufen;0,6 g O
+M01AE07;Suprofen;0,4 g O
+M01AE08;Pirprofen;0,8 g O
+M01AE09;Flurbiprofen;0,2 g O,R
+M01AE11;Tiaprofensäure;0,6 g O,R
+M01AE12;Oxaprozin;0,9 g O
+M01AE14;Dexibuprofen;0,8 g O
+M01AE17;Dexketoprofen;75 mg O,P
+M01AE52;Naproxen und Esomeprazol;0,5 g O bezogen auf Naproxen
+M01AG01;Mefenaminsäure;1 g O
+M01AG02;Tolfenaminsäure;0,3 g O,R
+M01AG03;Flufenaminsäure;0,5 g O
+M01AH01;Celecoxib;0,2 g O
+M01AH02;Rofecoxib;25 mg O
+M01AH03;Valdecoxib;10 mg O
+M01AH04;Parecoxib;40 mg P
+M01AH05;Etoricoxib;60 mg O
+M01AH06;Lumiracoxib;0,1 g O
+M01AX01;Nabumeton;1 g O
+M01AX02;Nifluminsäure;0,75 g O
+M01AX04;Azapropazon;0,75 g O
+M01AX05;Glucosamin;1,5 g O bezogen auf Glucosaminsulfat
+M01AX07;Benzydamin;0,15 g O,R
+M01AX12;Glukosaminoglycanpolysulfat;50 mg P
+M01AX13;Proquazon;0,9 g O,R
+M01AX17;Nimesulid;0,2 g O
+M01CA03;Oxycinchophen;1,5 g O
+M01CB01;Natriumaurothiomalat;2,4 mg P
+M01CB02;Natriumaurothiosulfat;14 mg P
+M01CB03;Auranofin;6 mg O
+M01CB04;Aurothioglucose;2,4 mg P
+M01CC01;Penicillamin;0,5 g O
+M01CX01;Methotrexat;2,5 mg O,P 
+M01CX02;Sulfasalazin;2 g O,R 
+M02AA06;Etofenamat;1 g T 
+M02AA07;Piroxicam;17,5 mg T 
+M02AA08;Felbinac;0,15 g T 
+M02AA10;Ketoprofen;0,275 g T 
+M02AA13;Ibuprofen;0,5 g T 
+M02AA15;Diclofenac;"0,1 g T; 0,28 g TD "
+M02AA23;Indometacin;0,04 g T 
+M02AC01;Hydroxyethylsalicylat;0,4 g T 
+M03AC01;Pancuronium;6,3 mg P 
+M03AC03;Vecuronium;6,3 mg P 
+M03AC04;Atracurium;38,5 mg P 
+M03AC09;Rocuroniumbromid;42 mg P 
+M03AC10;Mivacuriumchlorid;14 mg P 
+M03AC11;Cisatracurium;10,5 mg P 
+M03BA01;Phenprobamat;1,6 g O
+M03BA02;Carisoprodol;1,4 g O
+M03BA03;Methocarbamol;3 g O,P
+M03BA04;Styramat;0,5 g O
+M03BA05;Febarbamat;0,3 g O
+M03BB02;Chlormezanon;0,6 g O
+M03BB03;Chlorzoxazon;1,5 g O
+M03BC01;Orphenadrin(citrat);0,12 g O,P
+M03BX01;Baclofen;"50 mg O; 0,55 mg P"
+M03BX02;Tizanidin;12 mg O
+M03BX03;Pridinol;"6 mg O; 3 mg P "
+M03BX04;Tolperison;0,2 g O
+M03BX07;Tetrazepam;0,125 g O 
+M03BX09;Eperison;0,15 g O
+M03BX30;Fenyramidol;2 g O
+M03CA01;Dantrolen;0,1 g O
+M04AA01;Allopurinol;0,4 g O,P
+M04AA03;Febuxostat;80 mg O
+M04AB01;Probenecid;1 g O
+M04AB02;Sulfinpyrazon;0,3 g O
+M04AB03;Benzbromaron;0,1 g O
+M04AC01;Colchicin;1 mg O,P
+M04AC02;Cinchophen;1 g O
+M04AX02;Pegloticase;0,57 mg P
+M05BA01;Etidronsäure;"0,4 g O; 1,5 g P Dosis pro Behandlungszyklus bezogen auf das Salz der Etidronsäure"
+M05BA02;Clodronsäure;"1,6 g O; 1,5 g P Dosis pro Behandlungszyklus bezogen auf das Salz der Clodronsäure"
+M05BA03;Pamidronsäure;60 mg P Dosis pro Behandlungszyklus bezogen auf das Salz der Pamidronsäure
+M05BA04;Alendronsäure;10 mg O bezogen auf die Säure der Alendronsäure
+M05BA05;Tiludronsäure;0,4 g O bezogen auf die Säure der Tiludronsäure
+M05BA06;Ibandronsäure;"5 mg O Osteoporose; 6 mg P Dosis pro Behandlungszyklus bei Tumor-
+induzierter Hyperkalzämie; 50 mg O bei Tumor-induzierter Hyperkalzämie;
+33 mcg P bei Osteoporose bezogen auf die Säure der Ibandronsäure "
+M05BA07;Risedronsäure;"5 mg O Osteoporose; 30 mg O bei Morbus Paget bezogen auf das Salz der Risedronsäure "
+M05BA08;Zoledronsäure;"4 mg P Dosis pro Behandlungszyklus bei Tumor-induzierter Hyperkalzämie; 
+14 mcg P Osteoporose bezogen auf die Säure der Zoledronsäure "
+M05BB01;Etidronsäure und Calcium, Sequenzialpräparate;0,4 g O bezogen auf das Salz der Etidronsäure
+M05BB02;Risedronsäure und Calcium, Sequenzialpräparate;5 mg O bezogen auf das Salz der Risedronsäure 
+M05BB03;Alendronsäure und Colecalciferol;10 mg O bezogen auf die Säure der Alendronsäure
+M05BB04;"Risedronsäure, Calcium und Colecalciferol, 
+Sequenzialpräparate";5 mg O bezogen auf das Salz der Risedronsäure
+M05BB05;"Alendronsäure, Calcium und Colecalciferol, 
+Sequenzialpräparate";10 mg O bezogen auf die Säure der Alendronsäure
+M05BB06;Alendronsäure und Alfacalcidol, Sequenzialpräparate;10 mg O bezogen auf die Säure der Alendronsäure
+M05BB07;Risedronsäure und Colecalciferol;5 mg O bezogen auf das Salz der Risedronsäure 
+M05BB08;"Zoledronsäure, Calcium und Colecalciferol, 
+Sequenzialpräparate";"4 mg P Dosis pro Behandlungszyklus, bezogen auf die Säure 
+der Zoledronsäure "
+M05BB09;Ibandronsäure und Colecalciferol;33 mcg P bezogen auf die Säure der Ibandronsäure 
+M05BB10;"Ibandronsäure, Calcium und Colecalciferol, 
+Sequenzialpräparate";33 mcg P bezogen auf die Säure der Ibandronsäure 
+M05BB12;Ibandronsäure und Calcium;33 mcg P bezogen auf die Säure der Ibandronsäure 
+M05BC02;Eptotermin alfa;3,3 mg P 
+M05BX03;Strontiumranelat;2 g O
+M05BX04;Denosumab;"0,33 mg P; 0,12 g P Dosis pro Behandlungszyklus bei skelettbezogenen 
+Komplikationen mit Knochenmetastasen "
+M05BX05;Burosumab;1,43 mg P Kinder DDD 
+M09AA01;Hydrochinin;0,2 g O
+M09AA02;Chinin;0,2 g O 
+M09AB02;Kollagenase aus Clostridium histolyticum;0,9 mg P
+M09AP02;Bromelain;0,2 g O 
+M09AP03;Teufelskrallenwurzel;4,5 g O Droge 
+M09AP04;Brennnesselblätter;10 g O Droge aus Kraut und Blättern 
+M09AP05;Weidenrinden;90 mg O bezogen auf Gesamtsalicin 
+M09AX01;Hyaluronsäure;3,6 mg P intraartikulär
+M09AX02;Autologe Chondrozyten;Standarddosis: 1 DE P 
+M09AX03;Ataluren;"2,8 g O; 1 g O Kinder DDD "
+M09AX07;Nusinersen;0,1 mg P
+M09AX21;Mexiletin;0,3 g O 
+N01AH01;Fentanyl;"0,7 mg P; 55 mcg P Kinder DDD "
+N01AH03;Sufentanil;"30 mcg P; Standarddosis: 1 DE epidural "
+N01AH06;Remifentanil;52,5 mcg P 
+N01AX03;Ketamin;0,25 g P 
+N01AX10;Propofol;0,14 g P 
+N01BA01;Metabutethamin;Standarddosis: 1 DE P 
+N01BA02;Procain;Standarddosis: 1 DE P 
+N01BA03;Tetracain;Standarddosis: 1 DE P 
+N01BA04;Chloroprocain;Standarddosis: 1 DE P 
+N01BA05;Benzocain;Standarddosis: 1 DE P 
+N01BA06;Oxybuprocain;Standarddosis: 1 DE P 
+N01BA52;Procain, Kombinationen;Standarddosis: 1 DE P 
+N01BB01;Bupivacain;Standarddosis: 1 DE P 
+N01BB02;Lidocain;Standarddosis: 1 DE P 
+N01BB03;Mepivacain;Standarddosis: 1 DE P 
+N01BB04;Prilocain;Standarddosis: 1 DE P 
+N01BB05;Butanilicain;Standarddosis: 1 DE P 
+N01BB06;Cinchocain;Standarddosis: 1 DE P 
+N01BB07;Etidocain;Standarddosis: 1 DE P 
+N01BB08;Articain;Standarddosis: 1 DE P 
+N01BB09;Ropivacain;Standarddosis: 1 DE P 
+N01BB10;Levobupivacain;Standarddosis: 1 DE P 
+N01BB20;Kombinationen;Standarddosis: 1 DE P 
+N01BB51;Bupivacain, Kombinationen;Standarddosis: 1 DE P 
+N01BB52;Lidocain, Kombinationen;Standarddosis: 1 DE P 
+N01BB53;Mepivacain, Kombinationen;Standarddosis: 1 DE P 
+N01BB54;Prilocain, Kombinationen;Standarddosis: 1 DE P 
+N01BB57;Etidocain, Kombinationen;Standarddosis: 1 DE P 
+N01BB58;Articain, Kombinationen;Standarddosis: 1 DE P 
+N01BC01;Cocain;Standarddosis: 1 DE P 
+N01BH20;Kombinationen;Standarddosis: 1 DE P 
+N01BX01;Ethylchlorid;Standarddosis: 1 DE P 
+N01BX02;Dyclonin;Standarddosis: 1 DE P 
+N01BX03;Phenol;Standarddosis: 1 DE P 
+N01BX04;Capsaicin;"Standarddosis: 1 DE P; Standarddosis: 1 DE TD Pflaster "
+N01BX05;Propipocain;Standarddosis: 1 DE P 
+N01BX06;Diphenhydramin;Standarddosis: 1 DE U 
+N02AA01;Morphin;"0,1 g O; 30 mg P,R"
+N02AA03;Hydromorphon;"20 mg O; 4 mg P,R"
+N02AA04;Nicomorphin;30 mg O,P,R
+N02AA05;Oxycodon;"75 mg O; 30 mg P"
+N02AA08;Dihydrocodein;0,15 g O
+N02AA55;Oxycodon und Naloxon;75 mg O bezogen auf Oxycodonhydrochlorid
+N02AB01;Ketobemidon;50 mg O,P
+N02AB02;Pethidin;0,4 g O,P,R
+N02AB03;Fentanyl;"0,6 mg N,SL; 1,2 mg TD"
+N02AB07;Sufentanil;0,6 mg SL 
+N02AC01;Dextromoramid;"20 mg O,P; 40 mg R"
+N02AC03;Piritramid;45 mg P
+N02AC04;Dextropropoxyphen;"0,2 g O Chlorid; 0,3 g O Napsylat"
+N02AC05;Bezitramid;15 mg O
+N02AD01;Pentazocin;0,2 g O,P
+N02AD02;Phenazocin;3 mg P
+N02AE01;Buprenorphin;1,2 mg P,SL,TD
+N02AF01;Butorphanol;12 mg P
+N02AF02;Nalbufin;80 mg P
+N02AJ06;Codein und Paracetamol;3 g O bezogen auf Paracetamol 
+N02AJ13;Tramadol und Paracetamol;0,3 g O bezogen auf Tramadolhydrochlorid 
+N02AX01;Tilidin;0,2 g O,P
+N02AX02;Tramadol;0,3 g O,P,R
+N02AX05;Meptazinol;1,2 g O,P
+N02AX06;Tapentadol;0,4 g O
+N02AX51;Tilidin und Naloxon;0,2 g O bezogen auf Tilidinhydrochlorid 
+N02BA01;Acetylsalicylsäure;"3 g O,R; 1 g P bezogen auf Lysinacetylsalicylat;
+0,3 g O Kinder DDD "
+N02BA02;Aloxiprin;3 g O
+N02BA03;Cholinsalicylat;3 g O
+N02BA04;Natriumsalicylat;3 g O
+N02BA05;Salicylamid;3 g O
+N02BA06;Salsalat;3 g O
+N02BA07;Ethenzamid;3 g O
+N02BA09;Dipyrocetyl;3 g O
+N02BA10;Benorilat;3 g O
+N02BA11;Diflunisal;0,75 g O
+N02BA12;Kaliumsalicylat;7 g O
+N02BA13;Lysin-Acetylsalicylat;"3 g O; 1 g P "
+N02BA15;Carbasalat calcium;3,6 g O
+N02BA51;Acetylsalicylsäure, Kombinationen exkl. Psycholeptika;3 g O bezogen auf Acetylsalicylsäure 
+N02BB01;Phenazon;"3 g O; 3 g R "
+N02BB02;Metamizol-Natrium;"3 g O,P,R; 0,75 g O,R Kinder DDD "
+N02BB03;Aminophenazon;0,5 g R
+N02BB04;Propyphenazon;"3 g R; 3 g O "
+N02BB51;Phenazon, Kombinationen exkl. Psycholeptika;3 g O bezogen auf Phenazon
+N02BB54;Propyphenazon, Kombinationen exkl. Psycholeptika**;3 g O bezogen auf Propyphenazon
+N02BE01;Paracetamol;"3 g O,P,R; 0,375 g R Säuglings DDD; 0,75 g O,R Kinder DDD "
+N02BE03;Phenacetin;1,8 g O
+N02BE05;Propacetamol;6 g P
+N02BG02;Rimazolium;0,9 g O
+N02BG03;Glafenin;0,8 g O
+N02BG04;Floctafenin;1 g O
+N02BG07;Flupirtin;"0,4 g O; 0,525 g R "
+N02BG08;Ziconotid;12 mcg P
+N02BG09;Methoxyfluran;Standarddosis: 1 DE Inhal.lösung 
+N02BG10;Cannabinoide;42 mg SL bezogen auf Delta-9-Tetrahydrocannabinol und Cannabidiol 
+N02CA01;Dihydroergotamin;"1 mg N; 4 mg O,P"
+N02CA02;Ergotamin;4 mg Inhal.aerosol,O,P,R,SL
+N02CA04;Methysergid;4 mg O
+N02CA52;Ergotamin, Kombinationen exkl. Psycholeptika;4 mg O bezogen auf Ergotamin
+N02CA72;Ergotamin, Kombinationen mit Psycholeptika;4 mg O bezogen auf Ergotamin
+N02CB01;Flumedroxon;20 mg O
+N02CC01;Sumatriptan;"20 mg N; 50 mg O; 6 mg P; 25 mg R"
+N02CC02;Naratriptan;2,5 mg O
+N02CC03;Zolmitriptan;2,5 mg N,O
+N02CC04;Rizatriptan;10 mg O
+N02CC05;Almotriptan;12,5 mg O
+N02CC06;Eletriptan;40 mg O
+N02CC07;Frovatriptan;2,5 mg O
+N02CX01;Pizotifen;1,5 mg O
+N02CX02;Clonidin;0,1 mg O
+N02CX03;Iprazochrom;24 mg O
+N02CX07;Erenumab;2,5 mg P 
+N02CX12;Topiramat;0,1 g O 
+N03AA01;Methylphenobarbital;0,5 g O
+N03AA02;Phenobarbital;0,1 g O,P
+N03AA03;Primidon;1,25 g O
+N03AA30;Metharbital;0,2 g O
+N03AB01;Ethotoin;2,5 g O
+N03AB02;Phenytoin;0,3 g O,P
+N03AB03;Amino(diphenylhydantoin)valeriansäure;0,3 g O
+N03AB04;Mephenytoin;0,4 g O
+N03AB05;Fosphenytoin;0,45 g P
+N03AC01;Paramethadion;0,9 g O
+N03AC02;Trimethadion;1,5 g O
+N03AD01;Ethosuximid;1,25 g O
+N03AD02;Phensuximid;2 g O
+N03AD03;Mesuximid;0,9 g O
+N03AE01;Clonazepam;"8 mg O,P; 4,5 mg O Kinder DDD "
+N03AE02;Midazolam;7,5 mg SL Kinder DDD 
+N03AF01;Carbamazepin;1 g O,R
+N03AF02;Oxcarbazepin;1 g O
+N03AF03;Rufinamid;1,4 g O
+N03AF04;Eslicarbazepin;0,8 g O
+N03AG01;Valproinsäure;1,5 g O,P,R
+N03AG02;Valpromid;1,5 g O
+N03AG03;Aminobuttersäure;1 g O,P
+N03AG04;Vigabatrin;2 g O
+N03AG06;Tiagabin;30 mg O
+N03AX03;Sultiam;0,4 g O
+N03AX07;Phenacemid;1,5 g O
+N03AX09;Lamotrigin;0,3 g O
+N03AX10;Felbamat;2,4 g O
+N03AX11;Topiramat;0,3 g O
+N03AX12;Gabapentin;1,8 g O
+N03AX14;Levetiracetam;1,5 g O,P
+N03AX15;Zonisamid;"0,2 g O; 0,4 g O "
+N03AX16;Pregabalin;0,3 g O
+N03AX17;Stiripentol;1 g O
+N03AX18;Lacosamid;0,3 g O,P
+N03AX21;Retigabin;0,9 g O
+N03AX22;Perampanel;8 mg O
+N03AX23;Brivaracetam;0,1 g O,P
+N04AA01;Trihexyphenidyl;10 mg O
+N04AA02;Biperiden;10 mg O,P
+N04AA03;Metixen;40 mg O
+N04AA04;Procyclidin;25 mg O,P
+N04AA08;Dexetimid;"0,5 mg O; 0,125 mg P"
+N04AB02;Orphenadrin(chlorid);0,2 g O,P
+N04AC01;Benzatropin;2 mg O,P
+N04AC30;Etybenzatropin;9 mg O
+N04BA01;Levodopa;3,5 g O
+N04BA02;Levodopa und Decarboxylasehemmer*;0,6 g O bezogen auf Levodopa
+N04BA03;Levodopa, Decarboxylasehemmer und COMT-Hemmer;0,45 g O bezogen auf Levodopa
+N04BA10;Levodopa in Kombination mit Carbidopa;0,6 g O bezogen auf Levodopa 
+N04BA11;Levodopa in Kombination mit Benserazid;0,6 g O bezogen auf Levodopa 
+N04BA13;Levodopa in Kombination mit Carbidopa und Entacapon;0,45 g O bezogen auf Levodopa 
+N04BA14;Levodopa in Kombination mit Carbidopa und Pramipexol;0,3 g O bezogen auf Levodopa 
+N04BB01;Amantadin;"0,2 g O; 0,2 g P "
+N04BC01;Bromocriptin;40 mg O
+N04BC02;Pergolid;3 mg O
+N04BC04;Ropinirol;6 mg O
+N04BC05;Pramipexol;2,5 mg O Hydrochlorid
+N04BC06;Cabergolin;3 mg O
+N04BC07;Apomorphin;20 mg P
+N04BC08;Piribedil;0,2 g O
+N04BC09;Rotigotin;6 mg TD Pflaster
+N04BC10;Lisurid;1,3 mg O 
+N04BD01;Selegilin;5 mg O
+N04BD02;Rasagilin;1 mg O
+N04BD03;Safinamid;75 mg O
+N04BX01;Tolcapon;0,45 g O
+N04BX02;Entacapon;1 g O
+N04BX04;Opicapon;50 mg O
+N05AA01;Chlorpromazin;"0,3 g O,R; 0,1 g P"
+N05AA02;Levomepromazin;"0,3 g O; 0,1 g P"
+N05AA03;Promazin;"0,3 g O; 0,1 g P"
+N05AA04;Acepromazin;"0,1 g O; 50 mg P"
+N05AA05;Triflupromazin;0,1 g O,P
+N05AB01;Dixyrazin;"50 mg O; 30 mg P"
+N05AB02;Fluphenazin;"10 mg O; 1 mg P Depot"
+N05AB03;Perphenazin;"30 mg O; 10 mg P; 7 mg P Depot; 16 mg R"
+N05AB04;Prochlorperazin;"0,1 g O,R; 50 mg P"
+N05AB05;Thiopropazat;60 mg O
+N05AB06;Trifluoperazin;"20 mg O,R; 8 mg P"
+N05AB07;Acetophenazin;50 mg O
+N05AB08;Thioproperazin;"75 mg O; 20 mg P"
+N05AB09;Butaperazin;10 mg O
+N05AB10;Perazin;0,1 g O,P
+N05AC01;Periciazin;"50 mg O; 20 mg P"
+N05AC02;Thioridazin;0,3 g O
+N05AC03;Mesoridazin;0,2 g O,P
+N05AC04;Pipotiazin;"10 mg O; 5 mg P Depot"
+N05AD01;Haloperidol;"8 mg O,P; 3,3 mg P Depot"
+N05AD02;Trifluperidol;2 mg O
+N05AD03;Melperon;0,3 g O,P
+N05AD04;Moperon;20 mg O,P
+N05AD05;Pipamperon;0,2 g O
+N05AD06;Bromperidol;"10 mg O,P; 3,3 mg P Depot"
+N05AD07;Benperidol;"1,5 mg O; 1,5 mg P "
+N05AD08;Droperidol;2,5 mg P
+N05AE01;Oxypertin;0,12 g O
+N05AE02;Molindon;50 mg O
+N05AE03;Sertindol;16 mg O
+N05AE04;Ziprasidon;"80 mg O; 40 mg P"
+N05AE05;Lurasidon;"60 mg O bezogen auf das Lurasidonhydrochlorid 
+(entspricht 55,5 mg Lurasidon)"
+N05AF01;Flupentixol;"6 mg O; 4 mg P Depot"
+N05AF02;Clopenthixol;0,1 g O,P
+N05AF03;Chlorprothixen;"0,3 g O; 50 mg P"
+N05AF04;Tiotixen;30 mg O
+N05AF05;Zuclopenthixol;"30 mg O,P; 15 mg P Depot"
+N05AG01;Fluspirilen;0,7 mg P Depot
+N05AG02;Pimozid;4 mg O
+N05AG03;Penfluridol;6 mg O
+N05AH01;Loxapin;"9,1 mg Inhal.pulver (aus dem Mundstück abgegebene Dosis); 0,1 g O"
+N05AH02;Clozapin;0,3 g O,P
+N05AH03;Olanzapin;"10 mg O,P; 10 mg P Depot"
+N05AH04;Quetiapin;0,4 g O
+N05AH05;Asenapin;20 mg O
+N05AH06;Clotiapin;80 mg O,P
+N05AL01;Sulpirid;0,8 g O,P
+N05AL02;Sultoprid;1,2 g O
+N05AL03;Tiaprid;0,4 g O,P
+N05AL04;Remoxiprid;0,3 g O,P
+N05AL05;Amisulprid;0,4 g O
+N05AL07;Levosulpirid;0,4 g O
+N05AN01;Lithium;24 mmol O
+N05AX07;Prothipendyl;0,24 g O,P
+N05AX08;Risperidon;"5 mg O; 2,7 mg P Depot"
+N05AX11;Zotepin;0,2 g O
+N05AX12;Aripiprazol;"15 mg O,P; 13,3 mg P Depot"
+N05AX13;Paliperidon;"6 mg O; 2,5 mg P Depot, bezogen auf Paliperidon"
+N05AX14;Iloperidon;18 mg O
+N05AX15;Cariprazin;3 mg O
+N05AX16;Brexpiprazol;3 mg O
+N05BA01;Diazepam;10 mg O,P,R
+N05BA02;Chlordiazepoxid;"30 mg O; 50 mg P"
+N05BA03;Medazepam;20 mg O
+N05BA04;Oxazepam;"50 mg O; 50 mg R "
+N05BA05;Dikaliumclorazepat;20 mg O
+N05BA06;Lorazepam;2,5 mg O,P,SL
+N05BA08;Bromazepam;10 mg O
+N05BA09;Clobazam;20 mg O
+N05BA11;Prazepam;30 mg O
+N05BA12;Alprazolam;1 mg O
+N05BA13;Halazepam;0,1 g O
+N05BA15;Camazepam;30 mg O
+N05BA16;Nordazepam;15 mg O
+N05BA17;Fludiazepam;0,75 mg O
+N05BA18;Ethylloflazepat;2 mg O
+N05BA24;Bentazepam;75 mg O
+N05BB01;Hydroxyzin;75 mg O,P
+N05BB02;Captodiam;0,2 g O
+N05BC01;Meprobamat;1,2 g O
+N05BC03;Emylcamat;0,9 g O
+N05BD01;Benzoctamin;30 mg O,P
+N05BE01;Buspiron;30 mg O
+N05BP02;Kava-Kava-Wurzelstock;90 mg O Kavapyrone 
+N05BX01;Mephenoxalon;1,2 g O
+N05BX04;Fabomotizol;30 mg O
+N05CA01;Pentobarbital;0,1 g O,P,R
+N05CA02;Amobarbital;0,1 g O,P
+N05CA03;Butobarbital;0,15 g O
+N05CA04;Barbital;0,5 g O
+N05CA05;Aprobarbital;0,1 g O,P
+N05CA06;Secobarbital;0,1 g O
+N05CA07;Talbutal;0,1 g O
+N05CA08;Vinylbital;0,15 g O
+N05CA09;Vinbarbital;0,1 g O
+N05CA10;Cyclobarbital;0,2 g O
+N05CA11;Heptabarbital;0,2 g O
+N05CA12;Reposal;0,2 g O
+N05CA16;Hexobarbital;0,25 g O
+N05CC01;Chloralhydrat;1 g O,R
+N05CC02;Chloralodol;1,6 g O
+N05CC03;Acetylglycinamidchloralhydrat;1,7 g O
+N05CC04;Dichloralphenazon;1,3 g O
+N05CC05;Paraldehyd;5 g O,P,R
+N05CD01;Flurazepam;30 mg O
+N05CD02;Nitrazepam;5 mg O
+N05CD03;Flunitrazepam;1 mg O,P
+N05CD04;Estazolam;3 mg O
+N05CD05;Triazolam;"0,25 mg O; 0,2 mg SL"
+N05CD06;Lormetazepam;"1 mg O; 1 mg P "
+N05CD07;Temazepam;20 mg O
+N05CD08;Midazolam;15 mg O,P
+N05CD09;Brotizolam;0,25 mg O
+N05CD10;Quazepam;15 mg O
+N05CD11;Loprazolam;1 mg O
+N05CE01;Glutethimid;0,25 g O
+N05CE02;Methyprylon;0,2 g O
+N05CE03;Pyrithyldion;0,2 g O
+N05CF01;Zopiclon;7,5 mg O
+N05CF02;Zolpidem;"10 mg O; 10 mg SL "
+N05CF03;Zaleplon;10 mg O
+N05CH01;Melatonin;2 mg O
+N05CH03;Tasimelteon;20 mg O 
+N05CM01;Methaqualon;0,2 g O
+N05CM02;Clomethiazol;1,5 g O,P
+N05CM03;Bromisoval;0,6 g O
+N05CM04;Carbromal;1 g O
+N05CM05;Scopolamin;0,9 mg O,P
+N05CM06;Propiomazin;25 mg O
+N05CM07;Triclofos;1 g O
+N05CM08;Ethchlorvynol;0,5 g O
+N05CM10;Hexapropymate;0,4 g O
+N05CM12;Apronal;0,25 g O
+N05CM13;Valnoctamid;0,6 g O
+N05CM18;Dexmedetomidin;1 mg P
+N05CM20;Diphenhydramin;50 mg O 
+N05CM21;Doxylamin;37,5 mg O 
+N05CM22;Promethazin;75 mg O,P 
+N05CP01;Baldrianwurzel;"7 g O Droge; 6,5 ml O Tinktur "
+N05CP02;Kava-Kava-Wurzelstock;90 mg O Kavapyrone 
+N06AA01;Desipramin;0,1 g O
+N06AA02;Imipramin;0,1 g O,P
+N06AA03;Imipraminoxid;0,1 g O
+N06AA04;Clomipramin;0,1 g O,P
+N06AA05;Opipramol;0,15 g O
+N06AA06;Trimipramin;0,15 g O,P
+N06AA07;Lofepramin;0,105 g O
+N06AA08;Dibenzepin;0,3 g O
+N06AA09;Amitriptylin;75 mg O,P
+N06AA10;Nortriptylin;"75 mg O; 30 mg P"
+N06AA11;Protriptylin;30 mg O
+N06AA12;Doxepin;0,1 g O,P
+N06AA13;Iprindol;90 mg O
+N06AA14;Melitracen;75 mg O,P
+N06AA15;Butriptylin;75 mg O
+N06AA16;Dosulepin;0,15 g O
+N06AA17;Amoxapin;0,15 g O
+N06AA18;Dimetacrin;0,15 g O
+N06AA21;Maprotilin;0,1 g O,P
+N06AA25;Amitriptylinoxid;75 mg O,P 
+N06AB02;Zimeldin;0,2 g O
+N06AB03;Fluoxetin;20 mg O
+N06AB04;Citalopram;20 mg O,P
+N06AB05;Paroxetin;20 mg O
+N06AB06;Sertralin;50 mg O
+N06AB08;Fluvoxamin;0,1 g O
+N06AB10;Escitalopram;10 mg O
+N06AF01;Isocarboxazid;15 mg O
+N06AF02;Nialamid;0,1 g O
+N06AF03;Phenelzin;60 mg O
+N06AF04;Tranylcypromin;10 mg O
+N06AG02;Moclobemid;0,3 g O
+N06AP01;Johanniskraut;3 g O Droge 
+N06AX02;Tryptophan;1 g O Schlafstörungen 
+N06AX03;Mianserin;60 mg O
+N06AX04;Nomifensin;0,15 g O
+N06AX05;Trazodon;0,3 g O
+N06AX06;Nefazodon;0,4 g O
+N06AX07;Minaprin;0,1 g O
+N06AX09;Viloxazin;0,2 g O
+N06AX11;Mirtazapin;30 mg O
+N06AX12;Bupropion;"0,3 g O; 0,15 g O "
+N06AX14;Tianeptin;37,5 mg O
+N06AX16;Venlafaxin;0,1 g O
+N06AX17;Milnacipran;0,1 g O
+N06AX18;Reboxetin;8 mg O
+N06AX21;Duloxetin;60 mg O
+N06AX22;Agomelatin;25 mg O
+N06AX23;Desvenlafaxin;50 mg O
+N06AX26;Vortioxetin;10 mg O
+N06BA01;Amfetamin;15 mg O,P
+N06BA02;Dexamfetamin;15 mg O Kinder DDD
+N06BA03;Metamfetamin;15 mg O
+N06BA04;Methylphenidat;"30 mg O Kinder DDD; 40 mg O "
+N06BA05;Pemolin;40 mg O
+N06BA07;Modafinil;0,3 g O
+N06BA09;Atomoxetin;80 mg O
+N06BA11;Dexmethylphenidat;15 mg O
+N06BA12;Lisdexamfetamin;30 mg O Kinder DDD
+N06BA13;Armodafinil;0,15 g O
+N06BA21;Guanfacin;3 mg O Kinder DDD 
+N06BC01;Coffein;"0,4 g O,P; 6 mg O,P Säuglings DDD, bezogen auf Coffeincitrat "
+N06BX01;Meclofenoxat;1 g O,P 
+N06BX02;Pyritinol;0,6 g O
+N06BX03;Piracetam;"2,4 g O; 6 g P"
+N06BX13;Idebenon;0,9 g O
+N06BX15;Pipradrol;30 mg O
+N06BX18;Vinpocetin;15 mg O
+N06DA01;Tacrin;0,12 g O
+N06DA02;Donepezil;7,5 mg O
+N06DA03;Rivastigmin;"9 mg O; 9,5 mg TD Freisetzungsrate"
+N06DA04;Galantamin;16 mg O
+N06DP01;Ginkgo-biloba-Blätter-Trockenextrakt;0,18 g O 
+N06DX01;Memantin;20 mg O
+N06DX02;Ginkgo folium*;0,12 g O
+N06DX07;Dihydroergotoxin;3 mg O,P 
+N06DX09;Vincamin;60 mg O 
+N06DX12;Cinnarizin;0,15 g O 
+N06DX13;Nicergolin;30 mg O 
+N06DX14;Cyclandelat;0,6 g O 
+N06DX15;Xantinolnicotinat;0,9 g O,P 
+N06DX17;Nicotinylalkohol (Pyridylcarbinol);0,3 g O,P 
+N06DX18;Nimodipin;"0,3 g O; 50 mg P "
+N06DX19;Dihydroergocristin;3 mg O,P 
+N07AA01;Neostigmin;"60 mg O; 2 mg P"
+N07AA02;Pyridostigmin;"0,18 g O; 10 mg P"
+N07AA03;Distigmin;"5 mg O; 0,25 mg P"
+N07AA30;Ambenonium;60 mg O
+N07AB01;Carbachol;"6 mg O; 0,5 mg P"
+N07AB02;Bethanechol;45 mg O
+N07AX01;Pilocarpin;"15 mg O; 10 mg P"
+N07AX03;Cevimelin;90 mg O
+N07BA01;Nicotin;"60 mg Inhalation; 30 mg Kaugummi,N,SL; 14 mg TD; 30 mg Lutschtabletten "
+N07BA02;Bupropion;0,3 g O 
+N07BA03;Vareniclin;2 mg O
+N07BB01;Disulfiram;0,2 g O
+N07BB03;Acamprosat;2 g O
+N07BB04;Naltrexon;50 mg O
+N07BB05;Nalmefen;18 mg O
+N07BC01;Buprenorphin;"8 mg SL; 4 mg P Depot "
+N07BC02;Methadon;25 mg O,P
+N07BC04;Lofexidin;1,4 mg O
+N07BC05;Levomethadon;15 mg O
+N07BC09;Morphin;0,2 g O bezogen auf Morphinsulfat 
+N07BC21;Buprenorphin und Naloxon;8 mg SL bezogen auf Buprenorphin 
+N07BC51;Buprenorphin, Kombinationen;8 mg SL bezogen auf Buprenorphin
+N07CA01;Betahistin;24 mg O
+N07CA02;Cinnarizin;90 mg O
+N07CA03;Flunarizin;10 mg O
+N07CA05;Sulpirid;"0,225 g O; 0,2 g P "
+N07CA22;Cinnarizin und Dimenhydrinat;90 mg O bezogen auf Cinnarizin 
+N07CA52;Cinnarizin, Kombinationen;90 mg O bezogen auf Cinnarizin
+N07XB01;Thioctsäure (Alpha-Liponsäure);0,6 g O,P 
+N07XX01;Tirilazad;0,42 g P
+N07XX02;Riluzol;0,1 g O
+N07XX04;Natriumoxybat;7,5 g O
+N07XX05;Amifampridin;40 mg O
+N07XX06;Tetrabenazin;0,1 g O
+N07XX07;Fampridin;20 mg O
+N07XX08;Tafamidis;20 mg O
+N07XX11;Pitolisant;18 mg O
+N07XX12;Patisiran;1 mg P 
+N07XX15;Inotersen;41 mg P 
+N07XX59;Dextromethorphan, Kombinationen;40 mg O bezogen auf Dextromethorphan
+P01AB01;Metronidazol;2 g O,R
+P01AB02;Tinidazol;2 g O,R
+P01AB03;Ornidazol;1,5 g O
+P01AB06;Nimorazol;2 g O
+P01AB07;Secnidazol;2 g O
+P01AC01;Diloxanid;1,5 g O
+P01AX02;Emetin;60 mg P
+P01AX05;Mepacrin;0,3 g O
+P01AX06;Atovaquon;2,25 g O
+P01AX07;Trimetrexat;85 mg P
+P01AX09;Dehydroemetin;60 mg P
+P01AX11;Nitazoxanid;1 g O
+P01BA01;Chloroquin;0,5 g O,P Base
+P01BA02;Hydroxychloroquin;0,516 g O Base
+P01BA03;Primaquin;15 mg O Base
+P01BA06;Amodiaquin;0,5 g O
+P01BB01;Proguanil;0,2 g O Hydrochlorid, (prophylaktische Tagesdosis)
+P01BB51;Proguanil, Kombinationen;"0,4 g Proguanilhydrochlorid und 1 g Atovaquon zur Therapie; 
+0,1 g Proguanilhydrochlorid und 0,25 g Atovaquon zur Prophylaxe; 
+0,05 g Proguanilhydrochlorid und 0,125 g Atovaquon Kinder DDD 
+zur Prophylaxe "
+P01BC01;Chinin;1,5 g O,P Base
+P01BC02;Mefloquin;1 g O Base
+P01BD01;Pyrimethamin;75 mg O
+P01BD51;Pyrimethamin, Kombinationen;75 mg O,P bezogen auf Pyrimethamin
+P01BE01;Artemisinin;1 g O
+P01BE02;Artemether;"0,28 g O,R; 0,12 g P"
+P01BE03;Artesunat;0,28 g O,P,R
+P01BE05;Artenimol (Dihydroartemisinin);0,28 g O
+P01BF01;Artemether und Lumefantrin;0,28 g O bezogen auf Artemether
+P01BX01;Halofantrin;1,5 g O
+P01CA02;Benznidazol;0,4 g O
+P01CB01;Megluminantimonat;0,85 g P Sb5+
+P01CB02;Natriumstibogluconat;0,85 g P Sb5+
+P01CC01;Nifurtimox;0,7 g O
+P01CD01;Melarsoprol;60 mg P
+P01CX01;Pentamidindiisetionat;0,28 g P je Injektion
+P01CX02;Suraminnatrium;0,27 g P
+P02BA01;Praziquantel;3 g O
+P02BA02;Oxamniquin;1 g O
+P02BB01;Metrifonat;40 mg O
+P02CA01;Mebendazol;0,2 g O
+P02CA02;Tiabendazol;3 g O
+P02CA03;Albendazol;"0,4 g O; 0,8 g O "
+P02CA05;Flubendazol;0,2 g O
+P02CB01;Piperazin;3,5 g O als Hydrat
+P02CB02;Diethylcarbamazin;0,4 g O
+P02CC01;Pyrantel;0,75 g O
+P02CE01;Levamisol;0,15 g O
+P02CF01;Ivermectin;12 mg O
+P02CX01;Pyrvinium;0,35 g O bezogen auf die Base
+P02DA01;Niclosamid;2 g O
+R01AA03;Ephedrin;8 mg N
+R01AA04;Phenylephrin;4 mg N
+R01AA05;Oxymetazolin;0,4 mg N
+R01AA06;Tetryzolin;0,8 mg N
+R01AA07;Xylometazolin;"0,8 mg N; 0,175 mg N Kinder DDD "
+R01AA08;Naphazolin;0,4 mg N
+R01AB01;Phenylephrin;0,8 ml N 
+R01AB02;Naphazolin;0,8 ml N 
+R01AC01;Cromoglicinsäure;40 mg N
+R01AC02;Levocabastin;0,6 mg N
+R01AC03;Azelastin;0,56 mg N
+R01AC07;Nedocromil;10,4 mg N
+R01AD01;Beclometason;0,4 mg N
+R01AD04;Flunisolid;0,15 mg N
+R01AD05;Budesonid;0,2 mg N
+R01AD06;Betamethason;0,4 mg N
+R01AD07;Tixocortol;8 mg N
+R01AD08;Fluticason;0,2 mg N
+R01AD09;Mometason;0,2 mg N
+R01AD11;Triamcinolon;0,22 mg N
+R01AD12;Fluticasonfuroat;0,11 mg N
+R01AD13;Ciclesonid;0,2 mg N
+R01AD28;Fluticason und Azelastin;0,2 mg N bezogen auf Fluticasonpropionat 
+R01AX02;Retinol;800 E N
+R01AX03;Ipratropiumbromid;0,24 mg N
+R01AX06;Mupirocin;3 mg N 
+R01AX26;Dexpanthenol;35 mg N flüssige Zubereitungen 
+R01BA01;Phenylpropanolamin;0,1 g O
+R01BA02;Pseudoephedrin;0,24 g O
+R01BA03;Phenylephrin;40 mg O
+R01BA51;Phenylpropanolamin, Kombinationen;0,1 g O bezogen auf Phenylpropanolamin
+R01BA52;Pseudoephedrin, Kombinationen;0,24 g O bezogen auf Pseudoephedrin
+R01BA58;Pseudoephedrin und Desloratadin;5 mg O bezogen auf Desloratadin 
+R01BA59;Pseudoephedrin und Triprolidin;7,5 mg O bezogen auf Triprolidin 
+R01BA60;Pseudoephedrin und Cetirizin;10 mg O bezogen auf Cetirizindihydrochlorid 
+R02AA01;Ambazon;40 mg O
+R02AA02;Dequalinium;1,5 mg O
+R02AA05;Chlorhexidin;30 mg O
+R02AA28;Hexetidin;30 mg O 
+R02AX01;Flurbiprofen;44 mg O
+R02AX03;Benzydamin;9 mg O
+R03AA01;Epinephrin;"2,24 mg Inhal.aerosol; 20 mg Inhal.lösung"
+R03AB02;Isoprenalin;"0,64 mg Inhal.aerosol; 10 mg Inhal.lösung"
+R03AB03;Orciprenalin;6 mg Inhal.aerosol
+R03AC02;Salbutamol;"0,8 mg Inhal.aerosol; 10 mg Inhal.lösung; 0,8 mg Inhal.pulver 
+(aus dem Mundstück abgegebene Dosis)"
+R03AC03;Terbutalin;"2 mg Inhal.aerosol/pulver bezogen auf das Terbutalinsulfat; 
+20 mg Inhal.lösung"
+R03AC04;Fenoterol;"0,6 mg Inhal.aerosol/pulver bezogen auf das Fenoterolhydrobromid; 
+4 mg Inhal.lösung"
+R03AC05;Rimiterol;1,6 mg Inhal.aerosol
+R03AC06;Hexoprenalin;1,5 mg Inhal.aerosol
+R03AC08;Pirbuterol;1,2 mg Inhal.aerosol
+R03AC11;Tulobuterol;1,6 mg Inhal.aerosol
+R03AC12;Salmeterol;0,1 mg Inhal.aerosol/pulver
+R03AC13;Formoterol;24 mcg Inhal.aerosol/pulver bezogen auf das Formoterolhemifumarat
+R03AC16;Procaterol;60 mcg Inhal.aerosol
+R03AC18;Indacaterol;0,15 mg Inhal.pulver
+R03AC19;Olodaterol;5 mcg Inhal.lösung (aus dem Mundstück abgegebene Dosis)
+R03AK06;Salmeterol und Fluticason;0,1 mg Inhal.aerosol/pulver bezogen auf Salmeterol 
+R03AK07;Formoterol und Budesonid;24 mcg Inhal.aerosol/pulver bezogen auf das Formoterolhemifumarat 
+R03AK08;Formoterol und Beclometason;24 mcg Inhal.aerosol/pulver bezogen auf das Formoterolhemifumarat 
+R03AK10;Vilanterol und Fluticasonfuroat;25 mcg Inhal.pulver bezogen auf Vilanterol 
+R03AK11;Formoterol und Fluticason;24 mcg Inhal.aerosol/pulver bezogen auf das Formoterolhemifumarat 
+R03AL01;Fenoterol und Ipratropiumbromid;Standarddosis: 6 DE Inhal.aerosol 
+R03AL02;Salbutamol und Ipratropiumbromid;Standarddosis: 3 DE Inhal.lösung 
+R03AL03;Vilanterol und Umeclidiniumbromid;Standarddosis: 1 DE Inhal.pulver 
+R03AL04;Indacaterol und Glycopyrroniumbromid;Standarddosis: 1 DE Inhal.pulver 
+R03AL05;Formoterol und Aclidiniumbromid;Standarddosis: 2 DE Inhal.pulver 
+R03AL06;Olodaterol und Tiotropiumbromid;Standarddosis: 2 DE Inhal.lösung 
+R03AL08;Vilanterol, Umeclidiniumbromid und Fluticasonfuroat;Standarddosis: 1 DE Inhal.pulver 
+R03AL09;Formoterol, Glycopyrroniumbromid und Beclometason;Standarddosis: 4 DE Inhal.aerosol 
+R03BA01;Beclometason;"0,8 mg Inhal.aerosol/pulver bezogen auf das Beclometasondipropionat; 
+1,5 mg Inhal.lösung bezogen auf das Beclometasondipropionat; 
+0,4 mg Inhal.aerosol Partikelgröße < 3,3 mcm bezogen 
+auf das Beclometasondipropionat "
+R03BA02;Budesonid;"0,8 mg Inhal.aerosol/pulver; 1,5 mg Inhal.lösung"
+R03BA03;Flunisolid;1 mg Inhal.aerosol
+R03BA05;Fluticason;"0,6 mg Inhal.aerosol/pulver bezogen auf das Fluticasonpropionat; 
+1,5 mg Inhal.lösung bezogen auf das Fluticasonpropionat"
+R03BA07;Mometason;0,4 mg Inhal.pulver bezogen auf das Mometasonfuroat
+R03BA08;Ciclesonid;0,16 mg Inhal.aerosol
+R03BB01;Ipratropiumbromid;"0,12 mg Inhal.aerosol/pulver; 0,3 mg Inhal.lösung;
+1,5 mg Inhal.lösung; 0,6 mg Inhal.pulver "
+R03BB02;Oxitropiumbromid;"0,6 mg Inhal.aerosol; 4 mg Inhal.lösung"
+R03BB04;Tiotropiumbromid;"5 mcg Inhal.lösung bezogen auf Tiotropium (aus dem Mundstück 
+abgegebene Dosis); 10 mcg Inhal.pulver bezogen auf Tiotropium 
+(aus dem Mundstück abgegebene Dosis)"
+R03BB05;Aclidiniumbromid;"0,644 mg Inhal.pulver bezogen auf Aclidinium
+(aus dem Mundstück abgegebene Dosis)"
+R03BB06;Glycopyrroniumbromid;"44 mcg Inhal.pulver bezogen auf Glycopyrronium 
+(aus dem Mundstück abgegebene Dosis)"
+R03BB07;Umeclidiniumbromid;"55 mcg Inhal.pulver bezogen auf Umeclidinium 
+(aus dem Mundstück abgegebene Dosis)"
+R03BC01;Cromoglicinsäure;"40 mg Inhal.aerosol bezogen auf das Cromoglicinsäure, Dinatriumsalz;
+80 mg Inhal.lösung/pulver bezogen auf das Cromoglicinsäure, 
+Dinatriumsalz"
+R03BC03;Nedocromil;8 mg Inhal.aerosol
+R03CA02;Ephedrin;50 mg O
+R03CB01;Isoprenalin;40 mg O
+R03CB02;Methoxyphenamin;0,4 g O
+R03CB03;Orciprenalin**;60 mg O,P
+R03CC02;Salbutamol;12 mg O,P
+R03CC03;Terbutalin;"15 mg O,P; 0,25 mg P "
+R03CC04;Fenoterol;10 mg O,R
+R03CC05;Hexoprenalin;1,5 mg O,P
+R03CC06;Isoetarin;40 mg O
+R03CC07;Pirbuterol;30 mg O
+R03CC08;Procaterol;0,1 mg O
+R03CC09;Tretoquinol;"9 mg O; 0,2 mg P"
+R03CC10;Carbuterol;6 mg O
+R03CC11;Tulobuterol;4 mg O
+R03CC12;Bambuterol;20 mg O
+R03CC13;Clenbuterol;40 mcg O
+R03DA01;Diprophyllin;1 g O,P,R
+R03DA02;Cholintheophyllinat;0,6 g O,R
+R03DA03;Proxyphyllin;1,2 g O,P,R
+R03DA04;Theophyllin;0,4 g O,P,R
+R03DA05;Aminophyllin;0,6 g O,P,R
+R03DA11;Doxofyllin;0,8 g O,P
+R03DA12;Mepyramintheophyllinacetat;0,6 g O
+R03DC01;Zafirlukast;40 mg O
+R03DC03;Montelukast;"10 mg O; 5 mg O Kinder DDD "
+R03DX05;Omalizumab;16 mg P s.c.
+R03DX07;Roflumilast;0,5 mg O
+R03DX08;Reslizumab;7,1 mg P
+R03DX09;Mepolizumab;3,6 mg P
+R03DX10;Benralizumab;0,54 mg P
+R05CA01;Tyloxapol;5 mg Inhal.lösung
+R05CA02;Kaliumiodid;1,2 g O
+R05CA03;Guaifenesin;0,9 g O,P
+R05CA04;Ipecacuanha*;4 mg O Emetin
+R05CA05;Eibischwurzel*;1,6 g O Wurzel
+R05CA06;Senega*;3 g O Wurzel
+R05CA07;Antimonpentasulfid;0,2 g O
+R05CB01;Acetylcystein;"1,6 g Inhal.lösung; 0,5 g O; 0,5 g P "
+R05CB02;Bromhexin;"24 mg O,P; 24 mg Inhal.lösung "
+R05CB03;Carbocistein;1,5 g O
+R05CB04;Eprazinon;0,2 g O
+R05CB05;Mesna;1,2 g Inhal.lösung
+R05CB06;Ambroxol;"0,12 g O; 75 mg Inhal.lösung,O,P,R; 40 mg O,R Kinder DDD "
+R05CB13;Dornase alfa (Desoxyribonuclease);2,5 mg Inhal.lösung
+R05CB15;Erdostein;0,6 g O
+R05CB16;Mannitol;0,8 g Inhal.pulver
+R05CP01;Thymiankraut;"6 g O Droge; 3,5 g O Fluidextrakt "
+R05CP02;Efeublätter;0,3 g O Droge 
+R05DA01;Ethylmorphin;50 mg O
+R05DA03;Hydrocodon;"15 mg O; 15 mg P "
+R05DA04;Codein;0,1 g O
+R05DA07;Noscapin;0,125 g O
+R05DA08;Pholcodin;50 mg O
+R05DA09;Dextromethorphan;90 mg O
+R05DA10;Thebacon;15 mg O
+R05DA12;Acetyldihydrocodein;30 mg O
+R05DA14;Dihydrocodein;40 mg O 
+R05DB01;Benzonatat;0,6 g O
+R05DB02;Benproperin;75 mg O
+R05DB03;Clobutinol;0,12 g O,P
+R05DB04;Isoaminil;0,11 g O
+R05DB05;Pentoxyverin;0,1 g O,R
+R05DB07;Oxolamin;0,6 g O
+R05DB09;Oxeladin;80 mg O
+R05DB10;Clofedanol;60 mg O
+R05DB11;Pipazetat;80 mg O
+R05DB12;Bibenzoniumbromid;90 mg O
+R05DB13;Butamirat;25 mg O
+R05DB14;Fedrilat;0,2 g O
+R05DB21;Cloperastin;60 mg O bezogen auf Cloperastinhydrochlorid
+R05DB27;Levodropropizin;0,12 g O
+R05GA01;Doxycyclin, Kombinationen;0,1 g O,P bezogen auf Doxycyclin 
+R05GA02;Tetracyclin, Kombinationen;1 g O,P bezogen auf Tetracyclin 
+R05GB01;Doxycyclin mit Ambroxol;0,1 g O,P bezogen auf Doxycyclin 
+R05GB02;Tetracyclin, Kombinationen;1 g O,P bezogen auf Tetracyclin 
+R05GB03;Oxytetracyclin, Kombinationen;1 g O,P bezogen auf Oxytetracyclin 
+R05GB04;Thiamphenicol, Kombinationen;1,5 g O,P bezogen auf Thiamphenicol 
+R05GB05;Ampicillin, Kombinationen;"2 g O,P bezogen auf Ampicillin; 2,5 g O Kinder DDD bezogen auf Ampicillin "
+R05GB06;Cefaclor, Kombinationen;"1 g O,P bezogen auf Cefaclor; 0,75 g O Kinder DDD bezogen auf Cefaclor "
+R05GB07;Erythromycin, Kombinationen;"2 g O für Erythromycinethylsuccinat-haltige Zubereitungen; 
+1 g O Kinder DDD für Erythromycinethylsuccinat-haltige Zubereitungen "
+R05GB08;Metacyclin, Kombinationen;0,6 g O bezogen auf Metacyclin 
+R05GB51;Doxycyclin, Kombinationen;0,1 g O,P bezogen auf Doxycyclin 
+R05GC01;Sulfadiazin, Kombinationen;0,6 g O bezogen auf Sulfadiazin 
+R05GC02;Sulfamethoxazol und Trimethoprim;1,6 g Sulfamethoxazol + 0,32 g Trimethoprim 
+R06AA02;Diphenhydramin;"0,2 g O,R chlorid; 0,3 g O,R Teoclat"
+R06AA04;Clemastin;2 mg O,P
+R06AA06;Chlorphenoxamin;80 mg O,P
+R06AA07;Diphenylpyralin;10 mg O
+R06AA08;Carbinoxamin;16 mg O
+R06AA09;Doxylamin;25 mg O
+R06AB01;Brompheniramin;24 mg O
+R06AB02;Dexchlorpheniramin;6 mg O,P
+R06AB03;Dimetinden;"4 mg O; 4 mg P "
+R06AB04;Chlorphenamin;12 mg O,P
+R06AB05;Pheniramin;75 mg O
+R06AC01;Mepyramin;0,2 g O,P
+R06AC02;Histapyrrodin;80 mg O
+R06AC03;Chloropyramin;"0,15 g O; 20 mg P"
+R06AC04;Tripelennamin;0,15 g O
+R06AD01;Alimemazin;30 mg O,P
+R06AD02;Promethazin;25 mg O,P,R
+R06AD03;Thiethylperazin;13 mg O,P,R
+R06AD04;Methdilazin;16 mg O
+R06AD05;Hydroxyethylpromethazin;75 mg O
+R06AD06;Thiazinam;"0,9 g O; 0,3 g R"
+R06AD07;Mequitazin;10 mg O
+R06AD08;Oxomemazin;30 mg O
+R06AE01;Buclizin;50 mg O
+R06AE03;Cyclizin;"0,1 g O,P; 0,3 g R"
+R06AE04;Chlorcyclizin;0,1 g O
+R06AE05;Meclozin;50 mg O,R
+R06AE06;Oxatomid;60 mg O
+R06AE07;Cetirizin;10 mg O
+R06AE09;Levocetirizin;5 mg O
+R06AX01;Bamipin;0,1 g O
+R06AX02;Cyproheptadin;12 mg O
+R06AX05;Antazolin;0,3 g O,P
+R06AX07;Triprolidin;7,5 mg O
+R06AX09;Azatadin;2 mg O
+R06AX11;Astemizol;10 mg O
+R06AX12;Terfenadin;0,12 g O
+R06AX13;Loratadin;10 mg O
+R06AX15;Mebhydrolin;0,2 g O
+R06AX16;Deptropin;2 mg O
+R06AX17;Ketotifen;2 mg O
+R06AX18;Acrivastin;24 mg O
+R06AX19;Azelastin;4 mg O
+R06AX22;Ebastin;10 mg O
+R06AX25;Mizolastin;10 mg O
+R06AX26;Fexofenadin;0,12 g O
+R06AX27;Desloratadin;5 mg O
+R06AX28;Rupatadin;"10 mg O; 5 mg O Kinder DDD "
+R06AX29;Bilastin;20 mg O
+R07AA01;Colfoscerilpalmitat;0,108 g Inhal.pulver
+R07AA02;Natürliche Phospholipide*;0,16 g Instill.lösung
+R07AA04;Natürliche Phospholipide aus Schweinelunge;0,16 g Instill.lösung 
+R07AA05;Natürliche Phospholipide aus Rinderlunge;0,16 g Instill.lösung 
+R07AB01;Doxapram;0,4 g P
+R07AB02;Nikethamid;0,5 g O,P
+R07AB03;Pentetrazol;0,1 g O
+R07AB06;Prethcamid;0,4 g O,P
+R07AB07;Almitrin;0,1 g O
+R07AX02;Ivacaftor;"0,3 g O; 0,15 g O Kinder DDD "
+R07AX30;Ivacaftor und Lumacaftor;"Standarddosis: 4 DE O; Standarddosis: 2 DE O Kinder DDD "
+R07AX31;Ivacaftor und Tezacaftor;Standarddosis: 1 DE O 
+S01AA11;Gentamicin;1,25 mg AT,AS 
+S01AA24;Kanamycin;1,5 mg AT,AS 
+S01AD03;Aciclovir;4,65 mg AS 
+S01AE01;Ofloxacin;0,4 mg AT,AS 
+S01AE03;Ciprofloxacin;0,6 mg AT 
+S01AE07;Moxifloxacin;0,57 mg AT 
+S01BA01;Dexamethason;"0,2 mg AT,AS; 1 DE IVT pro Behandlungszeitraum "
+S01BA15;Fluocinolonacetonid;1 DE IVT pro Behandlungszeitraum 
+S01BC05;Ketorolac;0,75 mg AT bezogen auf Ketorolactrometamol 
+S01BC10;Nepafenac;0,15 mg AT 
+S01BC11;Bromfenac;66 mcg AT 
+S01EA01;Epinephrin;0,2 ml AT 
+S01EA02;Dipivefrin;0,2 ml AT 
+S01EA03;Apraclonidin;0,3 ml AT 
+S01EA04;Clonidin;0,25 ml AT 
+S01EA05;Brimonidin;0,2 ml AT 
+S01EB01;Pilocarpin;"0,285  Lamelle; 40 mg Salbe; 0,4 ml AT; 0,4 g AS "
+S01EB02;Carbachol;0,4 ml AT
+S01EB03;Ecothiopat;0,2 ml AT
+S01EB04;Demecarium;0,1 ml AT
+S01EB05;Physostigmin;0,4 ml AT
+S01EB06;Neostigmin;"40 mg Salbe; 0,4 ml AT"
+S01EC01;Acetazolamid;0,75 g O,P
+S01EC02;Diclofenamid;0,1 g O
+S01EC03;Dorzolamid;0,3 ml AT
+S01EC04;Brinzolamid;0,2 ml AT 
+S01EC05;Methazolamid;0,2 g O
+S01EC24;Brinzolamid und Brimonidin;0,2 ml AT 
+S01ED01;Timolol;"0,2 g AS; 0,2 ml AT "
+S01ED02;Betaxolol;0,2 ml AT 
+S01ED03;Levobunolol;0,2 ml AT 
+S01ED04;Metipranolol;0,2 ml AT 
+S01ED05;Carteolol;0,2 ml AT 
+S01ED06;Befunolol;0,2 ml AT 
+S01ED07;Pindolol;0,2 ml AT 
+S01ED08;Bupranolol;0,2 ml AT 
+S01ED24;Metipranolol und Pilocarpin;0,3 ml AT 
+S01ED61;Timolol und Latanoprost;0,1 ml AT 
+S01ED62;Timolol und Bimatoprost;0,1 ml AT 
+S01ED63;Timolol und Travoprost;0,1 ml AT 
+S01ED66;Timolol und Dorzolamid;0,2 ml AT 
+S01ED67;Timolol und Brinzolamid;0,2 ml AT 
+S01ED68;Timolol und Pilocarpin;0,2 ml AT 
+S01ED69;Timolol und Brimonidin;0,2 ml AT 
+S01EE01;Latanoprost;0,1 ml AT 
+S01EE02;Unoproston;0,2 ml AT 
+S01EE03;Bimatoprost;0,1 ml AT 
+S01EE04;Travoprost;0,1 ml AT 
+S01EE05;Tafluprost;0,1 ml AT 
+S01FA01;Atropin;1 mg AT 
+S01GA02;Tetryzolin;62,5 mcg AT 
+S01GX01;Cromoglicinsäure;8 mg AT 
+S01GX07;Azelastin;0,1 mg AT bezogen auf Azelastinhydrochlorid 
+S01KA01;Hyaluronsäure;Standarddosis: 1 DE AL 
+S01KA02;Hypromellose;Standarddosis: 1 DE AL 
+S01KA51;Hyaluronsäure, Kombinationen;Standarddosis: 1 DE AL 
+S01KX02;Spüllösungen;Standarddosis: 1 DE AL 
+S01LA03;Pegaptanib;0,024 DE IVT 
+S01LA04;Ranibizumab;0,036 DE IVT 
+S01LA05;Aflibercept;0,018 DE IVT 
+S01XA19;Limbale Stammzellen, autolog;Standarddosis: 1 DE IVT 
+S01XA20;Künstliche Tränen und andere indifferente Mittel;"Standarddosis: 0,4 ml AT; 0,4 g AS "
+S01XA21;Mercaptamin;0,4 ml AT 
+S01XA22;Ocriplasmin;Standarddosis: 1 DE IVT 
+S01XA24;Cenegermin;0,3 ml AT 
+S01XA27;Calciumdobesilat;0,5 g O 
+S01XA28;Hyaluronsäure;0,4 ml AT 
+S01XA43;Idebenon;0,9 g O 
+S01XC01;Polyvinylalkohol;"Standarddosis: 0,4 ml AT; 0,4 g AS "
+S01XC02;Povidon;"Standarddosis: 0,4 ml AT; 0,4 g AS "
+S01XC05;Hypromellose;"Standarddosis: 0,4 ml AT; 0,4 g AS "
+S01XC06;Hydroxyethylcellulose;"Standarddosis: 0,4 ml AT; 0,4 g AS "
+S01XC07;Carbomer;"Standarddosis: 0,4 ml AT; 0,4 g AS "
+S01XC08;Carmellose;"Standarddosis: 0,4 ml AT; 0,4 g AS "
+S01XC10;Verschiedene;"Standarddosis: 0,4 ml AT; 0,4 g AS "
+S01XC20;Kombinationen;"Standarddosis: 0,4 ml AT; 0,4 g AS "
+S01XC21;Polyvinylalkohol und Dexpanthenol;Standarddosis: 0,4 ml AT, 0,4 g AS 
+S01XC25;Hypromellose und Retinol;Standarddosis: 0,4 ml AT, 0,4 g AS 
+S01XC51;Polyvinylalkohol, Kombinationen;"Standarddosis: 0,4 ml AT; 0,4 g AS "
+S01XC55;Hypromellose, Kombinationen;"Standarddosis: 0,4 ml AT; 0,4 g AS "
+S01XC56;Hydroxyethylcellulose, Kombinationen;"Standarddosis: 0,4 ml AT; 0,4 g AS "
+S01XC57;Carbomer, Kombinationen;"Standarddosis: 0,4 ml AT; 0,4 g AS "
+S01XC58;Carmellose, Kombinationen;"Standarddosis: 0,4 ml AT; 0,4 g AS "
+S02BA08;Fluocinolonacetonid;2 EDO 
+V03AB14;Protamin;Standarddosis: 1 DE P 
+V03AB15;Naloxon;"Standarddosis: 1 DE N; Standarddosis: 1 DE P "
+V03AB17;Methylthioniniumchlorid;0,105 g P 
+V03AB27;4-Dimethylaminophenol;Standarddosis: 1 DE P 
+V03AB35;Sugammadex;0,28 g P 
+V03AB36;Phentolamin;Standarddosis: 1 DE P 
+V03AB37;Idarucizumab;5 g P 
+V03AC01;Deferoxamin;2,8 g P bezogen auf Deferoxaminmesilat 
+V03AC02;Deferipron;5,25 g O 
+V03AE01;Polystyrolsulfonat;45 g O
+V03AE02;Sevelamer;6,4 g O
+V03AE03;Lanthan(III)-carbonat;2,25 g O bezogen auf Lanthan
+V03AE05;Eisen(III)oxidhydroxid-Saccharose-Stärke-Komplex;1,5 g O bezogen auf Eisen
+V03AE06;Colestilan;7,5 g O 
+V03AE07;Calciumacetat;6 g O
+V03AE08;Eisen(III)citrat;6 g O
+V03AE09;Patiromercalcium;"8,4 g O; 16,8 g O "
+V03AE10;Natrium-Zirconiumcyclosilicat;7,5 g O 
+V03AE16;Calciumcarbonat;4 g O 
+V03AF02;Dexrazoxan;1,5 g P
+V03AF03;Calciumfolinat;60 mg O,P bezogen auf Folinsäure
+V03AF04;Calciumlevofolinat;30 mg O,P bezogen auf Levofolinsäure
+V03AF05;Amifostin;1,7 g P
+V03AF06;Natriumfolinat;"60 mg P bezogen auf Folinsäure; 60 mg O bezogen auf Folinsäure "
+V03AF07;Rasburicase;14 mg P
+V03AF08;Palifermin;4,2 mg P
+V03AF10;Natriumlevofolinat;30 mg P bezogen auf Levofolinsäure
+V03AK01;Cyanacrylsäurealkylester;Standarddosis: 1 DE T 
+V03AK50;Andere Gewebekleber, Kombinationen;Standarddosis: 1 DE T 
+V03AX03;Cobicistat;0,15 g O
+V03AX10;Placebo;Standarddosis: 1 DE O 
+V04BA01;Protein-Testzone;Standarddosis: 1 DE 
+V04BA03;Blut-Testzone;Standarddosis: 1 DE 
+V04BA05;pH-Testzone;Standarddosis: 1 DE 
+V04BA06;Ascorbinsäure-Testzone;Standarddosis: 1 DE 
+V04BA07;Schwangerschaftstest;Standarddosis: 1 DE 
+V04BA08;Bilirubin-Testzone;Standarddosis: 1 DE 
+V04BA09;Urobilinogen-Testzone;Standarddosis: 1 DE 
+V04BA10;Dichte-Testzone;Standarddosis: 1 DE 
+V04BA11;Nitrit-Testzone;Standarddosis: 1 DE 
+V04BA12;Leukozyten-Testzone;Standarddosis: 1 DE 
+V04BA13;CTX-Testzone;Standarddosis: 1 DE 
+V04BA14;Bakterien-Testzone;Standarddosis: 1 DE 
+V04BA15;Kreatin-Kinase-Testzone;Standarddosis: 1 DE 
+V04BA20;Kombinationen;Standarddosis: 1 DE 
+V04CA03;Glucose-Testzone, Blut;Standarddosis: 1 DE 
+V04CA04;Glucose-Testzone, Urin;Standarddosis: 1 DE 
+V04CA05;Keton-Testzone, Blut;Standarddosis: 1 DE 
+V04CA06;Keton-Testzone, Urin;Standarddosis: 1 DE 
+V04CA07;Glucose-Keton-Testzone, Urin;Standarddosis: 1 DE 
+V04CA08;Glycohämoglobin-Testzone;Standarddosis: 1 DE 
+V04CD01;Metyrapon;3 g O 
+V04CE03;Methacetin (13C);0,14 g P 
+V04CF01;Tuberkulin;Standarddosis: 1 DE 
+V04CL02;Nickel-Testzone;Standarddosis: 1 DE 
+V04CM02;Fertilitäts-Teststreifen;Standarddosis: 1 DE 
+V04CM03;Lutropin-Testzone;Standarddosis: 1 DE 
+V04CM04;FSH-Testzone;Standarddosis: 1 DE 
+V04CM05;Spermientest;Standarddosis: 1 DE 
+V04CM20;Kombinationen;Standarddosis: 1 DE 
+V04CN01;Amfetamin-Testzone;Standarddosis: 1 DE 
+V04CN02;Barbiturat-Testzone;Standarddosis: 1 DE 
+V04CN03;Benzodiazepin-Testzone;Standarddosis: 1 DE 
+V04CN04;Kokain-Testzone;Standarddosis: 1 DE 
+V04CN05;Methadon-Testzone;Standarddosis: 1 DE 
+V04CN06;Metamfetamin-Testzone;Standarddosis: 1 DE 
+V04CN07;Opiat-Testzone;Standarddosis: 1 DE 
+V04CN08;Tricyclische Antidepressiva-Testzone;Standarddosis: 1 DE 
+V04CN09;Tetrahydrocannabinol-Testzone;Standarddosis: 1 DE 
+V04CN10;Phenylcyclohexylpiperidin-Testzone;Standarddosis: 1 DE 
+V04CN11;Alkohol-Testzone;Standarddosis: 1 DE 
+V04CN12;Methylendioxy-methamphetamin Testzone;Standarddosis: 1 DE 
+V04CN13;Buprenorphin-Testzone;Standarddosis: 1 DE 
+V04CN14;Nicotin/Cotinin-Testzone;Standarddosis: 1 DE 
+V04CN15;Tenamfetamin-Testzone (MDA);Standarddosis: 1 DE 
+V04CN20;Kombinationen;Standarddosis: 1 DE 
+V04CO01;kardiales Fettsäure-Bindungsprotein (h-FABP);Standarddosis: 1 DE 
+V04CO02;N-terminal-pro BNP-Testzone;Standarddosis: 1 DE 
+V04CO03;pro BNP-Testzone;Standarddosis: 1 DE 
+V04CO04;CK-MB-Testzone;Standarddosis: 1 DE 
+V04CO20;Kombinationen;Standarddosis: 1 DE 
+V04CX01;Indocyaningrün;21 mg P 
+V04CX03;Fluorescein;Standarddosis: 1 DE 
+V04CX04;Harnsäure-Testzone;Standarddosis: 1 DE 
+V04CX05;Tumor-Antigen-Testzone;Standarddosis: 1 DE 
+V04CX08;Cholesterin-Testzone;Standarddosis: 1 DE 
+V04CX09;HDL-Cholesterin-Testzone;Standarddosis: 1 DE 
+V04CX12;Troponin-Testzone;Standarddosis: 1 DE 
+V04CX13;Helicobacter-pylori-Test;Standarddosis: 1 DE 
+V04CX14;Chlamydien-Testzone;Standarddosis: 1 DE 
+V04CX15;Streptokokken-Testzone;Standarddosis: 1 DE 
+V04CX16;Gonorrhoeae-neisseria-Testzone;Standarddosis: 1 DE 
+V04CX17;Blut-Testzone (Stuhl);Standarddosis: 1 DE 
+V04CX18;Mononucleose-Testzone;Standarddosis: 1 DE 
+V04CX21;Myoglobin-Testzone;Standarddosis: 1 DE 
+V04CX22;Prostata spezifische Antigen-Testzone;Standarddosis: 1 DE 
+V04CX23;Gerinnungsparameter;Standarddosis: 1 DE 
+V04CX24;Influenza-Testzone;Standarddosis: 1 DE 
+V04CX25;Protein-C-Testzone;Standarddosis: 1 DE 
+V04CX26;Vaterschaftstest mit DNA-Testzone;Standarddosis: 1 DE 
+V04CX28;Treponema pallidum-Testzone;Standarddosis: 1 DE 
+V04CX29;Lactat-Testzone;Standarddosis: 1 DE 
+V04CX31;Triglycerid-Testzone;Standarddosis: 1 DE 
+V04CX32;Aminolevulinsäure;1,4 g O 
+V04CX33;Gaxilose;0,45 g O 
+V04CX50;Andere Diagnostika, Kombinationen;Standarddosis: 1 DE 
+V04CX51;Troponin, Kombinationen;Standarddosis: 1 DE 
+V07AB01;Wasser;Standarddosis: 1 DE P 
+V07AB02;Physiologische Kochsalzlösung;Standarddosis: 1 DE P 
+V07AB10;Verschiedene Verdünnungslösungen;Standarddosis: 1 DE P 
+V07AN50;Katheter, Kombinationen;Standarddosis: 1 DE U 
+V08AA01;Amidotrizoesäure;Standarddosis: 1 DE O,P,R,U 
+V08AA04;Iotalaminsäure;Standarddosis: 1 DE P,U 
+V08AA05;Ioxitalaminsäure;Standarddosis: 1 DE O,R,U 
+V08AA13;Iomeglaminsäure;Standarddosis: 1 DE O 
+V08AA20;Kombinationen;Standarddosis: 1 DE O,P,R,U 
+V08AB02;Iohexol;Standarddosis: 1 DE O,P 
+V08AB03;Ioxaglinsäure;Standarddosis: 1 DE P 
+V08AB04;Iopamidol;Standarddosis: 1 DE P 
+V08AB05;Iopromid;Standarddosis: 1 DE O,P 
+V08AB06;Iotrolan;Standarddosis: 1 DE O,P,U 
+V08AB07;Ioversol;Standarddosis: 1 DE P 
+V08AB08;Iopentol;Standarddosis: 1 DE P 
+V08AB09;Iodixanol;Standarddosis: 1 DE P 
+V08AB10;Iomeprol;Standarddosis: 1 DE P 
+V08AB11;Iobitridol;Standarddosis: 1 DE P 
+V08AB13;Iosarcol;Standarddosis: 1 DE P 
+V08AC02;Iotroxinsäure;Standarddosis: 1 DE P 
+V08AC08;Natriumiopodat;Standarddosis: 1 DE O 
+V08AD01;Ethylester iodierter Fettsäuren;Standarddosis: 1 DE P 
+V08BA01;Bariumsulfat mit Suspensionsmittel;Standarddosis: 1 DE O,P,R,U 
+V08CA01;Gadopentetsäure;Standarddosis: 1 DE P 
+V08CA02;Gadotersäure;Standarddosis: 1 DE P 
+V08CA03;Gadodiamid;Standarddosis: 1 DE P 
+V08CA04;Gadoteridol;Standarddosis: 1 DE P 
+V08CA05;Mangafodipir;Standarddosis: 1 DE P 
+V08CA06;Gadoversetamid;Standarddosis: 1 DE P 
+V08CA08;Gadobensäure;Standarddosis: 1 DE P 
+V08CA09;Gadobutrol;Standarddosis: 1 DE P 
+V08CA10;Gadoxetsäure;Standarddosis: 1 DE P 
+V08CA11;Gadofosveset;Standarddosis: 1 DE P 
+V08CB01;Ferumoxsil;Standarddosis: 1 DE O,P,R 
+V08CB03;Eisenoxid, Nanopartikel;Standarddosis: 1 DE P 
+V08DA01;Perflutren, Humanalbumin-Mikrosphären;Standarddosis: 1 DE P 
+V08DA02;Galactose-Mikropartikel;Standarddosis: 1 DE P 
+V08DA04;Perflutren, Phospholipid-Mikrosphären;Standarddosis: 1 DE P 
+V08DA05;Schwefelhexafluorid, Phospholipid-Mikrosphären;Standarddosis: 1 DE P 
+V08EA01;Hexaminolevulinat;Standarddosis: 1 DE U 
+V09IA09;(99mTc)Technetiumtilmanocept;50 mcg P 
