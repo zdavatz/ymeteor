@@ -182,15 +182,22 @@ FlowPup.searchItem = async (keyword, browser, page) => {
 
   await page.waitFor(1000);
 
-  if(await page.$('#\\30 ') === null){
+  if(await page.$('#\\30 ')){
     Log('error','#\\30 does not exist')
-    return
   }
   await page.focus('#\\30 ');
   await page.keyboard.down('Control');
-  await page.keyboard.press('A');
-  await page.keyboard.up('Control');
+  // await page.keyboard.press('A');
+  // await page.keyboard.up('Control');
+  // await page.keyboard.press('Backspace');
+
+  await page.keyboard.press('Home');
+  await page.keyboard.down('Shift');
+  await page.keyboard.press('End');
+  await page.keyboard.up('Shift');
   await page.keyboard.press('Backspace');
+
+  
   await page.keyboard.type(keyword);
   await FlowPup.click(page, "#goME", 3000, 'Search Init')
   //

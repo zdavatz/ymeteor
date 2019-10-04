@@ -17,7 +17,7 @@ const axios = require('axios');
 //
 log = console.log;
 //
-var path = process.env['METEOR_SHELL_DIR'] + '/../../../exp/';
+var screenshotPath = process.env['METEOR_SHELL_DIR'] + '/../../../exp/';
 let file = 'atc_ddd_2019.csv'
 let filePath = '/private/' + file;
 let fileRemoteURL = 'https://raw.githubusercontent.com/zdavatz/cpp2sqlite/master/input/atc_ddd_2019.csv'
@@ -47,10 +47,13 @@ if (isCode) {
     }
     runAtc()
 }
-
-if(isClean){
-    Drugs.remove({project:'atc'})
-    Items.remove({project:'atc'})
+if (isClean) {
+    Drugs.remove({
+        project: 'atc'
+    })
+    Items.remove({
+        project: 'atc'
+    })
 }
 /*
     RUN
@@ -98,9 +101,9 @@ pharma.extractItem = async (page, keyword) => {
         data: $("#rechts > div:nth-child(14) > div:nth-child(5) > table").parsetable(true, true, true),
     }
     // AK-Classification
-    var amKlassification =  $('#contentFrame > table:nth-child(4) > tbody:nth-child(1) > tr:nth-child(4) > td:nth-child(1) > div:nth-child(18) > table:nth-child(2) > tbody:nth-child(1)').text()
+    var amKlassification = $('#contentFrame > table:nth-child(4) > tbody:nth-child(1) > tr:nth-child(4) > td:nth-child(1) > div:nth-child(18) > table:nth-child(2) > tbody:nth-child(1)').text()
     // #contentFrame > table:nth-child(4) > tbody:nth-child(1) > tr:nth-child(4) > td:nth-child(1) > div:nth-child(18) > table:nth-child(2) > tbody:nth-child(1)
-    if(amKlassification){
+    if (amKlassification) {
         item.amKlassification = amKlassification.replace(/(\r\n|\n|\r|\t)/gm, "");
     }
     // Files
@@ -108,11 +111,10 @@ pharma.extractItem = async (page, keyword) => {
     var docLen = $('#contentFrame > table:nth-child(1) > tbody > tr:nth-child(2) > td:nth-child(1)').find('a').length
     if (docLen > 0) {
         $('#contentFrame > table:nth-child(1) > tbody > tr:nth-child(2) > td:nth-child(1)').find('a').each(function () {
-            if(!$(this).text()){
+            if (!$(this).text()) {
                 return
             }
             var t = $(this).text().split(/\s/)
-
             var t = _.compact(t)
             var file = {}
             // check the files
@@ -136,7 +138,7 @@ pharma.extractItem = async (page, keyword) => {
     })
     item.meta = summary;
     item.project = type;
-    DB.itemInsert(item, 'number',type)
+    DB.itemInsert(item, 'number', type)
 }
 /*
   Search Keyword
@@ -150,25 +152,27 @@ pharma.searchItem = async (keyword, browser, page) => {
     // await page.waitForSelector('#\\30 ')
     // TESTING
     await page.waitFor(1000);
-    
-
-
-    if(await page.$('#\\30 ') === null){
-        Log('error','#\\30 does not exist')
+    if (await page.$('#\\30 ') === null) {
+        Log('error', '#\\30 does not exist')
         return
-      }
-
-
+    }
     await page.focus('#\\30 ');
-    await page.keyboard.down('Control');
-    await page.keyboard.press('A');
-    await page.keyboard.up('Control');
+    // await page.keyboard.down('Control');
+    // await page.keyboard.press('A');
+    // await page.keyboard.up('Control');
+    // await page.keyboard.press('Backspace');
+    await page.keyboard.press('Home');
+    await page.keyboard.down('Shift');
+    await page.keyboard.press('End');
+    await page.keyboard.up('Shift');
     await page.keyboard.press('Backspace');
     await page.keyboard.type(keyword);
     await page.select('select[name="searchField"]', "INDNR")
     await FlowPup.click(page, "#goME", 3000, 'Search Init')
     var itemsCount = '#titlesHeader > table > tbody > tr > td.wbtxt > span.wbtxt.dom_value\\:\\:getTitlesList\\(\\)\\.getCurrentResult\\(\\)\\.getHits\\(\\)'
     //  
+    // console.log('ITEMS Count:', itemsCount)
+    // await FlowPup.screenshot(page, '3-focus'+keyword+'.png',true)
     if (await page.$(itemsCount) === null) {
         Log('success', 'Results: 0')
         return
@@ -206,7 +210,6 @@ pharma.searchItem = async (keyword, browser, page) => {
                 //console.log('Scrapped done for one search:', keyword, itemsCount, 'scrapped')
                 await newPage.close()
                 Log('done', 'Session[closed]:' + keyword + ', Results[Scrapped]' + itemsCount)
-                
                 Drugs.update({
                     code: keyword
                 }, {

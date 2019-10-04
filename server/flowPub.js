@@ -7,8 +7,9 @@ import { builtinModules } from "module";
 /*
  */
 
+const rootDir = process.env['METEOR_SHELL_DIR'] + '/../../../';
 const path = process.env['METEOR_SHELL_DIR'] + '/../../../public';
-const exp = path + 'exp/'
+const exp = rootDir + '/exp/'
 /*
 
 */
@@ -37,6 +38,7 @@ FlowPup.goto = async (url, page, delay) => {
   /*
    */
   FlowPup.click = async (page, el, delay, msg) => {
+    await page.waitForSelector(el)
     await page.click(el);
     Log('step', 'Event[click]: ' + msg)
     if (delay && Number.isInteger(delay)) {
