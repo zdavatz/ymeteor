@@ -147,6 +147,14 @@ pharma.searchItem = async (keyword, browser, page) => {
         return
     }
     Log('progress', 'Searching: ' + chalk.green(keyword))
+    // await page.waitForSelector('#\\30 ')
+    // TESTING
+    await page.waitFor(1000);
+    if(await page.$('#\\30 ') === null || await page.$('#\30 ') === null){
+        Log('error','Element Does not Exist #\\30 or #\30')
+        return
+    }
+    //
     await page.focus('#\\30 ');
     await page.keyboard.down('Control');
     await page.keyboard.press('A');

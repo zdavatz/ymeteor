@@ -178,6 +178,14 @@ FlowPup.searchItem = async (keyword, browser, page) => {
 
 
 
+
+
+  await page.waitFor(1000);
+
+  if(await page.$('#\\30 ') === null){
+    Log('error','#\\30 does not exist')
+    return
+  }
   await page.focus('#\\30 ');
   await page.keyboard.down('Control');
   await page.keyboard.press('A');
@@ -194,6 +202,14 @@ FlowPup.searchItem = async (keyword, browser, page) => {
   var itemsCount = '#titlesHeader > table > tbody > tr > td.wbtxt > span.wbtxt.dom_value\\:\\:getTitlesList\\(\\)\\.getCurrentResult\\(\\)\\.getHits\\(\\)'
   if (await page.$(itemsCount) === null) {
     Log('error', 'Results: 0')
+    Drugs.update({
+      name: keyword
+    }, {
+      $set: {
+        checked: true,
+        results: 0
+      }
+    });
     return
   } else {
     var itemsCount = await page.evaluate(() => document.querySelector('#titlesHeader > table > tbody > tr > td.wbtxt > span.wbtxt.dom_value\\:\\:getTitlesList\\(\\)\\.getCurrentResult\\(\\)\\.getHits\\(\\)').innerHTML)
@@ -232,7 +248,8 @@ FlowPup.searchItem = async (keyword, browser, page) => {
           name: keyword
         }, {
           $set: {
-            checked: true
+            checked: true,
+            results:itemsCount 
           }
         });
       }
@@ -292,7 +309,7 @@ async function scrapPharma(url) {
       Log('error', 'Scrap: DrugsArr is not defined')
     }
     for (var i = 0; i <= drugs.length; i++) {
-      console.log('ScrapCon: Drugs.len', drugs.length, 'Drug', drugs[i])
+      console.log('Scraping:Drug', drugs[i])
       if (i === drugs.length || !drugs[i]) {
         await browser.close()
         Log('done', 'All drugs has been scrapped')
