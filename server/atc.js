@@ -150,11 +150,15 @@ pharma.searchItem = async (keyword, browser, page) => {
     // await page.waitForSelector('#\\30 ')
     // TESTING
     await page.waitFor(1000);
-    if(await page.$('#\\30 ') === null || await page.$('#\30 ') === null){
-        Log('error','Element Does not Exist #\\30 or #\30')
+    
+
+
+    if(await page.$('#\\30 ') === null){
+        Log('error','#\\30 does not exist')
         return
-    }
-    //
+      }
+
+
     await page.focus('#\\30 ');
     await page.keyboard.down('Control');
     await page.keyboard.press('A');
