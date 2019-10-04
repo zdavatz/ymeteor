@@ -192,20 +192,24 @@ pharma.searchItem = async (keyword, browser, page) => {
     await FlowPup.click(page, checkElement, null, 'Event[check]:input => item')
     // New blank page for Item
     const newPagePromise = new Promise(x => browser.once('targetcreated', target => x(target.page())));
+
     await FlowPup.click(page, '#documentDisplayButton', 3000, '[newTab]:Opening => item');
     const newPage = await newPagePromise;
     Log('start', 'Session[open]:' + keyword + ', Results[Scrapping]: ' + itemsCount)
     // Docs[loop]
     for (var j = 1; j <= parseInt(itemsCount); j++) {
         await pharma.extractItem(newPage, keyword)
-        Log('progress', 'Scrapping[current]: [ ' + chalk.bgGreen(j) + ' from ' + itemsCount + ' ] - ' + chalk.green(keyword))
+        Log('progress', 'Scrapping[current]: [ ' +j+ ' from ' + itemsCount + ' ] - ' + chalk.green(keyword))
+        // System Crashes
         var [button] = await newPage.$x("//a[contains(., '» nächstes Dokument »')]");
+        Log('progress','Getting Next Document: '+j)
         if (button) {
             await button.click();
             await newPage.waitForSelector('#contentFrame', {
                 visible: true,
                 timeout: 0
             });
+
             if (j === parseInt(itemsCount)) {
                 //console.log('Scrapped done for one search:', keyword, itemsCount, 'scrapped')
                 await newPage.close()
@@ -219,8 +223,16 @@ pharma.searchItem = async (keyword, browser, page) => {
                 });
                 console.log('Drug Checked')
             }
+        }else{
+            // RESTART*
+            
+            Log('warning', 'Session[pause]:' + keyword )
+            await newPage.close()
+            return
         }
     }
+
+
 }
 /*
   Puppeteer Scrapper
