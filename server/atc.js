@@ -61,13 +61,7 @@ if (isClean) {
 async function runAtc() {
     await remoteFile(fileRemoteURL)
     await log('Data Inserted')
-    await App.writeFile('/exports/pharma_atc.json', JSON.stringify(Items.find({
-        type: 'acc'
-    }).fetch()));
     await scrapPharma(pharma.entry)
-    await App.writeFile('/exports/pharma_atc.json', JSON.stringify(Items.find({
-        type: 'acc'
-    }).fetch()));
     App.exit()
 }
 /*
@@ -175,10 +169,27 @@ pharma.searchItem = async (keyword, browser, page) => {
     // await FlowPup.screenshot(page, '3-focus'+keyword+'.png',true)
     if (await page.$(itemsCount) === null) {
         Log('success', 'Results: 0')
+        Drugs.update({
+            code: keyword
+        }, {
+            $set: {
+                results: 0,
+                checked: true
+            }
+        });
+
         return
     } else {
         var itemsCount = await page.evaluate(() => document.querySelector('#titlesHeader > table > tbody > tr > td.wbtxt > span.wbtxt.dom_value\\:\\:getTitlesList\\(\\)\\.getCurrentResult\\(\\)\\.getHits\\(\\)').innerHTML)
         Log('success', 'Results: ' + itemsCount)
+        Drugs.update({
+            code: keyword
+        }, {
+            $set: {
+                results: itemsCount,
+                
+            }
+        });
     }
     // Check if elements
     var checkElement;

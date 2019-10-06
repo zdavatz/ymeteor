@@ -4,10 +4,56 @@
 <!--  await page.click('a[data-loadpage = "2"]'); -->
 
 <body>
-  <h4>Generated files</h4>
-  {{>files}}
+  {{>main}}
+  <!-- {{>files}} -->
 </body>
+<!--  -->
+<template name="main">
+  <div class="section">
+    <div class="columns is-centered">
+      <div class="column is-6">
 
+        <div class="field has-addons">
+          <div class="control is-expanded">
+            <input id="search" class="input is-radiusless is-fullwidth" type="text" placeholder="Search by drug name or atc-code ">
+          </div>
+          <!-- <div class="control">
+            <a class="button is-info is-radiusless">
+              Search
+            </a>
+          </div> -->
+        </div>
+        <!--  -->
+        <!-- {{#if results}} -->
+        
+
+        {{#each items}}
+
+          
+          {{#each arrayify this}}
+          <span class="is-capitalized">{{name}}</span> : {{value}}<br/>
+          <br/>
+          {{/each}}
+          <hr/>
+        {{/each}}
+        <!-- Search Stats -->
+
+        <!-- Search Results -->
+
+        <!-- {{/if}} -->
+
+        <!--  -->
+
+        {{#if stats}}
+
+        {{/if}}
+
+        <!--  -->
+      </div>
+    </div>
+  </div>
+</template>
+<!--  -->
 <template name="files">
   <div class="section">
     <div class="columns">
@@ -15,10 +61,11 @@
 
 
         {{#each files}}
-        <div class="column is-6">
-          <p class="notification is-white has-shadow"><a href="/exports/{{this}}" download target="_blank">{{this}}</a>
-          </p>
-        </div>
+          <div class="column is-6">
+            <p class="notification is-white has-shadow"><a href="/exports/{{this}}" download
+                target="_blank">{{this}}</a>
+            </p>
+          </div>
         {{/each}}
 
       </div>
