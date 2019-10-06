@@ -47,5 +47,5 @@ Meteor.methods({
 Meteor.publish('searchResults',function(keyword){
   console.log(keyword)
   if(!keyword) return;
-  return Items.find({$or:[{name:{$regex:keyword}},{keyword:keyword}]},{limit:10})
+  return Items.find({$or:[{name:{$regex:keyword}},{keyword:keyword}]})
 })
