@@ -18,6 +18,7 @@
     "papaparse": "^5.1.0",
     "puppeteer": "^1.19.0",
     "scrape-it": "^5.1.4",
+    "tabulator-tables": "^4.4.3",
     "yaml": "^1.6.0"
   },
   "meteor": {
