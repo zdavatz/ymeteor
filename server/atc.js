@@ -24,10 +24,10 @@ let fileRemoteURL = 'https://raw.githubusercontent.com/zdavatz/cpp2sqlite/master
 /*
     Testing Mode
 */
-let isTest = false;
+var isTest = false;
 let isClean = false;
 // let codeSample = ['A01AA01', 'A01AA03', 'A01AB09', 'A02AC02', 'A02AD04']
-let codeSample = ['G04BE03']
+var codeSample = ['G04BE03']
 /*
  */
 pharma = {}
@@ -47,6 +47,14 @@ if (isCode) {
     }
     runAtc()
 }
+
+var missing = Meteor.settings.Missing 
+if(Meteor.settings.loadMissing && missing.length){
+    log('Loading missing code',missing)
+    var isTest = true;
+    var codeSample = missing;
+}
+
 if (isClean) {
     Drugs.remove({
         project: 'atc'
