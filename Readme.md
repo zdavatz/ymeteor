@@ -25,3 +25,12 @@ Open http://localhost:3000 in the browser
 $ METEOR_PROFILE=1 METEOR_LOG=debug meteor --verbose
 
 #### Configure:
+
+
+
+### Missing ATC-Code
+
+./atc.json
+
+set "loadMissing":true
+set "Missing" => Missing code in array
