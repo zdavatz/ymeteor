@@ -24,11 +24,11 @@ Template.main.onRendered(function(){
                     {title:"Name", field:"name", sorter:"string"},
                     {title:'Title',field:'title' ,width:100},
                     {title:"number", field:"number",},
-                    {title:"Applicant", field:'applicant'},
-                    {title:"DosageForm",field:'dosageForm'},
+                    {title:"Registration Owner", field:'applicant'},
+                    {title:"Galenic Form",field:'dosageForm'},
                     {title:"Registration",field:'registration'},
                     {title:"Transport",field:'transport'},
-                    {title:"keyword",field:'keyword'},
+                    {title:"ATC-Code",field:'keyword'},
                     {title:'AmKlassification', field:'amKlassification'}
                 ],
             });
