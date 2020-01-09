@@ -1,5 +1,6 @@
 {
     "isCode": true,
     "loadMissing":true,
+    "reRun": true,
     "Missing":["G04BE03","A03AB12","A06AC02"]
   }

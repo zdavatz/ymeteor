@@ -33,8 +33,16 @@ var codeSample = ['G04BE03']
 pharma = {}
 pharma.root = 'https://portal.dimdi.de';
 pharma.entry = 'https://www.pharmnet-bund.de/dynamic/de/arzneimittel-informationssystem/index.html'
-/*
+
+
+/**
+ * Force ReRun 
  */
+
+let isRerun = Meteor.settings.reRun
+
+
+
 /*
  */
 let isCode = Meteor.settings.isCode
@@ -47,13 +55,20 @@ if (isCode) {
     }
     runAtc()
 }
-
-var missing = Meteor.settings.Missing 
-if(Meteor.settings.loadMissing && missing.length){
-    log('Loading missing code',missing)
+/**
+ * Load Missing ATC Code
+ */
+var missing = Meteor.settings.Missing
+if (Meteor.settings.loadMissing && missing.length) {
+    log('Loading missing code', missing)
     var isTest = true;
     var codeSample = missing;
 }
+
+/**
+ * Start with Clean Project
+ * NOTE: This will REMOVE the previous run DATA 
+ */
 
 if (isClean) {
     Drugs.remove({
@@ -72,8 +87,7 @@ async function runAtc() {
     await scrapPharma(pharma.entry)
     App.exit()
 }
-/*
- */
+
 /*
  */
 /*
@@ -195,7 +209,7 @@ pharma.searchItem = async (keyword, browser, page) => {
         }, {
             $set: {
                 results: itemsCount,
-                
+
             }
         });
     }
@@ -218,10 +232,10 @@ pharma.searchItem = async (keyword, browser, page) => {
     // Docs[loop]
     for (var j = 1; j <= parseInt(itemsCount); j++) {
         await pharma.extractItem(newPage, keyword)
-        Log('progress', 'Scrapping[current]: [ ' +j+ ' from ' + itemsCount + ' ] - ' + chalk.green(keyword))
+        Log('progress', 'Scrapping[current]: [ ' + j + ' from ' + itemsCount + ' ] - ' + chalk.green(keyword))
         // System Crashes
         var [button] = await newPage.$x("//a[contains(., '» nächstes Dokument »')]");
-        Log('progress','Getting Next Document: '+j)
+        Log('progress', 'Getting Next Document: ' + j)
         if (button) {
             await button.click();
             await newPage.waitForSelector('#contentFrame', {
@@ -242,10 +256,10 @@ pharma.searchItem = async (keyword, browser, page) => {
                 });
                 console.log('Drug Checked')
             }
-        }else{
+        } else {
             // RESTART*
-            
-            Log('warning', 'Session[pause]:' + keyword )
+
+            Log('warning', 'Session[pause]:' + keyword)
             await newPage.close()
             return
         }
@@ -282,6 +296,7 @@ async function scrapPharma(url) {
         });
         var elem = '#clause > div > div > table:nth-child(2) > tbody > tr.dom_if\\:\\:\\!getApplInfo\\(\\)\\.isFZKNavigationDisabled\\(\\) > td:nth-child(2) > a.wbbluebutton.dom_action\\:\\:AcceptFZK.dom_translate\\:\\:amis\\.clause\\.accept';
         await FlowPup.click(page, elem, 3000, 'Step[2] => Event[click] Aggrement[Accept]')
+        // USED for dev>
         // await page.screenshot({
         //     path: path + 'test-1.png',
         //     fullPage: true
@@ -295,12 +310,23 @@ async function scrapPharma(url) {
             Log('warning', 'Drugs[SET] Sample')
             var drugs = codeSample;
         } else {
-            var drugsDB = Drugs.find({
-                project: 'atc',
-                checked: {
-                    $ne: true
-                }
-            }).fetch();
+            if (isRerun) {
+                log('----------------------------')
+                Log('warning', 'ATC: Recheck updates Drugs[SET] DB; ', drugsDB.length + ' to scrap')
+                log('----------------------------')
+
+                var drugsDB = Drugs.find({
+                    project: 'atc'
+                }).fetch();
+            } else {
+                var drugsDB = Drugs.find({
+                    project: 'atc',
+                    checked: {
+                        $ne: true
+                    }
+                }).fetch();
+            }
+
             Log('warning', 'Drugs[SET] DB; ', drugsDB.length + ' to scrap')
             var drugs = drugsDB;
         }
