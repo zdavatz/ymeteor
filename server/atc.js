@@ -152,6 +152,10 @@ pharma.extractItem = async (page, keyword) => {
     var summary = Drugs.findOne({
         code: keyword
     })
+    /**
+     * Need to reCheck*
+     * reRun**
+     */
     item.meta = summary;
     item.project = type;
     DB.itemInsert(item, 'number', type)
