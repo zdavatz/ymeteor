@@ -315,13 +315,12 @@ async function scrapPharma(url) {
             var drugs = codeSample;
         } else {
             if (isRerun) {
-                log('----------------------------')
-                Log('warning', 'ATC: Recheck updates Drugs[SET] DB; ', drugsDB.length + ' to scrap')
-                log('----------------------------')
-
                 var drugsDB = Drugs.find({
                     project: 'atc'
                 }).fetch();
+                log('----------------------------')
+                Log('warning', 'ATC: Recheck updates Drugs[SET] DB; ', drugsDB.length + ' to scrap')
+                log('----------------------------')
             } else {
                 var drugsDB = Drugs.find({
                     project: 'atc',
