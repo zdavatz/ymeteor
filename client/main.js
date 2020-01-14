@@ -21,14 +21,17 @@ var whoData = function (value, data, type, params, component) {
     //params - the mutatorParams object from the column definition
     //component - when the "type" argument is "edit", this contains the cell component for the edited cell, otherwise it is the column component for the column
     log(data)
-    var sciName = data.data[1][1]
-    var doase = data.data[2][1]
-    var roa = ''
-    var ddd = data.meta
-    var name = ''
+    
+    if(data.meta){
+        // return
+        var meta = data.meta.name + ";" + data.meta.dose
+        return meta;
+    }else{
+        return data.title
+    }
+
     // var forecast = data.ForacastDate;
-    var meta = data.meta.name + ";" + data.meta.dose
-    return meta;
+
 }
 /** */
 Template.main.onRendered(function () {
