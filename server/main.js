@@ -45,6 +45,10 @@ Meteor.methods({
 
 
 Meteor.publish('searchResults',function(keyword){
-  if(!keyword) return;
-  return Items.find({$or:[{name:{$regex:keyword}},{keyword:keyword}]})
+  console.log('Searching for:', keyword)
+  console.log('Searching for: name, keyword, amKlassification,number')
+  // const partialMatch = new RegExp(`^${searchText}`, 'i');
+  // if(!keyword) return;
+
+  return Items.find({$or:[{name:{$regex:keyword , $options: "ig" }},{number: {$regex:keyword , $options: "ig"}},{keyword: {$regex:keyword , $options: "ig"}},{amKlassification: {$regex:keyword , $options: "ig"}} ]})
 })

@@ -15,6 +15,12 @@ Template.main.onRendered(function(){
      })
      self.autorun(function(){
         var i = Items.find().fetch()
+        if(!i.length){
+            // alert("No results")
+            console.log('NO results')
+        }
+
+        console.log('Results:' , i.length)
         // App.setSetting({data:Items.find().fetch()})
         if(i && _.isArray(i) && i.length !== 0){
             console.log('data',i)
@@ -22,8 +28,8 @@ Template.main.onRendered(function(){
                 data:i,
                 columns:[
                     {title:"Name", field:"name", sorter:"string"},
-                    {title:'Title',field:'title' ,width:100},
-                    {title:"number", field:"number",},
+                    {title:'Meta',field:'title' ,width:400},
+                    {title:"Number", field:"number",},
                     {title:"Registration Owner", field:'applicant'},
                     {title:"Galenic Form",field:'dosageForm'},
                     {title:"Registration",field:'registration'},
@@ -35,11 +41,14 @@ Template.main.onRendered(function(){
         }
      })
 })
-//
+/**
+ * 
+ */
 Template.main.events({
     'keyup #search'(e){
         var keyword = $(e.currentTarget).val()
         if(e.which === 13){
+            var keyword = keyword.toLowerCase()
             App.setSetting({keyword:keyword})
         }
     }
