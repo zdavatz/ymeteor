@@ -45,10 +45,22 @@ Meteor.methods({
 
 
 Meteor.publish('searchResults',function(keyword){
+  if(!keyword){
+    return
+  }
   console.log('Searching for:', keyword)
-  console.log('Searching for: name, keyword, amKlassification,number')
+  console.log('Searching for: name, keyword, amKlassification,number', keyword)
   // const partialMatch = new RegExp(`^${searchText}`, 'i');
   // if(!keyword) return;
 
   return Items.find({$or:[{name:{$regex:keyword , $options: "ig" }},{number: {$regex:keyword , $options: "ig"}},{keyword: {$regex:keyword , $options: "ig"}},{amKlassification: {$regex:keyword , $options: "ig"}} ]})
 })
+
+/**
+ * 
+ */
+Stats = {}
+
+Stats.total = Items.find({}).count()
+
+console.log(Stats)
