@@ -58,6 +58,11 @@ Template.main.onRendered(function () {
                         sorter: "string"
                     },
                     {
+                        title: "Project",
+                        field: "project",
+                        sorter: "string"
+                    },
+                    {
                         title: 'Meta',
                         field: 'title',
                         width: 400,
