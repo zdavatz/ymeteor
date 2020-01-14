@@ -27,7 +27,7 @@ var whoData = function (value, data, type, params, component) {
     var ddd = data.meta
     var name = ''
     // var forecast = data.ForacastDate;
-    var meta = data.meta
+    var meta = data.meta.name + ";" + data.meta.dose
     return meta;
 }
 /** */
