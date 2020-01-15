@@ -54,8 +54,8 @@ Template.main.onRendered(function () {
                 height:"700px",
                 layout:"fitColumns",
                 pagination:"local",
-                paginationSize:28,
-                paginationSizeSelector:[3, 6, 8, 10],
+                paginationSize:100,
+                paginationSizeSelector:[100, 500, 1000],
                 movableColumns:true,
                 data: i,
                 columns: [{
