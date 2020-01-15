@@ -51,6 +51,12 @@ Template.main.onRendered(function () {
         if (i && _.isArray(i) && i.length !== 0) {
             console.log('data', i)
             var table = new Tabulator("#meds", {
+                height:"700px",
+                layout:"fitColumns",
+                pagination:"local",
+                paginationSize:28,
+                paginationSizeSelector:[3, 6, 8, 10],
+                movableColumns:true,
                 data: i,
                 columns: [{
                         title: "Name",
