@@ -87,6 +87,9 @@ Stats.SwissMedicDhcpDe = Items.find({type:'doc',lang:'de'}).count()
 Stats.SwissMedicDhcpFR = Items.find({type:'doc',lang:'fr'}).count()
 
 
+
+Stats.drugsATC = Drugs.find({project:'atc'}).count()
+Stats.drugsPharma = Drugs.find({project:'pharproductma'}).count()
 /** */
 console.log(prettyjson.render(Stats, options))
 
@@ -95,7 +98,7 @@ console.log(prettyjson.render(Stats, options))
  * Update Items Meta.
  */
 
-dataCheck()
+// dataCheck()
 
 async function dataCheck (){
   // 
