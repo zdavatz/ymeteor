@@ -42,6 +42,9 @@ Template.main.onRendered(function () {
     })
     self.autorun(function () {
         var i = Items.find().fetch()
+
+        App.setSetting({results:i.length})
+
         if (!i.length) {
             // alert("No results")
             console.log('NO results')
@@ -64,12 +67,7 @@ Template.main.onRendered(function () {
                         sorter: "string"
                     },
                     {
-                        title: "Project",
-                        field: "project",
-                        sorter: "string"
-                    },
-                    {
-                        title: 'Meta',
+                        title: 'Data',
                         field: 'title',
                         width: 400,
                         mutator: whoData
