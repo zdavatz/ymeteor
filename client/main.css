@@ -1,4 +1,16 @@
 body {
-  padding: 10px;
   font-family: sans-serif;
+}
+
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+body {
+  -ms-overflow-style:none;
 }
