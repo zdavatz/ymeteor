@@ -16,6 +16,7 @@
     "lodash": "^4.17.15",
     "meteor-node-stubs": "^0.4.1",
     "papaparse": "^5.1.0",
+    "prettyjson": "^1.2.1",
     "puppeteer": "^1.19.0",
     "scrape-it": "^5.1.4",
     "tabulator-tables": "^4.4.3",

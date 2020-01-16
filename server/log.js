@@ -18,9 +18,9 @@ Log = async function(type,msg){
     chalkColors.done = chalk.white.bold.bgCyan
     var specialTypes = ['start','done']
     if(specialTypes.includes(type)){
-      log(chalkColors[type](type.toUpperCase()+':'),chalkColors[type](msg))
+      console.log(chalkColors[type](type.toUpperCase()+':'),chalkColors[type](msg))
     }else{
-      log(chalkColors[type](type.toUpperCase()+':'),chalkColors.def(msg))
+      console.log(chalkColors[type](type.toUpperCase()+':'),chalkColors.def(msg))
     }
     
   }

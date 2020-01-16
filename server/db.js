@@ -22,11 +22,19 @@ DB.itemInsert = (doc, field,type) => {
   }else{
     // Update products
    log('warning','DB: Doc Exists' + doc[field])
+   console.log('Update:', doc)
    Items.update({_id:isItem._id},{$set:doc})
    log('success','DB: Doc Update' + doc[field])
   }
 }
-// 
+/**
+ * 
+ */
+
+
+/**
+ * 
+ */
 DB.batchInsert = async (data, field,project) => {
   console.log(data[2],field,project)
   if (!data || !data.length || !field) {
@@ -72,25 +80,49 @@ DB.batchDrugs = async (data,project) => {
   })
 }
 // Drugs.remove({})
+
+/**
+ * Batch Insert
+ * Data: JSONArr, Field: Uniqe field, Project: Str (Identifier for Export)
+ */
 DB.batchAtc = async (data,field,project) => {
   if (!data || !data.length) {
     console.log('DB:batchInsert Err')
     return;
   }
   console.log('Checking meds.....')
+  
   _.each(data, (item) => {
     let isExist = Drugs.findOne({
       name: item.name
     })
-    if (!isExist && item) {
+    /**
+     * 
+     */
+    if (!isExist) {
       if (!item || !item.name) {
         console.log('Checking...')
         return
       }
       item.project = project
+      log(item)
+      log('CHECKING DRUGS',item)
       console.log('DrugsInsert: Success,', item, 'Inserted')
       Drugs.insert(item)
+    }else{
+      console.log('Exist',item)
     }
+    /**
+     * 
+     */
+    // if(isExist && !item.meta){
+    //   console.log('Meta: Does not exist')
+    //  // Drugs.update({_id:item._id},{$set:{}})
+    // }else{
+    //   console.log('Meta: Exists')
+    // }
+
+
   })
 }
 //

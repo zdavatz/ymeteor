@@ -152,10 +152,6 @@ pharma.extractItem = async (page, keyword) => {
     var summary = Drugs.findOne({
         code: keyword
     })
-    /**
-     * Need to reCheck*
-     * reRun**
-     */
     item.meta = summary;
     item.project = type;
     DB.itemInsert(item, 'number', type)
@@ -378,7 +374,20 @@ async function remoteFile(url) {
         var Atc_csv = Papa.parse(data, {
             header: true
         })
-        // console.log(Atc_csv.data[1])
+        console.log('Data from Remote File: Sample [1]:',Atc_csv.data[1])
         DB.batchAtc(Atc_csv.data, 'code', 'atc')
     }
 }
+
+
+
+
+
+/**
+ * Set Meta Field 
+ */
+
+
+
+
+

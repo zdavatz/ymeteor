@@ -1,6 +1,10 @@
 import {
   Meteor
 } from 'meteor/meteor';
+
+var prettyjson = require('prettyjson');
+
+
 import log from './log.js'
 import './swissmedic-o.js'
 import './pharma.js'
@@ -55,12 +59,50 @@ Meteor.publish('searchResults',function(keyword){
 
   return Items.find({$or:[{name:{$regex:keyword , $options: "ig" }},{number: {$regex:keyword , $options: "ig"}},{keyword: {$regex:keyword , $options: "ig"}},{amKlassification: {$regex:keyword , $options: "ig"}} ]})
 })
+/**
+ *  Pretty JSON options
+ */
+
+var options = {
+  keysColor: 'brightCyan',
+  dashColor: 'magenta',
+  stringColor: 'whbrightWhiteite'
+};
 
 /**
  * 
  */
 Stats = {}
 
-Stats.total = Items.find({}).count()
+Stats.Total = Items.find({}).count()
+Stats.ATC =  Items.find({type:'acc'}).count()
+Stats.ATCwithMeta = Items.find({meta: {$exists:true}}).count()
+Stats.ATCwithOutMeta = Items.find({meta: {$exists:false}}).count()
+Stats.Pharma = Items.find({type:'pharma'}).count()
 
-console.log(Stats)
+
+Stats.SwissMedicDrugsDe = Items.find({type:'drug',lang:'de'}).count()
+Stats.SwissMedicDrugsFr = Items.find({type:'drug',lang:'fr'}).count()
+Stats.SwissMedicDhcpDe = Items.find({type:'doc',lang:'de'}).count()
+Stats.SwissMedicDhcpFR = Items.find({type:'doc',lang:'fr'}).count()
+
+
+/** */
+console.log(prettyjson.render(Stats, options))
+
+
+/**\
+ * Update Items Meta.
+ */
+
+dataCheck()
+
+async function dataCheck (){
+  var items = Items.find({project: 'acc',meta: {$exists:false}}).fetch()
+  console.log("Items to be updated: ", items.length)
+  _.each(items,(item)=>{
+    var meta = Drugs.findOne({code:item.keyword})
+    Items.update({_id: item._id},{$set:{meta:meta}})
+    console.log('Item meta is updated',item.name, "-->", meta)
+  })
+}
