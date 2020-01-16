@@ -104,6 +104,7 @@ async function dataCheck (){
   if(items.length){
     _.each(items,(item)=>{
       var meta = Drugs.findOne({code:item.keyword})
+      console.log('Item meta is update[START]',item.keyword, "-->",  meta)
       if(meta){
         Items.update({_id: item._id},{$set: { meta: meta}})
         console.log('Item meta is updated',item.keyword, "-->", meta)
