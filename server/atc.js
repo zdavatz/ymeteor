@@ -314,6 +314,11 @@ async function scrapPharma(url) {
                 var drugsDB = Drugs.find({
                     project: 'atc'
                 }).fetch();
+
+                /**
+                 * Reset Drugs for Checked:false
+                 */
+                Drugs.update({project: 'atc'},{$set:{checked:false}},{multi:true})
                 log('----------------------------')
                 Log('warning', 'ATC: Recheck updates Drugs[SET] DB; ', drugsDB.length + ' to scrap')
                 log('----------------------------')
@@ -378,16 +383,3 @@ async function remoteFile(url) {
         DB.batchAtc(Atc_csv.data, 'code', 'atc')
     }
 }
-
-
-
-
-
-/**
- * Set Meta Field 
- */
-
-
-
-
-

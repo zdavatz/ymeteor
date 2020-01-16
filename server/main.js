@@ -100,9 +100,12 @@ dataCheck()
 async function dataCheck (){
   var items = Items.find({project: 'acc',meta: {$exists:false}}).fetch()
   console.log("Items to be updated: ", items.length)
-  _.each(items,(item)=>{
-    var meta = Drugs.findOne({code:item.keyword})
-    Items.update({_id: item._id},{$set:{meta:meta}})
-    console.log('Item meta is updated',item.name, "-->", meta)
-  })
+  if(items.length){
+    _.each(items,(item)=>{
+      var meta = Drugs.findOne({code:item.keyword})
+      Items.update({_id: item._id},{$set:{meta:meta}})
+      console.log('Item meta is updated',item.name, "-->", meta)
+    })
+  }
+
 }
