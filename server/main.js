@@ -89,7 +89,7 @@ Stats.SwissMedicDhcpFR = Items.find({type:'doc',lang:'fr'}).count()
 
 
 Stats.drugsATC = Drugs.find({project:'atc'}).count()
-Stats.drugsPharma = Drugs.find({project:'pharproductma'}).count()
+Stats.drugsPharma = Drugs.find({project:'product'}).count()
 /** */
 console.log(prettyjson.render(Stats, options))
 
