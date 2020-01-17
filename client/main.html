@@ -8,9 +8,118 @@
 </head>
 
 <body>
-  {{>main}}
+  <!-- {{>main}} -->
   <!-- {{>files}} -->
+
+  {{>SearchView}}
 </body>
+
+
+
+<template name="SearchView">
+  <div class="section is-paddingless is-marginless">
+    <div class="columns is-multiline is-paddingless is-marginless">
+    <div class="column is-1  is-fh sidebar is-hidden">
+     .
+    </div>
+
+    <div class="column is-12">
+      <div class="columns is-multiline is-centered">
+        <div class="column is-12 columns is-multiline is-centered">
+          <div class="column is-6 has-text-centered">
+            <br/>
+            <h1 class="title">Search Medications</h1>
+            <p>Search by ATC-Code, Drug name</p>
+            <br/>
+            <input id="search" class="input is-radiuslessx is-large" type="text"
+            placeholder="Search by drug name or atc-code " style="width: 70%">
+          </div>
+
+        </div>
+        <!--  -->
+        <!-- Results -->
+        <!-- {{#each repeat 1}}
+        <div class="column is-11 is-paddingless">
+          <div class="box is-radiusless"></div>
+        </div>
+        {{/each}} -->
+
+        <div class="column is-11 is-paddingless">
+
+
+        {{#if results}}
+        <table class="table is-fullwidth is-hoverable is-striped is-bordered">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th width="250px">Meta</th>
+              <th width="250px">Data</th>
+              <th>Number</th>
+              <th>Registration Owner</th>
+              <th>Galenic Form</th>
+              <th>Registration</th>
+              <th>Transport</th>
+              <th>AmKlassification</th>
+
+            </tr>
+          </thead>
+
+          <tbody>
+            {{#each results}}
+            <tr>
+              <td>{{countRow @index}}</td>
+              <td><a href="#">{{name}}</a></td>
+              <td>{{meta.name}} <br/> {{meta.dose}} <br/> {{meta.code}}</td>
+              <td class="">
+                <strong>{{data.[0]}}</strong>: {{data.[0].[1]}}<br/>
+                <strong>{{data.[1].[0]}}</strong>: {{data.[1].[1]}}<br/>
+                <strong>{{data.[2].[0]}}</strong>: {{data.[2].[1]}}<br/>
+
+              </td>
+              <td>{{number}}</td>
+                       
+              <td>{{applicant}}</td>
+              <td>{{dosageForm}}</td>
+              <td>{{registration}}</td>
+              <td>{{transport}}</td>
+              <td>{{amKlassification}}</td>
+            </tr>
+            {{/each}}
+
+          </tbody>
+
+          </table>
+         
+            
+          <div class="column is-11 has-text-centered is-hidden">
+            <a href="#" class="button is-primary is-large">Load more...</a>
+          </div>
+
+           <!-- {{else}} -->
+
+          {{/if}}
+
+        </div>
+
+
+        
+
+
+
+
+      </div>
+    </div>
+    </div>
+  </div>
+</template>
+
+
+
+
+
+
+
 <!--  -->
 <template name="main">
   <div class="section">

@@ -14,3 +14,14 @@ body::-webkit-scrollbar-button {
 body {
   -ms-overflow-style:none;
 }
+/* Utilities */
+.is-fh{
+  height: 100vh;
+}
+/* sidebar */
+
+.sidebar{
+  /* background:#f4f4f4; */
+  width: 80px !important;
+  /* border-right:1px solid #e4e4e4; */
+}

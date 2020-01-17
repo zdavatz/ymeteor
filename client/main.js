@@ -33,6 +33,11 @@ var whoData = function (value, data, type, params, component) {
     // var forecast = data.ForacastDate;
 
 }
+/**
+ * Data Field Renderer
+ */
+
+ var dataFieldRenderer
 /** */
 Template.main.onRendered(function () {
     var self = this;
@@ -128,4 +133,48 @@ Template.main.events({
 /**
  * 
  */
-Template.main.helpers({})
+
+
+Template.SearchView.onCreated(function(){
+    var self = this;
+    self.autorun(function () {
+        var keyword = App.getSetting('keyword');
+        Meteor.subscribe('searchResults', keyword)
+        console.log(Items.find().count())
+    })
+})
+/**
+ * 
+ */
+
+Template.SearchView.events({
+    'keyup #search'(e) {
+        var keyword = $(e.currentTarget).val()
+        if (e.which === 13) {
+            var keyword = keyword.toLowerCase()
+            App.setSetting({
+                keyword: keyword
+            })
+        }
+    }
+})
+
+/**
+ * 
+ */
+Template.SearchView.helpers({
+    results(){
+        return Items.find({}).fetch()
+    }
+})
+
+
+/**
+ * 
+ */
+Template.registerHelper('countRow',(i)=>{
+    var i = parseInt(i) + 1
+    return i
+})
+
+
