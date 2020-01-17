@@ -67,11 +67,17 @@ Template.main.onRendered(function () {
                         sorter: "string"
                     },
                     {
-                        title: 'Data',
+                        title: 'Meta',
                         field: 'title',
                         width: 400,
                         mutator: whoData
                     },
+                    {
+                        title: 'Data',
+                        field: 'title',
+                        width: 400,
+                        mutator: whoData
+                    },                    
                     {
                         title: "Number",
                         field: "number",

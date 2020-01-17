@@ -27,12 +27,6 @@ let frDocs = 'https://www.swissmedic.ch/swissmedic/fr/home/humanarzneimittel/mar
 Counter = 0;
 /*
  */
-Items.remove({
-    type: 'doc'
-})
-Items.remove({
-    type: 'drug'
-})
 /*
   ===
 */
@@ -83,6 +77,14 @@ Swiss.getItems = (type, lang) => {
         type: type
     }).fetch()
 }
+
+
+console.log("DEBUG",Items.find({
+    lang: 'de',
+    type: 'doc'
+}).count())
+
+
 /*
   Custom Single Link Scrapper 
     - Puppeteer is NOT required
@@ -124,6 +126,8 @@ Swiss.scrapDrug = (url, id) => {
             }, {
                 $set: data
             })
+
+            console.log("ITEM CHECK:",Items.findOne({ _id: id}))
         }
         //console.log(`Scrapping status: ${response.statusCode}`)
        
@@ -136,11 +140,11 @@ Swiss.scrapDrug = (url, id) => {
 Swiss.record = () => {
     console.log('Progress: Getting files ready')
     Meteor.setTimeout(function () {
-        Swiss.writeFile('/exports/chargenrueckrufe_de.json', JSON.stringify(Swiss.getItems('drug', 'de')))
-        Swiss.writeFile('/exports/dhcp_hcp_de.json', JSON.stringify(Swiss.getItems('doc', 'de')))
+        Swiss.writeFile('exports/chargenrueckrufe_de.json', JSON.stringify(Swiss.getItems('drug', 'de')))
+        Swiss.writeFile('exports/dhcp_hcp_de.json', JSON.stringify(Swiss.getItems('doc', 'de')))
         // French
-        Swiss.writeFile('/exports/chargenrueckrufe_fr.json', JSON.stringify(Swiss.getItems('drug', 'fr')))
-        Swiss.writeFile('/exports/dhcp_hcp_fr.json', JSON.stringify(Swiss.getItems('doc', 'fr')))
+        Swiss.writeFile('exports/chargenrueckrufe_fr.json', JSON.stringify(Swiss.getItems('drug', 'fr')))
+        Swiss.writeFile('exports/dhcp_hcp_fr.json', JSON.stringify(Swiss.getItems('doc', 'fr')))
         console.log('Done: Files have been saved to /public/exports')
         Swiss.close()
     }, 5000)
@@ -217,7 +221,7 @@ let scrapper = async (url, type, lang, file) => {
         if (i == nav.length) {
             console.log('Project:FINISHED', file, 'DONE')
             console.log('----------------------------------')
-            Swiss.writeFile('/exports/' + file, JSON.stringify(Swiss.getItems(type, lang)))
+            Swiss.writeFile('exports/' + file, JSON.stringify(Swiss.getItems(type, lang)))
             console.log('Check', file , " : " ,Items.find({type:type, lang:lang}).count() )
             console.log('----------------------------------')
             break;
