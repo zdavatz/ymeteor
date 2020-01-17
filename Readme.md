@@ -29,3 +29,6 @@ $ METEOR_PROFILE=1 METEOR_LOG=debug meteor --verbose
 
 set "loadMissing":true
 set "Missing" => Missing code in array
+
+### Convert json2csv
+/home/zeno/.nvm/versions/node/v11.12.0/bin/json2csv
