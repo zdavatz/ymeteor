@@ -47,10 +47,12 @@
 
 
         {{#if results}}
+        <div class="table__wrapper">
         <table class="table is-fullwidth is-hoverable is-striped is-bordered">
           <thead>
             <tr>
               <th>#</th>
+              <th>Files</th>
               <th>Name</th>
               <th width="250px">Meta</th>
               <th width="250px">Data</th>
@@ -60,7 +62,7 @@
               <th>Registration</th>
               <th>Transport</th>
               <th>AmKlassification</th>
-              <th>Files</th>
+             
 
             </tr>
           </thead>
@@ -69,6 +71,14 @@
             {{#each results}}
             <tr>
               <td>{{countRow @index}}</td>
+              <td>
+                {{#if files}}
+                  {{#each files}}
+                    <span class="tag">{{date}} </span><br/>
+                    <a href="https://portal.dimdi.de{{link}}" target="_blank">{{name}}</a><br/>
+                  {{/each}}
+                {{/if}}
+              </td>
               <td><a href="#">{{name}}</a></td>
               <td>{{meta.name}} <br/> {{meta.dose}} <br/> {{meta.code}}</td>
               <td class="">
@@ -84,22 +94,14 @@
               <td>{{registration}}</td>
               <td>{{transport}}</td>
               <td>{{amKlassification}}</td>
-              <td>
-                {{#if files}}
-                  {{#each files}}
-                    <span class="tag">{{date}} </span><br/>
-                    <a href="https://portal.dimdi.de{{link}}">{{name}}</a>
-                    <hr/>
-                  {{/each}}
-                {{/if}}
-              </td>
+
             </tr>
             {{/each}}
 
           </tbody>
 
           </table>
-         
+          </div>
             
           <div class="column is-11 has-text-centered is-hidden">
             <a href="#" class="button is-primary is-large">Load more...</a>

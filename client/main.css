@@ -25,3 +25,13 @@ body {
   width: 80px !important;
   /* border-right:1px solid #e4e4e4; */
 }
+
+.table__wrapper {
+  overflow-x: auto;
+}
+
+table { 
+  max-width:100vw;
+  overflow-y:scroll;
+  display: block;
+}
