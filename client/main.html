@@ -49,7 +49,7 @@
                   <tr>
                     <th width="15px">#</th>
                     <th>FI/GI</th>
-                    <th>Arzneimittel-name</th>
+                    <th>Arzneimittelname</th>
                     <th width="250px">DDD/ATC</th>
                     <th width="250px">Stoffname/-menge</th>
                     <th>Eingangs-nummer</th>
@@ -67,7 +67,7 @@
                     <td>
                       {{#if files}}
                       {{#each files}}
-                      <span class="tag">{{date}} </span><br />
+                      <br />
                       <a href="https://portal.dimdi.de{{link}}" target="_blank">
                         {{#if isEqual name "Fachinformation"}}
                         FI
@@ -76,7 +76,7 @@
                         {{#if isEqual name "Gebrauchsinformation"}}
                         GI
                         {{/if}}
-                        
+                        <span class="tag">{{date}} </span>
                       
                       </a><br />
                       {{/each}}
