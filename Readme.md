@@ -10,7 +10,7 @@ $ meteor npm install
 $ meteor --once --settings pharma.json
 
 #### Import HPC, DHPC and Chargenrückrufe from Swissmedic.ch
-$ meteor --once --settings swiss.json --port 3002
+$ meteor --once --settings swissmedic.json
 
 #### Import from Pharmnet
 $ meteor --once --settings atc.json   
