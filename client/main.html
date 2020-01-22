@@ -10,7 +10,6 @@
 <body>
   <!-- {{>main}} -->
   <!-- {{>files}} -->
-
   {{>SearchView}}
 </body>
 
@@ -61,6 +60,7 @@
               <th>Registration</th>
               <th>Transport</th>
               <th>AmKlassification</th>
+              <th>Files</th>
 
             </tr>
           </thead>
@@ -84,6 +84,15 @@
               <td>{{registration}}</td>
               <td>{{transport}}</td>
               <td>{{amKlassification}}</td>
+              <td>
+                {{#if files}}
+                  {{#each files}}
+                    <span class="tag">{{date}} </span><br/>
+                    <a href="https://portal.dimdi.de{{link}}">{{name}}</a>
+                    <hr/>
+                  {{/each}}
+                {{/if}}
+              </td>
             </tr>
             {{/each}}
 
