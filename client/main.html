@@ -66,7 +66,7 @@
                     <th>Registration Owner</th>
                     <th>Galenic Form</th>
                     <th>Registration</th>
-                    <th>Transport</th>
+                    <th>Verkehrs-fähig</th>
                     <th>AmKlassification</th>
 
 
@@ -88,8 +88,35 @@
                     <td><a href="#">{{name}}</a></td>
                     <td>{{meta.name}} <br /> {{meta.dose}} <br /> {{meta.code}}</td>
                     <td class="">
+                      <!-- {{getDataTable data "header"}} -->
+
                       {{#each data}}
-                      {{this}} 
+
+                   
+                      <!-- {{@index}} -->
+
+                      <!-- {{getDataTable this @index}} -->
+
+                      <!-- {{#if isSkipped @index}} -->
+                      {{#if this.[1]}}
+
+
+                      
+
+                      {{#if isEqual this.[0] "Stoffname"}}
+                      <strong>{{this.[1]}}:</strong> 
+                      {{else}}
+                      {{this.[1]}}  <br/>
+                      {{/if}}
+                      
+                    
+
+                      {{/if}}
+                      <!-- {{this.[0]}}
+                      {{this.[1]}} -->
+
+
+                      <!-- {{this[0]}} -->
 
                       {{/each}}
                       <!-- <strong>{{data.[0]}}</strong>: {{data.[0].[1]}}<br />

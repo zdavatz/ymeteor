@@ -110,12 +110,65 @@ Template.registerHelper('countRow', (i) => {
     var i = parseInt(i) + 1
     return i
 })
-
-
-
 /** */
 Template.registerHelper('readbaleBreaks', (str) => {
+    if(!str){
+        return
+    }
    var l = str.replace(/\Sicherheitsmerkmal Pflicht/g,"<br><strong>Sicherheitsmerkmal Pflicht</strong><br>")
     return l
 })
+/**
+ * Data table header/ data
+ */
+ Template.registerHelper('getDataTable',(data,type,index)=>{
+    //  if(!data || !type || !index){
+    //      console.log('Error',"getDataTable Error")
+    //      return
+    //  }
+     var header = []
+     var rows = []
+     _.each(data,(i)=>{
+         /**
+          * Header
+          */
+         if(i[0] !== "ASK-Nr."){
+            if (header.indexOf(i[0]) == -1) {
+                header.push(i[0]);
+            }
+            if (header.indexOf(i[1]) == -1) {
+                rows.push({[i[0]]: i[1]});
+            }
+         }
+         // Rows
+     })
+    //  console.log(header)
+    //  console.log(rows)
 
+     if(type == 'header'){
+         return header
+     }else{
+         
+        var index = index - 1;
+        console.log(rows[index])
+
+     }
+
+     
+
+
+ })
+
+ /**
+  * isEqual
+  */
+
+  Template.registerHelper('isEqual', (v,k)=>{
+      if(!v || !k){
+          console.log('error: isEqual')
+          return
+      }
+      if(v == k){
+          return true
+      }
+  })
