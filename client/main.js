@@ -172,3 +172,19 @@ Template.registerHelper('readbaleBreaks', (str) => {
           return true
       }
   })
+  
+
+
+ /**
+  * isEqual
+  */
+
+ Template.registerHelper('isNotEqual', (v,k)=>{
+    if(!v || !k){
+        console.log('error: isEqual')
+        return
+    }
+    if(v !== k){
+        return true
+    }
+})

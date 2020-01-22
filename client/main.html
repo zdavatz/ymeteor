@@ -4,22 +4,17 @@
   <!--  -->
   <!--  -->
 </head>
-
 <body>
   <!-- {{>main}} -->
   <!-- {{>files}} -->
   {{>SearchView}}
 </body>
-
-
-
 <template name="SearchView">
   <div class="section is-paddingless is-marginless">
     <div class="columns is-multiline is-paddingless is-marginless">
       <div class="column is-1  is-fh sidebar is-hidden">
         .
       </div>
-
       <div class="column is-12">
         <div class="columns is-multiline is-centered">
           <div class="column is-12 columns is-multiline is-centered">
@@ -31,7 +26,6 @@
               <input id="search" class="input is-radiuslessx is-large" type="text"
                 placeholder="Search by drug name or atc-code " style="width: 70%">
             </div>
-
           </div>
           <!--  -->
           <!-- Results -->
@@ -40,18 +34,14 @@
           <div class="box is-radiusless"></div>
         </div>
         {{/each}} -->
-
           <div class="column is-12 is-paddingless is-marginless">
-
-
             {{#if getSetting 'resultsCount'}}
             <p class="notification is-white">
-              <span class="subtitle is-5">Results found:</span> <span class="tag is-primary">{{getSetting 'resultsCount'}}</span> for <span class="tag is-success">{{getSetting 'keyword'}}</span>
-            
+              <span class="subtitle is-5">Results found:</span> <span
+                class="tag is-primary">{{getSetting 'resultsCount'}}</span> for <span
+                class="tag is-success">{{getSetting 'keyword'}}</span>
             </p>
             {{/if}}
-
-
             {{#if results}}
             <div class="table__wrapper">
               <table class="table is-fullwidth is-hoverable is-striped is-bordered">
@@ -68,11 +58,8 @@
                     <th>Registration</th>
                     <th>Verkehrs-fähig</th>
                     <th>AmKlassification</th>
-
-
                   </tr>
                 </thead>
-
                 <tbody>
                   {{#each results}}
                   <tr>
@@ -89,85 +76,47 @@
                     <td>{{meta.name}} <br /> {{meta.dose}} <br /> {{meta.code}}</td>
                     <td class="">
                       <!-- {{getDataTable data "header"}} -->
-
                       {{#each data}}
-
-                   
                       <!-- {{@index}} -->
-
                       <!-- {{getDataTable this @index}} -->
-
                       <!-- {{#if isSkipped @index}} -->
-                      {{#if this.[1]}}
-
-
-                      
-
+                      {{#if isNotEqual @index '0'}}
                       {{#if isEqual this.[0] "Stoffname"}}
-                      <strong>{{this.[1]}}:</strong> 
+                      {{this.[1]}}:
                       {{else}}
-                      {{this.[1]}}  <br/>
+                      {{this.[1]}} <br />
                       {{/if}}
-                      
-                    
-
                       {{/if}}
                       <!-- {{this.[0]}}
                       {{this.[1]}} -->
-
-
                       <!-- {{this[0]}} -->
-
                       {{/each}}
                       <!-- <strong>{{data.[0]}}</strong>: {{data.[0].[1]}}<br />
                       <strong>{{data.[1].[0]}}</strong>: {{data.[1].[1]}}<br />
                       <strong>{{data.[2].[0]}}</strong>: {{data.[2].[1]}}<br /> -->
-
                     </td>
                     <td>{{number}}</td>
-
                     <td>{{applicant}}</td>
                     <td>{{dosageForm}}</td>
                     <td>{{registration}}</td>
                     <td>{{transport}}</td>
                     <td class="content is-small">{{{readbaleBreaks amKlassification}}}</td>
-
                   </tr>
                   {{/each}}
-
                 </tbody>
-
               </table>
             </div>
-
             <div class="column is-11 has-text-centered is-hidden">
               <a href="#" class="button is-primary is-large">Load more...</a>
             </div>
-
             <!-- {{else}} -->
-
             {{/if}}
-
           </div>
-
-
-
-
-
-
-
         </div>
       </div>
     </div>
   </div>
 </template>
-
-
-
-
-
-
-
 <!--  -->
 <template name="main">
   <div class="section">
@@ -182,7 +131,6 @@
       </div>
     </div>
   </div>
-
   <div class="container  is-centered">
     <div class=" columns is-centered is-multiline">
       <div class="column is-8">
@@ -198,11 +146,8 @@
       </div>
     </div>
   </div>
-
   <!-- {{#if setting 'data'}} -->
   <!-- {{#if getSetting 'data'}} -->
-
-
   <!-- {{/if}} -->
 </template>
 <!--  -->
