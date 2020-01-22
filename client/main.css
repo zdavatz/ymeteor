@@ -3,17 +3,7 @@ body {
 }
 
 
-body::-webkit-scrollbar {
-  display: none;
-}
 
-body::-webkit-scrollbar-button {
-  display: none;
-}
-
-body {
-  -ms-overflow-style:none;
-}
 /* Utilities */
 .is-fh{
   height: 100vh;

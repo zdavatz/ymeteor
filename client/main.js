@@ -10,7 +10,7 @@ import {
 } from 'meteor/meteor';
 // import 'tabulator-tables';
 // 
-var Tabulator = require('tabulator-tables');
+
 Items = new Mongo.Collection('items')
 // 
 log = console.log
@@ -44,76 +44,6 @@ Template.main.onRendered(function () {
     self.autorun(function () {
         var keyword = App.getSetting('keyword');
         Meteor.subscribe('searchResults', keyword)
-    })
-    self.autorun(function () {
-        var i = Items.find().fetch()
-
-        App.setSetting({results:i.length})
-
-        if (!i.length) {
-            // alert("No results")
-            console.log('NO results')
-        }
-        console.log('Results:', i.length)
-        // App.setSetting({data:Items.find().fetch()})
-        if (i && _.isArray(i) && i.length !== 0) {
-            console.log('data', i)
-            var table = new Tabulator("#meds", {
-                height:"700px",
-                layout:"fitColumns",
-                pagination:"local",
-                paginationSize:100,
-                paginationSizeSelector:[100, 500, 1000],
-                movableColumns:true,
-                data: i,
-                columns: [{
-                        title: "Name",
-                        field: "name",
-                        sorter: "string"
-                    },
-                    {
-                        title: 'Meta',
-                        field: 'title',
-                        width: 400,
-                        mutator: whoData
-                    },
-                    {
-                        title: 'Data',
-                        field: 'title',
-                        width: 400,
-                        mutator: whoData
-                    },                    
-                    {
-                        title: "Number",
-                        field: "number",
-                    },
-                    {
-                        title: "Registration Owner",
-                        field: 'applicant'
-                    },
-                    {
-                        title: "Galenic Form",
-                        field: 'dosageForm'
-                    },
-                    {
-                        title: "Registration",
-                        field: 'registration'
-                    },
-                    {
-                        title: "Transport",
-                        field: 'transport'
-                    },
-                    {
-                        title: "ATC-Code",
-                        field: 'keyword'
-                    },
-                    {
-                        title: 'AmKlassification',
-                        field: 'amKlassification'
-                    }
-                ],
-            });
-        }
     })
 })
 /**
