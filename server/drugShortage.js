@@ -85,7 +85,7 @@ var counter = 0 ;
     Log('success', 'Scrapping is finished Data collected:' + drugsTableData.length )
     Log('warning', 'Writing the file: drugshortage.json')
     await App.writeFile('/exports/drugshortage.json', JSON.stringify(drugsTableData));
-    Log('success', 'The file is ready at /exports/drugshortage.json')
+    Log('success', 'The file is ready at /exports/drugshortage.json' + drugsTableData.length)
     await browser.close();
     console.log('Meteor Exit.')
     process.exit(0)
