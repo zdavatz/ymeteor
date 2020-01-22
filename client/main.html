@@ -88,9 +88,13 @@
                     <td><a href="#">{{name}}</a></td>
                     <td>{{meta.name}} <br /> {{meta.dose}} <br /> {{meta.code}}</td>
                     <td class="">
-                      <strong>{{data.[0]}}</strong>: {{data.[0].[1]}}<br />
+                      {{#each data}}
+                      {{this}} 
+
+                      {{/each}}
+                      <!-- <strong>{{data.[0]}}</strong>: {{data.[0].[1]}}<br />
                       <strong>{{data.[1].[0]}}</strong>: {{data.[1].[1]}}<br />
-                      <strong>{{data.[2].[0]}}</strong>: {{data.[2].[1]}}<br />
+                      <strong>{{data.[2].[0]}}</strong>: {{data.[2].[1]}}<br /> -->
 
                     </td>
                     <td>{{number}}</td>
