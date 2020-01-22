@@ -32,6 +32,6 @@ body {
 
 table { 
   max-width:100vw;
-  overflow-y:scroll;
+  /* overflow-y:scroll; */
   display: block;
 }
