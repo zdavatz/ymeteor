@@ -15,6 +15,12 @@ $ meteor --once --settings swiss.json --port 3002
 #### Import from Pharmnet
 $ meteor --once --settings atc.json   
 
+
+### Import from drugshortage
+
+$ meteor --settings drugshortage.json --once
+
+
 #### Check files
 $ cd public/exports
 

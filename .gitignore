@@ -8,3 +8,4 @@ exp/*
 settings.json
 npm-debug.log
 packages/*/.npm/
+dev/*

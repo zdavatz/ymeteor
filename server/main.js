@@ -8,6 +8,7 @@ var prettyjson = require('prettyjson');
 import log from './log.js'
 import './swissmedic-o.js'
 import './pharma.js'
+import './drugShortage.js'
 import './atc.js'
 import './app.js'
 if (process.pid) {

@@ -3,6 +3,11 @@ import Log from './log';
 App = {}
 App.path = process.env['METEOR_SHELL_DIR'] + '/../../../public/';
 log = console.log;
+
+
+/**
+ * Generate files if does not exist
+ */
 /*
 
 */
