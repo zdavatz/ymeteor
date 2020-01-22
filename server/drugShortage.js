@@ -52,29 +52,19 @@ var counter = 0 ;
     await page.goto(url, {
         waitUntil: 'load'
     });
-
-
-
-
-    // var drugsArr = await page.evaluate(() => Array.from(document.querySelectorAll('#GridView1 > tbody > tr'), 
-    // //element.textContent.trim()
-    //  element => element.innerHTML
-    //  )
-    // );
-
-    // console.log(drugsArr)
-
     let content = await page.content();
     var $ = cheerio.load(content);
-
-
     var tr = '#GridView1 > tbody > tr';
     var drugsTableData = []
+    /**
+     * 
+     */
     $(tr).each(function (index) {
         Log('step','Drug number' + index)
         var data = {}
         data.id = index;
         data.bezeichnung = $(this).find('td:nth-child(1)').text()
+        data.detailsLink = rootURL + $(this).find('td:nth-child(1) > a').attr('href')
         data.gtin = $(this).find('td:nth-child(2)').text()
         data.pharmacode = $(this).find('td:nth-child(3)').text()
         data.firma = $(this).find('td:nth-child(4)').text()
@@ -85,26 +75,20 @@ var counter = 0 ;
         Log('start','Scrapping' + data.bezeichnung)
         console.log(data)
         Log('Success','Scrapping' + data.bezeichnung)
-        
         if(data.bezeichnung){
             drugsTableData.push(data)
         }
-        
     })
-
-
+    /**
+     * 
+     */
     Log('success', 'Scrapping is finished Data collected:' + drugsTableData.length )
     Log('warning', 'Writing the file: drugshortage.json')
     await App.writeFile('/exports/drugshortage.json', JSON.stringify(drugsTableData));
-
     Log('success', 'The file is ready at /exports/drugshortage.json')
-
     await browser.close();
-
     console.log('Meteor Exit.')
     process.exit(0)
-
-
     /**
      * Used for scrapping the Details page product
      */
@@ -152,7 +136,6 @@ var counter = 0 ;
         Log('end', 'Success:' + drugsCollection[i].text )
         console.log(i, drugsCollection[i])
     }
-
     Log('success', 'Scrapping is finished')
     Log('warning', 'Writing the file: drugshortage.json')
     await App.writeFile('/exports/drugshortage.json', JSON.stringify(drugsCollection));
@@ -172,7 +155,5 @@ var counter = 0 ;
   /**
    * Get the table data
    */
-
    function getTableData(table){
-       
    }
