@@ -17,7 +17,7 @@ body {
 }
 
 .table__wrapper {
-  overflow-x: auto;
+  /* overflow-x: auto; */
 }
 
 table { 

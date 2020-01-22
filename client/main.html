@@ -47,7 +47,7 @@
               <table class="table is-fullwidth is-hoverable is-striped is-bordered">
                 <thead>
                   <tr>
-                    <th>#</th>
+                    <th width="15px">#</th>
                     <th>FI/GI</th>
                     <th>Name</th>
                     <th width="250px">DDD/ATC</th>
@@ -68,7 +68,17 @@
                       {{#if files}}
                       {{#each files}}
                       <span class="tag">{{date}} </span><br />
-                      <a href="https://portal.dimdi.de{{link}}" target="_blank">{{name}}</a><br />
+                      <a href="https://portal.dimdi.de{{link}}" target="_blank">
+                        {{#if isEqual name "Fachinformation"}}
+                        FI
+                        {{/if}}
+
+                        {{#if isEqual name "Gebrauchsinformation"}}
+                        GI
+                        {{/if}}
+                        
+                      
+                      </a><br />
                       {{/each}}
                       {{/if}}
                     </td>
