@@ -10,7 +10,6 @@ import {
 } from 'meteor/meteor';
 // import 'tabulator-tables';
 // 
-
 Items = new Mongo.Collection('items')
 // 
 log = console.log
@@ -21,23 +20,19 @@ var whoData = function (value, data, type, params, component) {
     //params - the mutatorParams object from the column definition
     //component - when the "type" argument is "edit", this contains the cell component for the edited cell, otherwise it is the column component for the column
     log(data)
-    
-    if(data.meta){
+    if (data.meta) {
         // return
         var meta = data.meta.name + ";" + data.meta.dose
         return meta;
-    }else{
+    } else {
         return data.title
     }
-
     // var forecast = data.ForacastDate;
-
 }
 /**
  * Data Field Renderer
  */
-
- var dataFieldRenderer
+var dataFieldRenderer
 /** */
 Template.main.onRendered(function () {
     var self = this;
@@ -63,20 +58,31 @@ Template.main.events({
 /**
  * 
  */
-
-
-Template.SearchView.onCreated(function(){
+Template.SearchView.onCreated(function () {
     var self = this;
     self.autorun(function () {
         var keyword = App.getSetting('keyword');
         Meteor.subscribe('searchResults', keyword)
-        console.log(Items.find().count())
+        var i = Items.find().count()
+        App.setSetting({
+            results: i.length
+        })
+        if (!i && App.getSetting('keyword')) {
+            // alert("No results")
+            console.log('NO results')
+            App.setSetting({
+                resultsCount: i
+            })
+        } else {
+            App.setSetting({
+                resultsCount: i
+            })
+        }
     })
 })
 /**
  * 
  */
-
 Template.SearchView.events({
     'keyup #search'(e) {
         var keyword = $(e.currentTarget).val()
@@ -88,23 +94,18 @@ Template.SearchView.events({
         }
     }
 })
-
 /**
  * 
  */
 Template.SearchView.helpers({
-    results(){
+    results() {
         return Items.find({}).fetch()
     }
 })
-
-
 /**
  * 
  */
-Template.registerHelper('countRow',(i)=>{
+Template.registerHelper('countRow', (i) => {
     var i = parseInt(i) + 1
     return i
 })
-
-
