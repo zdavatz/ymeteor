@@ -5,12 +5,13 @@ body {
 
 
 /* Utilities */
-.is-fh{
+.is-fh {
   height: 100vh;
 }
+
 /* sidebar */
 
-.sidebar{
+.sidebar {
   /* background:#f4f4f4; */
   width: 80px !important;
   /* border-right:1px solid #e4e4e4; */
@@ -20,8 +21,13 @@ body {
   /* overflow-x: auto; */
 }
 
-table { 
-  max-width:100vw;
+table {
+  max-width: 100vw;
   /* overflow-y:scroll; */
   display: block;
+}
+
+td,
+th {
+  vertical-align: top;
 }
