@@ -115,7 +115,7 @@ Template.registerHelper('countRow', (i) => {
 
 /** */
 Template.registerHelper('readbaleBreaks', (str) => {
-   var l = str.replace(/\Sicherheitsmerkmal Pflicht/g,"<strong>Sicherheitsmerkmal Pflicht</strong><br>")
+   var l = str.replace(/\Sicherheitsmerkmal Pflicht/g,"<br><strong>Sicherheitsmerkmal Pflicht</strong><br>")
     return l
 })
 
