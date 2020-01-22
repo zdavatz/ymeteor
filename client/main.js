@@ -8,6 +8,7 @@ import './main.html';
 import {
     Meteor
 } from 'meteor/meteor';
+import { stringify } from 'yaml';
 // import 'tabulator-tables';
 // 
 Items = new Mongo.Collection('items')
@@ -109,3 +110,12 @@ Template.registerHelper('countRow', (i) => {
     var i = parseInt(i) + 1
     return i
 })
+
+
+
+/** */
+Template.registerHelper('readbaleBreaks', (str) => {
+   var l = str.replace(/\Sicherheitsmerkmal Pflicht/g,"<strong>Sicherheitsmerkmal Pflicht</strong><br>")
+    return l
+})
+
