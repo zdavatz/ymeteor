@@ -71,12 +71,10 @@
                         {{#if isEqual name "Fachinformation"}}
                         FI
                         {{/if}}
-
                         {{#if isEqual name "Gebrauchsinformation"}}
                         GI
                         {{/if}} - 
                         <span class="content is-small">{{date}} </span>
-                      
                       </a><br />
                       {{/each}}
                       {{/if}}
@@ -84,8 +82,6 @@
                     <td><a href="#" class="setSettings" data-settings="keyword:{{keyword}}">{{name}}</a></td>
                     <td>{{meta.name}} <br /> {{meta.dose}} <br /> {{meta.code}}</td>
                     <td class="is-paddingless">
-                      
-
                       <table class="table  is-striped is-narrow is-hoverable is-fullwidth">
                         <thead>
                           <tr>
@@ -94,46 +90,14 @@
                           </tr>
                         </thead>
                         <tbody>
-
                           {{#each getDataTable data 'rows'}}
-                          <!-- {{#if isNotEqual @index '0'}} -->
                           <tr>
                             <td>{{this.name}}</td>
                             <td>{{this.dose}}</td>
                           </tr>
-                          <!-- {{/if}} -->
                           {{/each}}
-  
-
                         </tbody>
                       </table>
-
-                      <!-- {{getDataTable data "header" 1}} -->
-
-
-                      <!-- {{#each data}} -->
-
-                      <!-- {{getDataTable this 'Stoffname'}} {{getDataTable this 'Stoffmenge'}} -->
-                      <!-- {{@index}} -->
-                      <!-- {{getDataTable this @index}} -->
-                      <!-- {{#if isSkipped @index}} -->
-
-                       <!-- Stoffmenge  -->
-                      <!-- {{#if isNotEqual @index '0'}} -->
-                      <!-- {{this}} <br/> -->
-                      <!-- {{#if isEqual this.[0] "Stoffname"}}
-                      {{this.[1]}}:
-                      {{else}}
-                      {{this.[1]}} <br />
-                      {{/if}}-->
-                      <!-- {{/if}}  -->
-                      <!-- {{this.[0]}}
-                      {{this.[1]}} -->
-                      <!-- {{this[0]}} -->
-                      <!-- {{/each}} -->
-                      <!-- <strong>{{data.[0]}}</strong>: {{data.[0].[1]}}<br />
-                      <strong>{{data.[1].[0]}}</strong>: {{data.[1].[1]}}<br />
-                      <strong>{{data.[2].[0]}}</strong>: {{data.[2].[1]}}<br /> -->
                     </td>
                     <td>{{number}}</td>
                     <td>{{applicant}}</td>
