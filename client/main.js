@@ -122,6 +122,10 @@ Template.registerHelper('readbaleBreaks', (str) => {
 })
 /**
  * Data table header/ data
+ * data: Array(3)
+0: (3) ["ASK-Nr.", "", ""]
+1: (3) ["Stoffname", "Amlodipinbesilat", "Valsartan"]
+2: (3) ["Stoffmenge", "13.87mg", "160.mg"]
  */
 Template.registerHelper('getDataTable', (data, type, index) => {
     // Index required with header
@@ -133,21 +137,20 @@ Template.registerHelper('getDataTable', (data, type, index) => {
     var stoffname = []
     var stoffmenge = []
     var rows = []
-    _.each(data, (i) => {
+    _.each(data, (i, aindex) => {
         if (i[0] !== "ASK-Nr." || i[1] == undefined) {
             if (header.indexOf(i[0]) == -1) {
                 header.push(i[0]);
             }
-            if (i[0] == 'Stoffname') {
-                stoffname.push(i[1])
-            }
-            if (i[0] == 'Stoffmenge') {
-                stoffmenge.push(i[1])
-            }
-        }
+        }     
     })
-    _.each(stoffname,(r,index)=>{
-        rows.push({name:r, dose:stoffmenge[index]})
+    _.each(data[1],(r,index)=>{
+        // rows.push({name:r, dose:stoffmenge[index]})
+        if(index !== 0){
+            rows.push({name:r, dose:data[2][index]})
+        }
+        
+
     })
     if (type == 'header') {
         return header[index]
