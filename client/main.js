@@ -126,6 +126,7 @@ Template.registerHelper('readbaleBreaks', (str) => {
 0: (3) ["ASK-Nr.", "", ""]
 1: (3) ["Stoffname", "Amlodipinbesilat", "Valsartan"]
 2: (3) ["Stoffmenge", "13.87mg", "160.mg"]
+//
  */
 Template.registerHelper('getDataTable', (data, type, index) => {
     // Index required with header
