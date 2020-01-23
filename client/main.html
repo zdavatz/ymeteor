@@ -24,7 +24,7 @@
               <p>Search by ATC-Code, Drug name</p>
               <br />
               <input id="search" class="input is-radiuslessx is-large" type="text"
-                placeholder="Search by drug name or atc-code " style="width: 70%">
+                placeholder="Search by drug name or atc-code " value="{{getSetting 'keyword'}}" style="width: 70%">
             </div>
           </div>
           <!--  -->
@@ -81,7 +81,7 @@
                       {{/each}}
                       {{/if}}
                     </td>
-                    <td><a href="#">{{name}}</a></td>
+                    <td><a href="#" class="setSettings" data-settings="keyword:{{keyword}}">{{name}}</a></td>
                     <td>{{meta.name}} <br /> {{meta.dose}} <br /> {{meta.code}}</td>
                     <td class="">
                       <!-- {{getDataTable data "header"}} -->
