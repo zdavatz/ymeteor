@@ -5,10 +5,6 @@ const _ = require("lodash")
 const cheerio = require('cheerio');
 const puppeteer = require('puppeteer');
 const cheerioTableparser = require('cheerio-tableparser')
-
-
-
-
 // const xmltwojs = require('xmltwojs');
 import Log from './log.js';
 import './util.js'
@@ -21,9 +17,6 @@ const feed = 'https://www.pei.de/SiteGlobals/Functions/RSSFeed/RSSGenerator_Lief
 const fileName = "impfstoffe_deutschland_lieferengpass.json"
 var drugsCollection = []
 var counter = 0;
-
-
-
 /**
  * 
  */
@@ -52,21 +45,14 @@ async function scrapper(url) {
     });
     const page = await browser.newPage();
     // 
-
     // 
     await page.goto(feed, {
         waitUntil: 'load'
     });
     var content = await page.content();
-    // console.log(content)
     var $ = await cheerio.load(content, { xmlMode: true });
     var items = $('item')
-
     var rows = []
-
-    
-
-
     $('item').each((index, item)=>{
         var obj = {}
         obj.name = $(item).find('title').text()
@@ -79,10 +65,8 @@ async function scrapper(url) {
         console.log(obj)
         rows.push(obj)
     })
-
-
-
-    await App.writeFile('/exports/FEED_impfstoffe_deutschland_lieferengpass.json' + fileName, JSON.stringify(rows));
+    await App.writeFile('/exports/impfstoffe_deutschland_lieferengpass.json', JSON.stringify(rows));
+    Log('success', 'The file is ready at /exports/impfstoffe_deutschland_lieferengpass.json')
     process.exit(0)
     return
     // //
@@ -100,7 +84,6 @@ async function scrapper(url) {
  */
 async function getTableData(pageContent) {
     var $ = await cheerio.load(pageContent);
-
     // getting rows ids 
     var ids = []
     $('tr').each((row)=>{
@@ -110,11 +93,10 @@ async function getTableData(pageContent) {
             ids.push($(row).attr('id'))
         }
     })
-
-    
-
-
     return
+    /**
+     * Unfinished Work for Scrapping the HTML Table
+     */
     console.log('Table count', $('.gsb .c-table table').length)
     var tables = []
     $('.gsb .c-table table').each(function (index, elm) {
@@ -141,7 +123,6 @@ async function getTableData(pageContent) {
                         })
                     }
                 }
-
             });
         } else {
             console.log('Row length EMPTY', $(elm).find('tr').length)

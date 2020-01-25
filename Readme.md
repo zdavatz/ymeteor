@@ -21,6 +21,11 @@ $ meteor --once --settings atc.json
 $ meteor --settings drugshortage.json --once
 
 
+### Import from pei.de
+$ meteor --settings pei.json  --once
+
+
+
 #### Check files
 $ cd public/exports
 
