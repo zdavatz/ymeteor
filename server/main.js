@@ -10,6 +10,7 @@ import './swissmedic-o.js'
 import './pharma.js'
 import './drugShortage.js'
 import './atc.js'
+import './pei.js'
 import './app.js'
 if (process.pid) {
   console.log('This process is your pid ' + process.pid);

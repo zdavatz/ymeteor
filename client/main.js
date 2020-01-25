@@ -16,22 +16,50 @@ import {
 Items = new Mongo.Collection('items')
 // 
 log = console.log
-var whoData = function (value, data, type, params, component) {
-    //value - original value of the cell
-    //data - the data for the row
-    //type - the type of mutation occurring  (data|edit)
-    //params - the mutatorParams object from the column definition
-    //component - when the "type" argument is "edit", this contains the cell component for the edited cell, otherwise it is the column component for the column
-    log(data)
-    if (data.meta) {
-        // return
-        var meta = data.meta.name + ";" + data.meta.dose
-        return meta;
-    } else {
-        return data.title
+/**
+ * Routes
+ *        slug: FlowRouter.getParam("slug");
+ */
+
+
+BlazeLayout.setRoot('body');
+
+
+FlowRouter.route('/', {
+    name: 'dashApp',
+    action: function () {
+        BlazeLayout.render("dashAppLayout", {
+            content: "dashApp"
+        });
     }
-    // var forecast = data.ForacastDate;
-}
+});
+
+
+
+FlowRouter.route('/search/results', {
+    name: 'dashApp',
+    action: function () {
+        BlazeLayout.render("dashAppLayout", {
+            content: "dashApp"
+        });
+    }
+});
+
+
+// // 
+FlowRouter.notFound = {
+    name: 'notFound',
+    action: function () {
+        BlazeLayout.render('mainLayout', {
+            content: 'main'
+        });
+    }
+};
+
+
+
+
+
 /**
  * Data Field Renderer
  */
