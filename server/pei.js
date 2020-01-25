@@ -61,20 +61,20 @@ async function getTableData(pageContent){
             head.push(h)
         })
         var rows = [];
-        console.log('row lenght',$(elm).find('tr').length)
+        console.log('row length',$(elm).find('tr').length)
         $(elm).find('tr').each(function(c, n){
             console.log('row lenght td',$(n).find('td').length)
             for(i = 0; i < $(n).find('td').length; i ++){
-                rows.push({key: head[i], value: $(n).text()})
+                rows.push({id:i,key: head[i], value: $(n).text()})
             }
         });
-        console.log('rows',head)
-        console.log('rows',rows)
-
+        // console.log('rows',head)
+        // console.log('rows',rows)
+        console.log('New Table')
         tables.push(rows)
      })
 
-     console.log(tables)
+    //  console.log(tables)
 
      Log('success', 'Scrapping is finished Data collected https://www.pei.de/ :' + tables.length )
      Log('warning', 'Writing the file: impfstoffe_deutschland_lieferengpass.json')
