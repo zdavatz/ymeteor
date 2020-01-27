@@ -1,1 +1,0 @@
-{"type":"object","properties":{"text":{"type":"string"},"link":{"type":"string"},"_id":{"type":"integer"},"data":{"type":"array","items":{"type":"object"}}}}
