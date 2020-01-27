@@ -25,8 +25,8 @@ $ meteor --settings drugshortage.json --once
 $ meteor --settings pei.json  --once
 
 ### Generate Schemas
-$ meteor --settings generate-schema.json --once
-$ cd public/schema
+ $ meteor --settings generate-schema.json --once\
+ $ cd public/schema
 
 #### Check files
 $ cd public/exports
