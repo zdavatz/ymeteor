@@ -12,6 +12,9 @@ import './drugShortage.js'
 import './atc.js'
 import './pei.js'
 import './app.js'
+
+import './schema.js'
+
 if (process.pid) {
   console.log('This process is your pid ' + process.pid);
 }

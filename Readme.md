@@ -26,6 +26,11 @@ $ meteor --settings pei.json  --once
 
 
 
+
+### Generate Schemas
+$ meteor --settings generate-schema.json --once
+
+
 #### Check files
 $ cd public/exports
 
