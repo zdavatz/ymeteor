@@ -24,12 +24,9 @@ $ meteor --settings drugshortage.json --once
 ### Import from pei.de
 $ meteor --settings pei.json  --once
 
-
-
-
 ### Generate Schemas
-$ meteor --settings generate-schema.json --once
-
+ $ meteor --settings generate-schema.json --once\
+ $ cd public/schema
 
 #### Check files
 $ cd public/exports
