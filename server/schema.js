@@ -10,6 +10,14 @@ import './util.js'
 if (Meteor.settings.generateSchema) {
     generateSchema()
 }
+/**
+ * Create the Diretcory if does not exist
+ */
+
+
+ /**
+  * Generate Schemas
+  */
 function generateSchema() {
     let dirCont = fs.readdirSync(Util.exportDir);
     let files = dirCont.filter(function (elm) {
@@ -25,7 +33,8 @@ function generateSchema() {
         var obj = JSON.parse(data)
         var schema = toJsonSchema(obj[0])
         console.log('Schema: ', file, "=>", schema)
-        writeSchema(file, schema)
+        var fileName = file.split('.')[0] + "_schema" + '.json'
+        writeSchema(fileName, schema)
         console.log('SUCCESS: ' + file);
         console.log('=========================================')
     }
@@ -39,8 +48,5 @@ function generateSchema() {
  * @param {*} fileName/ DATA 
  */
 function writeSchema(fileName, data) {
-    if (!fs.existsSync(Util.public + 'schema')) {
-        fs.mkdirSync(Util.public + 'schema');
-    }
     App.writeFile('/schema/' + fileName, JSON.stringify(data))
 }
