@@ -69,7 +69,7 @@ var counter = 0 ;
         data.pharmacode = $(this).find('td:nth-child(3)').text()
         data.firma = $(this).find('td:nth-child(4)').text()
         data.datumLetzteMutation = $(this).find('td:nth-child(5)').text()
-        data.tageSeitSrsterMeldung = $(this).find('td:nth-child(6)').text()
+        data.tageSeitErsterMeldung = $(this).find('td:nth-child(6)').text()
         data.status = $(this).find('td:nth-child(7)').text()
         data.datumLieferfahigkeit = $(this).find('td:nth-child(8)').text()
         Log('start','Scrapping' + data.bezeichnung)
