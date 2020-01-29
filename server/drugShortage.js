@@ -87,19 +87,19 @@ async function scrapper(url, type, lang) {
         if(row){
             data.company = joinCol(head,row)
             console.log('CompanyObject',data.company)
+            console.log('Company Object generated')            
             console.log('Company Object generated')
-            // Removing Colorcode
-            // console.log('Company Object generated')
-            // console.log('Getting Color Code', row[0], data.firma)
-            // var colorObj= getColorIndicator(row[0],content)
-            // if(colorObj){
-            //     var colorHead = getTableHead($ , '#GridView5')
-            //     var colorCode = joinCol(colorHead,colorObj)
-            //     data.colorCode = colorCode;
-            //     console.log('===== colorCode Success ===== ')
-            // }else{
-            //     console.log('******************Color is not found********************')
-            // }
+            console.log('Getting Color Code', row[0], data.firma)
+            // Generating Color Code
+            var colorObj= getColorIndicator(row[0],content)
+            if(colorObj){
+                var colorHead = getTableHead($ , '#GridView5')
+                var colorCode = joinCol(colorHead,colorObj)
+                data.colorCode = colorCode;
+                console.log('===== colorCode Success ===== ')
+            }else{
+                console.log('******************Color is not found********************')
+            }
 
         }else{
             console.log('error','******************Company is not defined********************')
