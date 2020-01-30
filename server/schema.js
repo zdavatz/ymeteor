@@ -50,7 +50,7 @@ function generateSchema() {
         console.log('Schema: ', file, "=>", schema)
         var fileName = file.split('.')[0] + "_schema" + '.json'
         var schemaDrugShortage = drugShortageFix(schema)
-        writeSchema(fileName, schema)
+        writeSchema(fileName, schemaDrugShortage)
         console.log('SUCCESS: ' + file);
         console.log('=========================================')
     }
@@ -73,18 +73,26 @@ function drugShortageFix(schema){
     // Date fields
     var dateFields = ['datumLetzteMutation','tageSeitErsterMeldung','datumLieferfahigkeit','date', 'meldedatum']
     _.each(dateFields, (field)=>{
-        if(!schema.properties[field]){
+        if(!schema || !schema.properties || !schema.properties[field]){
+            Log('Warning',"schema ERROR DATE Fields")
             return
+        }else{
+            Log('Success',"schema set Date", field)
+            schema.properties[field].type = "date"
         }
-        schema.properties[field].type = "date"
+        
     })
     // Integer fields
     var dateFields = ['id','PZN']
     _.each(dateFields, (field)=>{
-        if(!schema.properties[field]){
+        if(!schema || !schema.properties || !schema.properties[field]){
+            Log('Error',"schema ERROR ID Fields")
             return
+        }else{
+            Log('Success',"schema set Date", field)
+            schema.properties[field].type = "integer"
         }
-        schema.properties[field].type = "integer"
+        
     })
     return schema
 }
