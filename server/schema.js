@@ -71,7 +71,7 @@ function writeSchema(fileName, data) {
  */
 function drugShortageFix(schema){
     // Date fields
-    var dateFields = ['datumLetzteMutation','tageSeitErsterMeldung','datumLieferfahigkeit','date', 'meldedatum']
+    var dateFields = ['datumLetzteMutation','tageSeitErsterMeldung','datumLieferfahigkeit','date', 'meldedatum','gtin','pharmacode']
     _.each(dateFields, (field)=>{
         if(!schema || !schema.properties || !schema.properties[field]){
             Log('progress',"schema  DATE Fields skipped5")

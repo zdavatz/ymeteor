@@ -2,7 +2,8 @@
     "type": "object",
     "properties": {
         "id": {
-            "type": "integer"
+            "type": "string",
+            "format": "integer"
         },
         "bezeichnung": {
             "type": "string"
@@ -12,28 +13,28 @@
             "format": "uri"
         },
         "gtin": {
-            "type": "string",
-            "format": "utc-millisec"
+            "type": "integer"
         },
         "pharmacode": {
-            "type": "string",
-            "format": "utc-millisec"
+            "type": "integer"
         },
         "firma": {
             "type": "string"
         },
         "datumLetzteMutation": {
-            "type": "date"
+            "type": "string",
+            "format": "date"
         },
         "tageSeitErsterMeldung": {
-            "type": "date",
-            "format": "utc-millisec"
+            "type": "string",
+            "format": "date"
         },
         "status": {
             "type": "string"
         },
         "datumLieferfahigkeit": {
-            "type": "date"
+            "type": "string",
+            "format": "date"
         },
         "company": {
             "type": "object",

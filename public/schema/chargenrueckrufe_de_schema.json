@@ -12,7 +12,8 @@
             "format": "uri"
         },
         "date": {
-            "type": "date"
+            "type": "string",
+            "format": "date"
         },
         "type": {
             "type": "string"
