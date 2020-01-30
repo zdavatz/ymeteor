@@ -6,6 +6,7 @@ import {
 } from 'meteor/reactive-var';
 import './main.html';
 import './search.html'
+import './_layout.html'
 import './UI.helpers.js'
 import './_routes.js'
 import {
@@ -58,9 +59,9 @@ Template.main.events({
     }
 })
 /**
- * 
+ *  New
  */
-Template.SearchView.onCreated(function () {
+Template.mainLayout.onCreated(function () {
     var self = this;
     self.autorun(function () {
         var keyword = App.getSetting('keyword');
@@ -85,7 +86,7 @@ Template.SearchView.onCreated(function () {
 /**
  * 
  */
-Template.SearchView.events({
+Template.mainLayout.events({
     'keyup #search'(e) {
         var keyword = $(e.currentTarget).val()
         if (e.which === 13) {
@@ -99,7 +100,7 @@ Template.SearchView.events({
 /**
  * 
  */
-Template.SearchView.helpers({
+Template.searchResults.helpers({
     results() {
         return Items.find({}).fetch()
     }

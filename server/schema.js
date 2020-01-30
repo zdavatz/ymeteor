@@ -5,11 +5,6 @@ const fs = require("fs");
 path = require('path');
 const _ = require("lodash")
 const toJsonSchema = require('to-json-schema');
-
-
-
-
-
 import './app.js'
 import './util.js'
 if (Meteor.settings.generateSchema) {
@@ -18,15 +13,10 @@ if (Meteor.settings.generateSchema) {
 /**
  * Create the Diretcory if does not exist
  */
-
-
  /**
   * Generate Schemas
   * {strings: {detectFormat: false}}
   */
-
-
-
   /**
    * 
    */
@@ -37,7 +27,6 @@ function generateSchema() {
     });
     console.log('Getting files ready: ', files)
     for (i = 0; i < files.length; i++) {
-
         var options = {
             strings: {
               preProcessFnc: (value, defaultFnc) => {
@@ -51,21 +40,15 @@ function generateSchema() {
               },
             },
           }
-
-
         console.log('-------------------'+files[i]+'--------------------')
         console.log('Start: ',files[i])
         var file = files[i]
         var filePath = path.join(Util.exportDir, file);
         var data = fs.readFileSync(filePath,'utf8')
         var obj = JSON.parse(data)
-        
         var schema = toJsonSchema(obj[0], options)
-
-
         console.log('Schema: ', file, "=>", schema)
         var fileName = file.split('.')[0] + "_schema" + '.json'
-        
         var schemaDrugShortage = drugShortageFix(schema)
         writeSchema(fileName, schema)
         console.log('SUCCESS: ' + file);
@@ -86,19 +69,25 @@ function writeSchema(fileName, data) {
 /**
  * 
  */
-
 function drugShortageFix(schema){
-    var dateFields = ['datumLetzteMutation','tageSeitErsterMeldung','datumLieferfahigkeit']
-  
+    // Date fields
+    var dateFields = ['datumLetzteMutation','tageSeitErsterMeldung','datumLieferfahigkeit','date', 'meldedatum']
     _.each(dateFields, (field)=>{
         if(!schema.properties[field]){
             return
         }
         console.log(schema.properties[field].type)
         schema.properties[field].type = "date"
-        // schema.properties[field].type = "date"
+    })
+    // Integer fields
+    var dateFields = ['id','PZN']
+    _.each(dateFields, (field)=>{
+        if(!schema.properties[field]){
+            return
+        }
+        console.log(schema.properties[field].type)
+        schema.properties[field].type = "integer"
     })
     return schema
 }
-
 // 
