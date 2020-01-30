@@ -76,7 +76,6 @@ function drugShortageFix(schema){
         if(!schema.properties[field]){
             return
         }
-        console.log(schema.properties[field].type)
         schema.properties[field].type = "date"
     })
     // Integer fields
@@ -85,7 +84,6 @@ function drugShortageFix(schema){
         if(!schema.properties[field]){
             return
         }
-        console.log(schema.properties[field].type)
         schema.properties[field].type = "integer"
     })
     return schema
