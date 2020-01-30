@@ -24,3 +24,4 @@ hamzamu:settings
 jquery
 kadira:flow-router
 meteor
+kadira:blaze-layout

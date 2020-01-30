@@ -31,7 +31,7 @@ function generateSchema() {
         var filePath = path.join(Util.exportDir, file);
         var data = fs.readFileSync(filePath,'utf8')
         var obj = JSON.parse(data)
-        var schema = toJsonSchema(obj[0])
+        var schema = toJsonSchema(obj[0],{strings: {detectFormat: false}})
         console.log('Schema: ', file, "=>", schema)
         var fileName = file.split('.')[0] + "_schema" + '.json'
         writeSchema(fileName, schema)
@@ -50,3 +50,6 @@ function generateSchema() {
 function writeSchema(fileName, data) {
     App.writeFile('/schema/' + fileName, JSON.stringify(data))
 }
+
+
+// 

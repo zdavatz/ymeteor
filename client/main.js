@@ -5,7 +5,9 @@ import {
     ReactiveVar
 } from 'meteor/reactive-var';
 import './main.html';
+import './search.html'
 import './UI.helpers.js'
+import './_routes.js'
 import {
     Meteor
 } from 'meteor/meteor';

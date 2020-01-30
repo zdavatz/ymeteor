@@ -8,8 +8,8 @@ BlazeLayout.setRoot('body');
 FlowRouter.route('/', {
     name: 'dashApp',
     action: function () {
-        BlazeLayout.render("dashAppLayout", {
-            content: "dashApp"
+        BlazeLayout.render("mainLayout", {
+            content: "searchResults"
         });
     }
 });

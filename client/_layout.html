@@ -1,6 +1,34 @@
 <!-- Main Layout -->
 <template name="mainLayout">
-    {{>Template.dynamic template=content}}
+   
+   
+
+    <div class="section is-paddingless is-marginless">
+        <div class="columns is-multiline is-paddingless is-marginless">
+          <div class="column is-1  is-fh sidebar is-hidden">
+            .
+          </div>
+          <div class="column is-12">
+            <div class="columns is-multiline is-centered">
+              <div class="column is-12 columns is-multiline is-centered">
+                <div class="column is-6 has-text-centered">
+                  <br />
+                  <h1 class="title">Search Medications</h1>
+                  <p>Search by ATC-Code, Drug name</p>
+                  <br />
+                  <input id="search" class="input is-radiuslessx is-large" type="text"
+                    placeholder="Search by drug name or atc-code " value="{{getSetting 'keyword'}}" style="width: 70%">
+                </div>
+              </div>
+              {{>Template.dynamic template=content}}
+              <!--  -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
 </template>
 <!-- Page Layout -->
 <template name="pageLayout">
