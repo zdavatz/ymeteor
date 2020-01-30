@@ -1,1 +1,0 @@
-{"type":"object","properties":{"name":{"type":"string","format":"style"},"PZN":{"type":"integer","format":"utc-millisec"},"Verfügbarkeit":{"type":"string"},"Meldedatum":{"type":"string"},"link":{"type":"string","format":"uri"},"id":{"type":"integer","format":"utc-millisec"}}}

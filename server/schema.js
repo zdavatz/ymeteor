@@ -74,11 +74,12 @@ function drugShortageFix(schema){
     var dateFields = ['datumLetzteMutation','tageSeitErsterMeldung','datumLieferfahigkeit','date', 'meldedatum']
     _.each(dateFields, (field)=>{
         if(!schema || !schema.properties || !schema.properties[field]){
-            Log('progress',"schema  DATE Fields skipped")
+            Log('progress',"schema  DATE Fields skipped5")
             return
         }else{
             Log('Success',"schema set Date", field)
-            schema.properties[field].type = "date"
+            schema.properties[field].type = "string"
+            schema.properties[field].format = "date"
         }
         
     })
@@ -90,7 +91,8 @@ function drugShortageFix(schema){
             return
         }else{
             Log('Success',"schema set Date", field)
-            schema.properties[field].type = "integer"
+            schema.properties[field].type = "string"
+            schema.properties[field].format = "integer"
         }
         
     })

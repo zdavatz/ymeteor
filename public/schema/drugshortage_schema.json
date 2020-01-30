@@ -1,1 +1,70 @@
-{"type":"object","properties":{"id":{"type":"integer"},"bezeichnung":{"type":"string"},"detailsLink":{"type":"string","format":"uri"},"gtin":{"type":"string","format":"utc-millisec"},"pharmacode":{"type":"string","format":"utc-millisec"},"firma":{"type":"string"},"datumLetzteMutation":{"type":"date"},"tageSeitErsterMeldung":{"type":"date","format":"utc-millisec"},"status":{"type":"string"},"datumLieferfahigkeit":{"type":"date"},"company":{"type":"object","properties":{"Bewertung":{"type":"integer"},"Firma":{"type":"string"},"Anzahl registrierte Produkte Total":{"type":"integer"},"Anzahl offene Engpässe":{"type":"integer"}}},"colorCode":{"type":"object","properties":{"#":{"type":"integer"},"Bewertung":{"type":"string"},"Art der Meldung":{"type":"string"}}}}}
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer"
+        },
+        "bezeichnung": {
+            "type": "string"
+        },
+        "detailsLink": {
+            "type": "string",
+            "format": "uri"
+        },
+        "gtin": {
+            "type": "string",
+            "format": "utc-millisec"
+        },
+        "pharmacode": {
+            "type": "string",
+            "format": "utc-millisec"
+        },
+        "firma": {
+            "type": "string"
+        },
+        "datumLetzteMutation": {
+            "type": "date"
+        },
+        "tageSeitErsterMeldung": {
+            "type": "date",
+            "format": "utc-millisec"
+        },
+        "status": {
+            "type": "string"
+        },
+        "datumLieferfahigkeit": {
+            "type": "date"
+        },
+        "company": {
+            "type": "object",
+            "properties": {
+                "Bewertung": {
+                    "type": "integer"
+                },
+                "Firma": {
+                    "type": "string"
+                },
+                "Anzahl registrierte Produkte Total": {
+                    "type": "integer"
+                },
+                "Anzahl offene Engpässe": {
+                    "type": "integer"
+                }
+            }
+        },
+        "colorCode": {
+            "type": "object",
+            "properties": {
+                "#": {
+                    "type": "integer"
+                },
+                "Bewertung": {
+                    "type": "string"
+                },
+                "Art der Meldung": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
