@@ -67,7 +67,7 @@ function writeSchema(fileName, data) {
     App.writeFile('/schema/' + fileName, JSON.stringify(data))
 }
 /**
- * 
+ * Schema Fix
  */
 function drugShortageFix(schema){
     // Date fields
