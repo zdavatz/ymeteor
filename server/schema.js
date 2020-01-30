@@ -46,7 +46,7 @@ function generateSchema() {
         var filePath = path.join(Util.exportDir, file);
         var data = fs.readFileSync(filePath,'utf8')
         var obj = JSON.parse(data)
-        var schema = toJsonSchema(obj[0], options)
+        var schema = toJsonSchema(obj[0])
         console.log('Schema: ', file, "=>", schema)
         var fileName = file.split('.')[0] + "_schema" + '.json'
         var schemaDrugShortage = drugShortageFix(schema)
