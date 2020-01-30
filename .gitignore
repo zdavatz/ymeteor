@@ -1,6 +1,5 @@
 node_modules/
 public/exports/*
-public/schema/*
 public/*.*
 exp/*
 .meteor/local
