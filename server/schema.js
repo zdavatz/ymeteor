@@ -68,34 +68,41 @@ function writeSchema(fileName, data) {
 }
 /**
  * Schema Fix
+ * date
+ * tageSeitErsterMeldung
  */
 function drugShortageFix(schema){
     // Date fields
-    var dateFields = ['datumLetzteMutation','tageSeitErsterMeldung','datumLieferfahigkeit','date', 'meldedatum','gtin','pharmacode']
+    var dateFields = ['datumLetzteMutation','tageSeitErsterMeldung','datumLieferfahigkeit','date', 'Meldedatum']
     _.each(dateFields, (field)=>{
         if(!schema || !schema.properties || !schema.properties[field]){
-            Log('progress',"schema  DATE Fields skipped5")
+            console.log('progress',"schema  DATE Fields skipped : ", field)
             return
         }else{
-            Log('Success',"schema set Date", field)
+            console.log('Success',"schema set Date", field)
             schema.properties[field].type = "string"
             schema.properties[field].format = "date"
+            console.log('validation check', field + ' = ',schema.properties[field].type , ' + ' , schema.properties[field].format)
         }
         
     })
     // Integer fields
-    var dateFields = ['id','PZN']
+    var dateFields = ['id','PZN','gtin','pharmacode', '_id']
     _.each(dateFields, (field)=>{
         if(!schema || !schema.properties || !schema.properties[field]){
-            Log('progress',"schema skipped ID Fields")
+            Log('progress',"schema skipped ID Fields" + field)
             return
         }else{
-            Log('Success',"schema set Date", field)
+            console.log('Success',"schema set Date: ", field)
             schema.properties[field].type = "string"
             schema.properties[field].format = "integer"
+            console.log('validation check',field + ' = ' , schema.properties[field].type , ' + ' , schema.properties[field].format)
         }
         
     })
+    console.log('======================================')
+    console.log('Schema ready',schema)
+    console.log('======================================')
     return schema
 }
 // 

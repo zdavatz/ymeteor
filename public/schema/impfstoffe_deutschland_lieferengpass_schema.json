@@ -1,1 +1,1 @@
-{"type":"object","properties":{"name":{"type":"string","format":"style"},"PZN":{"type":"string","format":"integer"},"Verfügbarkeit":{"type":"string"},"Meldedatum":{"type":"string"},"link":{"type":"string","format":"uri"},"id":{"type":"string","format":"integer"}}}
+{"type":"object","properties":{"name":{"type":"string","format":"style"},"PZN":{"type":"string","format":"integer"},"Verfügbarkeit":{"type":"string"},"Meldedatum":{"type":"string","format":"date"},"link":{"type":"string","format":"uri"},"id":{"type":"string","format":"integer"}}}
