@@ -5,6 +5,11 @@ const fs = require("fs");
 path = require('path');
 const _ = require("lodash")
 const toJsonSchema = require('to-json-schema');
+
+
+
+
+
 import './app.js'
 import './util.js'
 if (Meteor.settings.generateSchema) {
@@ -17,7 +22,14 @@ if (Meteor.settings.generateSchema) {
 
  /**
   * Generate Schemas
+  * {strings: {detectFormat: false}}
   */
+
+
+
+  /**
+   * 
+   */
 function generateSchema() {
     let dirCont = fs.readdirSync(Util.exportDir);
     let files = dirCont.filter(function (elm) {
@@ -25,13 +37,32 @@ function generateSchema() {
     });
     console.log('Getting files ready: ', files)
     for (i = 0; i < files.length; i++) {
+
+        var options = {
+            strings: {
+              preProcessFnc: (value, defaultFnc) => {
+                const schema = defaultFnc(value);
+                // console.log('Schema Validation',value)
+                if (value === 'GTIN') {
+                    // console.log('GTIN','ms')
+                  schema.format = 'integer';
+                }
+                return schema;
+              },
+            },
+          }
+
+
         console.log('-------------------'+files[i]+'--------------------')
         console.log('Start: ',files[i])
         var file = files[i]
         var filePath = path.join(Util.exportDir, file);
         var data = fs.readFileSync(filePath,'utf8')
         var obj = JSON.parse(data)
-        var schema = toJsonSchema(obj[0],{strings: {detectFormat: false}})
+        
+        var schema = toJsonSchema(obj[0], options)
+
+
         console.log('Schema: ', file, "=>", schema)
         var fileName = file.split('.')[0] + "_schema" + '.json'
         writeSchema(fileName, schema)
