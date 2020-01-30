@@ -74,7 +74,7 @@ function drugShortageFix(schema){
     var dateFields = ['datumLetzteMutation','tageSeitErsterMeldung','datumLieferfahigkeit','date', 'meldedatum']
     _.each(dateFields, (field)=>{
         if(!schema || !schema.properties || !schema.properties[field]){
-            Log('Warning',"schema ERROR DATE Fields")
+            Log('progress',"schema  DATE Fields skipped")
             return
         }else{
             Log('Success',"schema set Date", field)
@@ -86,7 +86,7 @@ function drugShortageFix(schema){
     var dateFields = ['id','PZN']
     _.each(dateFields, (field)=>{
         if(!schema || !schema.properties || !schema.properties[field]){
-            Log('Error',"schema ERROR ID Fields")
+            Log('progress',"schema skipped ID Fields")
             return
         }else{
             Log('Success',"schema set Date", field)
