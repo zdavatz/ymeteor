@@ -86,9 +86,13 @@ async function scrapper(url, type, lang) {
         console.log('getCompanyData result',row)
         if(row){
             data.company = joinCol(head,row)
+            // Schema fix
+            data.company["Anzahl offene Engpässe"] = parseInt(data.company["Anzahl offene Engpässe"] )
+            data.company["Bewertung"] = parseInt(data.company["Bewertung"])
+            data.company["Anzahl registrierte Produkte Total"] = parseInt(data.company["Anzahl registrierte Produkte Total"] )
+            /** */
             console.log('CompanyObject',data.company)
             console.log('Company Object generated')            
-            console.log('Company Object generated')
             console.log('Getting Color Code', row[0], data.firma)
             // Generating Color Code
             var colorObj= getColorIndicator(row[0],content)
@@ -96,6 +100,7 @@ async function scrapper(url, type, lang) {
                 var colorHead = getTableHead($ , '#GridView5')
                 var colorCode = joinCol(colorHead,colorObj)
                 data.colorCode = colorCode;
+                console.log('colorCode',colorCode)   
                 console.log('===== colorCode Success ===== ')
             }else{
                 console.log('******************Color is not found********************')
@@ -255,7 +260,7 @@ function rowToObject(elmTr,rowIndex,head){
     for(i = 0; i < head.length; i ++){
         if(!head[i]){
             console.log('*joinCol: Setting Number')
-            obj["#"] = row[i]
+            obj["#"] = parseInt(row[i])
         }else{
             obj[head[i]] = row[i]
         }
