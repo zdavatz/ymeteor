@@ -21,16 +21,16 @@
             "type": "string"
         },
         "datumLetzteMutation": {
-            "type": "string"
+            "type": "date"
         },
         "tageSeitErsterMeldung": {
-            "type": "integer"
+            "type": "date"
         },
         "status": {
             "type": "string"
         },
         "datumLieferfahigkeit": {
-            "type": "string"
+            "type": "date"
         },
         "company": {
             "type": "object",

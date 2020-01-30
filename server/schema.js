@@ -41,11 +41,11 @@ function generateSchema() {
         var options = {
             strings: {
               preProcessFnc: (value, defaultFnc) => {
-                const schema = defaultFnc(value);
+                var schema = defaultFnc(value);
                 // console.log('Schema Validation',value)
-                if (value === 'GTIN') {
+                if (value === 'datumLetzteMutation') {
                     // console.log('GTIN','ms')
-                  schema.format = 'integer';
+                  schema.format = 'date';
                 }
                 return schema;
               },
@@ -65,6 +65,8 @@ function generateSchema() {
 
         console.log('Schema: ', file, "=>", schema)
         var fileName = file.split('.')[0] + "_schema" + '.json'
+        
+        var schemaDrugShortage = drugShortageFix(schema)
         writeSchema(fileName, schema)
         console.log('SUCCESS: ' + file);
         console.log('=========================================')
@@ -81,6 +83,22 @@ function generateSchema() {
 function writeSchema(fileName, data) {
     App.writeFile('/schema/' + fileName, JSON.stringify(data))
 }
+/**
+ * 
+ */
 
+function drugShortageFix(schema){
+    var dateFields = ['datumLetzteMutation','tageSeitErsterMeldung','datumLieferfahigkeit']
+  
+    _.each(dateFields, (field)=>{
+        if(!schema.properties[field]){
+            return
+        }
+        console.log(schema.properties[field].type)
+        schema.properties[field].type = "date"
+        // schema.properties[field].type = "date"
+    })
+    return schema
+}
 
 // 
