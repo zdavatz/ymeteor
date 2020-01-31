@@ -68,7 +68,7 @@ Template.mainLayout.events({
                 keyword: keyword
             })
             /**Nice URL setting */
-            FlowRouter.go('/search/results/:keyword', {
+            FlowRouter.go('/search/:keyword', {
                 keyword: keyword
             })
         }
