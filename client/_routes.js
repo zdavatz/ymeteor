@@ -6,7 +6,7 @@ BlazeLayout.setRoot('body');
 
 
 FlowRouter.route('/', {
-    name: 'dashApp',
+    name: 'mainPage',
     action: function () {
         BlazeLayout.render("mainLayout", {
             content: "searchResults"
@@ -16,11 +16,11 @@ FlowRouter.route('/', {
 
 
 
-FlowRouter.route('/search/results', {
-    name: 'dashApp',
+FlowRouter.route('/search/results/:keyword', {
+    name: 'searchResults',
     action: function () {
-        BlazeLayout.render("dashAppLayout", {
-            content: "dashApp"
+        BlazeLayout.render("mainLayout", {
+            content: "searchResults"
         });
     }
 });
@@ -31,7 +31,7 @@ FlowRouter.notFound = {
     name: 'notFound',
     action: function () {
         BlazeLayout.render('mainLayout', {
-            content: 'main'
+            content: 'notFound'
         });
     }
 };

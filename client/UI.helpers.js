@@ -1,5 +1,5 @@
 /**
- * /**
+ * UI. Helpers
  * 
  */
 
@@ -18,11 +18,6 @@ Template.registerHelper('readbaleBreaks', (str) => {
 })
 /**
  * Data table header/ data
- * data: Array(3)
-0: (3) ["ASK-Nr.", "", ""]
-1: (3) ["Stoffname", "Amlodipinbesilat", "Valsartan"]
-2: (3) ["Stoffmenge", "13.87mg", "160.mg"]
-//
  */
 Template.registerHelper('getDataTable', (data, type, index) => {
     // Index required with header

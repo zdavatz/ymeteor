@@ -1,0 +1,47 @@
+<template name="main">
+    <div class="section">
+      <div class="columns is-centered">
+        <div class="column is-6">
+          <div class="field has-addons">
+            <div class="control is-expanded">
+              <input id="search" class="input is-radiusless is-fullwidth" type="text"
+                placeholder="Search by drug name or atc-code ">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container  is-centered">
+      <div class=" columns is-centered is-multiline">
+        <div class="column is-8">
+          <p>
+            {{#if getSetting 'results'}}
+            Results Found: {{getSetting 'results'}}
+            {{/if}}
+          </p>
+        </div>
+        <!--  -->
+        <div class="column is-12">
+          <div id="meds"></div>
+        </div>
+      </div>
+    </div>
+    <!-- {{#if setting 'data'}} -->
+    <!-- {{#if getSetting 'data'}} -->
+    <!-- {{/if}} -->
+  </template>
+  <!--  -->
+  <template name="files">
+    <div class="section">
+      <div class="columns">
+        <div class="column is-10 columns is-multiline">
+          {{#each files}}
+          <div class="column is-6">
+            <p class="notification is-white has-shadow"><a href="/exports/{{this}}" download target="_blank">{{this}}</a>
+            </p>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </template>

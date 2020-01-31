@@ -21,50 +21,17 @@ Items = new Mongo.Collection('items')
 // 
 log = console.log
 /**
- * Routes
- *        slug: FlowRouter.getParam("slug");
- * Removed
- */
-
-
-
-
-
-
-
-/**
- * Data Field Renderer
- */
-var dataFieldRenderer
-/** */
-Template.main.onRendered(function () {
-    var self = this;
-    self.autorun(function () {
-        var keyword = App.getSetting('keyword');
-        Meteor.subscribe('searchResults', keyword)
-    })
-})
-/**
- * 
- */
-Template.main.events({
-    'keyup #search'(e) {
-        var keyword = $(e.currentTarget).val()
-        if (e.which === 13) {
-            var keyword = keyword.toLowerCase()
-            App.setSetting({
-                keyword: keyword
-            })
-        }
-    }
-})
-/**
- *  New
+ *  MainLayout Renderer
  */
 Template.mainLayout.onCreated(function () {
     var self = this;
     self.autorun(function () {
+        
         var keyword = App.getSetting('keyword');
+        if(!keyword && FlowRouter.getParam("keyword")){
+            var keyword = FlowRouter.getParam("keyword")
+            App.setSetting({keyword:keyword})
+        }
         Meteor.subscribe('searchResults', keyword)
         var i = Items.find().count()
         App.setSetting({
@@ -94,6 +61,12 @@ Template.mainLayout.events({
             App.setSetting({
                 keyword: keyword
             })
+            /**Nice URL setting */
+            FlowRouter.go('/search/results/:keyword', {
+                keyword: keyword
+            })
+
+
         }
     }
 })
