@@ -1,1 +1,73 @@
-{"type":"object","properties":{"id":{"type":"string","format":"integer"},"bezeichnung":{"type":"string"},"detailsLink":{"type":"string","format":"uri"},"gtin":{"type":"string","format":"integer"},"pharmacode":{"type":"string","format":"integer"},"firma":{"type":"string"},"datumLetzteMutation":{"type":"string","format":"date"},"tageSeitErsterMeldung":{"type":"string","format":"date"},"status":{"type":"string"},"datumLieferfahigkeit":{"type":"string","format":"date"},"company":{"type":"object","properties":{"Bewertung":{"type":"integer"},"Firma":{"type":"string"},"Anzahl registrierte Produkte Total":{"type":"integer"},"Anzahl offene Engpässe":{"type":"integer"}}},"colorCode":{"type":"object","properties":{"#":{"type":"integer"},"Bewertung":{"type":"string"},"Art der Meldung":{"type":"string"}}}}}
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string",
+            "format": "integer"
+        },
+        "bezeichnung": {
+            "type": "string"
+        },
+        "detailsLink": {
+            "type": "string",
+            "format": "uri"
+        },
+        "gtin": {
+            "type": "string",
+            "format": "integer"
+        },
+        "pharmacode": {
+            "type": "string",
+            "format": "integer"
+        },
+        "firma": {
+            "type": "string"
+        },
+        "datumLetzteMutation": {
+            "type": "string",
+            "format": "date"
+        },
+        "tageSeitErsterMeldung": {
+            "type": "string",
+            "format": "date"
+        },
+        "status": {
+            "type": "string"
+        },
+        "datumLieferfahigkeit": {
+            "type": "string",
+            "format": "date"
+        },
+        "company": {
+            "type": "object",
+            "properties": {
+                "Bewertung": {
+                    "type": "integer"
+                },
+                "Firma": {
+                    "type": "string"
+                },
+                "Anzahl registrierte Produkte Total": {
+                    "type": "integer"
+                },
+                "Anzahl offene Engpässe": {
+                    "type": "integer"
+                }
+            }
+        },
+        "colorCode": {
+            "type": "object",
+            "properties": {
+                "#": {
+                    "type": "integer"
+                },
+                "Bewertung": {
+                    "type": "string"
+                },
+                "Art der Meldung": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
