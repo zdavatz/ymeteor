@@ -25,3 +25,4 @@ jquery
 kadira:flow-router
 meteor
 kadira:blaze-layout
+arillo:flow-router-helpers

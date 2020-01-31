@@ -21,16 +21,22 @@ Items = new Mongo.Collection('items')
 // 
 log = console.log
 /**
- *  MainLayout Renderer
+ * Routes
+ *       
+ * Removed
+ */
+/**
+ * Data Field Renderer
+ */
+/**
+ *  New
  */
 Template.mainLayout.onCreated(function () {
     var self = this;
     self.autorun(function () {
-        
-        var keyword = App.getSetting('keyword');
-        if(!keyword && FlowRouter.getParam("keyword")){
-            var keyword = FlowRouter.getParam("keyword")
-            App.setSetting({keyword:keyword})
+        var keyword = FlowRouter.getParam("keyword")
+        if(keyword){
+            App.setSetting({keyword:FlowRouter.getParam("keyword")})
         }
         Meteor.subscribe('searchResults', keyword)
         var i = Items.find().count()
@@ -65,8 +71,6 @@ Template.mainLayout.events({
             FlowRouter.go('/search/results/:keyword', {
                 keyword: keyword
             })
-
-
         }
     }
 })

@@ -54,7 +54,7 @@
         <tbody>
           {{#each results}}
           <tr id="{{countRow @index}}">
-            <td>{{countRow @index}}</td>
+            <td><a href="#{{countRow @index}}">{{countRow @index}}</a></td>
             <td>
               {{#if files}}
               {{#each files}}
@@ -70,7 +70,8 @@
               {{/each}}
               {{/if}}
             </td>
-            <td><a href="#" class="setSettings" data-settings="keyword:{{keyword}}">{{name}}</a></td>
+            <!-- href="/search/results/{{keyword}}" -->
+            <td><a href="{{pathFor 'searchResults' keyword=keyword}}"  class="setSettingsx" data-settings="keyword:{{keyword}}">{{name}}</a></td>
             <td>{{meta.name}} <br /> {{meta.dose}} <br /> {{meta.code}}</td>
             <td class="is-paddingless">
               <table class="table  is-stripedx is-narrow is-hoverable is-fullwidth">
