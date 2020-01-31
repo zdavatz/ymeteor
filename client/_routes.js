@@ -16,7 +16,7 @@ FlowRouter.route('/', {
 
 
 
-FlowRouter.route('/search/results/:keyword', {
+FlowRouter.route('/search/:keyword', {
     name: 'searchResults',
     action: function () {
         BlazeLayout.render("mainLayout", {
