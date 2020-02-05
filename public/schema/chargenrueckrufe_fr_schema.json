@@ -1,1 +1,39 @@
-{"type":"object","properties":{"_id":{"type":"string"},"title":{"type":"string"},"url":{"type":"string","format":"uri"},"date":{"type":"string","format":"date"},"type":{"type":"string"},"lang":{"type":"string"},"desc":{"type":"string"},"pdf":{"type":"string","format":"uri"},"prep":{"type":"array","items":{"type":"object"}}}}
+{
+    "type": "object",
+    "properties": {
+        "_id": {
+            "type": "string",
+            "format": "integer"
+        },
+        "title": {
+            "type": "string"
+        },
+        "url": {
+            "type": "string",
+            "format": "uri"
+        },
+        "date": {
+            "type": "string",
+            "format": "date"
+        },
+        "type": {
+            "type": "string"
+        },
+        "lang": {
+            "type": "string"
+        },
+        "desc": {
+            "type": "string"
+        },
+        "pdf": {
+            "type": "string",
+            "format": "uri"
+        },
+        "prep": {
+            "type": "array",
+            "items": {
+                "type": "object"
+            }
+        }
+    }
+}

@@ -1,1 +1,1 @@
-{"type":"object","properties":{"text":{"type":"string"},"link":{"type":"string"},"_id":{"type":"integer"},"data":{"type":"array","items":{"type":"object"}}}}
+{"type":"object","properties":{"text":{"type":"string"},"link":{"type":"string"},"_id":{"type":"string","format":"integer"},"data":{"type":"array","items":{"type":"object"}}}}

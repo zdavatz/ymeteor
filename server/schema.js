@@ -13,13 +13,20 @@ if (Meteor.settings.generateSchema) {
 /**
  * Create the Diretcory if does not exist
  */
- /**
-  * Generate Schemas
-  * {strings: {detectFormat: false}}
-  */
-  /**
-   * 
-   */
+/**
+ * Generate Schemas
+ * {strings: {detectFormat: false}}
+ */
+/**
+ * 
+ */
+
+var options = {
+    arrays: {
+        mode: 'all'
+    }
+}
+
 function generateSchema() {
     let dirCont = fs.readdirSync(Util.exportDir);
     let files = dirCont.filter(function (elm) {
@@ -29,24 +36,24 @@ function generateSchema() {
     for (i = 0; i < files.length; i++) {
         var options = {
             strings: {
-              preProcessFnc: (value, defaultFnc) => {
-                var schema = defaultFnc(value);
-                // console.log('Schema Validation',value)
-                if (value === 'datumLetzteMutation') {
-                    // console.log('GTIN','ms')
-                  schema.format = 'date';
-                }
-                return schema;
-              },
+                preProcessFnc: (value, defaultFnc) => {
+                    var schema = defaultFnc(value);
+                    // console.log('Schema Validation',value)
+                    if (value === 'datumLetzteMutation') {
+                        // console.log('GTIN','ms')
+                        schema.format = 'date';
+                    }
+                    return schema;
+                },
             },
-          }
-        console.log('-------------------'+files[i]+'--------------------')
-        console.log('Start: ',files[i])
+        }
+        console.log('-------------------' + files[i] + '--------------------')
+        console.log('Start: ', files[i])
         var file = files[i]
         var filePath = path.join(Util.exportDir, file);
-        var data = fs.readFileSync(filePath,'utf8')
+        var data = fs.readFileSync(filePath, 'utf8')
         var obj = JSON.parse(data)
-        var schema = toJsonSchema(obj[0])
+        var schema = toJsonSchema(obj[0],options)
         console.log('Schema: ', file, "=>", schema)
         var fileName = file.split('.')[0] + "_schema" + '.json'
         var schemaDrugShortage = drugShortageFix(schema)
@@ -71,37 +78,44 @@ function writeSchema(fileName, data) {
  * date
  * tageSeitErsterMeldung
  */
-function drugShortageFix(schema){
+function drugShortageFix(schema) {
     // Date fields
-    var dateFields = ['datumLetzteMutation','tageSeitErsterMeldung','datumLieferfahigkeit','date', 'Meldedatum']
-    _.each(dateFields, (field)=>{
-        if(!schema || !schema.properties || !schema.properties[field]){
-            console.log('progress',"schema  DATE Fields skipped : ", field)
+    var dateFields = ['datumLetzteMutation', 'tageSeitErsterMeldung', 'datumLieferfahigkeit', 'date', 'Meldedatum']
+    _.each(dateFields, (field) => {
+        if (!schema || !schema.properties || !schema.properties[field]) {
+            console.log('progress', "schema  DATE Fields skipped : ", field)
             return
-        }else{
-            console.log('Success',"schema set Date", field)
+        } else {
+            console.log('Success', "schema set Date", field)
             schema.properties[field].type = "string"
             schema.properties[field].format = "date"
-            console.log('validation check', field + ' = ',schema.properties[field].type , ' + ' , schema.properties[field].format)
+            console.log('validation check', field + ' = ', schema.properties[field].type, ' + ', schema.properties[field].format)
         }
-        
+
     })
     // Integer fields
-    var dateFields = ['id','PZN','gtin','pharmacode', '_id']
-    _.each(dateFields, (field)=>{
-        if(!schema || !schema.properties || !schema.properties[field]){
-            Log('progress',"schema skipped ID Fields" + field)
+    var dateFields = ['id', 'PZN', 'gtin', 'pharmacode', '_id']
+    _.each(dateFields, (field) => {
+        if (!schema || !schema.properties || !schema.properties[field]) {
+            Log('progress', "schema skipped ID Fields" + field)
             return
-        }else{
-            console.log('Success',"schema set Date: ", field)
+        } else {
+            console.log('Success', "schema set Date: ", field)
             schema.properties[field].type = "string"
             schema.properties[field].format = "integer"
-            console.log('validation check',field + ' = ' , schema.properties[field].type , ' + ' , schema.properties[field].format)
+            console.log('validation check', field + ' = ', schema.properties[field].type, ' + ', schema.properties[field].format)
         }
-        
+
     })
+
+
+    if(schema && schema.properties && schema.properties.prep && !schema.properties.prep.items){
+        schema.properties.prep.items = {
+            "type": "object"
+        }
+    }
     console.log('======================================')
-    console.log('Schema ready',schema)
+    console.log('Schema ready', schema)
     console.log('======================================')
     return schema
 }

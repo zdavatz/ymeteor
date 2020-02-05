@@ -1,1 +1,69 @@
-{"type":"object","properties":{"_id":{"type":"string"},"keyword":{"type":"string","format":"utc-millisec"},"title":{"type":"string"},"files":{"type":"array","items":{"type":"object","properties":{"date":{"type":"string"},"name":{"type":"string"},"lang":{"type":"string"},"link":{"type":"string"}}}},"number":{"type":"string","format":"utc-millisec"},"name":{"type":"string"},"dosageForm":{"type":"string"},"applicant":{"type":"string"},"transport":{"type":"string"},"registration":{"type":"string"},"refNo":{"type":"string"},"data":{"type":"array","items":{"type":"array","items":{"type":"string"}}},"type":{"type":"string"}}}
+{
+    "type": "object",
+    "properties": {
+        "_id": {
+            "type": "string"
+        },
+        "keyword": {
+            "type": "string",
+            "format": "utc-millisec"
+        },
+        "title": {
+            "type": "string"
+        },
+        "files": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "date": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "lang": {
+                        "type": "string"
+                    },
+                    "link": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "number": {
+            "type": "string",
+            "format": "utc-millisec"
+        },
+        "name": {
+            "type": "string"
+        },
+        "dosageForm": {
+            "type": "string"
+        },
+        "applicant": {
+            "type": "string"
+        },
+        "transport": {
+            "type": "string"
+        },
+        "registration": {
+            "type": "string"
+        },
+        "refNo": {
+            "type": "string"
+        },
+        "data": {
+            "type": "array",
+            "items": {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                }
+            }
+        },
+        "type": {
+            "type": "string"
+        }
+    }
+}
