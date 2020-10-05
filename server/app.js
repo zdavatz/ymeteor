@@ -13,7 +13,7 @@ log = console.log;
 */
 App.writeFile = async(file, data) => {
     log('Writing file =>', file)
-    await fs.writeFileSync(App.path + file, data, (err) => {
+    await fs.writeFileSync(App.path + file, data, 'utf8', (err) => {
       if (err) log('error',err);
       log('progress',"File updated" + file);
     });

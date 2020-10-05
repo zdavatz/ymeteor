@@ -19,7 +19,7 @@
     "prettyjson": "^1.2.1",
     "puppeteer": "^1.19.0",
     "scrape-it": "^5.1.4",
-    "to-json-schema": "^0.2.3",
+    "to-json-schema": "^0.2.5",
     "yaml": "^1.6.0"
   },
   "meteor": {

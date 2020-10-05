@@ -54,7 +54,7 @@ Swiss.patch = (data, type, lang) => {
   => ('/export/FILENAME',data)
 */
 Swiss.writeFile = (file, data) => {
-    fs.writeFile(path + file, data, (err) => {
+    fs.writeFile(path + file, data, 'utf8', (err) => {
         if (err) console.log(err);
         console.log("Successfully Written to File./", file);
     });
@@ -127,7 +127,7 @@ Swiss.scrapDrug = (url, id) => {
                 $set: data
             })
 
-            console.log("ITEM CHECK:",Items.findOne({ _id: id}))
+            // console.log("ITEM CHECK:",Items.findOne({ _id: id}))
         }
         //console.log(`Scrapping status: ${response.statusCode}`)
        
@@ -194,7 +194,7 @@ let scrapper = async (url, type, lang, file) => {
     await page.goto(url, {
         waitUntil: 'load'
     });
-    //
+    // Await Data elements to be loaded
     await page.waitForSelector(".mod-teaser")
 
 
@@ -207,6 +207,10 @@ let scrapper = async (url, type, lang, file) => {
         var nav = nav.filter((x, i, a) => a.indexOf(x) == i)
         return nav;
     })
+
+
+    // nav.unshift('1')
+
     console.log('Pages =>', nav)
     if (!nav.length) {
         log('error', 'Checking; There is no navigation')
@@ -214,9 +218,11 @@ let scrapper = async (url, type, lang, file) => {
     }
 
 
+
+
     //
     for (var i = 0; i <= nav.length; i++) {
-
+        console.log("PAGE: ",i)
 
         if (i == nav.length) {
             console.log('Project:FINISHED', file, 'DONE')
@@ -224,35 +230,45 @@ let scrapper = async (url, type, lang, file) => {
             Swiss.writeFile('exports/' + file, JSON.stringify(Swiss.getItems(type, lang)))
             console.log('Check', file , " : " ,Items.find({type:type, lang:lang}).count() )
             console.log('----------------------------------')
+            Swiss.close()
             break;
         }
+
 
         const dimensions = await page.evaluate(() => {
             var nav = document.querySelectorAll('a[data-loadpage]')
             var content = document.querySelectorAll('.mod-teaser')
             var title = document.querySelectorAll('.mod-teaser a')
             var items = []
+            
             var nav = [].map.call(nav, a => a.getAttribute("data-loadpage"));
             var nav = nav.filter(function (e) {
                 return e !== 0
             })
             var nav = nav.filter((x, i, a) => a.indexOf(x) == i)
+
+
             for (var i = 0; i < content.length; i++) {
                 var item = {
                     title: title[i].innerHTML,
                     url: title[i].getAttribute('href')
                 }
+
                 var date = content[i].innerHTML
+
                 var date = date.replace(/<[^>]*>?/gm, '')
                 var date = date.replace(/^\s+|\s+$/g, '')
                 var date = date.split(" ")
                 var date = date[0]
                 item.date = date;
+
+                console.log({item})
                 var skip = ['Newsdienste', 'Services']
                 if (skip.indexOf(date) == -1) {
                     items.push(item)
                 }
             }
+
             return {
                 items: items,
                 nav: nav,
@@ -273,6 +289,7 @@ let scrapper = async (url, type, lang, file) => {
         // }
 
     }
+
     await browser.close();
     console.log("Project",file, ' is done');
 }
