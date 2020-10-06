@@ -150,6 +150,7 @@ Swiss.record = async () => {
   // French
   await Swiss.writeFile('/exports/chargenrueckrufe_fr.json', JSON.stringify(Swiss.getItems('drug', 'fr')))
   await Swiss.writeFile('/exports/dhcp_hcp_fr.json', JSON.stringify(Swiss.getItems('doc', 'fr')))
+  
 }
 /*
 meteor | sed -e '/Exited with code/q'

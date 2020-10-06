@@ -4,6 +4,8 @@ import {
 import './config.js'
 import YAML from 'yaml'
 import './collections.js'
+import moment from 'moment';
+
 // import URLS from './urls.yaml'
 // console.log(URLS)
 const _ = require("lodash")
@@ -75,7 +77,7 @@ Swiss.getItems = (type, lang) => {
     return Items.find({
         lang: lang,
         type: type
-    }).fetch()
+    },{sort:{dateOrder: -1}}).fetch()
 }
 
 
@@ -89,10 +91,13 @@ console.log("DEBUG",Items.find({
   Custom Single Link Scrapper 
     - Puppeteer is NOT required
 */
+
+//  #content > div > div.col-md-8.main-content.js-glossary-context > div.mod.mod-teaserlist > div.mod.mod-dynamic.done > div:nth-child(11) > div > div > p
 Swiss.scrapDrug = (url, id) => {
     scrapeIt(url, {
         title: ".mod h1",
         date: '.mod-headline h5',
+        date2: '.mod-teaser .teaserDate',
         desc: ".mod-text article",
         pdf: {
             selector: ".mod-download a",
@@ -121,6 +126,12 @@ Swiss.scrapDrug = (url, id) => {
         }else{
             console.log('Files updated for ',data.title)
             data.pdf = rootURL + data.pdf
+           
+
+
+            // console.log({data})
+            console.log('date: ',data.date, data.date2)
+
             Items.update({
                 _id: id
             }, {
@@ -165,6 +176,7 @@ Swiss.run = async () => {
         var projects = Project.urls
         var project = projects[i]      
         if (!project || i == Project.urls.length) {
+            // Close Meteor
             await Swiss.close()
             return
         }
@@ -230,7 +242,7 @@ let scrapper = async (url, type, lang, file) => {
             Swiss.writeFile('exports/' + file, JSON.stringify(Swiss.getItems(type, lang)))
             console.log('Check', file , " : " ,Items.find({type:type, lang:lang}).count() )
             console.log('----------------------------------')
-            Swiss.close()
+            
             break;
         }
 
@@ -258,9 +270,19 @@ let scrapper = async (url, type, lang, file) => {
 
                 var date = date.replace(/<[^>]*>?/gm, '')
                 var date = date.replace(/^\s+|\s+$/g, '')
+                var date = date.replace(/\n/g, '')
                 var date = date.split(" ")
                 var date = date[0]
-                item.date = date;
+
+                var dateArr = date.split(".")
+                
+                var date =  dateArr.join('/')
+                
+                item.dateOrder = dateArr.reverse().join('/')
+
+                item.mainDate = date;
+
+
 
                 console.log({item})
                 var skip = ['Newsdienste', 'Services']

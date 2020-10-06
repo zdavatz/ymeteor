@@ -17,7 +17,7 @@ Log = async function (type, msg) {
   if (specialTypes.includes(type)) {
     console.log(chalkColors[type](type.toUpperCase() + ':'), chalkColors[type](msg))
   } else {
-    console.log(chalkColors['progress'](type.toUpperCase() + ':'), chalkColors.def(msg))
+    console.warning(msg)
   }
 }
 module.exports = Log
