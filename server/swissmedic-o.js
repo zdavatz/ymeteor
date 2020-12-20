@@ -72,15 +72,21 @@ Swiss.getFiles = (dir) => {
     - Fetch collection with certain values
 */
 Swiss.getItems = (type, lang) => {
+    Items.remove({date:'Newsletter'})
+    Items.remove({date:'Newsletters'})
     return Items.find({
         lang: lang,
         type: type
     },{sort:{dateOrder: -1}}).fetch()
 }
-console.log("DEBUG",Items.find({
+console.log("DEBUG::Getting Items",Items.find({
     lang: 'de',
     type: 'doc'
 }).count())
+
+
+
+
 /*
   Custom Single Link Scrapper 
     - Puppeteer is NOT required
@@ -111,14 +117,14 @@ Swiss.scrapDrug = (url, id) => {
         data,
         response
     }) => {
-        if(data.title == 'KPA Breakout Session – Präsentationen' || data.title == 'KPA Breakout Session – Présentations'){
-            console.log('Data Review...')
+        if(data.title == 'KPA Breakout Session – Präsentationen' || data.title == 'KPA Breakout Session – Présentations' || data.date == 'Newsletter' || data.date == 'Newsletters'){
+            console.log('Data Review...', 'Skipped')
             Items.remove(id)
         }else{
             console.log('Files updated for ',data.title)
             data.pdf = rootURL + data.pdf
             // console.log({data})
-            console.log('date: ',data.date, data.date2)
+            // console.log('date: ',data.date, data.date2)
             Items.update({
                 _id: id
             }, {
@@ -166,6 +172,7 @@ Swiss.run = async () => {
         await scrapper(project.url, project.type, project.lang, project.file)
     }
 }
+
 /*
   Pupeeter Scrapper
 */
@@ -208,7 +215,8 @@ let scrapper = async (url, type, lang, file) => {
         if (i == nav.length) {
             console.log('Project:FINISHED', file, 'DONE')
             console.log('----------------------------------')
-            Swiss.writeFile('exports/' + file, JSON.stringify(Swiss.getItems(type, lang)))
+            var items = Swiss.getItems(type, lang)
+            Swiss.writeFile('exports/' + file, JSON.stringify(items))
             console.log('Check', file , " : " ,Items.find({type:type, lang:lang}).count() )
             console.log('----------------------------------')
             break;
