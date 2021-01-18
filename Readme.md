@@ -1,4 +1,23 @@
 # Parsing Swissmedic and Pharmnet with Meteor
+#### Ubuntu dependencies for puppeteer
+ libx11-xcb1
+ libx11
+ libx11-dev
+ libXcomposite
+ libxcomposite-dev
+ libxcursor-dev
+ libxdamage-dev
+ libxi-dev
+ libxtst-dev
+ libnss3-dev
+ libcups2-dev
+ libxss-dev
+ libxrandr-dev
+ libatk1.0-dev
+ libatk-bridge2.0-dev
+ libpangocairo
+ libpangocairo-1.0
+ libgtk-3-dev
 
 #### Install Meteor on Linux
 `curl https://install.meteor.com/ | sh`
