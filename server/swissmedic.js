@@ -146,10 +146,10 @@ Swiss.record = async () => {
   log('progress', 'Progress: Getting files ready')
   //Meteor.setTimeout(function () {
   await Swiss.writeFile('/exports/chargenrueckrufe_de.json', JSON.stringify(Swiss.getItems('drug', 'de')))
-  await Swiss.writeFile('/exports/dhcp_hcp_de.json', JSON.stringify(Swiss.getItems('doc', 'de')))
+  await Swiss.writeFile('/exports/dhpc_hpc_de.json', JSON.stringify(Swiss.getItems('doc', 'de')))
   // French
   await Swiss.writeFile('/exports/chargenrueckrufe_fr.json', JSON.stringify(Swiss.getItems('drug', 'fr')))
-  await Swiss.writeFile('/exports/dhcp_hcp_fr.json', JSON.stringify(Swiss.getItems('doc', 'fr')))
+  await Swiss.writeFile('/exports/dhpc_hpc_fr.json', JSON.stringify(Swiss.getItems('doc', 'fr')))
   
 }
 /*
