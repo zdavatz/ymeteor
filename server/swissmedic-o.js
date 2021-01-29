@@ -143,10 +143,10 @@ Swiss.record = () => {
     console.log('Progress: Getting files ready')
     Meteor.setTimeout(function () {
         Swiss.writeFile('exports/chargenrueckrufe_de.json', JSON.stringify(Swiss.getItems('drug', 'de')))
-        Swiss.writeFile('exports/dhcp_hcp_de.json', JSON.stringify(Swiss.getItems('doc', 'de')))
+        Swiss.writeFile('exports/dhpc_hpc_de.json', JSON.stringify(Swiss.getItems('doc', 'de')))
         // French
         Swiss.writeFile('exports/chargenrueckrufe_fr.json', JSON.stringify(Swiss.getItems('drug', 'fr')))
-        Swiss.writeFile('exports/dhcp_hcp_fr.json', JSON.stringify(Swiss.getItems('doc', 'fr')))
+        Swiss.writeFile('exports/dhpc_hpc_fr.json', JSON.stringify(Swiss.getItems('doc', 'fr')))
         console.log('Done: Files have been saved to /public/exports')
         Swiss.close()
     }, 5000)
