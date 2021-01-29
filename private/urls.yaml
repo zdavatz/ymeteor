@@ -10,7 +10,7 @@ urls:
     url: https://www.swissmedic.ch/swissmedic/de/home/humanarzneimittel/marktueberwachung/health-professional-communication--hpc-.html
     lang: de
     type: doc
-    file: dhcp_hcp_de.json
+    file: dhcp_hpc_de.json
   -
     url: https://www.swissmedic.ch/swissmedic/fr/home/humanarzneimittel/marktueberwachung/qualitaetsmaengel-und-chargenrueckrufe/chargenrueckrufe.html
     lang: fr
@@ -20,5 +20,5 @@ urls:
     url: https://www.swissmedic.ch/swissmedic/fr/home/humanarzneimittel/marktueberwachung/health-professional-communication--hpc-.html
     lang: fr
     type: doc
-    file: dhcp_hcp_fr.json
+    file: dhcp_hpc_fr.json
 directory: /public/exposts
