@@ -21,7 +21,7 @@
     "puppeteer": "^1.20.0",
     "scrape-it": "^5.2.4",
     "to-json-schema": "^0.2.5",
-    "yaml": "^1.10.0"
+    "yaml": "^2.2.2"
   },
   "meteor": {
     "mainModule": {
