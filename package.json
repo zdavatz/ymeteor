@@ -18,7 +18,7 @@
     "moment": "^2.29.4",
     "papaparse": "^5.3.0",
     "prettyjson": "^1.2.1",
-    "puppeteer": "^1.20.0",
+    "puppeteer": "^24.37.5",
     "scrape-it": "^6.0.1",
     "to-json-schema": "^0.2.5",
     "yaml": "^2.2.2"
